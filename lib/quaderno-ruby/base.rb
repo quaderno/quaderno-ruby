@@ -9,8 +9,8 @@ module Quaderno
     base_uri 'http://localhost:3000/' 
     @@auth_token = nil 
     @@subdomain = nil
-    @@rate_limit = nil
-    @@remaining_rate_limit = nil
+    @@rate_limit = 'Unknown. This information will be available after your first request'
+    @@remaining_rate_limit = 'Unknown. This information will be available after your first request'
     @@api_path = nil
     
     class << self
@@ -28,7 +28,7 @@ module Quaderno
       @@subdomain = subdomain
     end
     
-    def self.rate_limit
+    def self.rate_limit_info
       rate_limit = { limit: @@rate_limit, remaining: @@remaining_rate_limit }
     end
     

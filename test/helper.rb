@@ -1,5 +1,13 @@
 require 'rubygems'
 require 'bundler'
+require 'ruby-debug'
+require 'vcr'
+VCR.configure do |c|
+  c.cassette_library_dir = 'fixtures/quaderno_cassettes'
+  c.ignore_localhost = false
+  c.hook_into :fakeweb
+end
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e

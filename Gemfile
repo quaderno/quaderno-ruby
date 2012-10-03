@@ -13,3 +13,9 @@ group :development do
   gem "rcov", "~> 0.9.11" #">= 0"
   gem 'httparty'
 end
+
+group :test do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'vcr', :require => 'vcr'
+  gem 'fakeweb'
+end
