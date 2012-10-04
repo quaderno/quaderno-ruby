@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby.rb",
     "lib/quaderno-ruby/base.rb",
     "lib/quaderno-ruby/contact.rb",
+    "lib/quaderno-ruby/invoice.rb",
     "lib/quaderno-ruby/behavior/crud.rb",
     "test/helper.rb",
     "test/test_quaderno-ruby.rb"

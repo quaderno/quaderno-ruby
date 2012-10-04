@@ -9,18 +9,15 @@ module Quaderno
     base_uri 'http://localhost:3000/' 
     @@auth_token = nil 
     @@subdomain = nil
-    @@rate_limit = 'Unknown. This information will be available after your first request'
-    @@remaining_rate_limit = 'Unknown. This information will be available after your first request'
+    @@rate_limit_info = 'Unknown. This information will be available after your first request'
     @@api_path = nil
-    
-    class << self
-      def api_model(klass)
-        class_eval <<-END
-          def api_model
-            #{klass}
-          end
-        END
-      end
+
+    def self.api_model(klass)
+      instance_eval <<-END
+        def api_model
+          #{klass}
+        end
+      END
     end
     
     def self.init(auth_token, subdomain)
@@ -28,20 +25,24 @@ module Quaderno
       @@subdomain = subdomain
     end
     
-    def self.rate_limit_info
-      rate_limit = { limit: @@rate_limit, remaining: @@remaining_rate_limit }
+    def self.set_rate_limit_info(rate_limit, remaining_rate_limit)
+      @@rate_limit_info = { limit: rate_limit, remaining: remaining_rate_limit }
     end
     
-    def auth_token
+    def self.rate_limit_info
+      @@rate_limit_info 
+    end
+    
+    def self.auth_token
       @@auth_token
     end
     
-    def subdomain
-      @@sub_domain
+    def self.subdomain
+      @@subdomain
     end
     
-    def self.api_path(api_path)
-      @@api_path = api_path
+    def self.api_path(api_path = nil)
+      @@api_path ||= api_path
     end
   end
 end
