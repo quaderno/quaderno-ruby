@@ -10,7 +10,6 @@ module Quaderno
     @@auth_token = nil 
     @@subdomain = nil
     @@rate_limit_info = 'Unknown. This information will be available after your first request'
-    @@api_path = nil
 
     def self.api_model(klass)
       instance_eval <<-END
@@ -42,7 +41,7 @@ module Quaderno
     end
     
     def self.api_path(api_path = nil)
-      @@api_path ||= api_path
+      @_api_path ||= api_path
     end
   end
 end

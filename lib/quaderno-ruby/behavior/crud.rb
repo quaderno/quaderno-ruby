@@ -7,7 +7,6 @@ module Quaderno
       end
     
       module ClassMethods
-        
         def all
           party_response = get("/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }.json", basic_auth: { username: api_model.auth_token })
           api_model.set_rate_limit_info(party_response.headers["x-ratelimit-limit"].to_i, party_response.headers["x-ratelimit-remaining"].to_i)
@@ -38,7 +37,7 @@ module Quaderno
         end
 
         def delete(id)
-          party_response = HTTParty.delete "#{api_model.base_uri}/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
+          party_response = HTTParty.delete "#{ api_model.base_uri }/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
           api_model.set_rate_limit_info(party_response.headers["x-ratelimit-limit"].to_i, party_response.headers["x-ratelimit-remaining"].to_i)
         end
       end

@@ -1,7 +1,6 @@
-require 'quaderno-ruby/base'
 require 'quaderno-ruby/behavior/crud'
-require 'quaderno-ruby/contact'
-require 'quaderno-ruby/invoice'
+%w(base contact invoice estimate expense payment).each { |filename| require "quaderno-ruby/#{ filename }" }
+
 
 
 module Quaderno
