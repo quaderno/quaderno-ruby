@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/contacts/5059bdbf2f412e0901000024.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '100'
+      x-ratelimit-remaining:
+      - '95'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"14b78bce5c1c5e526835f68af019275b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 58c844c6155e204b9543e6f0cefae58b
+      x-runtime:
+      - '0.080046'
+      content-length:
+      - '396'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 04 Oct 2012 11:10:59 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"5059bdbf2f412e0901000024","kind":"company","full_name":"ACME","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5059bdbf2f412e0901000024"}'
+    http_version: '1.1'
+  recorded_at: Thu, 04 Oct 2012 11:10:59 GMT
+recorded_with: VCR 2.2.4
