@@ -1,6 +1,8 @@
-require 'quaderno-ruby/behavior/crud'
-%w(base contact invoice estimate expense payment).each { |filename| require "quaderno-ruby/#{ filename }" }
+require 'ostruct'
 
+%w(crud deliver payment).each { |filename| require "quaderno-ruby/behavior/#{ filename }" }
+%w(base contact invoice estimate expense item payment).each { |filename| require "quaderno-ruby/#{ filename }" }
+require 'ruby-debug'
 
 
 module Quaderno

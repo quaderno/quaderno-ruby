@@ -1,7 +1,6 @@
 module Quaderno
   require 'httparty'
   require 'json'
-  require 'ostruct'
   
   class Base < OpenStruct
     include HTTParty
@@ -10,9 +9,15 @@ module Quaderno
     @@auth_token = nil 
     @@subdomain = nil
     @@rate_limit_info = 'Unknown. This information will be available after your first request'
-
+      
+    #Class methods
     def self.api_model(klass)
       instance_eval <<-END
+        def api_model
+          #{klass}
+        end
+      END
+      class_eval <<-END
         def api_model
           #{klass}
         end
@@ -37,7 +42,7 @@ module Quaderno
     end
     
     def self.subdomain
-      @@subdomain
+      @_subdomain = @@subdomain
     end
     
     def self.api_path(api_path = nil)
