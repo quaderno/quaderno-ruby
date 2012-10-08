@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "quaderno-ruby"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Carlos Hernandez"]
@@ -27,8 +27,14 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby.rb",
     "lib/quaderno-ruby/base.rb",
     "lib/quaderno-ruby/contact.rb",
+    "lib/quaderno-ruby/estimate.rb",
+    "lib/quaderno-ruby/expense.rb",
     "lib/quaderno-ruby/invoice.rb",
+    "lib/quaderno-ruby/item.rb",
+    "lib/quaderno-ruby/payment.rb",
     "lib/quaderno-ruby/behavior/crud.rb",
+    "lib/quaderno-ruby/behavior/deliver.rb",
+    "lib/quaderno-ruby/behavior/payment.rb",
     "test/helper.rb",
     "test/test_quaderno-ruby.rb"
   ]
