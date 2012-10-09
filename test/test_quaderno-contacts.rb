@@ -2,19 +2,23 @@ require 'helper'
 
 class TestQuadernoContact < Test::Unit::TestCase
   context "A user with an authenticate token" do
+
     setup do
       @auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
       @subdomain = 'assur-219'
       Quaderno::Base.init(@auth_token, @subdomain)
-      assert_equal true, true #REMEMBER TODO
     end
 
     should "get exception if pass wrong arguments" do
       assert_raise ArgumentError do 
-        Quaderno::Contact.all 1
+        VCR.use_cassette('all contacts') do
+          Quaderno::Contact.all 1
+        end
       end
       assert_raise ArgumentError do 
-        Quaderno::Contact.find
+        VCR.use_cassette('found contact') do
+          Quaderno::Contact.find
+        end
       end
     end
 
@@ -23,39 +27,57 @@ class TestQuadernoContact < Test::Unit::TestCase
         contacts = Quaderno::Contact.all
         assert_not_nil contacts
         assert_kind_of Array, contacts
-        assert_kind_of Quaderno::Contact, contacts[0]
+        contacts.each do |contact|
+          assert_kind_of Quaderno::Contact, contact
+        end
       end
     end
 
     should "find a contact" do
       VCR.use_cassette('found contact') do
-        contact = Quaderno::Contact.find '5059bdbf2f412e0901000024'
+        contacts = Quaderno::Contact.all
+        contact = Quaderno::Contact.find contacts[2].id
         assert_kind_of Quaderno::Contact, contact
-        assert_equal '5059bdbf2f412e0901000024', contact.id
+        assert_equal contacts[2].id, contact.id
       end
     end
     
     should "create a contact" do
       VCR.use_cassette('new contact') do
-        contact = Quaderno::Contact.create(kind: 'company', first_name: 'Test_Skynet')
+        contact = Quaderno::Contact.create(kind: 'company', first_name: 'Test_Skynet', email: 'my_little@po.ny')
         assert_kind_of Quaderno::Contact, contact
-        assert_equal 'Test_Skynet', contact.first_name
         assert_equal 'company', contact.kind
+        assert_equal 'Test_Skynet', contact.full_name
       end
     end
     
     should "update a contact" do
       VCR.use_cassette('updated contact') do
-        contact = Quaderno::Contact.update('506c2b452f412e024500002a', first_name: 'Test_OCP')
+        contacts = Quaderno::Contact.all
+        contact = Quaderno::Contact.update(contacts[2].id, first_name: 'Test_OCP', email: 'dont@stop.believing')
         assert_kind_of Quaderno::Contact, contact
-        assert_equal 'Test_OCP', contact.first_name
+        if contact.kind == 'company'
+          assert_equal 'Test_OCP', contact.full_name
+        else
+          assert_equal 'Test_OCP', contact.first_name
+        end
       end
+    end
+    
+    should "delete a contact" do
+        VCR.use_cassette('deleted contact') do
+          contacts_before = Quaderno::Contact.all
+          contact_id = contacts_before[10].id
+          Quaderno::Contact.delete contact_id
+          contacts_after = Quaderno::Contact.all
+          assert_not_equal contacts_after[10].id, contact_id
+        end
     end
     
     should "know the rate limit" do
       rate_limit_info = Quaderno::Base.rate_limit_info
-      assert_equal 100, rate_limit_info[:limit]
-      assert_operator rate_limit_info[:remaining], :< ,100     
+      assert_equal 1000, rate_limit_info[:limit]
+      assert_operator rate_limit_info[:remaining], :< ,1000     
     end
   end
 end

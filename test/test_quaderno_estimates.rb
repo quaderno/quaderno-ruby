@@ -1,0 +1,98 @@
+require 'helper'
+
+class TestQuadernoEstimate < Test::Unit::TestCase
+  context 'A user with an authenticate token' do
+
+    setup do
+      @auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
+      @subdomain = 'assur-219'
+      Quaderno::Base.init(@auth_token, @subdomain)
+    end
+
+    should 'get exception if pass wrong arguments' do
+      assert_raise ArgumentError do 
+        VCR.use_cassette('all estimates') do
+          Quaderno::Estimate.all 1
+        end
+      end
+      assert_raise ArgumentError do 
+        VCR.use_cassette('found estimate') do
+          Quaderno::Estimate.find
+        end
+      end
+    end
+
+    should 'get all estimates (populated db)' do
+      VCR.use_cassette('all estimates') do
+        estimates = Quaderno::Estimate.all
+        assert_not_nil estimates
+        assert_kind_of Array, estimates
+        estimates.each do |estimate|
+          assert_kind_of Quaderno::Estimate, estimate
+        end
+      end
+    end
+
+    should 'find a estimate' do
+      VCR.use_cassette('found estimate') do
+        estimates = Quaderno::Estimate.all
+        estimate = Quaderno::Estimate.find estimates[2].id
+        assert_kind_of Quaderno::Estimate, estimate
+        assert_equal estimates[2].id, estimate.id
+      end
+    end
+    
+    should 'create a estimate' do
+      VCR.use_cassette('new estimate') do
+        contacts = Quaderno::Contact.all
+        estimate = Quaderno::Estimate.create(contact_id: contacts[0].id ,
+                                           contact_name: contacts[0].full_name, 
+                                           currency: 'EUR', 
+                                           items: [
+                                             { 
+                                               description: 'Aircraft', 
+                                               quantity: '1.0', 
+                                               unit_price: '0.0' 
+                                             }
+                                           ],
+                                           tags: 'tnt', payment_details: '', 
+                                           notes: '')
+        assert_kind_of Quaderno::Estimate, estimate
+        assert_equal contacts[0].id, estimate.contact.id
+        assert_equal 'Aircraft', estimate.items[0].description
+      end
+    end
+    
+    should 'update an estimate' do
+      VCR.use_cassette('updated estimate') do
+        estimates = Quaderno::Estimate.all
+        estimate = Quaderno::Estimate.update(estimates[2].id, payment_details: 'Show me the moneeeeeeeyy!!!!')
+        assert_kind_of Quaderno::Estimate, estimate
+        assert_equal 'Show me the moneeeeeeeyy!!!!', estimate.payment_details
+      end
+    end
+    
+    should 'delete an estimate' do
+        VCR.use_cassette('deleted estimate') do
+          estimates = Quaderno::Estimate.all
+          estimate_id = estimates[2].id
+          Quaderno::Estimate.delete estimate_id
+          estimates = Quaderno::Estimate.all
+          assert_not_equal estimates[2].id, estimate_id
+        end
+    end
+    
+    should 'deliver an estimate' do
+      VCR.use_cassette('delivered estimate') do
+        estimates = Quaderno::Estimate.all
+        rate_limit_before = Quaderno::Base.rate_limit_info
+        begin
+          rate_limit_after = Quaderno::Estimate.deliver estimates[0].id
+        rescue Quaderno::Exceptions::RequiredFieldsEmpty
+          rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
+        end
+        assert_equal rate_limit_before[:remaining]-1, rate_limit_after[:remaining]
+      end
+    end
+  end
+end

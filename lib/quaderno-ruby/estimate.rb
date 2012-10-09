@@ -1,6 +1,5 @@
 module Quaderno
   class Estimate < Base
-    include Quaderno::Behavior::Crud    
     include Quaderno::Behavior::Deliver
     
     api_model Quaderno::Estimate

@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/behavior/crud.rb",
     "lib/quaderno-ruby/behavior/deliver.rb",
     "lib/quaderno-ruby/behavior/payment.rb",
+    "lib/quaderno-ruby/exceptions/exceptions.rb",
     "test/helper.rb",
     "test/test_quaderno-ruby.rb"
   ]

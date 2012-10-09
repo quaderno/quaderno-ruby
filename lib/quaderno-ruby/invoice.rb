@@ -1,6 +1,5 @@
 module Quaderno
   class Invoice < Base
-    include Quaderno::Behavior::Crud    
     include Quaderno::Behavior::Deliver
     include Quaderno::Behavior::Payment
     

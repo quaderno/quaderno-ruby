@@ -4,6 +4,8 @@ module Quaderno
   
   class Base < OpenStruct
     include HTTParty
+    include Quaderno::Exceptions
+    include Quaderno::Behavior::Crud    
     
     base_uri 'http://localhost:3000/' 
     @@auth_token = nil 
