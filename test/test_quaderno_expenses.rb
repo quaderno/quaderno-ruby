@@ -4,9 +4,10 @@ class TestQuadernoExpense < Test::Unit::TestCase
   context 'A user with an authenticate token' do
 
     setup do
-      @auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
-      @subdomain = 'assur-219'
-      Quaderno::Base.init(@auth_token, @subdomain)
+      Quaderno::Base.configure do |config|
+      	config.auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
+      	config.subdomain = 'assur-219'
+      end
     end
 
     should 'get exception if pass wrong arguments' do
