@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestQuadernoInvoice < Test::Unit::TestCase
-  context 'A user with an authenticate token' do
+  context 'A user with an authenticate token with invoices' do
 
     setup do
       Quaderno::Base.configure do |config|

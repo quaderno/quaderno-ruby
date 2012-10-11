@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestQuadernoContact < Test::Unit::TestCase
-  context "A user with an authenticate token" do
+  context "A user with an authenticate token with contacts" do
 
     setup do
       Quaderno::Base.configure do |config|
@@ -76,9 +76,11 @@ class TestQuadernoContact < Test::Unit::TestCase
     end
     
     should "know the rate limit" do
-      rate_limit_info = Quaderno::Base.rate_limit_info
-      assert_equal 1000, rate_limit_info[:limit]
-      assert_operator rate_limit_info[:remaining], :< ,1000     
+      VCR.use_cassette('rate limit') do
+        rate_limit_info = Quaderno::Base.rate_limit_info
+        assert_equal 1000, rate_limit_info[:limit]
+        assert_operator rate_limit_info[:remaining], :< ,1000     
+      end
     end
   end
 end

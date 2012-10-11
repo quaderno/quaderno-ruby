@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestQuadernoEstimate < Test::Unit::TestCase
-  context 'A user with an authenticate token' do
+  context 'A user with an authenticate token with estimates' do
 
     setup do
       Quaderno::Base.configure do |config|

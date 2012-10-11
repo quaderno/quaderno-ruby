@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/contacts.json
+    body:
+      encoding: US-ASCII
+      string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '535'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"dd894ef594ebb531f4b2d10684f197fb"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - e2c885fc0ebddf241b8c1f9d8d0c41ca
+      x-runtime:
+      - '0.032788'
+      content-length:
+      - '416'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:49 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"50769bdd2f412e0e2e00004e","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/50769bdd2f412e0e2e00004e"}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:49 GMT
+recorded_with: VCR 2.2.4

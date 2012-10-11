@@ -1,0 +1,143 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/estimates.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '521'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"9e27bc0753a41a0a6aa591b37c74710b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - a1ef356b0506d7d145b244f7f85d13ca
+      x-runtime:
+      - '0.176959'
+      content-length:
+      - '5839'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:51 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"507697dc2f412e0e2e000022","number":"0000011","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/507697dc2f412e0e2e000022"},{"id":"50769b0a2f412e0e2e000031","number":"0000009","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769b0a2f412e0e2e000031"},{"id":"5075365e2f412e0c4d000005","number":"0000012","issue_date":"2012-10-10","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"Show
+        me the moneeeeeeeyy!!!!","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/5075365e2f412e0c4d000005"},{"id":"50769b9a2f412e0e2e000040","number":"0000010","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769b9a2f412e0e2e000040"},{"id":"507693662f412e0e2e000013","number":"0000014","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/507693662f412e0e2e000013"},{"id":"50769bde2f412e0e2e00004f","number":"0000015","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769bde2f412e0e2e00004f"},{"id":"50604e052f412e059600000e","number":"0000007","issue_date":"2012-09-24","contact":{"id":"505c3b402f412e0248000044","full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"jellybean","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"","payment_details":"","notes":"","state":"invoiced","url":"http://localhost:3000/assur-219/api/v1/estimates/50604e052f412e059600000e"},{"id":"5074120e2f412e068d0000e1","number":"0000008","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/5074120e2f412e068d0000e1"},{"id":"5074102c2f412e068d00007e","number":"0000006","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/5074102c2f412e068d00007e"}]'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/ping.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '521'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"0c776997933eb60833b37beaf43814c8"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 51d4fbb129da2df44e7925fcf3573d3f
+      x-runtime:
+      - '0.022359'
+      content-length:
+      - '15'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:51 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK"}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/estimates/507697dc2f412e0e2e000022/deliver.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '520'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"6975803a375e3c7631c6ba9cf1704e1c"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - cb2f1ea27d5af4300fc12fe41ededc37
+      x-runtime:
+      - '0.134250'
+      content-length:
+      - '1019'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:51 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"507697dc2f412e0e2e000022","account_id":"5059bc652f412e090100000f","activities":[{"_id":"50769bdf2f412e0e2e000051","author":"John
+        Wu Wu","created_at":"2012-10-11T11:13:51+01:00","date":"2012-10-11T11:13:51+01:00","kind":"sent","payment_amount":null,"payment_id":null,"payment_method":null,"updated_at":"2012-10-11T11:13:51+01:00"}],"contact_id":"5073f9c22f412e02d0000032","contact_name":"A
+        Company","created_at":"2012-10-11T10:56:44+01:00","currency":"EUR","due_date":null,"due_days":null,"exchange_cents":null,"exchange_rate":null,"gross_amount_cents":0,"issue_date":"2012-10-11","items":[{"_id":"507697dc2f412e0e2e000023","description":"Aircraft","discount_rate":"0.0","quantity":"1.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"unit_price":"0.0"}],"notes":"","number":"0000011","payment_details":"","permalink":"a1587cd2d40e060c8c667a4d40bc0628abed9019","po_number":null,"state":"sent","subject":null,"tags_array":["tnt"],"total_cents":0,"updated_at":"2012-10-11T11:13:51+01:00"}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
+recorded_with: VCR 2.2.4

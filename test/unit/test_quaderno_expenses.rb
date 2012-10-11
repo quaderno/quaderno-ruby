@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestQuadernoExpense < Test::Unit::TestCase
-  context 'A user with an authenticate token' do
+  context 'A user with an authenticate token with expenses' do
 
     setup do
       Quaderno::Base.configure do |config|
@@ -102,8 +102,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
           expenses[0].add_payment(payment_method: "cash", amount_cents: "100000000")
           payment = expenses[0].payments.last
           array_length = expenses[0].payments.length
-          expenses[0].remove_payment(payment.id)
-          assert_equal array_length-1, expenses[0].payments.length
+          expenses[0].remove_payment(payment.id) unless payment.nil?
+          assert_equal (array_length.zero? ? array_length : array_length-1), expenses[0].payments.length   
         end
     end
   end

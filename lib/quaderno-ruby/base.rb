@@ -10,7 +10,7 @@ module Quaderno
     base_uri 'http://localhost:3000/' 
     @@auth_token = nil 
     @@subdomain = nil
-    @@rate_limit_info = 'Unknown. This information will be available after your first request'
+    @@rate_limit_info = nil
       
     def self.api_model(klass)
       instance_eval <<-END
@@ -38,17 +38,24 @@ module Quaderno
       @@subdomain = subdomain
     end
     
-
-    #Returns the rate limit information: limit and remaining requests
-    def self.rate_limit_info
-      @@rate_limit_info 
+    #Check the connection
+    def self.ping
+      begin
+        party_response = get("/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
+      rescue Errno::ECONNREFUSED
+        return false
+      end
+      true
     end
+    
+    #Returns the rate limit information: limit and remaining requests
+    def self.rate_limit_info(rate_limit = nil, remaining_rate_limit = nil)
+      party_response = get("/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
+      @@rate_limit_info = { limit: party_response.headers["x-ratelimit-limit"].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
+    end
+    
     
     private 
-    def self.set_rate_limit_info(rate_limit, remaining_rate_limit)
-      @@rate_limit_info = { limit: rate_limit, remaining: remaining_rate_limit }
-    end
-    
     def self.auth_token
       @@auth_token
     end
@@ -56,7 +63,7 @@ module Quaderno
     def self.subdomain
       @_subdomain = @@subdomain
     end
-    
+    #Set or returns the model path for the url
     def self.api_path(api_path = nil)
       @_api_path ||= api_path
     end

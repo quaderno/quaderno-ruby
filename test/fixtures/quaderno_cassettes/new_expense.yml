@@ -1,0 +1,138 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/expenses.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '512'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"476d8ac525b8f20c286ee38d49927f51"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - f7431e6868aedfaaad8a541d7ea0f929
+      x-runtime:
+      - '0.062441'
+      content-length:
+      - '3254'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:52 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"50769b9c2f412e0e2e000045","number":"5","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50769be02f412e0e2e000052","payment_date":"2012-10-11","payment_method":"cash","amount":"\u20ac1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b9c2f412e0e2e000045/payments/50769be02f412e0e2e000052"}],"tags":"tnt","notes":"","state":"paid","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b9c2f412e0e2e000045"},{"id":"50769b0c2f412e0e2e000036","number":"5","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50769b9c2f412e0e2e000043","payment_date":"2012-10-11","payment_method":"cash","amount":"\u20ac1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b0c2f412e0e2e000036/payments/50769b9c2f412e0e2e000043"}],"tags":"tnt","notes":"","state":"paid","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b0c2f412e0e2e000036"},{"id":"5074102d2f412e068d000088","number":"0000021","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"USD","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":"tnt","notes":"","state":"outstanding","url":"http://localhost:3000/assur-219/api/v1/expenses/5074102d2f412e068d000088"},{"id":"5059beab2f412e0901000057","number":"0001","issue_date":"2012-09-19","contact":{"id":"5072a5522f412e0315000026","full_name":"Test_OCP"},"po_number":"12345","currency":"EUR","items":[{"description":"TNT","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"IVA","tax_2_rate":"21.0","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[{"label":"IVA
+        (21.00%)","amount":"\u20ac0.00"}],"total":"\u20ac0.00","payments":[{"id":"5074102d2f412e068d000082","payment_date":"2012-10-09","payment_method":"cash","amount":"\u20ac1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/expenses/5059beab2f412e0901000057/payments/5074102d2f412e068d000082"}],"tags":"tnt","notes":"","state":"paid","url":"http://localhost:3000/assur-219/api/v1/expenses/5059beab2f412e0901000057"}]'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:52 GMT
+- request:
+    method: get
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/contacts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '511'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"979668fb1bb35e9013420f0c3a98e7f5"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 4fbf149524082291dd9f9e66f7d601fa
+      x-runtime:
+      - '0.069247'
+      content-length:
+      - '10159'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:52 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"5073f9c22f412e02d0000032","kind":"company","full_name":"A
+        Company","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"a_company@too.original","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/assur-219/api/v1/contacts/5073f9c22f412e02d0000032"},{"id":"5059bdbf2f412e0901000024","kind":"company","full_name":"ACME","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"acme@to.me","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/assur-219/api/v1/contacts/5059bdbf2f412e0901000024"},{"id":"505af3cc2f412e03210000d1","kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/505af3cc2f412e03210000d1"},{"id":"5059beab2f412e090100005a","kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5059beab2f412e090100005a"},{"id":"506c2a0e2f412e0245000027","kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/506c2a0e2f412e0245000027"},{"id":"505c3ba02f412e024800004b","kind":"company","full_name":"Test_OCP","contact_name":"Dash","street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":"1234567","phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"ES","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/505c3ba02f412e024800004b"},{"id":"5072a5522f412e0315000026","kind":"company","full_name":"Test_OCP","contact_name":"Tei","street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5072a5522f412e0315000026"},{"id":"505c3b402f412e0248000044","kind":"company","full_name":"Test_OCP","contact_name":"Tony","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/assur-219/api/v1/contacts/505c3b402f412e0248000044"},{"id":"505c4ec42f412e0248000050","kind":"company","full_name":"Test_OCP","contact_name":"Tei","street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/505c4ec42f412e0248000050"},{"id":"506c35242f412e024500004c","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/506c35242f412e024500004c"},{"id":"5072d33c2f412e03150000f6","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5072d33c2f412e03150000f6"},{"id":"5073db142f412e02d0000003","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073db142f412e02d0000003"},{"id":"5073db542f412e02d000000c","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073db542f412e02d000000c"},{"id":"5073dbf02f412e02d000000e","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073dbf02f412e02d000000e"},{"id":"5073fa8a2f412e02d0000034","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fa8a2f412e02d0000034"},{"id":"5073fae82f412e02d000003d","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fae82f412e02d000003d"},{"id":"5073fb0e2f412e02d0000046","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fb0e2f412e02d0000046"},{"id":"5073fb252f412e02d000004f","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fb252f412e02d000004f"},{"id":"5073fb2e2f412e02d0000058","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fb2e2f412e02d0000058"},{"id":"5073fb372f412e02d0000061","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fb372f412e02d0000061"},{"id":"5073fb712f412e02d000006a","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fb712f412e02d000006a"},{"id":"5073fc4b2f412e02d0000073","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fc4b2f412e02d0000073"},{"id":"5073fce02f412e02d000007c","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fce02f412e02d000007c"},{"id":"5073fd602f412e02d0000085","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fd602f412e02d0000085"},{"id":"5073fe9e2f412e02d000008e","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/5073fe9e2f412e02d000008e"}]'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:52 GMT
+- request:
+    method: post
+    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/expenses.json
+    body:
+      encoding: US-ASCII
+      string: number=5&contact_id=5073f9c22f412e02d0000032&contact_name=A%20Company&currency=EUR&items[][description]=Aircraft&items[][quantity]=1.0&items[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+    headers:
+      authorization:
+      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '510'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"b971d290e68afe13cc308aa1e73ec74c"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 3ea91e8168f345b97f634a4369c5ee2c
+      x-runtime:
+      - '0.043807'
+      content-length:
+      - '638'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
+      date:
+      - Thu, 11 Oct 2012 10:13:52 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"50769be02f412e0e2e000054","number":"5","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
+        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":"tnt","notes":"","state":"outstanding","url":"http://localhost:3000/assur-219/api/v1/expenses/50769be02f412e0e2e000054"}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:13:52 GMT
+recorded_with: VCR 2.2.4
