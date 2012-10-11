@@ -49,7 +49,7 @@ module Quaderno
     end
     
     #Returns the rate limit information: limit and remaining requests
-    def self.rate_limit_info(rate_limit = nil, remaining_rate_limit = nil)
+    def self.rate_limit_info
       party_response = get("/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
       @@rate_limit_info = { limit: party_response.headers["x-ratelimit-limit"].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
     end
