@@ -61,7 +61,7 @@ You can access all the instance fields like this:
  Quaderno::Contact.find(id) #=> Quaderno::Contact
 ```
 
-will return the contact with the id passed ass parameter.
+will return the contact with the id passed as parameter.
 
 ### Creating a new contact
 ```ruby
@@ -99,7 +99,7 @@ will delete the contact with the id passed as parameter.
   Quaderno::Invoice.find(id) #=> Quaderno::Invoice
 ```
 
-will return the invoice with the id passed ass parameter.
+will return the invoice with the id passed as parameter.
 
 ### Creating a new invoice
 
@@ -122,7 +122,7 @@ will update the specified invoice with the data of the hash passed as second par
   Quaderno::Invoice.delete(id) #=> Boolean
 ```
 
-will delete the invoice with the id passed ass parameter.
+will delete the invoice with the id passed as parameter.
 
  
 ###Adding or removing a payment
@@ -165,7 +165,7 @@ In order to  remove a payment you will need the Invoice instance you want to upd
   Quaderno::Estimate.find(id) #=> Quaderno::Estimate
 ```
 
-will return the estimate with the id passed ass parameter.
+will return the estimate with the id passed as parameter.
 
 ### Creating a new estimate
 
@@ -231,7 +231,7 @@ In order to  remove a payment you will need the estimate you want to update.
  Quaderno::Expense.find(id) #=> Quaderno::Expense
 ```
 
-will return the expense with the id passed ass parameter.
+will return the expense with the id passed as parameter.
 
 ### Creating a new expense
 ```ruby
