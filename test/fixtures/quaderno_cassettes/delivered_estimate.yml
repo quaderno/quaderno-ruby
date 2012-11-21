@@ -17,19 +17,19 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '651'
+      - '633'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"3f85cfaedd49a35c2d45db27c147aa8a"'
+      - ! '"8ccab8654adce7e3c49f1b3c350e94ea"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - f498964ba670b8da04623489c7ca88f2
+      - a351eb26ae75efc25f21ce4aad78af60
       x-runtime:
-      - '0.100277'
+      - '0.099667'
       content-length:
       - '1956'
       connection:
@@ -38,9 +38,9 @@ http_interactions:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50a3a1e42f412e1d39000022","number":"0000001","issue_date":"2012-11-14","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Teapots","quantity":"100000000.0","unit_price":"0.1","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","gross_amount":"\u20ac10,000,000.00"}],"subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac10,000,000.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50a3a1e42f412e1d39000022.json"},{"id":"50acb3a62f412eda52000043","number":"0000015","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acb3a62f412eda52000043.json"},{"id":"50acd53a2f412eda520000ca","number":"0000003","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acd53a2f412eda520000ca.json"}]'
+      string: ! '[{"id":"50a3a1e42f412e1d39000022","number":"0000001","issue_date":"2012-11-14","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Teapots","quantity":"100000000.0","unit_price":"0.1","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","gross_amount":"\u20ac10,000,000.00"}],"subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac10,000,000.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50a3a1e42f412e1d39000022.json"},{"id":"50acb3a62f412eda52000043","number":"0000015","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acb3a62f412eda52000043.json"},{"id":"50acdd5c2f412eda520000ce","number":"0000002","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acdd5c2f412eda520000ce.json"}]'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
+  recorded_at: Wed, 21 Nov 2012 13:55:41 GMT
 - request:
     method: get
     uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/ping.json
@@ -58,7 +58,7 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '651'
+      - '633'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -68,9 +68,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - f2d2bc9c1c4e61a8200a218a4a2566e6
+      - b2ec1573e9c9ce218510d75b0fda60ab
       x-runtime:
-      - '0.035123'
+      - '0.034916'
       content-length:
       - '15'
       connection:
@@ -81,7 +81,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
+  recorded_at: Wed, 21 Nov 2012 13:55:41 GMT
 - request:
     method: get
     uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates/50a3a1e42f412e1d39000022/deliver.json
@@ -99,7 +99,7 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '650'
+      - '632'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -109,9 +109,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - d7b4de2071f47870d286acf4078d037d
+      - bcfb35eccc58c9090e9f7a3fc07ebd9c
       x-runtime:
-      - '0.057134'
+      - '0.236681'
       content-length:
       - '1576'
       connection:
@@ -123,5 +123,5 @@ http_interactions:
       string: ! '{"_id":"50a3a1e42f412e1d39000022","account_id":"50a0ce4a2f412e5fad000001","activities":[{"_id":"50a3a1e42f412e1d39000024","author":"John
         Wu","created_at":null,"date":"2012-11-14T13:51:32+00:00","kind":"created","updated_at":null}],"contact_id":"50a23cb22f412eae4f000003","contact_name":"100-499","created_at":"2012-11-14T13:51:32Z","currency":"EUR","due_date":null,"due_days":null,"exchange":null,"exchange_rate":null,"gross_amount":{"cents":1000000000,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2766","USD_TO_EUR":"0.78394481"},"mutex":{}}},"issue_date":"2012-11-14","items":[{"_id":"50a3a1e42f412e1d39000023","description":"Teapots","discount_rate":"0.0","quantity":"100000000.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","unit_price":"0.1"}],"notes":"","number":"0000001","payment_details":"","permalink":"5b7485e047132dcfef46fbe79435a3b6a7dae0e4","po_number":"","state":"draft","subject":"","tags":[],"total":{"cents":1000000000,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2766","USD_TO_EUR":"0.78394481"},"mutex":{}}},"updated_at":"2012-11-14T13:51:32Z"}'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
+  recorded_at: Wed, 21 Nov 2012 13:55:41 GMT
 recorded_with: VCR 2.3.0

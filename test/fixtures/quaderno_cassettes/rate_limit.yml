@@ -17,7 +17,7 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '659'
+      - '604'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -27,9 +27,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 299bf8513f0320234195fc0a9a0fb61b
+      - b685df5464aac98da9bdc41e263ecc54
       x-runtime:
-      - '0.038593'
+      - '0.036975'
       content-length:
       - '15'
       connection:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:46 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:08 GMT
 recorded_with: VCR 2.3.0

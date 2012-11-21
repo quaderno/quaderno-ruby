@@ -17,19 +17,19 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '665'
+      - '610'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"28ad7e52332c9945df9907d60ebdf1dc"'
+      - ! '"8b2458e40ebc526af0877b6f6a48a6c2"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 38cb8d01b6ab10fda862b25839d24da7
+      - 675006ef40583731081e4e7a2870b449
       x-runtime:
-      - '0.057541'
+      - '0.063321'
       content-length:
       - '413'
       connection:
@@ -38,7 +38,7 @@ http_interactions:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"id":"50acd52d2f412eda520000c9","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acd52d2f412eda520000c9"}'
+      string: ! '{"id":"50acdd772f412eda520000d9","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acdd772f412eda520000d9"}'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:45 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:07 GMT
 recorded_with: VCR 2.3.0

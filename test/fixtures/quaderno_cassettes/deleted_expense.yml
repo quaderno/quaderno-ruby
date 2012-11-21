@@ -17,19 +17,19 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '692'
+      - '596'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"e8e33057914cc37b306b3a8efd301125"'
+      - ! '"66c7893df0c2d85ec2b59f8e40209eee"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - b4b3396926eac52d10ee9fa3fe8f5647
+      - 5acb9851de1010800b81726923cdc123
       x-runtime:
-      - '0.128820'
+      - '0.131037'
       content-length:
       - '2924'
       connection:
@@ -38,12 +38,12 @@ http_interactions:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50acd5102f412eda520000bb","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb.json"},{"id":"50acd2562f412eda520000b2","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acd50f2f412eda520000b9","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2/payments/50acd50f2f412eda520000b9.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2.json"},{"id":"50acd17c2f412eda520000a9","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acd2552f412eda520000b0","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd17c2f412eda520000a9/payments/50acd2552f412eda520000b0.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd17c2f412eda520000a9.json"},{"id":"50acb48c2f412eda5200004b","number":"001","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"USD","items":[{"description":"aaa","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acb48c2f412eda5200004b.json"}]'
+      string: ! '[{"id":"50acdd842f412eda520000dc","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acdd842f412eda520000dc.json"},{"id":"50acd5102f412eda520000bb","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acdd842f412eda520000da","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb/payments/50acdd842f412eda520000da.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb.json"},{"id":"50acd2562f412eda520000b2","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acd50f2f412eda520000b9","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2/payments/50acd50f2f412eda520000b9.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2.json"},{"id":"50acb48c2f412eda5200004b","number":"001","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"USD","items":[{"description":"aaa","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acb48c2f412eda5200004b.json"}]'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:16 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:21 GMT
 - request:
     method: delete
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses/50acd17c2f412eda520000a9.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2.json
     body:
       encoding: US-ASCII
       string: ''
@@ -58,18 +58,18 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '691'
+      - '595'
       x-ua-compatible:
       - IE=Edge
       cache-control:
       - no-cache
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTYwYjc5NDI4NDBiODczY2QxMzI1ZGY0Yjg5Yjg1ZjA5BjsAVA%3D%3D--2af6cc9ecd907e4f6ba9ffc5e520f8eaff82fe5e;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTJhMzZhMjY3NWMyNWU3ZjVlYWM4MmE3ODY0OWEyY2RkBjsAVA%3D%3D--7ca0b5e4dd49ff8f66faea6d0c1d3f31295bf549;
         path=/; HttpOnly
       x-request-id:
-      - 3b136e9134a8888830c0d726720fc0cc
+      - 33c7c1b30b5264c39a0fb03cd2e9326e
       x-runtime:
-      - '0.060294'
+      - '0.065276'
       connection:
       - close
       server:
@@ -78,7 +78,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:16 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:21 GMT
 - request:
     method: get
     uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses.json
@@ -96,19 +96,19 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '690'
+      - '594'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"420d91d496a9cd920310ba7540161c90"'
+      - ! '"734e4cb977528b55e141f7365163ce90"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - a29e56500e71911c98458c273ec94731
+      - df07cfde2719342ae35b64729414c807
       x-runtime:
-      - '0.106637'
+      - '0.110264'
       content-length:
       - '2077'
       connection:
@@ -117,7 +117,7 @@ http_interactions:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50acd5102f412eda520000bb","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb.json"},{"id":"50acd2562f412eda520000b2","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acd50f2f412eda520000b9","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2/payments/50acd50f2f412eda520000b9.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2.json"},{"id":"50acb48c2f412eda5200004b","number":"001","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"USD","items":[{"description":"aaa","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acb48c2f412eda5200004b.json"}]'
+      string: ! '[{"id":"50acdd842f412eda520000dc","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acdd842f412eda520000dc.json"},{"id":"50acd5102f412eda520000bb","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acdd842f412eda520000da","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb/payments/50acdd842f412eda520000da.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb.json"},{"id":"50acb48c2f412eda5200004b","number":"001","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"USD","items":[{"description":"aaa","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acb48c2f412eda5200004b.json"}]'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:16 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:21 GMT
 recorded_with: VCR 2.3.0

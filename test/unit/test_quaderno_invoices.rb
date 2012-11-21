@@ -88,7 +88,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         invoices = Quaderno::Invoice.all
         rate_limit_before = Quaderno::Base.rate_limit_info
         begin
-          rate_limit_after = Quaderno::Invoice.deliver invoices[0].id
+          rate_limit_after = invoices[0].deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmpty
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end

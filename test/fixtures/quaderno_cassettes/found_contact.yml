@@ -17,21 +17,21 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '661'
+      - '606'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"dbd45663c22c5821361dcfd354065642"'
+      - ! '"a46811df675feac2e1a53cb5af168900"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 3cf5f4818a6a3d404cfd75a56b5f87d2
+      - 8ca4cb18987a8f7112c4edf754018a41
       x-runtime:
-      - '0.116351'
+      - '0.341673'
       content-length:
-      - '4450'
+      - '4463'
       connection:
       - close
       server:
@@ -39,13 +39,13 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '[{"id":"50a23cb22f412eae4f000003","kind":"company","full_name":"100-499","contact_name":"","street_line_1":"Evergreen
-        Terrace","street_line_2":"","postal_code":"K0A 1B0","city":"Springfield","region":"Canada","country":"CA","phone_1":"3447277","phone_2":"3447277","fax":"","email":"vidadelaempresa@gmail.com","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50a23cb22f412eae4f000003"},{"id":"50a0d1eb2f412e58a700000b","kind":"company","full_name":"ACME","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0d1eb2f412e58a700000b"},{"id":"50aa3de82f412ec2ab000014","kind":"person","first_name":"John","last_name":"","full_name":"John","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"john@recrea.es","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3de82f412ec2ab000014"},{"id":"50aa3e162f412ec2ab000019","kind":"company","full_name":"Jonz","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"john@recrea.es","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3e162f412ec2ab000019"},{"id":"50a21bf72f412e1a68000017","kind":"company","full_name":"Matusalen","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a21bf72f412e1a68000017"},{"id":"50a0d2e82f412e15bf000004","kind":"company","full_name":"Mediaset","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0d2e82f412e15bf000004"},{"id":"50acb2b72f412eda52000041","kind":"company","full_name":"Tei","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acb2b72f412eda52000041"},{"id":"50a21c9e2f412e1a68000026","kind":"company","full_name":"Test_OCP","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50a21c9e2f412e1a68000026"},{"id":"50a0f5612f412ef720000019","kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":"Evergreen
-        Terrace","street_line_2":"","postal_code":"K0A 1B0","city":"Springfield","region":"Canada","country":"CA","phone_1":"3447277","phone_2":null,"fax":null,"email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0f5612f412ef720000019"},{"id":"50acc9842f412eda52000068","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acc9842f412eda52000068"},{"id":"50acb16e2f412eda5200003e","kind":"person","first_name":"Zed","last_name":"","full_name":"Zed","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50acb16e2f412eda5200003e"}]'
+        Terrace","street_line_2":"","postal_code":"K0A 1B0","city":"Springfield","region":"Canada","country":"CA","phone_1":"3447277","phone_2":"3447277","fax":"","email":"vidadelaempresa@gmail.com","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50a23cb22f412eae4f000003"},{"id":"50a0d1eb2f412e58a700000b","kind":"company","full_name":"ACME","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0d1eb2f412e58a700000b"},{"id":"50aa3e162f412ec2ab000019","kind":"company","full_name":"Jonz","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"john@recrea.es","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3e162f412ec2ab000019"},{"id":"50a21bf72f412e1a68000017","kind":"company","full_name":"Matusalen","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a21bf72f412e1a68000017"},{"id":"50a0d2e82f412e15bf000004","kind":"company","full_name":"Mediaset","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0d2e82f412e15bf000004"},{"id":"50acb2b72f412eda52000041","kind":"company","full_name":"Tei","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acb2b72f412eda52000041"},{"id":"50a21c9e2f412e1a68000026","kind":"company","full_name":"Test_OCP","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50a21c9e2f412e1a68000026"},{"id":"50a0f5612f412ef720000019","kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":"Evergreen
+        Terrace","street_line_2":"","postal_code":"K0A 1B0","city":"Springfield","region":"Canada","country":"CA","phone_1":"3447277","phone_2":null,"fax":null,"email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50a0f5612f412ef720000019"},{"id":"50aa3de82f412ec2ab000014","kind":"person","first_name":"Test_OCP","last_name":"","full_name":"Test_OCP","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3de82f412ec2ab000014"},{"id":"50acc9842f412eda52000068","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acc9842f412eda52000068"},{"id":"50acb16e2f412eda5200003e","kind":"person","first_name":"Zed","last_name":"","full_name":"Zed","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50acb16e2f412eda5200003e"}]'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:46 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:08 GMT
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/contacts/50aa3de82f412ec2ab000014.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/contacts/50aa3e162f412ec2ab000019.json
     body:
       encoding: US-ASCII
       string: ''
@@ -60,28 +60,28 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '660'
+      - '605'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"131d7b9d2979b490930f5a11d2496a17"'
+      - ! '"d745a685a936921f81be83a4af522b5d"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 75325d0f392cd3d8be98429b17daba08
+      - 6db2d352644452458726ce8d8675319a
       x-runtime:
-      - '0.054611'
+      - '0.056317'
       content-length:
-      - '397'
+      - '381'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"id":"50aa3de82f412ec2ab000014","kind":"person","first_name":"John","last_name":"","full_name":"John","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"john@recrea.es","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3de82f412ec2ab000014"}'
+      string: ! '{"id":"50aa3e162f412ec2ab000019","kind":"company","full_name":"Jonz","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":"","fax":"","email":"john@recrea.es","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/50aa3e162f412ec2ab000019"}'
     http_version: '1.1'
-  recorded_at: Wed, 21 Nov 2012 13:20:46 GMT
+  recorded_at: Wed, 21 Nov 2012 13:56:08 GMT
 recorded_with: VCR 2.3.0

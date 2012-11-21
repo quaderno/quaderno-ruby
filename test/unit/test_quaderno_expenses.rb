@@ -88,7 +88,6 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
-        debugger
         payment = expenses[0].add_payment(method: "cash", number: "100000000")
         assert_kind_of Quaderno::Payment, payment
         assert_equal "cash", payment.method

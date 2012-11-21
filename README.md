@@ -1,6 +1,6 @@
 # Quaderno-ruby
 
-Quaderno-ruby is a ruby wrapper for quaderno api.
+Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api).
 
 ## Installation & Configuration
 
@@ -36,9 +36,9 @@ This will return true if the service is up or false if it is not.
 
 This will return a hash with information about the rate limit and your remaining requestes
 
-## Accessing the instances
+## Reading the values
 
-You can access all the instance fields like this:
+Quaderno-ruby parses all the json responses in human readable data, so you can access each value just like this:
 
 ```ruby
   contact.id 
@@ -144,11 +144,13 @@ In order to  remove a payment you will need the Invoice instance you want to upd
  
 ###Delivering the invoice
 
-  You can also deliver an invoice to the default recipients.
+  In order to deliver the estimate to the default recipient you will need the estimate you want to send.
   
 ```ruby
-  Quaderno::Invoice.deliver(invoice_id)
+  invoice = Quaderno::Invoice.find(invoice_id)
+  invoice.deliver
 ```
+
 
 ## Managing estimates
 
@@ -192,7 +194,7 @@ will delete the estimate with the id passed as parameter.
 
  
 ###Adding or removing a payment
- In order to  add a payment you will need the estimate you want to update.
+ In order to add a payment you will need the estimate you want to update.
  
 ```ruby
   estimate = Quaderno::Estimate.find(estimate_id)
@@ -209,11 +211,11 @@ In order to  remove a payment you will need the estimate you want to update.
 ``` 
  
 ###Delivering the estimate
-
-  You can also deliver an estimate to the default recipients.
+  In order to deliver the estimate to the default recipient you will need the estimate you want to send.
   
 ```ruby
-  Quaderno::Estimate.deliver(estimate_id)
+  estimate = Quaderno::Estimate.find(estimate_id)
+  estimate.deliver
 ```
 
  
@@ -255,3 +257,6 @@ will update the specified expense with the data of the hash passed as second par
 will delete the expense with the id passed as parameter.
 
 
+## Quaderno-api 
+
+For further information, please visit [quaderno api] (https://github.com/recrea/quaderno-api) wiki

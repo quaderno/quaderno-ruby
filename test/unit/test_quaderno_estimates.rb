@@ -88,7 +88,7 @@ class TestQuadernoEstimate < Test::Unit::TestCase
         estimates = Quaderno::Estimate.all
         rate_limit_before = Quaderno::Base.rate_limit_info
         begin
-          rate_limit_after = Quaderno::Estimate.deliver estimates[0].id
+          rate_limit_after = estimates[0].deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmpty
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end
