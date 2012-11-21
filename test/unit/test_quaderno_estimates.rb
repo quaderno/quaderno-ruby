@@ -5,8 +5,8 @@ class TestQuadernoEstimate < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
-      	config.subdomain = 'assur-219'
+        config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+        config.subdomain = 'recrea'
       end
     end
 
@@ -47,17 +47,17 @@ class TestQuadernoEstimate < Test::Unit::TestCase
       VCR.use_cassette('new estimate') do
         contacts = Quaderno::Contact.all
         estimate = Quaderno::Estimate.create(contact_id: contacts[0].id ,
-                                           contact_name: contacts[0].full_name, 
-                                           currency: 'EUR', 
-                                           items: [
-                                             { 
-                                               description: 'Aircraft', 
-                                               quantity: '1.0', 
-                                               unit_price: '0.0' 
-                                             }
-                                           ],
-                                           tags: 'tnt', payment_details: '', 
-                                           notes: '')
+                                            contact_name: contacts[0].full_name, 
+                                            currency: 'EUR', 
+                                            items: [
+                                              { 
+                                                description: 'Aircraft', 
+                                                quantity: '1.0', 
+                                                unit_price: '0.0' 
+                                              }
+                                            ],
+                                            tags: 'tnt', payment_details: '', 
+                                            notes: '')
         assert_kind_of Quaderno::Estimate, estimate
         assert_equal contacts[0].id, estimate.contact.id
         assert_equal 'Aircraft', estimate.items[0].description

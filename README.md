@@ -14,7 +14,7 @@ To configure just add this to your initializers
 
 ```ruby
 	Quaderno::Base.configure do |config|
-		config.auth_token = 'my_auth_token'
+		config.auth_token = 'my_authenticate_token'
 		config.subdomain = 'my_account_subdomain'
 	end
 ```

@@ -2,45 +2,43 @@
 http_interactions:
 - request:
     method: post
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/contacts.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/contacts.json
     body:
       encoding: US-ASCII
       string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '535'
+      - '665'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"dd894ef594ebb531f4b2d10684f197fb"'
+      - ! '"28ad7e52332c9945df9907d60ebdf1dc"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - e2c885fc0ebddf241b8c1f9d8d0c41ca
+      - 38cb8d01b6ab10fda862b25839d24da7
       x-runtime:
-      - '0.032788'
+      - '0.057541'
       content-length:
-      - '416'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:49 GMT
+      - '413'
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"id":"50769bdd2f412e0e2e00004e","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/assur-219/api/v1/contacts/50769bdd2f412e0e2e00004e"}'
+      string: ! '{"id":"50acd52d2f412eda520000c9","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50acd52d2f412eda520000c9"}'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:49 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Wed, 21 Nov 2012 13:20:45 GMT
+recorded_with: VCR 2.3.0

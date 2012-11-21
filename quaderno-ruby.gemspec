@@ -14,14 +14,14 @@ Gem::Specification.new do |s|
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/quaderno-ruby.rb",

@@ -5,8 +5,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
-      	config.subdomain = 'assur-219'
+        config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+        config.subdomain = 'recrea'
       end
     end
 
@@ -88,10 +88,11 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
-        payment = expenses[0].add_payment(payment_method: "cash", amount_cents: "100000000")
+        debugger
+        payment = expenses[0].add_payment(method: "cash", number: "100000000")
         assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.payment_method
-        assert_equal "$1,000,000.00", payment.amount
+        assert_equal "cash", payment.method
+        assert_equal "100,000,000.00", payment.amount[1..-1]
         assert_equal expenses[0].payments.last.id, payment.id 
       end
     end
@@ -99,7 +100,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'remove a payment' do
         VCR.use_cassette('unpay an expense') do
           expenses = Quaderno::Expense.all
-          expenses[0].add_payment(payment_method: "cash", amount_cents: "100000000")
+          expenses[0].add_payment(method: "cash", number: "100000000")
           payment = expenses[0].payments.last
           array_length = expenses[0].payments.length
           expenses[0].remove_payment(payment.id) unless payment.nil?

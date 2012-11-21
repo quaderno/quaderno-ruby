@@ -5,8 +5,8 @@ class TestQuadernoInvoice < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
-      	config.subdomain = 'assur-219'
+        config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+        config.subdomain = 'recrea'
       end
     end
 
@@ -99,10 +99,10 @@ class TestQuadernoInvoice < Test::Unit::TestCase
     should 'add a payment' do
       VCR.use_cassette('paid invoice') do
         invoices = Quaderno::Invoice.all
-        payment = invoices[0].add_payment(payment_method: "cash", amount_cents: "100000000")
+        payment = invoices[0].add_payment(method: "cash", number: "100000000")
         assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.payment_method
-        assert_equal "$1,000,000.00", payment.amount
+        assert_equal "cash", payment.method
+        assert_equal "100,000,000.00", payment.amount[1..-1]
         assert_equal invoices[0].payments.last.id, payment.id 
       end
     end

@@ -2,132 +2,122 @@
 http_interactions:
 - request:
     method: get
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/expenses.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '503'
+      - '686'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"465458aa65d37e7b34a81b941526858e"'
+      - ! '"420d91d496a9cd920310ba7540161c90"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 57c0a1ae0ec2ee85f304476703014859
+      - 823a7b4aa46bfdf73a4913cbab12cffe
       x-runtime:
-      - '0.058190'
+      - '0.107663'
       content-length:
-      - '3031'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:53 GMT
+      - '2077'
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50769be02f412e0e2e000054","number":"5","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":"tnt","notes":"","state":"outstanding","url":"http://localhost:3000/assur-219/api/v1/expenses/50769be02f412e0e2e000054"},{"id":"50769b9c2f412e0e2e000045","number":"5","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50769be02f412e0e2e000052","payment_date":"2012-10-11","payment_method":"cash","amount":"\u20ac1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b9c2f412e0e2e000045/payments/50769be02f412e0e2e000052"}],"tags":"tnt","notes":"","state":"paid","url":"http://localhost:3000/assur-219/api/v1/expenses/50769b9c2f412e0e2e000045"},{"id":"5074102d2f412e068d000088","number":"0000021","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"USD","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":"tnt","notes":"","state":"outstanding","url":"http://localhost:3000/assur-219/api/v1/expenses/5074102d2f412e068d000088"},{"id":"5059beab2f412e0901000057","number":"0001","issue_date":"2012-09-19","contact":{"id":"5072a5522f412e0315000026","full_name":"Test_OCP"},"po_number":"12345","currency":"EUR","items":[{"description":"TNT","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"IVA","tax_2_rate":"21.0","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[{"label":"IVA
-        (21.00%)","amount":"\u20ac0.00"}],"total":"\u20ac0.00","payments":[{"id":"5074102d2f412e068d000082","payment_date":"2012-10-09","payment_method":"cash","amount":"\u20ac1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/expenses/5059beab2f412e0901000057/payments/5074102d2f412e068d000082"}],"tags":"tnt","notes":"","state":"paid","url":"http://localhost:3000/assur-219/api/v1/expenses/5059beab2f412e0901000057"}]'
+      string: ! '[{"id":"50acd5102f412eda520000bb","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb.json"},{"id":"50acd2562f412eda520000b2","number":"4","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","payments":[{"id":"50acd50f2f412eda520000b9","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2/payments/50acd50f2f412eda520000b9.json"}],"tags":[],"notes":"","state":"paid","url":"http://localhost:3000/recrea/api/v1/expenses/50acd2562f412eda520000b2.json"},{"id":"50acb48c2f412eda5200004b","number":"001","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"USD","items":[{"description":"aaa","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"$0.00","discount":"$0.00","gross_amount":"$0.00"}],"subtotal":"$0.00","discount":"$0.00","taxes":[],"total":"$0.00","payments":[],"tags":[],"notes":"","state":"outstanding","url":"http://localhost:3000/recrea/api/v1/expenses/50acb48c2f412eda5200004b.json"}]'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:53 GMT
+  recorded_at: Wed, 21 Nov 2012 13:20:17 GMT
 - request:
     method: post
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/expenses/50769be02f412e0e2e000054/payments.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb/payments.json
     body:
       encoding: US-ASCII
-      string: payment_method=cash&amount_cents=100000000
+      string: method=cash&number=100000000
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '502'
+      - '685'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"fdd220b3fdb0d390c9e1e94fb3c7e1a0"'
+      - ! '"cc4a45e55809eea5c7ef2a07c68fb017"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 816787f7c15cb60391afa71fee9e85c1
+      - 255aed70b70b4aa6c14b1866cc6329ab
       x-runtime:
-      - '0.045034'
+      - '0.093794'
       content-length:
-      - '225'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:53 GMT
+      - '218'
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"id":"50769be12f412e0e2e000056","payment_date":"2012-10-11","payment_method":"cash","amount":"$1,000,000.00","url":"http://localhost:3000/assur-219/api/v1/invoices/50769be02f412e0e2e000054/payments/50769be12f412e0e2e000056"}'
+      string: ! '{"id":"50acd5112f412eda520000be","date":"2012-11-21","method":"cash","amount":"\u20ac100,000,000.00","url":"http://localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb/payments/50acd5112f412eda520000be.json"}'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:53 GMT
+  recorded_at: Wed, 21 Nov 2012 13:20:17 GMT
 - request:
     method: delete
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/expenses/50769be02f412e0e2e000054/payments/50769be12f412e0e2e000056.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/expenses/50acd5102f412eda520000bb/payments/50acd5112f412eda520000be.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 204
-      message: ! 'No Content '
+      message: No Content
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '501'
+      - '684'
       x-ua-compatible:
       - IE=Edge
       cache-control:
       - no-cache
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTllZGY1Mzc2YjIxM2EyMDAxNTFlNGNlZjcyZDNhMWQ3BjsAVA%3D%3D--0c5ea607c28110618283fd14925857c30eb9ecbd;
+        path=/; HttpOnly
       x-request-id:
-      - 20bf7d5ce942c570a8c7dae5efff9b31
+      - f1a939088ac6c6c97c2d46904dc47676
       x-runtime:
-      - '0.168559'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:53 GMT
+      - '0.262104'
       connection:
       - close
-      set-cookie:
-      - _dubsr_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTYwNTE1MDIzYjRjOTZmYThhYWNkOThhMDhkODViY2QzBjsAVA%3D%3D--28325d4d0aa09693099df803f2e32a6eb8325fe6;
-        path=/; HttpOnly
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:53 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Wed, 21 Nov 2012 13:20:17 GMT
+recorded_with: VCR 2.3.0

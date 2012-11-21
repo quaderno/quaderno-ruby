@@ -5,8 +5,8 @@ class TestQuadernoContact < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'Lt4Q6zAvGzmbN7dsbcmA'
-      	config.subdomain = 'assur-219'
+      	config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+      	config.subdomain = 'recrea'
       end    
     end
 

@@ -2,74 +2,63 @@
 http_interactions:
 - request:
     method: get
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/estimates.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '521'
+      - '651'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"9e27bc0753a41a0a6aa591b37c74710b"'
+      - ! '"3f85cfaedd49a35c2d45db27c147aa8a"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - a1ef356b0506d7d145b244f7f85d13ca
+      - f498964ba670b8da04623489c7ca88f2
       x-runtime:
-      - '0.176959'
+      - '0.100277'
       content-length:
-      - '5839'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:51 GMT
+      - '1956'
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"507697dc2f412e0e2e000022","number":"0000011","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/507697dc2f412e0e2e000022"},{"id":"50769b0a2f412e0e2e000031","number":"0000009","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769b0a2f412e0e2e000031"},{"id":"5075365e2f412e0c4d000005","number":"0000012","issue_date":"2012-10-10","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"Show
-        me the moneeeeeeeyy!!!!","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/5075365e2f412e0c4d000005"},{"id":"50769b9a2f412e0e2e000040","number":"0000010","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769b9a2f412e0e2e000040"},{"id":"507693662f412e0e2e000013","number":"0000014","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/507693662f412e0e2e000013"},{"id":"50769bde2f412e0e2e00004f","number":"0000015","issue_date":"2012-10-11","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/50769bde2f412e0e2e00004f"},{"id":"50604e052f412e059600000e","number":"0000007","issue_date":"2012-09-24","contact":{"id":"505c3b402f412e0248000044","full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"jellybean","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"","payment_details":"","notes":"","state":"invoiced","url":"http://localhost:3000/assur-219/api/v1/estimates/50604e052f412e059600000e"},{"id":"5074120e2f412e068d0000e1","number":"0000008","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/assur-219/api/v1/estimates/5074120e2f412e068d0000e1"},{"id":"5074102c2f412e068d00007e","number":"0000006","issue_date":"2012-10-09","contact":{"id":"5073f9c22f412e02d0000032","full_name":"A
-        Company"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":"tnt","payment_details":"","notes":"","state":"sent","url":"http://localhost:3000/assur-219/api/v1/estimates/5074102c2f412e068d00007e"}]'
+      string: ! '[{"id":"50a3a1e42f412e1d39000022","number":"0000001","issue_date":"2012-11-14","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Teapots","quantity":"100000000.0","unit_price":"0.1","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","gross_amount":"\u20ac10,000,000.00"}],"subtotal":"\u20ac10,000,000.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac10,000,000.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50a3a1e42f412e1d39000022.json"},{"id":"50acb3a62f412eda52000043","number":"0000015","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acb3a62f412eda52000043.json"},{"id":"50acd53a2f412eda520000ca","number":"0000003","issue_date":"2012-11-21","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50acd53a2f412eda520000ca.json"}]'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
+  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
 - request:
     method: get
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/ping.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/ping.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '521'
+      - '651'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -79,65 +68,60 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 51d4fbb129da2df44e7925fcf3573d3f
+      - f2d2bc9c1c4e61a8200a218a4a2566e6
       x-runtime:
-      - '0.022359'
+      - '0.035123'
       content-length:
       - '15'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:51 GMT
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
+  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
 - request:
     method: get
-    uri: http://Lt4Q6zAvGzmbN7dsbcmA@localhost:3000/assur-219/api/v1/estimates/507697dc2f412e0e2e000022/deliver.json
+    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates/50a3a1e42f412e1d39000022/deliver.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic THQ0UTZ6QXZHem1iTjdkc2JjbUE6
+      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '520'
+      - '650'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"6975803a375e3c7631c6ba9cf1704e1c"'
+      - ! '"8ec84a28c07c683a391af72840fe2d91"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - cb2f1ea27d5af4300fc12fe41ededc37
+      - d7b4de2071f47870d286acf4078d037d
       x-runtime:
-      - '0.134250'
+      - '0.057134'
       content-length:
-      - '1019'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.2/2012-04-20)
-      date:
-      - Thu, 11 Oct 2012 10:13:51 GMT
+      - '1576'
       connection:
       - close
+      server:
+      - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"_id":"507697dc2f412e0e2e000022","account_id":"5059bc652f412e090100000f","activities":[{"_id":"50769bdf2f412e0e2e000051","author":"John
-        Wu Wu","created_at":"2012-10-11T11:13:51+01:00","date":"2012-10-11T11:13:51+01:00","kind":"sent","payment_amount":null,"payment_id":null,"payment_method":null,"updated_at":"2012-10-11T11:13:51+01:00"}],"contact_id":"5073f9c22f412e02d0000032","contact_name":"A
-        Company","created_at":"2012-10-11T10:56:44+01:00","currency":"EUR","due_date":null,"due_days":null,"exchange_cents":null,"exchange_rate":null,"gross_amount_cents":0,"issue_date":"2012-10-11","items":[{"_id":"507697dc2f412e0e2e000023","description":"Aircraft","discount_rate":"0.0","quantity":"1.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"unit_price":"0.0"}],"notes":"","number":"0000011","payment_details":"","permalink":"a1587cd2d40e060c8c667a4d40bc0628abed9019","po_number":null,"state":"sent","subject":null,"tags_array":["tnt"],"total_cents":0,"updated_at":"2012-10-11T11:13:51+01:00"}'
+      string: ! '{"_id":"50a3a1e42f412e1d39000022","account_id":"50a0ce4a2f412e5fad000001","activities":[{"_id":"50a3a1e42f412e1d39000024","author":"John
+        Wu","created_at":null,"date":"2012-11-14T13:51:32+00:00","kind":"created","updated_at":null}],"contact_id":"50a23cb22f412eae4f000003","contact_name":"100-499","created_at":"2012-11-14T13:51:32Z","currency":"EUR","due_date":null,"due_days":null,"exchange":null,"exchange_rate":null,"gross_amount":{"cents":1000000000,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2766","USD_TO_EUR":"0.78394481"},"mutex":{}}},"issue_date":"2012-11-14","items":[{"_id":"50a3a1e42f412e1d39000023","description":"Teapots","discount_rate":"0.0","quantity":"100000000.0","tax_1_name":"","tax_1_rate":"","tax_2_name":"","tax_2_rate":"","unit_price":"0.1"}],"notes":"","number":"0000001","payment_details":"","permalink":"5b7485e047132dcfef46fbe79435a3b6a7dae0e4","po_number":"","state":"draft","subject":"","tags":[],"total":{"cents":1000000000,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2766","USD_TO_EUR":"0.78394481"},"mutex":{}}},"updated_at":"2012-11-14T13:51:32Z"}'
     http_version: '1.1'
-  recorded_at: Thu, 11 Oct 2012 10:13:51 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Wed, 21 Nov 2012 13:20:59 GMT
+recorded_with: VCR 2.3.0
