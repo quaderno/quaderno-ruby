@@ -34,20 +34,20 @@ class TestQuadernoEstimate < Test::Unit::TestCase
       end
     end
 
-    should 'find a estimate' do
+    should 'find an estimate' do
       VCR.use_cassette('found estimate') do
         estimates = Quaderno::Estimate.all
-        estimate = Quaderno::Estimate.find estimates[2].id
+        estimate = Quaderno::Estimate.find estimates.first.id
         assert_kind_of Quaderno::Estimate, estimate
-        assert_equal estimates[2].id, estimate.id
+        assert_equal estimates.first.id, estimate.id
       end
     end
     
-    should 'create a estimate' do
+    should 'create an estimate' do
       VCR.use_cassette('new estimate') do
         contacts = Quaderno::Contact.all
-        estimate = Quaderno::Estimate.create(contact_id: contacts[0].id ,
-                                            contact_name: contacts[0].full_name, 
+        estimate = Quaderno::Estimate.create(contact_id: contacts.first.id ,
+                                            contact_name: contacts.first.full_name, 
                                             currency: 'EUR', 
                                             items: [
                                               { 
@@ -59,15 +59,15 @@ class TestQuadernoEstimate < Test::Unit::TestCase
                                             tags: 'tnt', payment_details: '', 
                                             notes: '')
         assert_kind_of Quaderno::Estimate, estimate
-        assert_equal contacts[0].id, estimate.contact.id
-        assert_equal 'Aircraft', estimate.items[0].description
+        assert_equal contacts.first.id, estimate.contact.id
+        assert_equal 'Aircraft', estimate.items.first.description
       end
     end
     
     should 'update an estimate' do
       VCR.use_cassette('updated estimate') do
         estimates = Quaderno::Estimate.all
-        estimate = Quaderno::Estimate.update(estimates[2].id, payment_details: 'Show me the moneeeeeeeyy!!!!')
+        estimate = Quaderno::Estimate.update(estimates.first.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
         assert_kind_of Quaderno::Estimate, estimate
         assert_equal 'Show me the moneeeeeeeyy!!!!', estimate.payment_details
       end
@@ -76,10 +76,10 @@ class TestQuadernoEstimate < Test::Unit::TestCase
     should 'delete an estimate' do
         VCR.use_cassette('deleted estimate') do
           estimates = Quaderno::Estimate.all
-          estimate_id = estimates[2].id
+          estimate_id = estimates.first.id
           Quaderno::Estimate.delete estimate_id
           estimates = Quaderno::Estimate.all
-          assert_not_equal estimates[2].id, estimate_id
+          assert_not_equal estimates.first.id, estimate_id
         end
     end
     
@@ -88,7 +88,7 @@ class TestQuadernoEstimate < Test::Unit::TestCase
         estimates = Quaderno::Estimate.all
         rate_limit_before = Quaderno::Base.rate_limit_info
         begin
-          rate_limit_after = estimates[0].deliver
+          rate_limit_after = estimates.first.deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmpty
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end

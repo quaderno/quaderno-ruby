@@ -37,9 +37,9 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'find a expense' do
       VCR.use_cassette('found expense') do
         expenses = Quaderno::Expense.all
-        expense = Quaderno::Expense.find expenses[2].id
+        expense = Quaderno::Expense.find expenses.first.id
         assert_kind_of Quaderno::Expense, expense
-        assert_equal expenses[2].id, expense.id
+        assert_equal expenses.first.id, expense.id
       end
     end
     
@@ -48,8 +48,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
         expenses = Quaderno::Expense.all
         contacts = Quaderno::Contact.all
         expense = Quaderno::Expense.create(number: "#{ expenses.length + 1 }",
-                                           contact_id: contacts[0].id ,
-                                           contact_name: contacts[0].full_name, 
+                                           contact_id: contacts.first.id ,
+                                           contact_name: contacts.first.full_name, 
                                            currency: 'EUR', 
                                            items: [
                                              { 
@@ -61,8 +61,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
                                            tags: 'tnt', payment_details: '', 
                                            notes: '')
         assert_kind_of Quaderno::Expense, expense
-        assert_equal contacts[0].id, expense.contact.id
-        assert_equal 'Aircraft', expense.items[0].description
+        assert_equal contacts.first.id, expense.contact.id
+        assert_equal 'Aircraft', expense.items.first.description
       end
     end
     
@@ -78,32 +78,32 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'delete an expense' do
         VCR.use_cassette('deleted expense') do
           expenses = Quaderno::Expense.all
-          expense_id = expenses[2].id
+          expense_id = expenses.first.id
           Quaderno::Expense.delete expense_id
           expenses = Quaderno::Expense.all
-          assert_not_equal expenses[2].id, expense_id
+          assert_not_equal expenses.first.id, expense_id
         end
     end
     
     should 'add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
-        payment = expenses[0].add_payment(method: "cash", number: "100000000")
+        payment = expenses.first.add_payment(payment_method: "cash", number: "100000000")
         assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.method
+        assert_equal "cash", payment.payment_method
         assert_equal "100,000,000.00", payment.amount[1..-1]
-        assert_equal expenses[0].payments.last.id, payment.id 
+        assert_equal expenses.first.payments.last.id, payment.id 
       end
     end
     
     should 'remove a payment' do
         VCR.use_cassette('unpay an expense') do
           expenses = Quaderno::Expense.all
-          expenses[0].add_payment(method: "cash", number: "100000000")
-          payment = expenses[0].payments.last
-          array_length = expenses[0].payments.length
-          expenses[0].remove_payment(payment.id) unless payment.nil?
-          assert_equal (array_length.zero? ? array_length : array_length-1), expenses[0].payments.length   
+          expenses.first.add_payment(payment_method: "cash", number: "100000000")
+          payment = expenses.first.payments.last
+          array_length = expenses.first.payments.length
+          expenses.first.remove_payment(payment.id) unless payment.nil?
+          assert_equal (array_length.zero? ? array_length : array_length-1), expenses.first.payments.length   
         end
     end
   end

@@ -37,9 +37,9 @@ class TestQuadernoInvoice < Test::Unit::TestCase
     should 'find a invoice' do
       VCR.use_cassette('found invoice') do
         invoices = Quaderno::Invoice.all
-        invoice = Quaderno::Invoice.find invoices[2].id
+        invoice = Quaderno::Invoice.find invoices.first.id
         assert_kind_of Quaderno::Invoice, invoice
-        assert_equal invoices[2].id, invoice.id
+        assert_equal invoices.first.id, invoice.id
       end
     end
     
@@ -67,7 +67,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
     should 'update an invoice' do
       VCR.use_cassette('updated invoice') do
         invoices = Quaderno::Invoice.all
-        invoice = Quaderno::Invoice.update(invoices[2].id, payment_details: 'Show me the moneeeeeeeyy!!!!')
+        invoice = Quaderno::Invoice.update(invoices.first.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
         assert_kind_of Quaderno::Invoice, invoice
         assert_equal 'Show me the moneeeeeeeyy!!!!', invoice.payment_details
       end
@@ -76,10 +76,10 @@ class TestQuadernoInvoice < Test::Unit::TestCase
     should 'delete an invoice' do
         VCR.use_cassette('deleted invoice') do
           invoices = Quaderno::Invoice.all
-          invoice_id = invoices[2].id
+          invoice_id = invoices.first.id
           Quaderno::Invoice.delete invoice_id
           invoices = Quaderno::Invoice.all
-          assert_not_equal invoices[2].id, invoice_id
+          assert_not_equal invoices.first.id, invoice_id
         end
     end
     
@@ -88,7 +88,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         invoices = Quaderno::Invoice.all
         rate_limit_before = Quaderno::Base.rate_limit_info
         begin
-          rate_limit_after = invoices[0].deliver
+          rate_limit_after = invoices.first.deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmpty
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end
@@ -99,21 +99,22 @@ class TestQuadernoInvoice < Test::Unit::TestCase
     should 'add a payment' do
       VCR.use_cassette('paid invoice') do
         invoices = Quaderno::Invoice.all
-        payment = invoices[0].add_payment(method: "cash", number: "100000000")
+        payment = invoices.first.add_payment(payment_method: "cash", number: "100000000")
         assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.method
+        assert_equal "cash", payment.payment_method
         assert_equal "100,000,000.00", payment.amount[1..-1]
-        assert_equal invoices[0].payments.last.id, payment.id 
+        assert_equal invoices.first.payments.last.id, payment.id 
       end
     end
     
     should 'remove a payment' do
         VCR.use_cassette('unpay an invoice') do
           invoices = Quaderno::Invoice.all
-          payment = invoices[0].payments.last
-          array_length = invoices[0].payments.length
-          invoices[0].remove_payment(payment.id) unless payment.nil?
-          assert_equal (array_length.zero? ? array_length : array_length-1), invoices[0].payments.length
+          invoices.first.add_payment(payment_method: "cash", number: "100000000")
+          payment = invoices.first.payments.last
+          array_length = invoices.first.payments.length
+          invoices.first.remove_payment(payment.id) unless payment.nil?
+          assert_equal (array_length.zero? ? array_length : array_length-1), invoices.first.payments.length
         end
     end
   end

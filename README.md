@@ -2,6 +2,8 @@
 
 Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api).
 
+As the api, it's mostly crud.
+
 ## Installation & Configuration
 
 To install add the following to your Gemfile:
@@ -68,7 +70,7 @@ will return the contact with the id passed as parameter.
  Quaderno::Contact.create(params) #=> Quaderno::Contact
 ```
 
-will create a contact using the information of the hash passed as parameter and return an instance of Quaderno::Contact with the created contact
+will create a contact using the information of the hash passed as parameter and return an instance of Quaderno::Contact with the created contact.
 
 ### Updating an existing contact
 ```ruby
@@ -240,7 +242,7 @@ will return the expense with the id passed as parameter.
  Quaderno::Expense.create(params) #=> Quaderno::Expense
 ```
 
-will create an expense using the information of the hash passed as parameter and return an instance of Quaderno::Expense with the created expense
+will create an expense using the information of the hash passed as parameter and return an instance of Quaderno::Expense with the created expense.
 
 ### Updating an existing expense
 ```ruby
