@@ -53,10 +53,10 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
  
 ### Getting all contacts
 ```ruby
- Quaderno::Contact.all #=> Array
+ Quaderno::Contact.all(1) #=> Array
 ```
 
- will return an array with all your contacts.
+ will return an array with all your contacts on the first page.
  
 ### Finding a contact
 ```ruby
@@ -94,7 +94,7 @@ will delete the contact with the id passed as parameter.
   Quaderno::Invoice.all #=> Array
 ```
 
- will return an array with all your invoices.
+ will return an array with all your invoices on the first page.
  
 ### Finding an invoice
 ```ruby
@@ -162,7 +162,7 @@ In order to  remove a payment you will need the Invoice instance you want to upd
   Quaderno::Estimate.all #=> Array
 ```
 
- will return an array with all your estimates.
+ will return an array with all your estimates on the first page.
  
 ### Finding an estimate
 ```ruby
@@ -228,7 +228,7 @@ In order to  remove a payment you will need the estimate you want to update.
  Quaderno::Expense.all #=> Array
 ```
 
- will return an array with all your expenses.
+ will return an array with all your expenses on the first page.
  
 ### Finding an expense
 ```ruby
