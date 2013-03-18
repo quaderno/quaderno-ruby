@@ -51,7 +51,7 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 
 ## Managing contacts
  
-### Getting all contacts
+### Getting contacts
 ```ruby
  Quaderno::Contact.all(1) #=> Array
 ```
@@ -89,9 +89,9 @@ will delete the contact with the id passed as parameter.
  
 ## Managing invoices
 
-### Getting all invoices
+### Getting invoices
 ```ruby
-  Quaderno::Invoice.all #=> Array
+  Quaderno::Invoice.all(1) #=> Array
 ```
 
  will return an array with all your invoices on the first page.
@@ -157,9 +157,9 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 ## Managing estimates
 
 
-### Getting all estimates
+### Getting estimates
 ```ruby
-  Quaderno::Estimate.all #=> Array
+  Quaderno::Estimate.all(1) #=> Array
 ```
 
  will return an array with all your estimates on the first page.
@@ -223,9 +223,9 @@ In order to  remove a payment you will need the estimate you want to update.
  
 ## Managing expenses
 
-### Getting all expenses
+### Getting expenses
 ```ruby
- Quaderno::Expense.all #=> Array
+ Quaderno::Expense.all(1) #=> Array
 ```
 
  will return an array with all your expenses on the first page.
