@@ -7,7 +7,7 @@ module Quaderno
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud    
     
-    base_uri 'http://app.quaderno.io/' 
+    base_uri 'https://quadernoapp.com/'
     @@auth_token = nil 
     @@subdomain = nil
     @@rate_limit_info = nil
