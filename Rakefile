@@ -14,13 +14,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "quaderno-ruby"
-  gem.homepage = "http://github.com/polimorfico/quaderno-ruby"
+  gem.name = "quaderno"
+  gem.homepage = "http://github.com/recrea/quaderno-ruby"
   gem.license = "MIT"
   gem.summary = %Q{one-line summary of your gem}
   gem.description = %Q{longer description of your gem}
   gem.email = "carlos@recrea.es"
-  gem.authors = ["Carlos Hernandez"]
+  gem.authors = ["Recrea"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
