@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Carlos Hernandez"]
+  s.authors = ["Recrea"]
   s.date = "2012-10-02"
   s.description = "longer description of your gem"
   s.email = "carlos@recrea.es"
