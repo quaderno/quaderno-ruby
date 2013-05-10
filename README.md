@@ -9,7 +9,7 @@ As the api, it's mostly crud.
 To install add the following to your Gemfile:
 
 ```ruby
-	gem 'quaderno-ruby', require 'quaderno-ruby'
+	gem 'quaderno', require 'quaderno-ruby'
 ```
 
 To configure just add this to your initializers
