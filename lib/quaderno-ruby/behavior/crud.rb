@@ -28,8 +28,12 @@ module Quaderno
           element['contact'] = contact
         end
 
-        def all(page_number)
-          party_response = get("/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }.json?page=#{page_number}", basic_auth: { username: api_model.auth_token })
+        def all(page_number = nil)
+          if page_number
+            party_response = get("/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }.json?page=#{page_number}", basic_auth: { username: api_model.auth_token })
+          else
+            party_response = get("/#{ api_model.subdomain }/api/v1/#{ api_model.api_path }.json", basic_auth: { username: api_model.auth_token })
+          end
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true })
           array = JSON::parse party_response.body
           collection = []

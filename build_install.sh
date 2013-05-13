@@ -1,2 +1,2 @@
-gem build quaderno-ruby.gemspec
-gem install quaderno-ruby-0.1.1.gem
+gem build quaderno.gemspec
+gem install quaderno-1.0.0.gem

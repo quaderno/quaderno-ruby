@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://zDQ91a8GGsXf4Wzon5jY@localhost:3000/recrea/api/v1/items.json
+    body:
+      encoding: US-ASCII
+      string: code=000000&name=Test_Skynet&unit_cost=21.0
+    headers:
+      authorization:
+      - Basic ekRROTFhOEdHc1hmNFd6b241alk6
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '959'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"1520652c666d238478cdc82a00884bca"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 30d1fd476984e97ce886f6dd24be0f56
+      x-runtime:
+      - '0.119819'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":8,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","url":"http://localhost:3000/recrea/api/v1/items/8"}'
+    http_version: '1.1'
+  recorded_at: Mon, 13 May 2013 21:19:29 GMT
+recorded_with: VCR 2.3.0
