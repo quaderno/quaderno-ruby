@@ -20,7 +20,7 @@ module Quaderno
 
           items_collection = []
           element['items'].each do |item|
-            items_collection << api_model.to_instance(Quaderno::Item, item)
+            items_collection << api_model.to_instance(Quaderno::DocumentItem, item)
           end
           element['items'] = items_collection
 
