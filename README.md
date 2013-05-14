@@ -53,10 +53,11 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
  
 ### Getting contacts
 ```ruby
- Quaderno::Contact.all(1) #=> Array
+ Quaderno::Contact.all() #=> Array
+ Quaderno::Contact.all(page: 1) #=> Array
 ```
 
- will return an array with all your contacts on the first page.
+ will return an array with all your contacts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name. 
  
 ### Finding a contact
 ```ruby
@@ -131,11 +132,12 @@ will delete the item with the id passed as parameter.
 
 ### Getting invoices
 ```ruby
-  Quaderno::Invoice.all(1) #=> Array
+  Quaderno::Invoice.all #=> Array
+  Quaderno::Invoice.all(page: 1) #=> Array
 ```
 
- will return an array with all your invoices on the first page.
- 
+ will return an array with all your invoices on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date 
+
 ### Finding an invoice
 ```ruby
   Quaderno::Invoice.find(id) #=> Quaderno::Invoice
@@ -199,7 +201,8 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 
 ### Getting estimates
 ```ruby
-  Quaderno::Estimate.all(1) #=> Array
+  Quaderno::Estimate.all() #=> Array
+  Quaderno::Estimate.all(page: 1) #=> Array
 ```
 
  will return an array with all your estimates on the first page.
@@ -265,10 +268,11 @@ In order to  remove a payment you will need the estimate you want to update.
 
 ### Getting expenses
 ```ruby
- Quaderno::Expense.all(1) #=> Array
+ Quaderno::Expense.all() #=> Array
+ Quaderno::Expense.all(page: 1) #=> Array
 ```
 
- will return an array with all your expenses on the first page.
+ will return an array with all your expenses on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date.
  
 ### Finding an expense
 ```ruby
