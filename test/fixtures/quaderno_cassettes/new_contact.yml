@@ -2,43 +2,41 @@
 http_interactions:
 - request:
     method: post
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/contacts.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/contacts.json
     body:
       encoding: US-ASCII
       string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '453'
+      - '901'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"1de4ee61d38870705317ff34f303558c"'
+      - ! '"b70b7b1eeb598f310cf02a0836eb39dd"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 14785e7dea56ca20167a5bf6416bab50
+      - 2f3d715f1e37585554284e6d3d3ebca9
       x-runtime:
-      - '0.042335'
-      content-length:
-      - '413'
+      - '0.769979'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"id":"50adf2612f412ec281000027","kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/50adf2612f412ec281000027"}'
+      string: ! '{"id":15,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/15"}'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:37 GMT
+  recorded_at: Tue, 14 May 2013 10:47:49 GMT
 recorded_with: VCR 2.3.0

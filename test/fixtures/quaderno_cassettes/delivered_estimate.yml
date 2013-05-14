@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/estimates.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -17,39 +17,43 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '460'
+      - '884'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"85a3b35f41c9e4773921349d0adad8d0"'
+      - ! '"5b7ecba12d39953a997fc60af9f8dc2c"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 64311ebc064fe8816c725fe5b5eb0e9c
+      - beefac59cfd987f2870d59068046d8ff
       x-runtime:
-      - '0.051237'
-      content-length:
-      - '1289'
+      - '0.844291'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50adf1ca2f412ec281000020","number":"0000005","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf1ca2f412ec281000020.json"},{"id":"50adf2572f412ec281000023","number":"0000006","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf2572f412ec281000023.json"}]'
+      string: ! '[{"id":15,"number":"0000007","issue_date":"2013-04-25","contact":{"id":4,"full_name":"Test_OCP
+        Doe"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"Show
+        me the moneeeeeeeyy!!!!","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/91b1ab60bc88b87973bb9c03d668f6ceebb30137","url":"http://localhost:3000/recrea/api/v1/estimates/15.json"},{"id":14,"number":"0000006","issue_date":"2013-04-25","contact":{"id":5,"full_name":"Stark
+        Industries"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"declined","permalink":"http://localhost:3000/estimate/4dae199225447e31626848012ca892b69d507262","url":"http://localhost:3000/recrea/api/v1/estimates/14.json"},{"id":13,"number":"0000005","issue_date":"2013-04-25","contact":{"id":3,"full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"accepted","permalink":"http://localhost:3000/estimate/b70a0607dee9da936bbc941f3f5d9d88dd49952f","url":"http://localhost:3000/recrea/api/v1/estimates/13.json"},{"id":12,"number":"0000004","issue_date":"2013-04-25","contact":{"id":6,"full_name":"ACME"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/d877d05d92046a69fe737fa5b43053c23975ea4d","url":"http://localhost:3000/recrea/api/v1/estimates/12.json"},{"id":11,"number":"0000003","issue_date":"2013-04-25","contact":{"id":5,"full_name":"Stark
+        Industries"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f7d4b0db4eb44df4c64717de9a8fce4358552156","url":"http://localhost:3000/recrea/api/v1/estimates/11.json"},{"id":10,"number":"0000002","issue_date":"2013-04-25","contact":{"id":2,"full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f40fd3dc4d2e6b597d2c45897eb8af605fd3b9b0","url":"http://localhost:3000/recrea/api/v1/estimates/10.json"},{"id":9,"number":"0000001","issue_date":"2013-04-25","contact":{"id":1,"full_name":"Recrea
+        Systems, SLU"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"invoiced","permalink":"http://localhost:3000/estimate/2219c272c3aa91e6ed27f8e8cfe2c905c81f6e2f","url":"http://localhost:3000/recrea/api/v1/estimates/9.json"},{"id":21,"number":"0000008","issue_date":"2013-04-24","contact":{"id":7,"full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"Fresones","quantity":"1.0","unit_price":"5.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac5.00","discount":"\u20ac0.00","gross_amount":"\u20ac5.00"}],"subtotal":"\u20ac5.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac5.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f049036ab6504548aed34d59ad58fea7bc08d266","url":"http://localhost:3000/recrea/api/v1/estimates/21.json"},{"id":22,"number":"0000009","issue_date":"2013-03-24","contact":{"id":4,"full_name":"Test_OCP
+        Doe"},"po_number":"","currency":"EUR","items":[{"description":"Tarta de fresa","quantity":"1.0","unit_price":"5.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac5.00","discount":"\u20ac0.00","gross_amount":"\u20ac5.00"}],"subtotal":"\u20ac5.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac5.00","tags":[],"payment_details":"","notes":"","state":"invoiced","permalink":"http://localhost:3000/estimate/91992f05a4762c0a253ea34b51cbbe720fad82f4","url":"http://localhost:3000/recrea/api/v1/estimates/22.json"}]'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:48:01 GMT
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/ping.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/ping.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -58,7 +62,7 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '460'
+      - '884'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -68,11 +72,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 75dde67d914a205fbb3c17afba1389e1
+      - 6f9a3329a7229ac686425c804117225c
       x-runtime:
-      - '0.026407'
-      content-length:
-      - '15'
+      - '0.059732'
       connection:
       - close
       server:
@@ -81,16 +83,16 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:48:01 GMT
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates/50adf1ca2f412ec281000020/deliver.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/estimates/15/deliver.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -99,29 +101,28 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '459'
+      - '883'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"644078b591b4789a0d6ef95ee6eab996"'
+      - ! '"17a6d164f3d008afd60b2f10a7535828"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 558cc6f1dea3d33f01f013b023040bfd
+      - 27caeab8414c4deecf37a3fac4137b50
       x-runtime:
-      - '0.038187'
-      content-length:
-      - '1511'
+      - '0.138798'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '{"_id":"50adf1ca2f412ec281000020","account_id":"50a0ce4a2f412e5fad000001","activities":[{"_id":"50adf1ca2f412ec281000022","author":"John
-        Wu","created_at":null,"date":"2012-11-22T09:35:06+00:00","kind":"created","updated_at":null}],"contact_id":"50a23cb22f412eae4f000003","contact_name":"100-499","created_at":"2012-11-22T09:35:06Z","currency":"EUR","due_date":null,"due_days":null,"exchange":null,"exchange_rate":null,"gross_amount":{"cents":0,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2845"},"mutex":{}}},"issue_date":"2012-11-22","items":[{"_id":"50adf1ca2f412ec281000021","description":"Aircraft","discount_rate":"0.0","quantity":"1.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"unit_price":"0.0"}],"notes":"","number":"0000005","payment_details":"","permalink":"91baa705e322fdf56142396fb02debf060b50c91","po_number":null,"state":"draft","subject":null,"tags":[],"total":{"cents":0,"currency":{"id":"eur","priority":2,"iso_code":"EUR","name":"Euro","symbol":"\u20ac","subunit":"Cent","subunit_to_unit":100,"symbol_first":true,"html_entity":"&#x20AC;","decimal_mark":",","thousands_separator":".","iso_numeric":"978"},"bank":{"rounding_method":null,"rates":{"EUR_TO_USD":"1.2845"},"mutex":{}}},"updated_at":"2012-11-22T09:35:06Z"}'
+      string: ! '{"estimate":{"account_id":1,"amount_paid_cents":0,"contact_id":4,"contact_name":"Test_OCP
+        Doe","created_at":"2013-04-25T10:41:51Z","currency":"EUR","delivery":null,"document_id":null,"due_date":null,"due_days":null,"end_date":null,"exchange_cents":null,"exchange_rate":"1.0","frequency":null,"gross_amount_cents":3300,"id":15,"issue_date":"2013-04-25","notes":"","number":"0000007","payment_details":"Show
+        me the moneeeeeeeyy!!!!","permalink":"91b1ab60bc88b87973bb9c03d668f6ceebb30137","po_number":"","recurring_document":null,"renewal_date":null,"start_date":null,"state":"draft","total_cents":3300,"updated_at":"2013-05-14T10:00:48Z","valid_until":null}}'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:48:02 GMT
 recorded_with: VCR 2.3.0

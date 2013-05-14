@@ -5,7 +5,7 @@ class TestQuadernoContact < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+      	config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
       	config.subdomain = 'recrea'
       end    
     end
@@ -13,7 +13,7 @@ class TestQuadernoContact < Test::Unit::TestCase
     should "get exception if pass wrong arguments" do
       assert_raise ArgumentError do 
         VCR.use_cassette('all contacts') do
-          Quaderno::Contact.all 1
+          Quaderno::Contact.all 1, 2, 3
         end
       end
       assert_raise ArgumentError do 
@@ -67,11 +67,12 @@ class TestQuadernoContact < Test::Unit::TestCase
     
     should "delete a contact" do
         VCR.use_cassette('deleted contact') do
+          new_contact = Quaderno::Contact.create(kind: 'company', first_name: 'Z, Mazinger Z', email: 'koji@kabuto.ftw')
           contacts_before = Quaderno::Contact.all
-          contact_id = contacts_before[10].id
+          contact_id = contacts_before.last.id
           Quaderno::Contact.delete contact_id
           contacts_after = Quaderno::Contact.all
-          assert_not_equal contacts_after[10].id, contact_id
+          assert_not_equal contacts_after.last.id, contact_id
         end
     end
     

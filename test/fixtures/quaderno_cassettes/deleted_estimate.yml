@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/contacts.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -17,39 +17,82 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '463'
+      - '888'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"f0ff47d94fcc652191deee279374d1c7"'
+      - ! '"d251a198e8a45af2dac75b448e48bbce"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 8b7c4947935ef100b96dc86686bef8c9
+      - 939cbd1311bf933d4b1b21ca98e726a7
       x-runtime:
-      - '0.060847'
-      content-length:
-      - '1933'
+      - '0.142070'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50adf1702f412ec28100001d","number":"0000004","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf1702f412ec28100001d.json"},{"id":"50adf1ca2f412ec281000020","number":"0000005","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf1ca2f412ec281000020.json"},{"id":"50adf2572f412ec281000023","number":"0000006","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf2572f412ec281000023.json"}]'
+      string: ! '[{"id":3,"kind":"company","full_name":"100-499","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/3"},{"id":6,"kind":"company","full_name":"ACME","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/6"},{"id":1,"kind":"company","full_name":"Recrea
+        Systems, SLU","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"info@recreahq.com","web":null,"discount":null,"tax_id":"B35635648","bank_account":null,"language":"ES","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/1"},{"id":5,"kind":"company","full_name":"Stark
+        Industries","contact_name":"Tony","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/5"},{"id":2,"kind":"company","full_name":"Test_OCP","contact_name":"","street_line_1":"C/Bernardo
+        de la Torre n\u00ba 104","street_line_2":"apartamento 201","postal_code":"35007","city":"Las
+        Palmas de Gran Canaria","region":"Las Palmas","country":"ES","phone_1":"653157684","phone_2":"653157684","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/2"},{"id":7,"kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/7"},{"id":4,"kind":"person","first_name":"Test_OCP","last_name":"Doe","full_name":"Test_OCP
+        Doe","street_line_1":"Bernardo de la Torre 104","street_line_2":"","postal_code":"35007","city":"Las
+        Palmas de Gran Canaria","region":"Las Palmas","country":"ES","phone_1":"653157684","phone_2":"653157684","fax":"","email":"dont@stop.believing","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/4"},{"id":12,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/12"},{"id":15,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/15"},{"id":8,"kind":"company","full_name":"Toby","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/8"}]'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:47:59 GMT
+- request:
+    method: post
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/estimates.json
+    body:
+      encoding: US-ASCII
+      string: contact_id=3&number=test%20number%204400&contact_name=100-499&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '887'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"6a759b6a0c3908c7aee06c5a425f4e8a"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - d19ae50f3bda2867ce74f4a6788c99fe
+      x-runtime:
+      - '0.393017'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":170,"number":"test number 4400","issue_date":"2013-05-14","contact":{"id":3,"full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/c05b0fc8ec387b24da9039c8125c6d39496bbbb6","url":"http://localhost:3000/recrea/api/v1/estimates/170.json"}'
+    http_version: '1.1'
+  recorded_at: Tue, 14 May 2013 10:48:00 GMT
 - request:
     method: delete
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates/50adf1702f412ec28100001d.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/estimates/170.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 204
@@ -58,18 +101,18 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '462'
+      - '886'
       x-ua-compatible:
       - IE=Edge
       cache-control:
       - no-cache
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTE3MzBkODE3NjQ0ZTg2MGVjODdmNTQ5ZjBlYWZkNjAzBjsAVA%3D%3D--d8c53fdd83f371cacd64784738885d49dd990cfe;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTcxZGEzMjA5N2I1YjRkN2RjZDE0NmQ4ZTFhMDQ2MzBiBjsAVA%3D%3D--0c17cfac393063b0ea8491fa091953e45901dab7;
         path=/; HttpOnly
       x-request-id:
-      - b9b13bed7ad8f78d4bc9d8c1729ea853
+      - 6b12aec48e69ddf32243a0a8e50ac2e5
       x-runtime:
-      - '0.032883'
+      - '0.111850'
       connection:
       - close
       server:
@@ -78,16 +121,16 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:48:00 GMT
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/estimates.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/estimates.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -96,28 +139,32 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '461'
+      - '885'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
       - IE=Edge
       etag:
-      - ! '"85a3b35f41c9e4773921349d0adad8d0"'
+      - ! '"5b7ecba12d39953a997fc60af9f8dc2c"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 4170ff926c198105aff8e2d95e1cda7f
+      - 9cae84e779a54da090b007513d649b96
       x-runtime:
-      - '0.050319'
-      content-length:
-      - '1289'
+      - '0.813743'
       connection:
       - close
       server:
       - thin 1.5.0 codename Knife
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"50adf1ca2f412ec281000020","number":"0000005","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf1ca2f412ec281000020.json"},{"id":"50adf2572f412ec281000023","number":"0000006","issue_date":"2012-11-22","contact":{"id":"50a23cb22f412eae4f000003","full_name":"100-499"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"subtotal":"\u20ac0.00","discount":"\u20ac0.00","gross_amount":"\u20ac0.00"}],"subtotal":"\u20ac0.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac0.00","tags":[],"payment_details":"","notes":"","state":"draft","url":"http://localhost:3000/recrea/api/v1/estimates/50adf2572f412ec281000023.json"}]'
+      string: ! '[{"id":15,"number":"0000007","issue_date":"2013-04-25","contact":{"id":4,"full_name":"Test_OCP
+        Doe"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"Show
+        me the moneeeeeeeyy!!!!","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/91b1ab60bc88b87973bb9c03d668f6ceebb30137","url":"http://localhost:3000/recrea/api/v1/estimates/15.json"},{"id":14,"number":"0000006","issue_date":"2013-04-25","contact":{"id":5,"full_name":"Stark
+        Industries"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"declined","permalink":"http://localhost:3000/estimate/4dae199225447e31626848012ca892b69d507262","url":"http://localhost:3000/recrea/api/v1/estimates/14.json"},{"id":13,"number":"0000005","issue_date":"2013-04-25","contact":{"id":3,"full_name":"100-499"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"accepted","permalink":"http://localhost:3000/estimate/b70a0607dee9da936bbc941f3f5d9d88dd49952f","url":"http://localhost:3000/recrea/api/v1/estimates/13.json"},{"id":12,"number":"0000004","issue_date":"2013-04-25","contact":{"id":6,"full_name":"ACME"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/d877d05d92046a69fe737fa5b43053c23975ea4d","url":"http://localhost:3000/recrea/api/v1/estimates/12.json"},{"id":11,"number":"0000003","issue_date":"2013-04-25","contact":{"id":5,"full_name":"Stark
+        Industries"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f7d4b0db4eb44df4c64717de9a8fce4358552156","url":"http://localhost:3000/recrea/api/v1/estimates/11.json"},{"id":10,"number":"0000002","issue_date":"2013-04-25","contact":{"id":2,"full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f40fd3dc4d2e6b597d2c45897eb8af605fd3b9b0","url":"http://localhost:3000/recrea/api/v1/estimates/10.json"},{"id":9,"number":"0000001","issue_date":"2013-04-25","contact":{"id":1,"full_name":"Recrea
+        Systems, SLU"},"po_number":"","currency":"EUR","items":[{"description":"Algo","quantity":"1.0","unit_price":"33.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac33.00","discount":"\u20ac0.00","gross_amount":"\u20ac33.00"}],"subtotal":"\u20ac33.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac33.00","tags":[],"payment_details":"","notes":"","state":"invoiced","permalink":"http://localhost:3000/estimate/2219c272c3aa91e6ed27f8e8cfe2c905c81f6e2f","url":"http://localhost:3000/recrea/api/v1/estimates/9.json"},{"id":21,"number":"0000008","issue_date":"2013-04-24","contact":{"id":7,"full_name":"Test_OCP"},"po_number":"","currency":"EUR","items":[{"description":"Fresones","quantity":"1.0","unit_price":"5.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac5.00","discount":"\u20ac0.00","gross_amount":"\u20ac5.00"}],"subtotal":"\u20ac5.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac5.00","tags":[],"payment_details":"","notes":"","state":"draft","permalink":"http://localhost:3000/estimate/f049036ab6504548aed34d59ad58fea7bc08d266","url":"http://localhost:3000/recrea/api/v1/estimates/21.json"},{"id":22,"number":"0000009","issue_date":"2013-03-24","contact":{"id":4,"full_name":"Test_OCP
+        Doe"},"po_number":"","currency":"EUR","items":[{"description":"Tarta de fresa","quantity":"1.0","unit_price":"5.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"subtotal":"\u20ac5.00","discount":"\u20ac0.00","gross_amount":"\u20ac5.00"}],"subtotal":"\u20ac5.00","discount":"\u20ac0.00","taxes":[],"total":"\u20ac5.00","tags":[],"payment_details":"","notes":"","state":"invoiced","permalink":"http://localhost:3000/estimate/91992f05a4762c0a253ea34b51cbbe720fad82f4","url":"http://localhost:3000/recrea/api/v1/estimates/22.json"}]'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:27 GMT
+  recorded_at: Tue, 14 May 2013 10:48:00 GMT
 recorded_with: VCR 2.3.0

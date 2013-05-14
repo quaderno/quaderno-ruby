@@ -5,7 +5,7 @@ class TestQuadernoItem < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'zDQ91a8GGsXf4Wzon5jY'
+      	config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
       	config.subdomain = 'recrea'
       end    
     end
@@ -13,7 +13,7 @@ class TestQuadernoItem < Test::Unit::TestCase
     should "get exception if pass wrong arguments" do
       assert_raise ArgumentError do 
         VCR.use_cassette('all items') do
-          Quaderno::Item.all 1
+          Quaderno::Item.all 1, 2, 3
         end
       end
       assert_raise ArgumentError do 
@@ -62,13 +62,13 @@ class TestQuadernoItem < Test::Unit::TestCase
     end
     
     should "delete a item" do
-        VCR.use_cassette('deleted item') do
-          items_before = Quaderno::Item.all
-          item_id = items_before[10].id
-          Quaderno::Item.delete item_id
-          items_after = Quaderno::Item.all
-          assert_not_equal items_after[10].id, item_id
-        end
+      VCR.use_cassette('deleted item') do
+        items_before = Quaderno::Item.all
+        item_id = items_before.last.id
+        Quaderno::Item.delete item_id
+        items_after = Quaderno::Item.all
+        assert_not_equal items_after.last.id, item_id
+      end
     end
     
     should "know the rate limit" do

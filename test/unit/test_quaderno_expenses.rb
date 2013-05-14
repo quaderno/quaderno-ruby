@@ -5,7 +5,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+        config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
         config.subdomain = 'recrea'
       end
     end
@@ -13,7 +13,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'get exception if pass wrong arguments' do
       assert_raise ArgumentError do 
         VCR.use_cassette('all expenses') do
-          Quaderno::Expense.all 1
+          Quaderno::Expense.all 1, 2, 3
         end
       end
       assert_raise ArgumentError do 
@@ -47,11 +47,10 @@ class TestQuadernoExpense < Test::Unit::TestCase
       VCR.use_cassette('new expense') do
         expenses = Quaderno::Expense.all
         contacts = Quaderno::Contact.all
-        expense = Quaderno::Expense.create(number: "#{ expenses.length + 1 }",
-                                           contact_id: contacts.first.id ,
+        expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
                                            contact_name: contacts.first.full_name, 
                                            currency: 'EUR', 
-                                           items: [
+                                           items_attributes: [
                                              { 
                                                description: 'Aircraft', 
                                                quantity: '1.0', 
@@ -63,35 +62,60 @@ class TestQuadernoExpense < Test::Unit::TestCase
         assert_kind_of Quaderno::Expense, expense
         assert_equal contacts.first.id, expense.contact.id
         assert_equal 'Aircraft', expense.items.first.description
+        Quaderno::Expense.delete(expense.id)
       end
     end
     
     should 'update an expense' do
       VCR.use_cassette('updated expense') do
-        expenses = Quaderno::Expense.all
-        expense = Quaderno::Expense.update(expenses[2].id, currency: 'USD')
+      contacts = Quaderno::Contact.all
+      expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
+                                 contact_name: contacts.first.full_name, 
+                                 currency: 'EUR', 
+                                 items_attributes: [
+                                   { 
+                                     description: 'Aircraft', 
+                                     quantity: '1.0', 
+                                     unit_price: '0.0' 
+                                   }
+                                 ],
+                                 tags: 'tnt', payment_details: '', 
+                                 notes: '')
+        expense = Quaderno::Expense.update(expense.id, currency: 'USD')
         assert_kind_of Quaderno::Expense, expense
         assert_equal 'USD', expense.currency
+        Quaderno::Expense.delete(expense.id)
       end
     end
     
     should 'delete an expense' do
         VCR.use_cassette('deleted expense') do
+          contacts = Quaderno::Contact.all
+          expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
+                                             contact_name: contacts.first.full_name, 
+                                             currency: 'EUR', 
+                                             items_attributes: [
+                                               { 
+                                                 description: 'Aircraft', 
+                                                 quantity: '1.0', 
+                                                 unit_price: '0.0' 
+                                               }
+                                             ],
+                                             tags: 'tnt', payment_details: '', 
+                                             notes: '')
+          Quaderno::Expense.delete expense.id
           expenses = Quaderno::Expense.all
-          expense_id = expenses.first.id
-          Quaderno::Expense.delete expense_id
-          expenses = Quaderno::Expense.all
-          assert_not_equal expenses.first.id, expense_id
+          assert_not_equal expenses.first.id, expense.id
         end
     end
     
     should 'add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
-        payment = expenses.first.add_payment(payment_method: "cash", number: "100000000")
+        payment = expenses.first.add_payment(payment_method: "cash", amount: "10000")
         assert_kind_of Quaderno::Payment, payment
         assert_equal "cash", payment.payment_method
-        assert_equal "100,000,000.00", payment.amount[1..-1]
+        assert_equal "10,000.00", payment.amount[1..-1]
         assert_equal expenses.first.payments.last.id, payment.id 
       end
     end
@@ -99,7 +123,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
     should 'remove a payment' do
         VCR.use_cassette('unpay an expense') do
           expenses = Quaderno::Expense.all
-          expenses.first.add_payment(payment_method: "cash", number: "100000000")
+          expenses.first.add_payment(payment_method: "cash", amount: "10000")
           payment = expenses.first.payments.last
           array_length = expenses.first.payments.length
           expenses.first.remove_payment(payment.id) unless payment.nil?

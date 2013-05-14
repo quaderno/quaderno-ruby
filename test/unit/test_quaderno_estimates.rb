@@ -5,7 +5,7 @@ class TestQuadernoEstimate < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = 'xiZvifX5hwsxAiymYPk2'
+        config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
         config.subdomain = 'recrea'
       end
     end
@@ -13,7 +13,7 @@ class TestQuadernoEstimate < Test::Unit::TestCase
     should 'get exception if pass wrong arguments' do
       assert_raise ArgumentError do 
         VCR.use_cassette('all estimates') do
-          Quaderno::Estimate.all 1
+          Quaderno::Estimate.all 1, 2, 3
         end
       end
       assert_raise ArgumentError do 
@@ -47,9 +47,10 @@ class TestQuadernoEstimate < Test::Unit::TestCase
       VCR.use_cassette('new estimate') do
         contacts = Quaderno::Contact.all
         estimate = Quaderno::Estimate.create(contact_id: contacts.first.id ,
+                                            number: 'test number 42',
                                             contact_name: contacts.first.full_name, 
                                             currency: 'EUR', 
-                                            items: [
+                                            items_attributes: [
                                               { 
                                                 description: 'Aircraft', 
                                                 quantity: '1.0', 
@@ -61,25 +62,52 @@ class TestQuadernoEstimate < Test::Unit::TestCase
         assert_kind_of Quaderno::Estimate, estimate
         assert_equal contacts.first.id, estimate.contact.id
         assert_equal 'Aircraft', estimate.items.first.description
+        Quaderno::Estimate.delete(estimate.id)
       end
     end
     
     should 'update an estimate' do
       VCR.use_cassette('updated estimate') do
-        estimates = Quaderno::Estimate.all
-        estimate = Quaderno::Estimate.update(estimates.first.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
+        contacts = Quaderno::Contact.all
+        estimate = Quaderno::Estimate.create(contact_id: contacts.first.id,
+                                            number: 'test number 4400',
+                                            contact_name: contacts.first.full_name, 
+                                            currency: 'EUR', 
+                                            items_attributes: [
+                                              { 
+                                                description: 'Aircraft', 
+                                                quantity: '1.0', 
+                                                unit_price: '0.0' 
+                                              }
+                                            ],
+                                            tags: 'tnt', payment_details: '', 
+                                            notes: '')        
+        estimate = Quaderno::Estimate.update(estimate.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
         assert_kind_of Quaderno::Estimate, estimate
         assert_equal 'Show me the moneeeeeeeyy!!!!', estimate.payment_details
+        Quaderno::Estimate.delete(estimate.id)
       end
     end
     
     should 'delete an estimate' do
         VCR.use_cassette('deleted estimate') do
+          contacts = Quaderno::Contact.all
+          estimate = Quaderno::Estimate.create(contact_id: contacts.first.id,
+                                              number: 'test number 4400',
+                                              contact_name: contacts.first.full_name, 
+                                              currency: 'EUR', 
+                                              items_attributes: [
+                                                { 
+                                                  description: 'Aircraft', 
+                                                  quantity: '1.0', 
+                                                  unit_price: '0.0' 
+                                                }
+                                              ],
+                                              tags: 'tnt', payment_details: '', 
+                                              notes: '')
+          Quaderno::Estimate.delete estimate.id
           estimates = Quaderno::Estimate.all
-          estimate_id = estimates.first.id
-          Quaderno::Estimate.delete estimate_id
-          estimates = Quaderno::Estimate.all
-          assert_not_equal estimates.first.id, estimate_id
+          assert_not_equal estimates.first.id, estimate.id
         end
     end
     

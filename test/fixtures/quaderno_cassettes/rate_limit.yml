@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://xiZvifX5hwsxAiymYPk2@localhost:3000/recrea/api/v1/ping.json
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/ping.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic eGladmlmWDVod3N4QWl5bVlQazI6
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       x-ratelimit-limit:
       - '1000'
       x-ratelimit-remaining:
-      - '447'
+      - '894'
       content-type:
       - application/json; charset=utf-8
       x-ua-compatible:
@@ -27,11 +27,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - bd5affbcba1c2196be8985c80f6251ca
+      - 80c37f15c73f5ae4035211ea15ae8aef
       x-runtime:
-      - '0.030080'
-      content-length:
-      - '15'
+      - '0.072009'
       connection:
       - close
       server:
@@ -40,5 +38,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 22 Nov 2012 09:37:38 GMT
+  recorded_at: Tue, 14 May 2013 10:47:51 GMT
 recorded_with: VCR 2.3.0
