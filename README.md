@@ -86,7 +86,47 @@ will update the specified contact with the data of the hash passed as second par
 
 will delete the contact with the id passed as parameter.
 
- 
+## Managing items
+
+### Getting items
+```ruby
+  Quaderno::Item(1) #=> Array
+```
+
+will return an array with all your items on the first page.
+
+### Finding an item
+```ruby
+  Quaderno::Item.find(id) #=> Quaderno::Item
+```
+
+will return the items with the id passed as parameter.
+
+
+will return the contact with the id passed as parameter.
+
+### Creating a new item
+```ruby
+ Quaderno::Item.create(params) #=> Quaderno::Item
+```
+
+will create an item using the information of the hash passed as parameter and return an instance of Quaderno::Item with the created contact.
+
+### Updating an existing item
+```ruby
+ Quaderno::Item.update(id, params) #=> Quaderno::Item
+```
+
+will update the specified item with the data of the hash passed as second parameter.
+
+### Deleting an item
+```ruby
+  Quaderno::Item.delete(id) #=> Boolean
+```
+
+will delete the item with the id passed as parameter.
+
+
 ## Managing invoices
 
 ### Getting invoices
