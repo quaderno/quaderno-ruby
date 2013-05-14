@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "quaderno"
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Recrea"]
@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/item.rb",
     "lib/quaderno-ruby/payment.rb",
     "quaderno-1.0.0.gem",
+    "quaderno-1.1.0.gem",
     "quaderno.gemspec",
     "test/fixtures/quaderno_cassettes/all_contacts.yml",
     "test/fixtures/quaderno_cassettes/all_estimates.yml",
