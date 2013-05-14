@@ -90,10 +90,10 @@ will delete the contact with the id passed as parameter.
 
 ### Getting items
 ```ruby
-  Quaderno::Item(1) #=> Array
+  Quaderno::Item #=> Array
 ```
 
-will return an array with all your items on the first page.
+will return an array with all your items.
 
 ### Finding an item
 ```ruby
