@@ -177,7 +177,7 @@ will delete the invoice with the id passed as parameter.
   invoice.add_payment(params) #=> Quaderno::Payment
 ```
 
-Where params is a hash with the payment information. The method will return the an instance of Quaderno::Payment wich contains the information of the payment.
+Where params is a hash with the payment information. The method will return an instance of Quaderno::Payment wich contains the information of the payment.
 
 In order to  remove a payment you will need the Invoice instance you want to update.
  
@@ -246,7 +246,7 @@ will delete the estimate with the id passed as parameter.
   estimate.add_payment(params) #=> Quaderno::Payment
 ```
 
-Where params is a hash with the payment information. The method will return the an instance of Quaderno::Payment wich contains the information of the payment.
+Where params is a hash with the payment information. The method will return an instance of Quaderno::Payment wich contains the information of the payment.
 
 In order to  remove a payment you will need the estimate you want to update.
  
