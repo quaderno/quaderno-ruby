@@ -1,8 +1,7 @@
 # Quaderno-ruby
 
-Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api).
-
-As the api, it's mostly crud.
+Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api). 
+As the API, it's mostly CRUD.
 
 ## Installation & Configuration
 
@@ -102,9 +101,6 @@ will return an array with all your items.
 ```
 
 will return the items with the id passed as parameter.
-
-
-will return the contact with the id passed as parameter.
 
 ### Creating a new item
 ```ruby
