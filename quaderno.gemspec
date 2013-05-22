@@ -38,6 +38,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/invoice.rb",
     "lib/quaderno-ruby/item.rb",
     "lib/quaderno-ruby/payment.rb",
+    "lib/quaderno-ruby/webhook.rb",
     "quaderno-1.0.0.gem",
     "quaderno-1.1.0.gem",
     "quaderno.gemspec",

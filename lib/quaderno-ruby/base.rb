@@ -38,6 +38,15 @@ module Quaderno
       @@subdomain = subdomain
     end
     
+    def self.authorization(auth_token)
+      begin
+        party_response = get("/subdomain/api/v1/authorization.json", basic_auth: { username: auth_token })
+        return  JSON::parse party_response.body
+      rescue Errno::ECONNREFUSED
+        return false
+      end
+    end
+
     #Check the connection
     def self.ping
       begin

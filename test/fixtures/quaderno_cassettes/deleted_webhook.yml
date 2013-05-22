@@ -1,0 +1,241 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fgoogle.com&events[]=created&events[]=updated
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '929'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"41479f6abb2dc8b535664b4b55fa45e9"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWFiZWY4YjdiOGE4MTEwOTJmNzYwNjM3MjI5ODEwZDlkBjsAVA%3D%3D--96c9ca246f226d02be6c26d8a868d525b15704b7;
+        path=/; HttpOnly
+      x-request-id:
+      - 751dfac73b7b688e55853a1e224622e6
+      x-runtime:
+      - '0.746976'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":29,"url":"http://google.com","auth_key":"Q50K-zCp8fLGNzafpqwRAg","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2013-05-22T13:03:16Z","updated_at":"2013-05-22T13:03:16Z"}'
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:16 GMT
+- request:
+    method: post
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fquadernoapp.com&events[]=created&events[]=updated
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '928'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"91751cad6f240bf2cd55374b21ec9c9c"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA4MTVlZjYwN2E4Y2M5ZDZmODNhMTFjNmE3ZDNlOTEwBjsAVA%3D%3D--f6560d1e8177a9171e9c270baa897cad6f1b9859;
+        path=/; HttpOnly
+      x-request-id:
+      - 44eebcec669d7dd2e4720193c175ac51
+      x-runtime:
+      - '2.037525'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":30,"url":"http://quadernoapp.com","auth_key":"mVSEZT81ZNwVwyHtlwAq1g","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2013-05-22T13:03:18Z","updated_at":"2013-05-22T13:03:18Z"}'
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:18 GMT
+- request:
+    method: get
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '927'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"ca612ba1284ac24b8347dd0dffae6109"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - d0d5569d82c9be995978dcd7f8089e8d
+      x-runtime:
+      - '0.193783'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":29,"url":"http://google.com","auth_key":"Q50K-zCp8fLGNzafpqwRAg","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2013-05-22T13:03:16Z","updated_at":"2013-05-22T13:03:16Z"},{"id":30,"url":"http://quadernoapp.com","auth_key":"mVSEZT81ZNwVwyHtlwAq1g","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2013-05-22T13:03:18Z","updated_at":"2013-05-22T13:03:18Z"}]'
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:19 GMT
+- request:
+    method: delete
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks/30.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '926'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWVkZGUzZWE5YjYzNzY3NThiNzQxNmMxYTY5NTEyZTU5BjsAVA%3D%3D--19e696f976bb7946320a51be9160ea12324de4ef;
+        path=/; HttpOnly
+      x-request-id:
+      - ee561356cfb653c5b2817ee7ca988491
+      x-runtime:
+      - '0.058304'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:19 GMT
+- request:
+    method: get
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '925'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"4cbb31a140ceebe49b4a4498c4b0498d"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - a5fa14f7262fe2fdcaf1bd57d4e5eba9
+      x-runtime:
+      - '0.073359'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":29,"url":"http://google.com","auth_key":"Q50K-zCp8fLGNzafpqwRAg","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2013-05-22T13:03:16Z","updated_at":"2013-05-22T13:03:16Z"}]'
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:19 GMT
+- request:
+    method: delete
+    uri: http://n8sDLUZ5z1d6dYXKixnx@localhost:3000/recrea/api/v1/webhooks/29.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic bjhzRExVWjV6MWQ2ZFlYS2l4bng6
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '924'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTUxMGJmNDQ1NmM0ZTg4MWZlMTAzZDc2MGE2MjlkNWFjBjsAVA%3D%3D--019868e990c5a4465f8b240425e31832f3a7dab1;
+        path=/; HttpOnly
+      x-request-id:
+      - da8630d8a68ccc310dfa5027028a7e3f
+      x-runtime:
+      - '0.105922'
+      connection:
+      - close
+      server:
+      - thin 1.5.0 codename Knife
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 22 May 2013 13:03:19 GMT
+recorded_with: VCR 2.3.0
