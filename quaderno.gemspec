@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "quaderno"
-  s.version = "1.1.2"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Recrea"]
-  s.date = "2013-05-15"
+  s.date = "2013-05-22"
   s.description = "longer description of your gem"
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "build_install.sh",
+    "changelog.md",
     "lib/quaderno-ruby.rb",
     "lib/quaderno-ruby/base.rb",
     "lib/quaderno-ruby/behavior/crud.rb",
@@ -41,17 +42,20 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/webhook.rb",
     "quaderno-1.0.0.gem",
     "quaderno-1.1.0.gem",
+    "quaderno-1.1.2.gem",
     "quaderno.gemspec",
     "test/fixtures/quaderno_cassettes/all_contacts.yml",
     "test/fixtures/quaderno_cassettes/all_estimates.yml",
     "test/fixtures/quaderno_cassettes/all_expenses.yml",
     "test/fixtures/quaderno_cassettes/all_invoices.yml",
     "test/fixtures/quaderno_cassettes/all_items.yml",
+    "test/fixtures/quaderno_cassettes/all_webhooks.yml",
     "test/fixtures/quaderno_cassettes/deleted_contact.yml",
     "test/fixtures/quaderno_cassettes/deleted_estimate.yml",
     "test/fixtures/quaderno_cassettes/deleted_expense.yml",
     "test/fixtures/quaderno_cassettes/deleted_invoice.yml",
     "test/fixtures/quaderno_cassettes/deleted_item.yml",
+    "test/fixtures/quaderno_cassettes/deleted_webhook.yml",
     "test/fixtures/quaderno_cassettes/delivered_estimate.yml",
     "test/fixtures/quaderno_cassettes/delivered_invoice.yml",
     "test/fixtures/quaderno_cassettes/found_contact.yml",
@@ -59,11 +63,13 @@ Gem::Specification.new do |s|
     "test/fixtures/quaderno_cassettes/found_expense.yml",
     "test/fixtures/quaderno_cassettes/found_invoice.yml",
     "test/fixtures/quaderno_cassettes/found_item.yml",
+    "test/fixtures/quaderno_cassettes/found_webhook.yml",
     "test/fixtures/quaderno_cassettes/new_contact.yml",
     "test/fixtures/quaderno_cassettes/new_estimate.yml",
     "test/fixtures/quaderno_cassettes/new_expense.yml",
     "test/fixtures/quaderno_cassettes/new_invoice.yml",
     "test/fixtures/quaderno_cassettes/new_item.yml",
+    "test/fixtures/quaderno_cassettes/new_webhook.yml",
     "test/fixtures/quaderno_cassettes/paid_expense.yml",
     "test/fixtures/quaderno_cassettes/paid_invoice.yml",
     "test/fixtures/quaderno_cassettes/rate_limit.yml",
@@ -74,13 +80,15 @@ Gem::Specification.new do |s|
     "test/fixtures/quaderno_cassettes/updated_expense.yml",
     "test/fixtures/quaderno_cassettes/updated_invoice.yml",
     "test/fixtures/quaderno_cassettes/updated_item.yml",
+    "test/fixtures/quaderno_cassettes/updated_webhook.yml",
     "test/helper.rb",
     "test/test_quaderno-ruby.rb",
     "test/unit/test_quaderno_contacts.rb",
     "test/unit/test_quaderno_estimates.rb",
     "test/unit/test_quaderno_expenses.rb",
     "test/unit/test_quaderno_invoices.rb",
-    "test/unit/test_quaderno_items.rb"
+    "test/unit/test_quaderno_items.rb",
+    "test/unit/test_quaderno_webhooks.rb"
   ]
   s.homepage = "http://github.com/recrea/quaderno-ruby"
   s.licenses = ["MIT"]
