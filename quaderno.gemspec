@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "quaderno"
-  s.version = "1.2.0"
+  s.version = "1.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Recrea"]
-  s.date = "2013-05-22"
+  s.date = "2013-06-20"
   s.description = "longer description of your gem"
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
@@ -43,6 +43,7 @@ Gem::Specification.new do |s|
     "quaderno-1.0.0.gem",
     "quaderno-1.1.0.gem",
     "quaderno-1.1.2.gem",
+    "quaderno-1.2.0.gem",
     "quaderno.gemspec",
     "test/fixtures/quaderno_cassettes/all_contacts.yml",
     "test/fixtures/quaderno_cassettes/all_estimates.yml",
