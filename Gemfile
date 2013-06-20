@@ -17,7 +17,6 @@ group :development do
 end
 
 group :test do
-  gem 'debugger', :require => 'ruby-debug'
   gem 'fakeweb'
   gem 'vcr', :require => 'vcr'
 end
