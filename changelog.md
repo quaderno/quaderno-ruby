@@ -1,5 +1,9 @@
 #Changelog
 
+##1.2.1
+
+* Deleted debugger dependency
+
 ##1.2.0
 
 * Added Quaderno webhooks as a resource
