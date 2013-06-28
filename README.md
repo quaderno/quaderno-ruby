@@ -10,7 +10,7 @@ Current version is 1.2.0. See the changelog [here](https://github.com/recrea/qua
 To install add the following to your Gemfile:
 
 ```ruby
-	gem 'quaderno', require 'quaderno-ruby'
+	gem 'quaderno', require: 'quaderno-ruby'
 ```
 
 To configure just add this to your initializers
