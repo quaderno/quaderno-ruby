@@ -58,7 +58,11 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
  Quaderno::Contact.all(page: 1) #=> Array
 ```
 
- will return an array with all your contacts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name. 
+ will return an array with all your contacts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name. For example:
+ 
+```ruby
+ Quaderno::Contact.all(q: 'John Doe') #=> Array
+```
  
 ### Finding a contact
 ```ruby
