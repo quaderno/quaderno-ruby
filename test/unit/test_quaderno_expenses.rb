@@ -5,8 +5,9 @@ class TestQuadernoExpense < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
+        config.auth_token = '1spyno1mbqbp3SFpg9uT'
         config.subdomain = 'recrea'
+        config.debug = true
       end
     end
 
@@ -115,7 +116,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
         payment = expenses.first.add_payment(payment_method: "cash", amount: "10000")
         assert_kind_of Quaderno::Payment, payment
         assert_equal "cash", payment.payment_method
-        assert_equal "10,000.00", payment.amount[1..-1]
+        assert_equal "10,000.00", payment.amount[0..payment.amount.length - 3]
         assert_equal expenses.first.payments.last.id, payment.id 
       end
     end

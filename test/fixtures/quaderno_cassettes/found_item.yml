@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/items.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1858'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"bcea0893565ac5c95d5dae6164a7cad8"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - ef7f3a426e38d7b45a67ffe1586cee92
+      x-runtime:
+      - '0.147829'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:21 GMT
+      content-length:
+      - '451'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":1,"code":"00001","name":"Fritata","unit_cost":"20.0","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/1"},{"id":3,"code":"NaN00","name":"Nan
+        Kima","unit_cost":"2.35","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/3"},{"id":2,"code":"000017","name":"Pizzata","unit_cost":"25.99","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/2"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:21 GMT
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/items/2.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1857'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"278ccbca7a4144f6bf8246cd2a10a720"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - e207239527980223d1c541e92a5a1a79
+      x-runtime:
+      - '0.364120'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:22 GMT
+      content-length:
+      - '150'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2,"code":"000017","name":"Pizzata","unit_cost":"25.99","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/2"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:22 GMT
+recorded_with: VCR 2.3.0

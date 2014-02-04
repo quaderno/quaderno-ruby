@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/items.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1855'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"bcea0893565ac5c95d5dae6164a7cad8"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 7d3de84684ae3582772412270cd60ad1
+      x-runtime:
+      - '0.381205'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:22 GMT
+      content-length:
+      - '451'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":1,"code":"00001","name":"Fritata","unit_cost":"20.0","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/1"},{"id":3,"code":"NaN00","name":"Nan
+        Kima","unit_cost":"2.35","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/3"},{"id":2,"code":"000017","name":"Pizzata","unit_cost":"25.99","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/2"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:22 GMT
+- request:
+    method: put
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/items/2.json
+    body:
+      encoding: US-ASCII
+      string: name=Test_OCP
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1854'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"fad25d508433bb4f2bc087d6a2a5545e"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - faec2eb816556a17ef72fcd379d0a349
+      x-runtime:
+      - '0.139602'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:22 GMT
+      content-length:
+      - '151'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWNhMDczNWQ0ZWYwMWIwYjkwZDU2MjE2YmIxZmRmZDE1BjsAVA%3D%3D--442e44d3bc449fac8b51a8a6373e689bcf9554cf;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2,"code":"000017","name":"Test_OCP","unit_cost":"25.99","tax_1_name":"IVA","tax_1_rate":21.0,"url":"http://localhost:3000/recrea/api/v1/items/2"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:22 GMT
+recorded_with: VCR 2.3.0

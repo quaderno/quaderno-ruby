@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/items.json
+    body:
+      encoding: US-ASCII
+      string: code=000000&name=Test_Skynet&unit_cost=21.0
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1862'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"20022f45ad6a47be1296a2bb0ae7d965"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 70573cf566812c993f356878b8041fc3
+      x-runtime:
+      - '0.473481'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:20 GMT
+      content-length:
+      - '116'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWFjOTNlZDA2ZGZjOGNkNGY0NjcwNGIwYzAwMGUxY2ZiBjsAVA%3D%3D--f9f1d28ce2529772f9c808c989cc47ae626206e2;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":4,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","url":"http://localhost:3000/recrea/api/v1/items/4"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:20 GMT
+recorded_with: VCR 2.3.0

@@ -1,0 +1,204 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/contacts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1976'
+      x-pages-currentpage:
+      - '1'
+      x-pages-totalpages:
+      - '1'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"71b79c1b45cfb58a71172c277dd004b5"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 40c504d3ee1254d5321cd62b9a8ecc98
+      x-runtime:
+      - '0.267820'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:39:53 GMT
+      content-length:
+      - '1879'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2,"kind":"company","full_name":"Another Test Contact","contact_name":"","street_line_1":"Kamiya
+        Kashin Ryu no Dojo","street_line_2":"","postal_code":"876-0854","city":"Tokyo","region":"Tokyo","country":"JP","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/2"},{"id":1,"kind":"company","full_name":"API
+        Test Contact","contact_name":"","street_line_1":"Evergreen Terrace","street_line_2":"","postal_code":"K0A
+        1B0","city":"Springfield","region":"Canada","country":"ES","phone_1":"","phone_2":"","fax":"","email":"dummy@email.test","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/1"},{"id":4,"kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/4"},{"id":6,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/6"},{"id":3,"kind":"company","full_name":"TSM","contact_name":"Reginald","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"reggie@tsm.com","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/3"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:39:53 GMT
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/estimates.json
+    body:
+      encoding: US-ASCII
+      string: contact_id=2&number=test%20number%204400&contact_name=Another%20Test%20Contact&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1975'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"96731bd4e0be6ec97c875ec181b960e3"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - da7a3ee65c0b23d2ccdf7df80dc825b4
+      x-runtime:
+      - '0.156521'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:39:53 GMT
+      content-length:
+      - '707'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWQyNzQwNWJhZjM5OGI3YTI0MGUwN2FmOTFhNTM4YTQzBjsAVA%3D%3D--fe10ea5a21ea4ab9b34d039c6768d55867089f8c;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":11,"number":"test number 4400","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
+        Test Contact"},"po_number":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/estimate/193b01105b8019fd2da1f27b13b17707ecd4fe9b","url":"http://localhost:3000/recrea/api/v1/estimates/11.json"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:39:53 GMT
+- request:
+    method: delete
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/estimates/11.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1974'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      x-request-id:
+      - d6ca8117ed7821d9932588d148bf3c26
+      x-runtime:
+      - '0.257304'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:39:53 GMT
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTI4NTJkMmY3NWVkYzUzNWY5ZmViZTlmODBlNjc3YjY4BjsAVA%3D%3D--df4593775971c5434138b94c42e69fb30e226be9;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:39:53 GMT
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/estimates.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1973'
+      x-pages-currentpage:
+      - '1'
+      x-pages-totalpages:
+      - '1'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"e381d87821899056ec8529c9f9bb5f0a"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 1c7c4f7302c2f73593d05cce598f0e96
+      x-runtime:
+      - '0.170577'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:39:53 GMT
+      content-length:
+      - '2872'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":9,"number":"0000003","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
+        Test Contact"},"po_number":"","currency":"EUR","items":[{"description":"Bread
+        pack","quantity":"1.0","unit_price":"2.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"2.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"2.00 \u20ac"}],"subtotal":"2.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"2.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/estimate/43cb8820f8901ce8ee208a79f2a4c4d6eef63eb6","url":"http://localhost:3000/recrea/api/v1/estimates/9.json"},{"id":8,"number":"0000002","issue_date":"2014-02-04","contact":{"id":1,"full_name":"API
+        Test Contact"},"po_number":"","currency":"EUR","items":[{"description":"Paint","quantity":"1.0","unit_price":"50.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"50.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"50.00 \u20ac"},{"description":"Brushes","quantity":"1.0","unit_price":"12.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"12.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"12.00 \u20ac"},{"description":"Working
+        suits","quantity":"1.0","unit_price":"20.99","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"20.99
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"20.99 \u20ac"}],"subtotal":"82.99
+        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"IVA (21.00%)","amount":"2.52
+        \u20ac"}],"total":"85.51 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/estimate/749d695e7c7b0fd8545416fa30346ca3c69f5658","url":"http://localhost:3000/recrea/api/v1/estimates/8.json"},{"id":7,"number":"0000001","issue_date":"2014-02-04","contact":{"id":1,"full_name":"API
+        Test Contact"},"po_number":"","currency":"EUR","items":[{"description":"Paint","quantity":"1.0","unit_price":"50.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"50.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"50.00 \u20ac"},{"description":"Brushes","quantity":"1.0","unit_price":"12.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"12.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"12.00 \u20ac"}],"subtotal":"62.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"62.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/estimate/8a4c4788bf7cbb1ecf13e875176864a9b02f5d7f","url":"http://localhost:3000/recrea/api/v1/estimates/7.json"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:39:53 GMT
+recorded_with: VCR 2.3.0

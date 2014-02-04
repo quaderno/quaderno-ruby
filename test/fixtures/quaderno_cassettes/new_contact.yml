@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/contacts.json
+    body:
+      encoding: US-ASCII
+      string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1989'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"4dcaa41a92eaf65d8cff622e26197c1a"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 71d46738b0fefa4a2eb8b96b5a173dc0
+      x-runtime:
+      - '0.617169'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:39:42 GMT
+      content-length:
+      - '365'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTRiOGZjZjBjYjIyNWY3ODM0OThjNzljZjA3YTQ1ZGYxBjsAVA%3D%3D--2007caa01d9ec5aeda2cc828d93d5347fb00bedf;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":6,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/6"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:39:42 GMT
+recorded_with: VCR 2.3.0

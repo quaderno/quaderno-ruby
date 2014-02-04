@@ -1,0 +1,261 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fgoogle.com&events[]=created&events[]=updated
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1851'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"4555700f677a7c9e4b13c85dcb6b6661"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 4221c70b915cb94f5d2a52802b3c3161
+      x-runtime:
+      - '1.480550'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:25 GMT
+      content-length:
+      - '227'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWY4NDQ2MGNiZjBhOWRiMjExNzRlZDM1YTQzMWQ0YmMyBjsAVA%3D%3D--eba3c76f196c41a3d0722d4c3c8ec0f8c121dca7;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2,"url":"http://google.com","auth_key":"yISVcCmG28BKfEQgoIP7fA","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:25Z","updated_at":"2014-02-04T14:53:25Z"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:25 GMT
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fquadernoapp.com&events[]=created&events[]=updated
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1850'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"4fb35fc680c5c1154f2b8b759fb3c6a1"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - c9fddb1e800bf55ced76a84387cf00b9
+      x-runtime:
+      - '2.248368'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:27 GMT
+      content-length:
+      - '232'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTJjMDIwYjkxYTM1YjhiYmFhN2U5MmQ2MmY1ZDVlMmM1BjsAVA%3D%3D--3dbe45aa15afeef725dc64373de80aa5c3d152ff;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":3,"url":"http://quadernoapp.com","auth_key":"rmiUjrx2YZpTSg2O6UgYag","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:27Z","updated_at":"2014-02-04T14:53:27Z"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:27 GMT
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1849'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"5d1505498f7a35127b522d99a23c7100"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 548728b73b8e2c0333b681dacbfa2736
+      x-runtime:
+      - '0.142064'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:28 GMT
+      content-length:
+      - '462'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2,"url":"http://google.com","auth_key":"yISVcCmG28BKfEQgoIP7fA","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:25Z","updated_at":"2014-02-04T14:53:25Z"},{"id":3,"url":"http://quadernoapp.com","auth_key":"rmiUjrx2YZpTSg2O6UgYag","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:27Z","updated_at":"2014-02-04T14:53:27Z"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:28 GMT
+- request:
+    method: delete
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks/3.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1848'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      x-request-id:
+      - bd741af48783fac18f53c67f62911ab9
+      x-runtime:
+      - '0.120173'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:28 GMT
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTk4YTNmMzVhZjkxZGNjNTkyZDkzZTdjMTM5NGUyMWRmBjsAVA%3D%3D--f2be9b8d3eecf23eb1892640d37923a5d77f9756;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:28 GMT
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1847'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"1f4e1ff7ceca5e61d6a938a27bfc2e95"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 4cf7369b12291329c18cb77ef891f5d4
+      x-runtime:
+      - '0.353821'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:28 GMT
+      content-length:
+      - '229'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2,"url":"http://google.com","auth_key":"yISVcCmG28BKfEQgoIP7fA","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:25Z","updated_at":"2014-02-04T14:53:25Z"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:28 GMT
+- request:
+    method: delete
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks/2.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1846'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 1e3b1b6451c0b314e2bd75652329e8ce
+      x-runtime:
+      - '0.107987'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:53:28 GMT
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTUzMWFjMjkwMjRiMTdlYjgyZmUyYmExOGY3MGM2MzBmBjsAVA%3D%3D--d35abc22fadb8e9e16ea00bd72d3f9014f47669b;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:53:28 GMT
+recorded_with: VCR 2.3.0

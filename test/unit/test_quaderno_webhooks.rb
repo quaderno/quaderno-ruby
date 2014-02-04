@@ -5,8 +5,9 @@ class TestQuadernoWebhook < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = 'n8sDLUZ5z1d6dYXKixnx'
+      	config.auth_token = '1spyno1mbqbp3SFpg9uT'
       	config.subdomain = 'recrea'
+        config.debug = true
       end    
     end
 
@@ -85,8 +86,8 @@ class TestQuadernoWebhook < Test::Unit::TestCase
     should "know the rate limit" do
       VCR.use_cassette('rate limit') do
         rate_limit_info = Quaderno::Base.rate_limit_info
-        assert_equal 1000, rate_limit_info[:limit]
-        assert_operator rate_limit_info[:remaining], :< ,1000     
+        assert_equal 2000, rate_limit_info[:limit]
+        assert_operator rate_limit_info[:remaining], :< ,2000     
       end
     end
   end

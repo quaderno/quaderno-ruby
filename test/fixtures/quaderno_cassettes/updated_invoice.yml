@@ -1,0 +1,192 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/contacts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1866'
+      x-pages-currentpage:
+      - '1'
+      x-pages-totalpages:
+      - '1'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"71b79c1b45cfb58a71172c277dd004b5"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 345cb45249c985c31edc3ca544815743
+      x-runtime:
+      - '0.401254'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:09 GMT
+      content-length:
+      - '1879'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2,"kind":"company","full_name":"Another Test Contact","contact_name":"","street_line_1":"Kamiya
+        Kashin Ryu no Dojo","street_line_2":"","postal_code":"876-0854","city":"Tokyo","region":"Tokyo","country":"JP","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/2"},{"id":1,"kind":"company","full_name":"API
+        Test Contact","contact_name":"","street_line_1":"Evergreen Terrace","street_line_2":"","postal_code":"K0A
+        1B0","city":"Springfield","region":"Canada","country":"ES","phone_1":"","phone_2":"","fax":"","email":"dummy@email.test","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/1"},{"id":4,"kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/4"},{"id":6,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/6"},{"id":3,"kind":"company","full_name":"TSM","contact_name":"Reginald","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"reggie@tsm.com","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/3"}]'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:09 GMT
+- request:
+    method: post
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices.json
+    body:
+      encoding: US-ASCII
+      string: contact_id=2&contact_name=Another%20Test%20Contact&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 201
+      message: ! 'Created '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1865'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"cc4f2831d3a2588246f65bfc0887706c"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - bd2ee25b1dca88d52244349fd140b954
+      x-runtime:
+      - '0.542478'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:09 GMT
+      content-length:
+      - '726'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTdhN2MyOTg0ZTE3NDIwODBlZmMzY2NlODQ2NjgwYzk5BjsAVA%3D%3D--6dec022a548149bc33396be8edd98384baf2058c;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":27,"number":"0000004","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
+        Test Contact"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/invoice/83f26b93d512dc5ecc55679a8fd1a7f9df4228b3","url":"http://localhost:3000/recrea/api/v1/invoices/27.json"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:09 GMT
+- request:
+    method: put
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices/27.json
+    body:
+      encoding: US-ASCII
+      string: payment_details=Show%20me%20the%20moneeeeeeeyy!!!!
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1864'
+      content-type:
+      - application/json; charset=utf-8
+      x-ua-compatible:
+      - IE=Edge
+      etag:
+      - ! '"0dbc81a9e537d331041720e63e35817a"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - e618a04d01f9e3408389a35c1ebf065c
+      x-runtime:
+      - '0.527183'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:10 GMT
+      content-length:
+      - '754'
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWFmY2I5MGVhYzgwOGUwM2IzNjY2Y2UzNjBhZWM4ZmRhBjsAVA%3D%3D--c73bca816c699aa3ef1b94d6660f79d9a73859db;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":27,"number":"0000004","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
+        Test Contact"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"payment_details":"Show
+        me the moneeeeeeeyy!!!!","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/invoice/83f26b93d512dc5ecc55679a8fd1a7f9df4228b3","url":"http://localhost:3000/recrea/api/v1/invoices/27.json"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:10 GMT
+- request:
+    method: delete
+    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices/27.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+  response:
+    status:
+      code: 204
+      message: ! 'No Content '
+    headers:
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1863'
+      x-ua-compatible:
+      - IE=Edge
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 10616d8bc4d421d3b3e5cd3c2b5ba4e0
+      x-runtime:
+      - '0.485066'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      date:
+      - Tue, 04 Feb 2014 14:52:10 GMT
+      connection:
+      - close
+      set-cookie:
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWViODIxYzdiYjc0MjJkMTc2M2ExYjEwMzYyYWY0YmVlBjsAVA%3D%3D--0c48857750fe76399b44dff940804e012c167b86;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 04 Feb 2014 14:52:10 GMT
+recorded_with: VCR 2.3.0
