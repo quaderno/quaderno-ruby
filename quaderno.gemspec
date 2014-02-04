@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "quaderno"
-  s.version = "1.2.1"
+  s.version = "1.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Recrea"]
-  s.date = "2013-06-20"
+  s.date = "2014-02-04"
   s.description = "longer description of your gem"
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
@@ -40,10 +40,6 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/item.rb",
     "lib/quaderno-ruby/payment.rb",
     "lib/quaderno-ruby/webhook.rb",
-    "quaderno-1.0.0.gem",
-    "quaderno-1.1.0.gem",
-    "quaderno-1.1.2.gem",
-    "quaderno-1.2.0.gem",
     "quaderno.gemspec",
     "test/fixtures/quaderno_cassettes/all_contacts.yml",
     "test/fixtures/quaderno_cassettes/all_estimates.yml",
@@ -101,33 +97,18 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_development_dependency(%q<debugger>, [">= 0"])
-      s.add_development_dependency(%q<httparty>, [">= 0"])
+      s.add_runtime_dependency(%q<httparty>, [">= 0"])
+      s.add_runtime_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_development_dependency(%q<shoulda>, [">= 0"])
-      s.add_development_dependency(%q<rcov>, ["~> 0.9.11"])
-      s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<vcr>, [">= 0"])
     else
-      s.add_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_dependency(%q<debugger>, [">= 0"])
       s.add_dependency(%q<httparty>, [">= 0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_dependency(%q<shoulda>, [">= 0"])
-      s.add_dependency(%q<rcov>, ["~> 0.9.11"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<vcr>, [">= 0"])
+      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
     end
   else
-    s.add_dependency(%q<bundler>, [">= 1.0.0"])
-    s.add_dependency(%q<debugger>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-    s.add_dependency(%q<shoulda>, [">= 0"])
-    s.add_dependency(%q<rcov>, ["~> 0.9.11"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<vcr>, [">= 0"])
+    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
   end
 end
 

@@ -1,4 +1,3 @@
-require 'ruby-debug'
 module Quaderno
   module Behavior
     module Crud         

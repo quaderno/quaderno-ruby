@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'bundler'
-require 'ruby-debug'
 require 'vcr'
 
 VCR.configure do |c|
