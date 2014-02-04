@@ -1,5 +1,9 @@
 #Changelog
 
+##1.2.2
+
+* Added ruby 2.0.0 compatibility
+
 ##1.2.1
 
 * Deleted debugger dependency
