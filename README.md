@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api). 
 As the API, it's mostly CRUD.
 
-Current version is 1.2.0. See the changelog [here](https://github.com/recrea/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.2.2. See the changelog [here](https://github.com/recrea/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
