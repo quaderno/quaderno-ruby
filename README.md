@@ -24,7 +24,7 @@ To configure just add this to your initializers
 
 ## Get authorization data
 
-You can get the subdomain by checking your account url by calling the authorization method with your personal api token.
+You can get your account subdomain by grabbing it from your account url by calling the authorization method with your personal api token.
 
 ```ruby
   Quaderno::Base.authorization 'my_authenticate_token' 
