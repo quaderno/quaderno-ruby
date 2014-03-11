@@ -22,6 +22,17 @@ To configure just add this to your initializers
 	end
 ```
 
+## Get authorization data
+
+You can get the subdomain by checking your account url by calling the authorization method with your personal api token.
+
+```ruby
+  Quaderno::Base.authorization 'my_authenticate_token' 
+  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://quadernoapp.com/my_account_subdomain/api/v1/"}} 
+```
+
+This will return a hash with the information about your api url, which includes the account subdomain.
+
 ## Ping the service
  You can ping the service in order to check if it is up with: 
  
