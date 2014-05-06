@@ -9,13 +9,13 @@ gem 'httparty'
 gem "rdoc", "~> 3.12"
 
 group :development do
-  gem "jeweler", "~> 1.8.4"
+  gem "jeweler", "~> 2.0.1"
 end
 
 group :test do
   gem "bundler", ">= 1.0.0"
   gem 'fakeweb'
-  gem "rcov", "~> 0.9.11" #">= 0"
+  gem "rcov", "~> 0.9.11"
   gem "shoulda", ">= 0"
   gem 'vcr', :require => 'vcr'
 end

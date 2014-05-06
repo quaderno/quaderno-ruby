@@ -10,7 +10,8 @@ module Quaderno
     @@auth_token = nil 
     @@subdomain = nil
     @@rate_limit_info = nil
-    @@debug = false
+    
+    self.base_uri 'https://quadernoapp.com/'
 
     def self.api_model(klass)
       instance_eval <<-END
@@ -28,8 +29,6 @@ module Quaderno
     #Default way to configure the authenticata data
     def self.configure
       yield self
-
-      self.base_uri( @@debug ? 'http://localhost:3000/' : 'https://quadernoapp.com/')
     end
      
     def self.auth_token=(auth_token)
@@ -40,12 +39,6 @@ module Quaderno
       @@subdomain = subdomain
     end
     
-    def self.debug=(val)
-      if val != false
-        @@debug = true 
-      end
-    end
-
     def self.authorization(auth_token)
       begin
         party_response = get("/subdomain/api/v1/authorization.json", basic_auth: { username: auth_token })
