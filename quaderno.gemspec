@@ -9,9 +9,8 @@ Gem::Specification.new do |s|
   s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib"]
   s.authors = ["Recrea"]
-  s.date = "2014-05-06"
+  s.date = "2014-05-07"
   s.description = "longer description of your gem"
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
@@ -91,7 +90,8 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/recrea/quaderno-ruby"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.2.2"
+  s.require_paths = ["lib"]
+  s.rubygems_version = "2.1.11"
   s.summary = "one-line summary of your gem"
 
   if s.respond_to? :specification_version then
