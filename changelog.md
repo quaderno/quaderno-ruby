@@ -1,4 +1,7 @@
 #Changelog
+##1.3.0
+
+* Removed debug mode
 
 ##1.2.2
 
