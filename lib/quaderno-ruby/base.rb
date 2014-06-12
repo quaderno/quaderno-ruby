@@ -10,8 +10,8 @@ module Quaderno
     @@auth_token = nil 
     @@subdomain = nil
     @@rate_limit_info = nil
-    
-    self.base_uri 'https://quadernoapp.com/'
+    @@environment = :production
+    @@base_url = 'https://quadernoapp.com'
 
     def self.api_model(klass)
       instance_eval <<-END
@@ -29,8 +29,14 @@ module Quaderno
     #Default way to configure the authenticata data
     def self.configure
       yield self
+
+      @@base_url = @@environment == :sandbox ? 'http://sandbox-quadernoapp.com' : 'https://quadernoapp.com'
     end
      
+    def self.environment=(mode)
+      @@environment = mode
+    end
+
     def self.auth_token=(auth_token)
       @@auth_token = auth_token
     end
@@ -39,11 +45,13 @@ module Quaderno
       @@subdomain = subdomain
     end
     
-    def self.authorization(auth_token)
+    def self.authorization(auth_token, mode = nil)
       begin
-        party_response = get("/subdomain/api/v1/authorization.json", basic_auth: { username: auth_token })
+        mode ||= @@environment
+        base_url = mode == :sandbox ? 'http://sandbox-quadernoapp.com' : 'https://quadernoapp.com'
+        party_response = get("#{base_url}/subdomain/api/v1/authorization.json", basic_auth: { username: auth_token })
         return  JSON::parse party_response.body
-      rescue Errno::ECONNREFUSED
+      rescue Exception
         return false
       end
     end
@@ -51,7 +59,7 @@ module Quaderno
     #Check the connection
     def self.ping
       begin
-        party_response = get("/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
+        party_response = get("#{base_url}/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
       rescue Errno::ECONNREFUSED
         return false
       end
@@ -60,12 +68,16 @@ module Quaderno
     
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
-      party_response = get("/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
+      party_response = get("#{@@base_url}/#{ subdomain }/api/v1/ping.json", basic_auth: { username: auth_token })
       @@rate_limit_info = { limit: party_response.headers["x-ratelimit-limit"].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
     end
     
     
-    private 
+    private
+    def self.base_url
+      @@base_url
+    end
+
     def self.auth_token
       @@auth_token
     end
