@@ -2,203 +2,302 @@
 http_interactions:
 - request:
     method: get
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/contacts.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/contacts.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:29:28 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1878'
+      - '1549'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
-      - '1'
-      content-type:
-      - application/json; charset=utf-8
+      - '5'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"71b79c1b45cfb58a71172c277dd004b5"'
+      - ! '"c8dc64244b78ebaeae0681e06d44ee7b"'
       cache-control:
-      - max-age=0, private, must-revalidate
+      - must-revalidate, private, max-age=0
       x-request-id:
-      - 3f56157212245b6f1ff864d34f0d64fc
+      - ab78cc09a1a8ce4f380e2ea8c6ed4687
       x-runtime:
-      - '0.407511'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:52:03 GMT
-      content-length:
-      - '1879'
-      connection:
-      - close
+      - '0.161836'
+      x-rack-cache:
+      - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":2,"kind":"company","full_name":"Another Test Contact","contact_name":"","street_line_1":"Kamiya
-        Kashin Ryu no Dojo","street_line_2":"","postal_code":"876-0854","city":"Tokyo","region":"Tokyo","country":"JP","phone_1":"","phone_2":"","fax":"","email":"","web":"","discount":null,"tax_id":"","language":"EN","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/2"},{"id":1,"kind":"company","full_name":"API
-        Test Contact","contact_name":"","street_line_1":"Evergreen Terrace","street_line_2":"","postal_code":"K0A
-        1B0","city":"Springfield","region":"Canada","country":"ES","phone_1":"","phone_2":"","fax":"","email":"dummy@email.test","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/1"},{"id":4,"kind":"company","full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/4"},{"id":6,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://localhost:3000/recrea/api/v1/contacts/6"},{"id":3,"kind":"company","full_name":"TSM","contact_name":"Reginald","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"reggie@tsm.com","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://localhost:3000/recrea/api/v1/contacts/3"}]'
+      string: ! '[{"id":760,"kind":"company","full_name":"\u0003 esatipa","contact_name":null,"street_line_1":"Torres
+        Quevedo","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"673832948","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/760"},{"id":113,"kind":"company","full_name":"100-499","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"totoro.estepario@gmail.com","web":null,"discount":null,"tax_id":"","bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/113"},{"id":725,"kind":"company","full_name":"Aitor
+        Hernandez Pe\u00f1a","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"aithor123@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/725"},{"id":742,"kind":"company","full_name":"Akira
+        Comics S.L.","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"akira@akiracomics.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/742"},{"id":694,"kind":"company","full_name":"Ale","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"+34650960183","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/694"},{"id":498,"kind":"company","full_name":"Alejandro","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"alexmanalopez@gmail.com","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/498"},{"id":744,"kind":"company","full_name":"Alejandro
+        Lopez Santos","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"alexmanalopez@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/744"},{"id":739,"kind":"company","full_name":"ANA","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"ana@vali2.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/739"},{"id":773,"kind":"company","full_name":"Angel
+        Ramos de Miguel","contact_name":null,"street_line_1":";;;Las Palmas de Gran
+        Canaria;;;Espa\u00f1a","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"668829133","phone_2":null,"fax":null,"email":"aramos.gcc@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/773"},{"id":717,"kind":"company","full_name":"Angel
+        Ramos de Miguel","contact_name":null,"street_line_1":";;;Las Palmas de Gran
+        Canaria;;;Espa\u00f1a","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"668829133","phone_2":null,"fax":null,"email":"aramos.gcc@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/717"},{"id":748,"kind":"company","full_name":"Antonio  Brito","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"605100535","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/748"},{"id":752,"kind":"company","full_name":"Antonio
+        C. Dom\u00ednguez Brito","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"adominguez@iusiani.ulpgc.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/752"},{"id":733,"kind":"company","full_name":"aviso_llegada","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"avisollegada@adtpostales.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/733"},{"id":764,"kind":"company","full_name":"Aythami","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"678875767","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/764"},{"id":736,"kind":"company","full_name":"Borja
+        Santana Corvo","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"ahviel@hotmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/736"},{"id":713,"kind":"company","full_name":"Bycor","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"+34646675709","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/713"},{"id":728,"kind":"company","full_name":"Bycor
+        S\u00e1nchez","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"bycor1989@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/728"},{"id":729,"kind":"company","full_name":"Canal
+        Amena","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"2224","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/729"},{"id":755,"kind":"company","full_name":"Carlos
+        Hern\u00e1ndez","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"620815221","phone_2":null,"fax":null,"email":"carlos@recrea.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/755"},{"id":735,"kind":"company","full_name":"Carlos
+        Hern\u00e1ndez Medina","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"carlos@recrea.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/735"},{"id":686,"kind":"company","full_name":"Coolmod","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"902
+        88 85 34","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/686"},{"id":749,"kind":"company","full_name":"Cristina","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"+34650756263","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/749"},{"id":726,"kind":"company","full_name":"Cruz
+        Roja","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"987795001","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/726"},{"id":763,"kind":"company","full_name":"Dalia","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"637
+        22 08 60","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/763"},{"id":674,"kind":"company","full_name":"Dav
+        Mel God","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"arthas_guay@hotmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/674"}]'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:52:03 GMT
+  recorded_at: Fri, 13 Jun 2014 12:29:28 GMT
 - request:
     method: post
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/invoices.json
     body:
       encoding: US-ASCII
-      string: contact_id=2&contact_name=Another%20Test%20Contact&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+      string: contact_id=760&contact_name=%03%20esatipa&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 201
-      message: ! 'Created '
+      message: Created
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:29:29 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1877'
-      content-type:
-      - application/json; charset=utf-8
+      - '1548'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"7bc2297a76dca4a023b7943691818359"'
+      - ! '"4cc8e440da93e55528f57b06c28d5fa5"'
       cache-control:
       - max-age=0, private, must-revalidate
-      x-request-id:
-      - 87a69c480e0b8ddeb0a8448167cbf4d7
-      x-runtime:
-      - '0.546841'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:52:03 GMT
-      content-length:
-      - '726'
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTg4YjdkNjUxYzU5MGFkN2FlYmNhYWRhNDk5ODhiZmZmBjsAVA%3D%3D--19a8a50ecb9e4730b4e0a8318502ecbc9899ab49;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWRjZmRiNzU5YzM2N2QwOWQ1ZjRkN2I1NDJlMGMyMjJhBjsAVA%3D%3D--f91a0637c8eb89691259c571b6a8618cf7deac0f;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - e8a97b8621ac88b3bb7318eca79410d7
+      x-runtime:
+      - '0.366736'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":26,"number":"0000004","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
-        Test Contact"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
+      string: ! '{"id":534,"number":"xxxx-2","issue_date":"2014-06-13","contact":{"id":760,"full_name":"\u0003
+        esatipa"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"id":688,"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
         \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/invoice/7c7e1d53dc05054314494fd2af947f8072ffa0e2","url":"http://localhost:3000/recrea/api/v1/invoices/26.json"}'
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"c6a931181ef315621633a61b02ef94c64abf97bf","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/c6a931181ef315621633a61b02ef94c64abf97bf","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/534.json"}'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:52:03 GMT
+  recorded_at: Fri, 13 Jun 2014 12:29:29 GMT
 - request:
     method: delete
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices/26.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/invoices/534.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 204
-      message: ! 'No Content '
+      message: No Content
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:29:30 GMT
+      connection:
+      - close
+      status:
+      - 204 No Content
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1876'
+      - '1547'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       cache-control:
       - no-cache
-      x-request-id:
-      - 22a79cc05df0d53ba20070d2a886fcbd
-      x-runtime:
-      - '0.443906'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:52:04 GMT
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTI5Njk0NTVlNmM0ZDRjOGQxY2ZhNzgxYWYyNjgxNDJjBjsAVA%3D%3D--84955ffd1b7a0ac548669370716ea00f3147225c;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWNjYjEwNjZiNGZhYjNmZjUxZmYwN2ExZjE3ZjkxYTA5BjsAVA%3D%3D--0d21b05a94b24c2f27d8d9305ebe53d3e07ad854;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - 741fcd7720f5e2546a2b87c049ba4611
+      x-runtime:
+      - '0.248352'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:52:04 GMT
+  recorded_at: Fri, 13 Jun 2014 12:29:30 GMT
 - request:
     method: get
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/invoices.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/invoices.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:29:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1875'
+      - '1546'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
       - '1'
-      content-type:
-      - application/json; charset=utf-8
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"53fc8e14c11dee1f0727271327376f21"'
+      - ! '"8c4efe0476bf5e51d27010fc53982477"'
       cache-control:
-      - max-age=0, private, must-revalidate
+      - must-revalidate, private, max-age=0
       x-request-id:
-      - cd43e91e94c9ab4289cbc93e26f566e3
+      - f64994f7e9d401ee8c8e286c370f35ae
       x-runtime:
-      - '0.530425'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:52:04 GMT
-      content-length:
-      - '2818'
-      connection:
-      - close
+      - '1.110763'
+      x-rack-cache:
+      - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":3,"number":"0000003","issue_date":"2014-02-04","contact":{"id":2,"full_name":"Another
-        Test Contact"},"po_number":"","due_date":null,"currency":"EUR","items":[{"description":"Free
-        stuff!","quantity":"200.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"},{"description":"Pizza
-        bagles","quantity":"2.0","unit_price":"15.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
+      string: ! '[{"id":482,"number":"xxxx-1","issue_date":"2014-06-13","contact":{"id":775,"full_name":"Pisnacho"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"id":636,"description":"Solar
+        flare","quantity":"30.0","unit_price":"20.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"600.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"600.00 \u20ac"}],"subtotal":"600.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"600.00 \u20ac","payments":[{"id":361,"date":"2014-06-13","payment_method":"credit_card","amount":"300.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/361.json"},{"id":362,"date":"2014-06-13","payment_method":"credit_card","amount":"300.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/362.json"},{"id":363,"date":"2014-06-13","payment_method":"cash","amount":"100,000,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/363.json"},{"id":365,"date":"2014-06-13","payment_method":"cash","amount":"100,000,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/365.json"},{"id":367,"date":"2014-06-13","payment_method":"cash","amount":"100,000,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/367.json"},{"id":369,"date":"2014-06-13","payment_method":"cash","amount":"100,000,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/369.json"},{"id":371,"date":"2014-06-13","payment_method":"cash","amount":"100,000,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482/payments/371.json"}],"payment_details":null,"notes":null,"state":"paid","tag_list":[],"secure_id":"4950f46362cfe3e3ae186f79f50a9bbf3f6964ed","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/4950f46362cfe3e3ae186f79f50a9bbf3f6964ed","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/482.json"},{"id":471,"number":"0000002G","issue_date":"2014-06-12","contact":{"id":427,"full_name":"John
+        Wu"},"po_number":"","due_date":null,"currency":"EUR","items":[{"id":625,"description":"Fort
+        boyard","quantity":"1.0","unit_price":"20.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":"0.0","tax_2_name":"","tax_2_rate":"0.0","reference":"","subtotal":"20.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"20.00 \u20ac"}],"subtotal":"20.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"20.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"8ab991d188985a959668f3526a5b6e9841b1a364","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/8ab991d188985a959668f3526a5b6e9841b1a364","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/471.json"},{"id":469,"number":"0000002F","issue_date":"2014-06-10","contact":{"id":543,"full_name":"Moe
+        Slck"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"id":623,"description":"Goixxa
+        sadasd","quantity":"1.0","unit_price":"23.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":"0.0","reference":null,"subtotal":"23.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"23.00 \u20ac"}],"subtotal":"23.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"23.00 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"draft","tag_list":[],"secure_id":"f9297150c46fea6ed24312f732665c6c8bc27b74","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/f9297150c46fea6ed24312f732665c6c8bc27b74","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/469.json"},{"id":470,"number":"0000001F","issue_date":"2014-06-10","contact":{"id":543,"full_name":"Moe
+        Slck"},"po_number":null,"due_date":null,"currency":"EUR","items":[{"id":624,"description":"Pixxa
+        asd lock","quantity":"1.0","unit_price":"1323.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":"0.0","reference":null,"subtotal":"1,323.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"1,323.00 \u20ac"}],"subtotal":"1,323.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"1,323.00 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"draft","tag_list":[],"secure_id":"03effafda7b4e71e3cbc959fd3c6a236d884300f","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/03effafda7b4e71e3cbc959fd3c6a236d884300f","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/470.json"},{"id":460,"number":"INV-000009","issue_date":"2014-01-28","contact":{"id":113,"full_name":"100-499"},"po_number":null,"due_date":"2014-02-12","currency":"EUR","items":[{"id":608,"description":"Pistachos
+        en alm\u00edbar \u00a1Con el punto de arena justo!","quantity":"1.0","unit_price":"35.99","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"35.99
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"35.99 \u20ac"},{"id":609,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"49.99
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"49.99 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"ec71cf14133a4c6828dbe90c453f33b29f895258","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/ec71cf14133a4c6828dbe90c453f33b29f895258","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/460.json"},{"id":61,"number":"0000004","issue_date":"2014-01-01","contact":{"id":115,"full_name":"Tree"},"po_number":"","due_date":null,"currency":"EUR","items":[{"id":61,"description":"Something","quantity":"1.0","unit_price":"10.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"10.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"10.00 \u20ac"}],"subtotal":"10.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"10.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"a1daa2eb33ffa1de41d91eecb708a6b1f8b07913","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/a1daa2eb33ffa1de41d91eecb708a6b1f8b07913","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/61.json"},{"id":60,"number":"0000003","issue_date":"2014-01-01","contact":{"id":114,"full_name":"Direct
+        Debit"},"po_number":"","due_date":null,"currency":"EUR","items":[{"id":60,"description":"Something","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
         \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[{"id":9,"date":"2014-02-04","payment_method":"cash","amount":"100,000,000.00
-        \u20ac","url":"http://localhost:3000/recrea/api/v1/invoices/3/payments/9.json"}],"payment_details":"","notes":"","state":"paid","tag_list":[],"permalink":"http://localhost:3000/invoice/060c7204face21de13e68b33c940b030164a42b1","url":"http://localhost:3000/recrea/api/v1/invoices/3.json"},{"id":2,"number":"0000002","issue_date":"2014-02-04","contact":{"id":3,"full_name":"TSM"},"po_number":"","due_date":null,"currency":"EUR","items":[{"description":"Free
-        stuff!","quantity":"200.0","unit_price":"1.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"200.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"200.00 \u20ac"}],"subtotal":"200.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"200.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/invoice/b59479ddd5e9d2ff72d276a1fd9ead4764343984","url":"http://localhost:3000/recrea/api/v1/invoices/2.json"},{"id":1,"number":"0000001","issue_date":"2014-02-04","contact":{"id":1,"full_name":"API
-        Test Contact"},"po_number":"","due_date":null,"currency":"EUR","items":[{"description":"Something","quantity":"1.0","unit_price":"10.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"10.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"10.00 \u20ac"},{"description":"Free
-        stuff!","quantity":"200.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"10.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"10.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"permalink":"http://localhost:3000/invoice/e8a2610def0bed3cd429f45f9561853d401aa31e","url":"http://localhost:3000/recrea/api/v1/invoices/1.json"}]'
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"530a4b0a3ff3df62464d27f241e6a92c83fe14ce","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/530a4b0a3ff3df62464d27f241e6a92c83fe14ce","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/60.json"},{"id":59,"number":"0000002","issue_date":"2014-01-01","contact":{"id":114,"full_name":"Direct
+        Debit"},"po_number":"","due_date":null,"currency":"EUR","items":[{"id":59,"description":"Something","quantity":"1.0","unit_price":"230.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"230.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"230.00 \u20ac"}],"subtotal":"230.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"230.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"442a1f564517bd26bfc67009600a47e28f69d602","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/442a1f564517bd26bfc67009600a47e28f69d602","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/59.json"},{"id":58,"number":"0000001","issue_date":"2014-01-01","contact":{"id":113,"full_name":"100-499"},"po_number":"","due_date":null,"currency":"EUR","items":[{"id":58,"description":"asdasd","quantity":"1.0","unit_price":"132.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"132.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"132.00 \u20ac"}],"subtotal":"132.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"132.00 \u20ac","payments":[],"payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"2e23ef7a5be57eacaca3eddbfd2e15c76e62f9b2","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/2e23ef7a5be57eacaca3eddbfd2e15c76e62f9b2","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/58.json"},{"id":461,"number":"INV-000008","issue_date":"2013-11-20","contact":{"id":113,"full_name":"100-499"},"po_number":null,"due_date":"2013-12-05","currency":"EUR","items":[{"id":610,"description":"Pistachos
+        en alm\u00edbar","quantity":"1.0","unit_price":"35.99","discount_rate":"0.0","tax_1_name":"Chach\u00f3n","tax_1_rate":"30.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"35.99
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"35.99 \u20ac"}],"subtotal":"35.99
+        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"Chach\u00f3n (30.00%)","amount":"10.80
+        \u20ac"}],"total":"46.79 \u20ac","payments":[{"id":352,"date":"2013-11-20","payment_method":"cash","amount":"46.79
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/461/payments/352.json"}],"payment_details":null,"notes":null,"state":"paid","tag_list":[],"secure_id":"ebba91b17452bfb7f19bbe48ad03092d877c37c2","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/ebba91b17452bfb7f19bbe48ad03092d877c37c2","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/461.json"},{"id":462,"number":"INV-000007","issue_date":"2013-11-20","contact":{"id":113,"full_name":"100-499"},"po_number":null,"due_date":"2013-12-05","currency":"EUR","items":[{"id":611,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":"Chach\u00f3n","tax_1_rate":"30.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"Chach\u00f3n (30.00%)","amount":"4.20
+        \u20ac"}],"total":"18.20 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"eafb47c593ae210f41768a6274cdc436c26cabf6","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/eafb47c593ae210f41768a6274cdc436c26cabf6","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/462.json"},{"id":463,"number":"INV-000006","issue_date":"2013-11-20","contact":{"id":542,"full_name":"Escritor
+        deprimente"},"po_number":"123456","due_date":"2013-12-05","currency":"EUR","items":[{"id":612,"description":"Pistachos
+        en alm\u00edbar","quantity":"1.0","unit_price":"12.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"12.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"12.00 \u20ac"},{"id":613,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"26.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"26.00 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"f1f32aa5affa66fd2ea1c304fae1c127b86e06f7","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/f1f32aa5affa66fd2ea1c304fae1c127b86e06f7","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/463.json"},{"id":464,"number":"INV-000005","issue_date":"2013-11-20","contact":{"id":542,"full_name":"Escritor
+        deprimente"},"po_number":"123456","due_date":"2013-12-05","currency":"EUR","items":[{"id":614,"description":"Pistachos
+        en alm\u00edbar","quantity":"1.0","unit_price":"3999.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"3,999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"3,999.00 \u20ac"},{"id":615,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"4,013.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"4,013.00 \u20ac","payments":[{"id":353,"date":"2013-11-25","payment_method":"cash","amount":"4,013.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/464/payments/353.json"}],"payment_details":null,"notes":null,"state":"paid","tag_list":[],"secure_id":"b9d896c490e1a23e908c6fd678c4b9b65b946596","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/b9d896c490e1a23e908c6fd678c4b9b65b946596","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/464.json"},{"id":465,"number":"INV-000004","issue_date":"2013-11-20","contact":{"id":493,"full_name":"John
+        Wu Wu"},"po_number":null,"due_date":"2013-12-05","currency":"EUR","items":[{"id":616,"description":"Pistachos
+        en alm\u00edbar","quantity":"1.0","unit_price":"3999.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"3,999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"3,999.00 \u20ac"},{"id":617,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"4,013.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"4,013.00 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"c7c6bbec3bbc4b124f1160eaa95b8fb5868ba629","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/c7c6bbec3bbc4b124f1160eaa95b8fb5868ba629","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/465.json"},{"id":466,"number":"INV-000003","issue_date":"2013-11-19","contact":{"id":493,"full_name":"John
+        Wu Wu"},"po_number":null,"due_date":"2013-12-04","currency":"EUR","items":[{"id":618,"description":"Pistachos
+        en alm\u00edbar","quantity":"1.0","unit_price":"35.99","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"35.99
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"35.99 \u20ac"},{"id":619,"description":"tarta
+        de fresa","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"49.99
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"49.99 \u20ac","payments":[{"id":354,"date":"2013-11-19","payment_method":"cash","amount":"49.99
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/466/payments/354.json"}],"payment_details":null,"notes":null,"state":"paid","tag_list":[],"secure_id":"337f9420cf177d5bc420444a5ce28f366c91e41d","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/337f9420cf177d5bc420444a5ce28f366c91e41d","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/466.json"},{"id":467,"number":"INV-000002","issue_date":"2013-11-19","contact":{"id":113,"full_name":"100-499"},"po_number":null,"due_date":"2013-12-04","currency":"EUR","items":[{"id":620,"description":"Pistachos
+        en alm\u00edbar Defectuosos","quantity":"1.0","unit_price":"35.99","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"35.99
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"35.99 \u20ac"},{"id":621,"description":"tarta
+        de fresa Caducadas","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"49.99
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"49.99 \u20ac","payments":[],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"ba6558f82a6388f55c36f7fb848d048a4173dd46","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/ba6558f82a6388f55c36f7fb848d048a4173dd46","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/467.json"},{"id":468,"number":"INV-000001","issue_date":"2013-11-18","contact":{"id":493,"full_name":"John
+        Wu Wu"},"po_number":null,"due_date":"2013-12-03","currency":"EUR","items":[{"id":622,"description":"tarta
+        de fresa Tartas de fresa a granel","quantity":"1.0","unit_price":"14.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":"0.0","tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"14.00 \u20ac"}],"subtotal":"14.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"14.00 \u20ac","payments":[{"id":355,"date":"2013-11-19","payment_method":"cash","amount":"1.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/468/payments/355.json"},{"id":356,"date":"2013-11-19","payment_method":"check","amount":"10.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/468/payments/356.json"}],"payment_details":null,"notes":null,"state":"late","tag_list":[],"secure_id":"37c941741d9bc40d5661498684e3e8c2826606c1","permalink":"http://ninive-688.sandbox-quadernoapp.com/invoice/37c941741d9bc40d5661498684e3e8c2826606c1","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/invoices/468.json"}]'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:52:04 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Fri, 13 Jun 2014 12:29:32 GMT
+recorded_with: VCR 2.9.2

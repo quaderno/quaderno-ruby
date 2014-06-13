@@ -13,8 +13,10 @@ group :development do
 end
 
 group :test do
+  gem 'debugger'
   gem "bundler", ">= 1.0.0"
   gem 'fakeweb'
+  gem 'minitest', '~> 4.7.5 '
   gem "simplecov", ">= 0"
   gem "shoulda", ">= 0"
   gem 'vcr', :require => 'vcr'

@@ -5,9 +5,9 @@ class TestQuadernoItem < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = '1spyno1mbqbp3SFpg9uT'
-      	config.subdomain = 'recrea'
-        config.debug = true
+        config.auth_token = 'kAppsMggGcw8psUwdZBV'
+        config.subdomain = 'ninive-688'
+        config.environment = :sandbox
       end    
     end
 
@@ -38,9 +38,9 @@ class TestQuadernoItem < Test::Unit::TestCase
     should "find an item" do
       VCR.use_cassette('found item') do
         items = Quaderno::Item.all
-        item = Quaderno::Item.find items[2].id
+        item = Quaderno::Item.find items[1].id
         assert_kind_of Quaderno::Item, item
-        assert_equal items[2].id, item.id
+        assert_equal items[1].id, item.id
       end
     end
     
@@ -56,7 +56,7 @@ class TestQuadernoItem < Test::Unit::TestCase
     should "update an item" do
       VCR.use_cassette('updated item') do
         items = Quaderno::Item.all
-        item = Quaderno::Item.update(items[2].id, name: 'Test_OCP')
+        item = Quaderno::Item.update(items[1].id, name: 'Test_OCP')
         assert_kind_of Quaderno::Item, item
         assert_equal 'Test_OCP', item.name
       end

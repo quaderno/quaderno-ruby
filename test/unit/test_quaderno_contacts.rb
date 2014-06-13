@@ -5,10 +5,10 @@ class TestQuadernoContact < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-      	config.auth_token = '1spyno1mbqbp3SFpg9uT'
-      	config.subdomain = 'recrea'
-        config.debug = true
-      end    
+        config.auth_token = 'kAppsMggGcw8psUwdZBV'
+        config.subdomain = 'ninive-688'
+        config.environment = :sandbox
+      end
     end
 
     should "get exception if pass wrong arguments" do
@@ -58,11 +58,7 @@ class TestQuadernoContact < Test::Unit::TestCase
         contacts = Quaderno::Contact.all
         contact = Quaderno::Contact.update(contacts[2].id, first_name: 'Test_OCP', email: 'dont@stop.believing')
         assert_kind_of Quaderno::Contact, contact
-        if contact.kind == 'company'
-          assert_equal 'Test_OCP', contact.full_name
-        else
-          assert_equal 'Test_OCP', contact.first_name
-        end
+        assert_equal 'Test_OCP', contact.first_name || contact.full_name
       end
     end
     

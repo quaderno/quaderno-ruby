@@ -5,9 +5,9 @@ class TestQuadernoEstimate < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = '1spyno1mbqbp3SFpg9uT'
-        config.subdomain = 'recrea'
-        config.debug = true
+        config.auth_token = 'kAppsMggGcw8psUwdZBV'
+        config.subdomain = 'ninive-688'
+        config.environment = :sandbox
       end
     end
 

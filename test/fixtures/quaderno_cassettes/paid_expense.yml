@@ -2,113 +2,107 @@
 http_interactions:
 - request:
     method: get
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/expenses.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:41:41 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1903'
+      - '1451'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
       - '1'
-      content-type:
-      - application/json; charset=utf-8
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"80a15ecdb18867e3da0bbedf18328e0a"'
+      - ! '"9a16a79e9d125e2de0da7f16e991de3e"'
       cache-control:
-      - max-age=0, private, must-revalidate
+      - must-revalidate, private, max-age=0
       x-request-id:
-      - 5c49291729cdb25d6cc2c11f94f3200d
+      - f19b6bc9fde2ec900ff3bccbe160eab6
       x-runtime:
-      - '0.505219'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:50:53 GMT
-      content-length:
-      - '2607'
-      connection:
-      - close
+      - '0.156997'
+      x-rack-cache:
+      - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":6,"number":null,"issue_date":"2014-05-04","contact":{"id":2,"full_name":"Another
-        Test Contact"},"po_number":"","currency":"EUR","items":[{"description":"Honeypots","quantity":"1.3","unit_price":"19.03","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"IRPF","tax_2_rate":"-9.0","reference":"","subtotal":"24.74
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"24.74 \u20ac"}],"subtotal":"24.74
-        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"IRPF (-9.00%)","amount":"-2.23
-        \u20ac"},{"label":"IVA (21.00%)","amount":"5.20 \u20ac"}],"total":"27.71 \u20ac","payments":[{"id":1,"date":"2014-02-04","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://localhost:3000/recrea/api/v1/expenses/6/payments/1.json"},{"id":3,"date":"2014-02-04","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://localhost:3000/recrea/api/v1/expenses/6/payments/3.json"},{"id":5,"date":"2014-02-04","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://localhost:3000/recrea/api/v1/expenses/6/payments/5.json"}],"notes":"Hello","state":"paid","tag_list":[],"url":"http://localhost:3000/recrea/api/v1/expenses/6.json"},{"id":4,"number":null,"issue_date":"2014-02-04","contact":{"id":1,"full_name":"API
-        Test Contact"},"po_number":"","currency":"EUR","items":[{"description":"Very
-        important stuff","quantity":"1.0","unit_price":"2230.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"IRPF","tax_2_rate":"-9.0","reference":"","subtotal":"2,230.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"2,230.00 \u20ac"}],"subtotal":"2,230.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"IRPF (-9.00%)","amount":"-200.70
-        \u20ac"},{"label":"IVA (21.00%)","amount":"468.30 \u20ac"}],"total":"2,497.60
-        \u20ac","payments":[],"notes":"Hello","state":"outstanding","tag_list":[],"url":"http://localhost:3000/recrea/api/v1/expenses/4.json"},{"id":5,"number":null,"issue_date":"2014-02-04","contact":{"id":3,"full_name":"TSM"},"po_number":"","currency":"EUR","items":[{"description":"Bombers","quantity":"5.0","unit_price":"29.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":"21.0","tax_2_name":"IRPF","tax_2_rate":"-9.0","reference":"","subtotal":"145.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"145.00 \u20ac"}],"subtotal":"145.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[{"label":"IRPF (-9.00%)","amount":"-13.05
-        \u20ac"},{"label":"IVA (21.00%)","amount":"30.45 \u20ac"}],"total":"162.40
-        \u20ac","payments":[],"notes":"Hello","state":"outstanding","tag_list":[],"url":"http://localhost:3000/recrea/api/v1/expenses/5.json"}]'
+      string: ! '[{"id":543,"number":null,"issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
+        Contact"},"po_number":"","currency":"EUR","items":[{"id":697,"description":"Hello","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543.json"}]'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:50:53 GMT
+  recorded_at: Fri, 13 Jun 2014 12:41:41 GMT
 - request:
     method: post
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/expenses/6/payments.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses/543/payments.json
     body:
       encoding: US-ASCII
       string: payment_method=cash&amount=10000
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 201
-      message: ! 'Created '
+      message: Created
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:41:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1902'
-      content-type:
-      - application/json; charset=utf-8
+      - '1450'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"e00deb7cbc99d4748e33d221fd238310"'
+      - ! '"70c59d6194249fda45f4e88e8ff1f4de"'
       cache-control:
       - max-age=0, private, must-revalidate
-      x-request-id:
-      - bb483ce10ea8e331d24531133b0a3d5c
-      x-runtime:
-      - '0.512479'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:50:54 GMT
-      content-length:
-      - '151'
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTI2ODg5ZTBjNGY0NmQwZDg5OTQ1ZjUxMTM3NzQ1ZTRjBjsAVA%3D%3D--c92d4991f4606133764b90ab1359c06c56050b3b;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTI5MWE5YjQ5YjM3YWEwODQxYjZhY2Y1MmRjZTA1NDQzBjsAVA%3D%3D--fae7c96f79d607c8d5d9a3ac206a0f586e3085fb;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - 3e6e092867afe334d4a629a4a430459b
+      x-runtime:
+      - '0.235364'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":7,"date":"2014-02-04","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://localhost:3000/recrea/api/v1/expenses/6/payments/7.json"}'
+      string: ! '{"id":373,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/373.json"}'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:50:54 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Fri, 13 Jun 2014 12:41:42 GMT
+recorded_with: VCR 2.9.2

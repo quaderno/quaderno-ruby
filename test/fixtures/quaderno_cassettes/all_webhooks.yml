@@ -2,217 +2,237 @@
 http_interactions:
 - request:
     method: post
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/webhooks.json
     body:
       encoding: US-ASCII
-      string: url=http%3A%2F%2Fgoogle.com&events[]=created&events[]=updated
+      string: url=http%3A%2F%2Fgoogle.com&events_types[]=invoice.created&events_types[]=invoice.updated
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 201
-      message: ! 'Created '
+      message: Created
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:34:28 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1842'
-      content-type:
-      - application/json; charset=utf-8
+      - '1492'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"572568e82d8bb5c05d1da455dd2b68e9"'
+      - ! '"1b018226dfb9197f0a6abcdb56a49a7a"'
       cache-control:
       - max-age=0, private, must-revalidate
-      x-request-id:
-      - e650227db2fbde0c339be3cecde6306a
-      x-runtime:
-      - '0.826650'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:53:32 GMT
-      content-length:
-      - '227'
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTY4NWY5ODE0NWQ0OTU4YWI1OWYzODYxZDViZWQzOTIxBjsAVA%3D%3D--febd7021d04b40d2c97d61edda5bdd5e038d5684;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTMyMjdkYzM3YTliOThlNDhkZDljNmQ3NDZiYjMyNzM5BjsAVA%3D%3D--126cc4bb6c49d9547b8249feb07fd8029ad5d05d;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - b845e8588dc45643096112084aa5b429
+      x-runtime:
+      - '0.263191'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":5,"url":"http://google.com","auth_key":"okItwHLl4ohTN56GAjasjw","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:32Z","updated_at":"2014-02-04T14:53:32Z"}'
+      string: ! '{"id":31,"url":"http://google.com","auth_key":"yb2e3cFegrOV1dG9JZxcvg","events_types":["invoice.created","invoice.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-06-13T12:34:28Z","updated_at":"2014-06-13T12:34:28Z"}'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:53:32 GMT
+  recorded_at: Fri, 13 Jun 2014 12:34:28 GMT
 - request:
     method: post
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/webhooks.json
     body:
       encoding: US-ASCII
-      string: url=http%3A%2F%2Fquadernoapp.com&events[]=created&events[]=updated&events[]=deleted
+      string: url=http%3A%2F%2Fquadernoapp.com&events_types[]=expense.created&events_types[]=expense.updated&events_types[]=contact.deleted
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 201
-      message: ! 'Created '
+      message: Created
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:34:29 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1841'
-      content-type:
-      - application/json; charset=utf-8
+      - '1491'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"a622eca95492185f1fb74efcc0f53d22"'
+      - ! '"bfc1bf966e1335580804a4e3163e756f"'
       cache-control:
       - max-age=0, private, must-revalidate
-      x-request-id:
-      - cd7baddf2b4494ba7e4b0998d26e9974
-      x-runtime:
-      - '2.253129'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:53:34 GMT
-      content-length:
-      - '242'
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWU1NTcxNGMzYmU0MWRmYzJiMjY3ZWY4OGY2MzE3NGE4BjsAVA%3D%3D--493a9a145278d56bb7de2b86115e4c34e4341627;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTJhZDk1Njk3OTM2YjYzOGNlZGU3MDk3Nzk0N2Y5Y2FmBjsAVA%3D%3D--329566d674bf5ab5a66157cb559c28d8dd16cab5;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - 91dd2c90662c503543c1c6409c802e01
+      x-runtime:
+      - '0.813012'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":6,"url":"http://quadernoapp.com","auth_key":"G3q7IziH6KT-FQs6-QYy1Q","events":["created","updated","deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:34Z","updated_at":"2014-02-04T14:53:34Z"}'
+      string: ! '{"id":32,"url":"http://quadernoapp.com","auth_key":"BF4TOv35AkXHWHTwyqOSDg","events_types":["expense.created","expense.updated","contact.deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-06-13T12:34:29Z","updated_at":"2014-06-13T12:34:29Z"}'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:53:34 GMT
+  recorded_at: Fri, 13 Jun 2014 12:34:29 GMT
 - request:
     method: get
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/webhooks.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: OK
     headers:
-      x-ratelimit-limit:
-      - '2000'
-      x-ratelimit-remaining:
-      - '1840'
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:34:30 GMT
       content-type:
       - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1490'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       etag:
-      - ! '"94fd95c57bd64f0a184f6b7a495fe76a"'
+      - ! '"6b76c7ab82dd4fa67bb4653e77976a7f"'
       cache-control:
-      - max-age=0, private, must-revalidate
+      - must-revalidate, private, max-age=0
       x-request-id:
-      - 2cd66834dcdc7bd9b8bac591c04e7e91
+      - f0e5fa3217c2ba525bbb008689589ca3
       x-runtime:
-      - '0.135322'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:53:34 GMT
-      content-length:
-      - '472'
-      connection:
-      - close
+      - '0.074528'
+      x-rack-cache:
+      - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":5,"url":"http://google.com","auth_key":"okItwHLl4ohTN56GAjasjw","events":["created","updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:32Z","updated_at":"2014-02-04T14:53:32Z"},{"id":6,"url":"http://quadernoapp.com","auth_key":"G3q7IziH6KT-FQs6-QYy1Q","events":["created","updated","deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-02-04T14:53:34Z","updated_at":"2014-02-04T14:53:34Z"}]'
+      string: ! '[{"id":6,"url":"http://quadernoapp.com","auth_key":"ebL7LVbbJBVOwMSZCQz75A","events_types":["invoice.created","expense.updated"],"last_sent_at":"2014-06-13T12:29:43Z","last_error":null,"events_sent":7,"created_at":"2014-06-13T12:09:20Z","updated_at":"2014-06-13T12:09:20Z"},{"id":12,"url":"http://quadernoapp.com","auth_key":"CyZRqDK-ypNmYYeL0l1B0Q","events_types":["invoice.created","invoice.updated","contact.deleted"],"last_sent_at":"2014-06-13T12:33:03Z","last_error":null,"events_sent":16,"created_at":"2014-06-13T12:09:32Z","updated_at":"2014-06-13T12:09:34Z"},{"id":31,"url":"http://google.com","auth_key":"yb2e3cFegrOV1dG9JZxcvg","events_types":["invoice.created","invoice.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-06-13T12:34:28Z","updated_at":"2014-06-13T12:34:28Z"},{"id":32,"url":"http://quadernoapp.com","auth_key":"BF4TOv35AkXHWHTwyqOSDg","events_types":["expense.created","expense.updated","contact.deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-06-13T12:34:29Z","updated_at":"2014-06-13T12:34:29Z"}]'
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:53:34 GMT
+  recorded_at: Fri, 13 Jun 2014 12:34:30 GMT
 - request:
     method: delete
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks/5.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/webhooks/31.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 204
-      message: ! 'No Content '
+      message: No Content
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:34:30 GMT
+      connection:
+      - close
+      status:
+      - 204 No Content
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1839'
+      - '1489'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       cache-control:
       - no-cache
-      x-request-id:
-      - 1c04ef9a384aff3289ed0465ee6d8232
-      x-runtime:
-      - '0.101120'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:53:34 GMT
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTFjYjE4NGQ1ZTEwNTVlZThjZDE5NDczZjE3ZjMwOTYzBjsAVA%3D%3D--25f862316ea069a3ca7e99aea63357f73ae5b6c6;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWI4MDEyYTUxYTRhYzJlYTcyZjUxNWM4ZGQ0OWNhMWNhBjsAVA%3D%3D--6e24cc95b5171e9e98273893da850beb974a86a4;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - 90b82aee257ad06a11b38b8bcd9bda63
+      x-runtime:
+      - '0.066085'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:53:34 GMT
+  recorded_at: Fri, 13 Jun 2014 12:34:30 GMT
 - request:
     method: delete
-    uri: http://1spyno1mbqbp3SFpg9uT@localhost:3000/recrea/api/v1/webhooks/6.json
+    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/webhooks/32.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic MXNweW5vMW1icWJwM1NGcGc5dVQ6
+      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
   response:
     status:
       code: 204
-      message: ! 'No Content '
+      message: No Content
     headers:
+      server:
+      - nginx/1.4.5
+      date:
+      - Fri, 13 Jun 2014 12:34:31 GMT
+      connection:
+      - close
+      status:
+      - 204 No Content
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1838'
+      - '1488'
       x-ua-compatible:
-      - IE=Edge
+      - IE=Edge,chrome=1
       cache-control:
       - no-cache
-      x-request-id:
-      - 2ed7a47c1dd73d6934ff6a3a6979f1a7
-      x-runtime:
-      - '0.321013'
-      server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-      date:
-      - Tue, 04 Feb 2014 14:53:34 GMT
-      connection:
-      - close
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA5ZDA1OGIwNjVhNjkzNTM4MTIyNTA4OTQ2MDdlNzIzBjsAVA%3D%3D--8f401b0afa66d88c0cca2f20d71522456ef60665;
-        path=/; HttpOnly
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWFiYzFiMzc4MGFlZGU5OGEyMzcwNjM4MDcyYzY5ODE5BjsAVA%3D%3D--ad06c3ce72953f269cf29cb7911635cd6a8eae85;
+        domain=sandbox-quadernoapp.com; path=/; HttpOnly
+      x-request-id:
+      - 85bcfc897207a8d4a5363e1e532a7f83
+      x-runtime:
+      - '0.064684'
+      x-rack-cache:
+      - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 04 Feb 2014 14:53:34 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Fri, 13 Jun 2014 12:34:31 GMT
+recorded_with: VCR 2.9.2
