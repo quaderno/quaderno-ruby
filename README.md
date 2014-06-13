@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api). 
 As the API, it's mostly CRUD.
 
-Current version is 1.2.2. See the changelog [here](https://github.com/recrea/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.3.1. See the changelog [here](https://github.com/recrea/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -19,17 +19,22 @@ To configure just add this to your initializers
 	Quaderno::Base.configure do |config|
 		config.auth_token = 'my_authenticate_token'
 		config.subdomain = 'my_account_subdomain'
+    config.environment = :production
 	end
 ```
+
+The `environment` attribute is optional and set to `:production` by default. Optionally, you can set it to `:sandbox` in order to test your application before deploying it to production.
 
 ## Get authorization data
 
 You can get your account subdomain by grabbing it from your account url or by calling the authorization method with your personal api token.
 
 ```ruby
-  Quaderno::Base.authorization 'my_authenticate_token' 
+  Quaderno::Base.authorization 'my_authenticate_token', environment
   # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://quadernoapp.com/my_account_subdomain/api/v1/"}} 
 ```
+
+`envirnment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
 
 This will return a hash with the information about your api url, which includes the account subdomain.
 

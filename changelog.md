@@ -1,4 +1,9 @@
 #Changelog
+##1.3.1
+
+* Added sandbox environment
+* Added `to_hash` instance method
+
 ##1.3.0
 
 * Removed debug mode
