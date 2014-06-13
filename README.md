@@ -19,7 +19,7 @@ To configure just add this to your initializers
 	Quaderno::Base.configure do |config|
 		config.auth_token = 'my_authenticate_token'
 		config.subdomain = 'my_account_subdomain'
-    config.environment = :production
+        config.environment = :production
 	end
 ```
 
