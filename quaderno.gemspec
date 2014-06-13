@@ -42,6 +42,8 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/payment.rb",
     "lib/quaderno-ruby/webhook.rb",
     "quaderno.gemspec",
+    "test/fixtures/.DS_Store",
+    "test/fixtures/quaderno_cassettes/.DS_Store",
     "test/fixtures/quaderno_cassettes/all_contacts.yml",
     "test/fixtures/quaderno_cassettes/all_estimates.yml",
     "test/fixtures/quaderno_cassettes/all_expenses.yml",
