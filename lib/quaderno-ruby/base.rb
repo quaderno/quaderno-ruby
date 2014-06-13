@@ -13,6 +13,10 @@ module Quaderno
     @@environment = :production
     @@base_url = 'https://quadernoapp.com'
 
+    def to_hash
+      self.marshal_dump
+    end
+
     def self.api_model(klass)
       instance_eval <<-END
         def api_model

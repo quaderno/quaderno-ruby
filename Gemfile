@@ -15,7 +15,7 @@ end
 group :test do
   gem "bundler", ">= 1.0.0"
   gem 'fakeweb'
-  gem "rcov", "~> 0.9.11"
+  gem "simplecov", ">= 0"
   gem "shoulda", ">= 0"
   gem 'vcr', :require => 'vcr'
 end
