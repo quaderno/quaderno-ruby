@@ -13,7 +13,6 @@ group :development do
 end
 
 group :test do
-  gem 'debugger'
   gem "bundler", ">= 1.0.0"
   gem 'fakeweb'
   gem 'minitest', '~> 4.7.5 '

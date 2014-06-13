@@ -3,7 +3,6 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'rubygems'
 require 'bundler'
-require 'debugger'
 
 begin
   Bundler.setup(:default, :test)
