@@ -34,7 +34,7 @@ You can get your account subdomain by grabbing it from your account url or by ca
   # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://quadernoapp.com/my_account_subdomain/api/v1/"}} 
 ```
 
-`envirnment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
+`environment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
 
 This will return a hash with the information about your api url, which includes the account subdomain.
 
