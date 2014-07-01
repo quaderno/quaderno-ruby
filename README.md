@@ -10,17 +10,17 @@ Current version is 1.3.1. See the changelog [here](https://github.com/recrea/qua
 To install add the following to your Gemfile:
 
 ```ruby
-	gem 'quaderno', require: 'quaderno-ruby'
+  gem 'quaderno', require: 'quaderno-ruby'
 ```
 
 To configure just add this to your initializers
 
 ```ruby
-	Quaderno::Base.configure do |config|
-		config.auth_token = 'my_authenticate_token'
-		config.subdomain = 'my_subdomain'
-        config.environment = :production
-	end
+  Quaderno::Base.configure do |config|
+    config.auth_token = 'my_authenticate_token'
+    config.subdomain = 'my_subdomain'
+    config.environment = :production
+  end
 ```
 
 The `environment` attribute is optional and set to `:production` by default. Optionally, you can set it to `:sandbox` in order to test your application before deploying it to production.

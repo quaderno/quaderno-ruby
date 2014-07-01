@@ -1,4 +1,8 @@
 #Changelog
+##1.3.2
+
+* Use new urls format
+
 ##1.3.1
 
 * Added sandbox environment
