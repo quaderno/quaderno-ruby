@@ -7,10 +7,13 @@ module Quaderno
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud    
     
+    PRODUCTION_URL = 'https://quadernoapp.com'
+    SANDBOX_URL = 'http://sandbox-quadernoapp.com'
+
     @@auth_token = nil 
-    @@subdomain = nil
+    @@subdomain = 'subdomain'
     @@rate_limit_info = nil
-    @@base_url = nil
+    @@base_url = PRODUCTION_URL
     @@environment = :production
 
     # Class methods
@@ -47,7 +50,7 @@ module Quaderno
     def self.authorization(auth_token, mode = nil)
       begin
         mode ||= @@environment
-        base_url = mode == :sandbox ? 'http://sandbox-quadernoapp.com' : 'https://quadernoapp.com'
+        base_url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
         party_response = get("#{base_url}/api/v1/authorization.json", basic_auth: { username: auth_token })
         return  JSON::parse party_response.body
       rescue Exception
