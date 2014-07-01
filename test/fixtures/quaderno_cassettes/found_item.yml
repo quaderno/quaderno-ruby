@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:14 GMT
+      - Tue, 01 Jul 2014 09:08:04 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,34 +29,34 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1399'
+      - '1928'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"92861c01f089737feb118f784953b52a"'
+      - ! '"484111898eb77f3321009a9c45671d7c"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - edbfbdeae98a3697977086d3fbbaaeb2
+      - 20973c55031c616436cdc86a46b93e77
       x-runtime:
-      - '0.112836'
+      - '0.048222'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":51,"code":"0001-x","name":"Nothing else matters","unit_cost":"20.0","stock":"23.0","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/51"},{"id":47,"code":"007","name":"Test
-        Item","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"}]'
+      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
+        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:14 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:04 GMT
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items/47.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -65,7 +65,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:15 GMT
+      - Tue, 01 Jul 2014 09:08:04 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -77,22 +77,23 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1398'
+      - '1927'
       last-modified:
-      - Fri, 13 Jun 2014 12:42:03 GMT
+      - Tue, 01 Jul 2014 08:44:41 GMT
       cache-control:
       - must-revalidate, private, max-age=0
       x-ua-compatible:
       - IE=Edge,chrome=1
       x-request-id:
-      - 0dcc7dc72ca0b7ebd98ad52eb65cfe7a
+      - acba7f550e6217a8afb8065be96f5948
       x-runtime:
-      - '0.112848'
+      - '0.062193'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"id":47,"code":"007","name":"Test Item","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"}'
+      string: ! '{"id":23942,"code":"007","name":"Techtoys MechaGodzilla 13cm fully
+        posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:15 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:05 GMT
 recorded_with: VCR 2.9.2

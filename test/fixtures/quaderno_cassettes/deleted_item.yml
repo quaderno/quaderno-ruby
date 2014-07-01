@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:12 GMT
+      - Tue, 01 Jul 2014 09:08:02 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,34 +29,34 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1402'
+      - '1931'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"8bab47993f28af1c3cc850b71eba6275"'
+      - ! '"dd53748ab46bda52a703f55094269639"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 6e492370a4941e92cf5353afacbffa7e
+      - 5cafe6879cb2e2f3ed33d850db0a785b
       x-runtime:
-      - '0.119582'
+      - '0.070997'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":51,"code":"0001-x","name":"Nothing else matters","unit_cost":"20.0","stock":"23.0","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/51"},{"id":47,"code":"007","name":"Test
-        Item","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"},{"id":53,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/53"}]'
+      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
+        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"},{"id":23944,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:12 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:02 GMT
 - request:
     method: delete
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items/53.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 204
@@ -65,7 +65,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:13 GMT
+      - Tue, 01 Jul 2014 09:08:03 GMT
       connection:
       - close
       status:
@@ -73,34 +73,34 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1401'
+      - '1930'
       x-ua-compatible:
       - IE=Edge,chrome=1
       cache-control:
       - no-cache
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTI2ZWNjZTZjZjNiNjQyMmM5NThlMDllODhiODc5N2EzBjsAVA%3D%3D--d83f2ba713ad4e69645f0d056a1d9127c878463d;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTUyZTg2YzQ4ZmI3NmRiYzRlYTdiYTE3NmQyYjc5OWYwBjsAVA%3D%3D--98b907c01c81f6a3831097aca93088d2d5bc127f;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - e2b9aced34a074397921bcae8c20beff
+      - 1c52886a8e4524a6bd2bb5da46e6439d
       x-runtime:
-      - '0.113841'
+      - '0.062330'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:13 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:03 GMT
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -109,7 +109,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:13 GMT
+      - Tue, 01 Jul 2014 09:08:03 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -121,23 +121,23 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1400'
+      - '1929'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"92861c01f089737feb118f784953b52a"'
+      - ! '"484111898eb77f3321009a9c45671d7c"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 5ccaec09bfcb5cd41a64f34f9b729007
+      - 3ba00456969a5c0c1149291a6ff9832c
       x-runtime:
-      - '0.112752'
+      - '0.057727'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":51,"code":"0001-x","name":"Nothing else matters","unit_cost":"20.0","stock":"23.0","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/51"},{"id":47,"code":"007","name":"Test
-        Item","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"}]'
+      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
+        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:13 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:03 GMT
 recorded_with: VCR 2.9.2

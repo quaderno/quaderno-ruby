@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:48 GMT
+      - Tue, 01 Jul 2014 09:07:16 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1441'
+      - '1963'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -37,33 +37,37 @@ http_interactions:
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"f8c16df3cad07eca53aa3d6a08d8657b"'
+      - ! '"3e3f97d65226a933e567d56c0eec4407"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - da4f4e1fb94434b641dd471180162253
+      - b4a7b543e374537a79492fd3aee51cbe
       x-runtime:
-      - '0.159711'
+      - '0.141905'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":543,"number":null,"issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":697,"description":"Hello","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[{"id":373,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/373.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543.json"}]'
+      string: ! '[{"id":492370,"number":null,"issue_date":"2014-07-01","contact":{"id":142301,"full_name":"Vince
+        Offer"},"po_number":"","currency":"EUR","items":[{"id":1294888,"description":"ShamWow","quantity":"100.0","unit_price":"9.99","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"999.00 \u20ac"}],"subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"999.00 \u20ac","payments":[{"id":328807,"date":"2014-07-01","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328807.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370.json"},{"id":492368,"number":null,"issue_date":"2014-07-01","contact":{"id":142299,"full_name":"Test_OCP
+        Stanman"},"po_number":"","currency":"EUR","items":[{"id":1294884,"description":"The
+        Cadillac of Coffins''","quantity":"1.0","unit_price":"100000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"100,000.00 \u20ac"}],"subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"100,000.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492368.json"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:48 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:16 GMT
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses/543.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -72,7 +76,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:49 GMT
+      - Tue, 01 Jul 2014 09:07:17 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -84,26 +88,26 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1440'
+      - '1962'
       last-modified:
-      - Fri, 13 Jun 2014 12:41:42 GMT
+      - Tue, 01 Jul 2014 09:07:10 GMT
       cache-control:
       - must-revalidate, private, max-age=0
       x-ua-compatible:
       - IE=Edge,chrome=1
       x-request-id:
-      - 6acc867df51351ce14b4a9f1f7a4c39a
+      - 0b4f365647872fd9f7d1b8a1ffcc1065
       x-runtime:
-      - '0.157579'
+      - '0.113224'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"id":543,"number":null,"issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":697,"description":"Hello","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[{"id":373,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/373.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543.json"}'
+      string: ! '{"id":492370,"number":null,"issue_date":"2014-07-01","contact":{"id":142301,"full_name":"Vince
+        Offer"},"po_number":"","currency":"EUR","items":[{"id":1294888,"description":"ShamWow","quantity":"100.0","unit_price":"9.99","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"999.00 \u20ac"}],"subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"999.00 \u20ac","payments":[{"id":328807,"date":"2014-07-01","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328807.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370.json"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:49 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:17 GMT
 recorded_with: VCR 2.9.2

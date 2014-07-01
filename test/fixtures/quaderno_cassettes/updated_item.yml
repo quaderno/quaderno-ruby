@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:17 GMT
+      - Tue, 01 Jul 2014 09:08:06 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,34 +29,34 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1396'
+      - '1925'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"92861c01f089737feb118f784953b52a"'
+      - ! '"484111898eb77f3321009a9c45671d7c"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 6a8a55c37a13063d42b5e043aecf5a48
+      - 0defb6ddb2c5f57a1058470105b477bc
       x-runtime:
-      - '0.116180'
+      - '0.075011'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":51,"code":"0001-x","name":"Nothing else matters","unit_cost":"20.0","stock":"23.0","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/51"},{"id":47,"code":"007","name":"Test
-        Item","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"}]'
+      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
+        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:17 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:06 GMT
 - request:
     method: put
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items/47.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942.json
     body:
       encoding: US-ASCII
       string: name=Test_OCP
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -65,7 +65,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:18 GMT
+      - Tue, 01 Jul 2014 09:08:06 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -77,25 +77,25 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1395'
+      - '1924'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"0276048d2b1e288aa3621555dd6e0a75"'
+      - ! '"8ef40fdfd4e20fc4d34861150f0d0513"'
       cache-control:
       - max-age=0, private, must-revalidate
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTY2ODJhNzk5MGM3ZWQ4YWY4MzI0NDA1MDIzNTgxMDAxBjsAVA%3D%3D--c1bbd620064a02b4c3d62f60f3ff9b6443b6e1e9;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTI2OGM0MzEyNzVlZjFmNDc4Njk2YTU2OGY3MjU1MzQ4BjsAVA%3D%3D--79aec1bb0e6af290718cd20fd7a2ca127768ea7a;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 1a130b4fbdec31b562302f34d71b8235
+      - 3b39de1bc54431d30243c5c313d6fdae
       x-runtime:
-      - '0.135251'
+      - '0.092128'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":47,"code":"007","name":"Test_OCP","unit_cost":"20.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/47"}'
+      string: ! '{"id":23942,"code":"007","name":"Test_OCP","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:18 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:06 GMT
 recorded_with: VCR 2.9.2

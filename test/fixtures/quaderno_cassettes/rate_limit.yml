@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/ping.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/ping.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:16 GMT
+      - Tue, 01 Jul 2014 09:05:53 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1397'
+      - '1992'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
@@ -37,14 +37,14 @@ http_interactions:
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 06b4cd049a998ddb19ff00f5f7a9fafd
+      - 8b2d48d4b2ece720ab27123d5fa0303e
       x-runtime:
-      - '0.037519'
+      - '0.039538'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
       string: ! '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:16 GMT
+  recorded_at: Tue, 01 Jul 2014 09:05:53 GMT
 recorded_with: VCR 2.9.2

@@ -5,8 +5,8 @@ class TestQuadernoItem < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = 'kAppsMggGcw8psUwdZBV'
-        config.subdomain = 'ninive-688'
+        config.auth_token = 'RsNaLsNr1KZcdrQRKKKk'
+        config.subdomain = 'uruk-1066'
         config.environment = :sandbox
       end    
     end

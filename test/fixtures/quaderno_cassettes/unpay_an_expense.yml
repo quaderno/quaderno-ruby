@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:50 GMT
+      - Tue, 01 Jul 2014 09:07:18 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1438'
+      - '1960'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -37,33 +37,37 @@ http_interactions:
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"f8c16df3cad07eca53aa3d6a08d8657b"'
+      - ! '"3e3f97d65226a933e567d56c0eec4407"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 2dc6b5df0396090840e11769ff969cb5
+      - c4175e494b7d107c236c4efc497d4585
       x-runtime:
-      - '0.159041'
+      - '0.135283'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":543,"number":null,"issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":697,"description":"Hello","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[{"id":373,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/373.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543.json"}]'
+      string: ! '[{"id":492370,"number":null,"issue_date":"2014-07-01","contact":{"id":142301,"full_name":"Vince
+        Offer"},"po_number":"","currency":"EUR","items":[{"id":1294888,"description":"ShamWow","quantity":"100.0","unit_price":"9.99","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"999.00 \u20ac"}],"subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"999.00 \u20ac","payments":[{"id":328807,"date":"2014-07-01","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328807.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370.json"},{"id":492368,"number":null,"issue_date":"2014-07-01","contact":{"id":142299,"full_name":"Test_OCP
+        Stanman"},"po_number":"","currency":"EUR","items":[{"id":1294884,"description":"The
+        Cadillac of Coffins''","quantity":"1.0","unit_price":"100000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"100,000.00 \u20ac"}],"subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"100,000.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492368.json"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:50 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:18 GMT
 - request:
     method: post
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses/543/payments.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments.json
     body:
       encoding: US-ASCII
       string: payment_method=cash&amount=10000
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 201
@@ -72,7 +76,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:51 GMT
+      - Tue, 01 Jul 2014 09:07:19 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -84,37 +88,37 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1437'
+      - '1959'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"7bcd1ae1d8372ac585a25f834ec2c8ba"'
+      - ! '"3eff255bf5a0e1dcdf84fb60b5807fcc"'
       cache-control:
       - max-age=0, private, must-revalidate
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTBhYmIzY2YyNzcxODc2ZTliNzVmMmVkOWM2Njc2NTRmBjsAVA%3D%3D--992fed5249a12efa481965dd72373b61ccaab0bb;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWZkMDkwOTY5ZmY3MjYwOTczOTlmOTE0NGY1MTY2NWFjBjsAVA%3D%3D--8a8720ed55cb31c7139096f515a035ea62cbbda2;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 1f4a7e37544a62c858fca70a989c98ff
+      - 404ff4472706582b4c490524887c9938
       x-runtime:
-      - '0.065483'
+      - '0.069431'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":374,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/374.json"}'
+      string: ! '{"id":328808,"date":"2014-07-01","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328808.json"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:51 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:19 GMT
 - request:
     method: delete
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses/543/payments/374.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328808.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 204
@@ -123,7 +127,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:52 GMT
+      - Tue, 01 Jul 2014 09:07:19 GMT
       connection:
       - close
       status:
@@ -131,23 +135,23 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1436'
+      - '1958'
       x-ua-compatible:
       - IE=Edge,chrome=1
       cache-control:
       - no-cache
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTNkNWYyNTViNWFhNTJhYjdmNzc0ZTliMDk2YmZhOTc1BjsAVA%3D%3D--b4098b9a1393eacca195421561e799d28d426f88;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJThiMDY3Y2MzYWVjZWNmMDNhNzgxYzQ2OGUzOWI2MzIzBjsAVA%3D%3D--ca794873f9c264eb3e9dce84fb8ad4ef9c4a2926;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 5e37d397f72e89683fc01dc2b9d16132
+      - 71658558015eef02e66383aa2064498c
       x-runtime:
-      - '0.254177'
+      - '0.083843'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:52 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:19 GMT
 recorded_with: VCR 2.9.2

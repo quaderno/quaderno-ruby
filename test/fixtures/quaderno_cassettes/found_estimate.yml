@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/estimates.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/estimates.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:37:54 GMT
+      - Tue, 01 Jul 2014 09:06:21 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1458'
+      - '1980'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -37,32 +37,39 @@ http_interactions:
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"5d184cc5cf5eeab4c09eef2efe84c3cf"'
+      - ! '"d33c420455711494333dc878dbb2cf3a"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - acc4f17ac8052afaca006eae6098c2c5
+      - 32ae9dab263961177c3a500a6e82b0ef
       x-runtime:
-      - '0.103185'
+      - '0.082628'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":539,"number":"0000001","issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":693,"description":"Something","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"8d2bccffae34fb6fa7bd943f7642956de77ce693","permalink":"http://ninive-688.sandbox-quadernoapp.com/estimate/8d2bccffae34fb6fa7bd943f7642956de77ce693","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/estimates/539.json"}]'
+      string: ! '[{"id":492372,"number":"0000002","issue_date":"2014-07-01","contact":{"id":142302,"full_name":"Pepe
+        Gotera & Otilio"},"po_number":"","currency":"EUR","items":[{"id":1294890,"description":"Test
+        Item #5","quantity":"1.0","unit_price":"52.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"52.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"52.00 \u20ac"},{"id":1294891,"description":"Test
+        Item #6","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"82.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"82.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"4cf5cf7de5fa21c0c68737db16aa8d4630d11d19","permalink":"http://uruk-1066.sandbox-quadernoapp.com/estimate/4cf5cf7de5fa21c0c68737db16aa8d4630d11d19","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/estimates/492372.json"},{"id":492371,"number":"0000001","issue_date":"2014-07-01","contact":{"id":142302,"full_name":"Pepe
+        Gotera & Otilio"},"po_number":"","currency":"EUR","items":[{"id":1294889,"description":"Test
+        Item #4","quantity":"1.0","unit_price":"3430.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"3,430.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"3,430.00 \u20ac"}],"subtotal":"3,430.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"3,430.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"4f635b1811bc6cc20a071fe4f85bf8733c04b451","permalink":"http://uruk-1066.sandbox-quadernoapp.com/estimate/4f635b1811bc6cc20a071fe4f85bf8733c04b451","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/estimates/492371.json"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:37:54 GMT
+  recorded_at: Tue, 01 Jul 2014 09:06:21 GMT
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/estimates/539.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/estimates/492372.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -71,7 +78,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:37:55 GMT
+      - Tue, 01 Jul 2014 09:06:21 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -83,25 +90,28 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1457'
+      - '1979'
       last-modified:
-      - Fri, 13 Jun 2014 12:37:24 GMT
+      - Tue, 01 Jul 2014 08:44:13 GMT
       cache-control:
       - must-revalidate, private, max-age=0
       x-ua-compatible:
       - IE=Edge,chrome=1
       x-request-id:
-      - 8aad53fa232a2f884a8d40876e8eef43
+      - 769fb4848eb0004894f5339eb2f253d0
       x-runtime:
-      - '0.090264'
+      - '0.069526'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '{"id":539,"number":"0000001","issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":693,"description":"Something","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"8d2bccffae34fb6fa7bd943f7642956de77ce693","permalink":"http://ninive-688.sandbox-quadernoapp.com/estimate/8d2bccffae34fb6fa7bd943f7642956de77ce693","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/estimates/539.json"}'
+      string: ! '{"id":492372,"number":"0000002","issue_date":"2014-07-01","contact":{"id":142302,"full_name":"Pepe
+        Gotera & Otilio"},"po_number":"","currency":"EUR","items":[{"id":1294890,"description":"Test
+        Item #5","quantity":"1.0","unit_price":"52.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"52.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"52.00 \u20ac"},{"id":1294891,"description":"Test
+        Item #6","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"82.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"82.00 \u20ac","payment_details":"","notes":"","state":"draft","tag_list":[],"secure_id":"4cf5cf7de5fa21c0c68737db16aa8d4630d11d19","permalink":"http://uruk-1066.sandbox-quadernoapp.com/estimate/4cf5cf7de5fa21c0c68737db16aa8d4630d11d19","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/estimates/492372.json"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:37:55 GMT
+  recorded_at: Tue, 01 Jul 2014 09:06:21 GMT
 recorded_with: VCR 2.9.2

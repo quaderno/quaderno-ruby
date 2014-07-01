@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/items.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
     body:
       encoding: US-ASCII
       string: code=000000&name=Test_Skynet&unit_cost=21.0
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 201
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:46:11 GMT
+      - Tue, 01 Jul 2014 09:08:02 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,25 +29,25 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1403'
+      - '1932'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"bb4c8d72ed38b31290ff17f688164866"'
+      - ! '"e0a1dfbe8dd0b3be5d9fcdaa22441e78"'
       cache-control:
       - max-age=0, private, must-revalidate
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTk1MDJkZjVlZjFiMzIxMGMzOTk3Y2IyMTlkOTY4YjdhBjsAVA%3D%3D--75f330020ceb24768015eed8daffd66da3440448;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTE2NmEyODMzMTE1NjliMGE2NmUyOTg2NzY2NDRlOTkyBjsAVA%3D%3D--d86b46e33cdfe6f1ff23b5f1a78e77cd3e515773;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 4eaed6bab5b0aa07dfaacd9d904e306d
+      - 4586d674c455e8fe1940a0a09fb39bf1
       x-runtime:
-      - '0.132707'
+      - '0.071937'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":53,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/items/53"}'
+      string: ! '{"id":23944,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:46:11 GMT
+  recorded_at: Tue, 01 Jul 2014 09:08:02 GMT
 recorded_with: VCR 2.9.2

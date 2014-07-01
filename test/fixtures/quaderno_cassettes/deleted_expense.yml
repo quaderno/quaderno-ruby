@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/contacts.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/contacts.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:45 GMT
+      - Tue, 01 Jul 2014 09:07:14 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,56 +29,42 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1445'
+      - '1967'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
-      - '6'
+      - '1'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"1b15811e4cf410f02945920334685406"'
+      - ! '"bcad972a420d51a47d312c5b43926c87"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - b29e4ca6e9e99212d7f0d27eba2beb43
+      - e831385d500678ed23acde1edfe4149d
       x-runtime:
-      - '0.221473'
+      - '0.096000'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":760,"kind":"company","full_name":"\u0003 esatipa","contact_name":null,"street_line_1":"Torres
-        Quevedo","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"673832948","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/760"},{"id":113,"kind":"company","full_name":"100-499","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"totoro.estepario@gmail.com","web":null,"discount":null,"tax_id":"","bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/113"},{"id":498,"kind":"company","full_name":"Alejandro","contact_name":"","street_line_1":"","street_line_2":"","postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":"","fax":"","email":"alexmanalopez@gmail.com","web":"","discount":null,"tax_id":"","bank_account":"","language":"ES","notes":"","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/498"},{"id":744,"kind":"company","full_name":"Alejandro
-        Lopez Santos","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"alexmanalopez@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/744"},{"id":739,"kind":"company","full_name":"ANA","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"ana@vali2.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/739"},{"id":773,"kind":"company","full_name":"Angel
-        Ramos de Miguel","contact_name":null,"street_line_1":";;;Las Palmas de Gran
-        Canaria;;;Espa\u00f1a","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"668829133","phone_2":null,"fax":null,"email":"aramos.gcc@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/773"},{"id":717,"kind":"company","full_name":"Angel
-        Ramos de Miguel","contact_name":null,"street_line_1":";;;Las Palmas de Gran
-        Canaria;;;Espa\u00f1a","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"668829133","phone_2":null,"fax":null,"email":"aramos.gcc@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/717"},{"id":748,"kind":"company","full_name":"Antonio  Brito","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"605100535","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/748"},{"id":752,"kind":"company","full_name":"Antonio
-        C. Dom\u00ednguez Brito","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"adominguez@iusiani.ulpgc.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/752"},{"id":733,"kind":"company","full_name":"aviso_llegada","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"avisollegada@adtpostales.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/733"},{"id":764,"kind":"company","full_name":"Aythami","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"678875767","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/764"},{"id":736,"kind":"company","full_name":"Borja
-        Santana Corvo","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"ahviel@hotmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/736"},{"id":713,"kind":"company","full_name":"Bycor","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"+34646675709","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/713"},{"id":728,"kind":"company","full_name":"Bycor
-        S\u00e1nchez","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"bycor1989@gmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/728"},{"id":729,"kind":"company","full_name":"Canal
-        Amena","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"2224","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/729"},{"id":755,"kind":"company","full_name":"Carlos
-        Hern\u00e1ndez","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"620815221","phone_2":null,"fax":null,"email":"carlos@recrea.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/755"},{"id":735,"kind":"company","full_name":"Carlos
-        Hern\u00e1ndez Medina","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"carlos@recrea.es","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/735"},{"id":686,"kind":"company","full_name":"Coolmod","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"902
-        88 85 34","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/686"},{"id":749,"kind":"company","full_name":"Cristina","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"+34650756263","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/749"},{"id":726,"kind":"company","full_name":"Cruz
-        Roja","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"987795001","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/726"},{"id":763,"kind":"company","full_name":"Dalia","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"637
-        22 08 60","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/763"},{"id":711,"kind":"company","full_name":"David","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"620453446","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/711"},{"id":673,"kind":"company","full_name":"David
-        Meli\u00e1n Godoy","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"dmg_dragon@hotmail.com","web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/673"},{"id":756,"kind":"company","full_name":"David
-        Santiago","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":"660608373","phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"bank_account":null,"language":"EN","notes":null,"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/756"},{"id":114,"kind":"person","first_name":"Direct","last_name":"Debit","full_name":"Direct
-        Debit","street_line_1":"Bernardo de la Torre 104","street_line_2":"","postal_code":"35007","city":"Las
-        Palmas de Gran Canaria","region":"Las Palmas","country":"ES","phone_1":"","phone_2":"","fax":"","email":"totoro.estepario@gmail.com","web":"","discount":null,"tax_id":"12345678Z","bank_account":"ES9121000418450200051332","language":"EN","notes":"","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/contacts/114"}]'
+      string: ! '[{"id":142297,"kind":"company","full_name":"Dummy","contact_name":null,"street_line_1":"","street_line_2":null,"postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":null,"fax":null,"email":"","web":null,"discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142297"},{"id":142302,"kind":"company","full_name":"Pepe
+        Gotera & Otilio","contact_name":null,"street_line_1":"","street_line_2":null,"postal_code":"","city":"","region":"","country":"ES","phone_1":"","phone_2":null,"fax":null,"email":"","web":null,"discount":null,"tax_id":"","bank_account":null,"language":"ES","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142302"},{"id":142298,"kind":"company","full_name":"Test","contact_name":null,"street_line_1":"Evergreen
+        Terrace","street_line_2":null,"postal_code":"K0A 1B0","city":"Springfield","region":"","country":"US","phone_1":"3447277","phone_2":null,"fax":null,"email":"","web":null,"discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142298"},{"id":142299,"kind":"person","first_name":"Test_OCP","last_name":"Stanman","full_name":"Test_OCP
+        Stanman","street_line_1":"","street_line_2":null,"postal_code":"","city":"","region":"Monkey
+        Island","country":"BS","phone_1":"","phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142299"},{"id":142303,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142303"},{"id":142301,"kind":"person","first_name":"Vince","last_name":"Offer","full_name":"Vince
+        Offer","street_line_1":"","street_line_2":null,"postal_code":"","city":"","region":"","country":"US","phone_1":"","phone_2":null,"fax":null,"email":"","web":null,"discount":null,"tax_id":"","language":"ES","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142301"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:45 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:14 GMT
 - request:
     method: post
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses.json
     body:
       encoding: US-ASCII
-      string: contact_id=760&contact_name=%03%20esatipa&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+      string: contact_id=142297&contact_name=Dummy&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 201
@@ -87,7 +73,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:46 GMT
+      - Tue, 01 Jul 2014 09:07:14 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -99,39 +85,38 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1444'
+      - '1966'
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"ddf5edaac3fd482faac515d6d2bdc5a9"'
+      - ! '"6dbb52b8598556c5cffe02198215d94f"'
       cache-control:
       - max-age=0, private, must-revalidate
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWU5NWM5ZmU5YTE5MzBlMTg3YmM0ODY5NmFhZjIxNGU0BjsAVA%3D%3D--3e2bee58736e6a4a40a4e00084c5575c2d588498;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTVmMDRlYmExYTUzNDU2OTI1YjdmZDJmNzNjNGRiZDNlBjsAVA%3D%3D--954ec7401f2573d93b88628b519a4725bf517690;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - b0a096e733adba6a55972341027fc8b0
+      - f308f7aac2f39b9cebea80e51de45ce7
       x-runtime:
-      - '0.275920'
+      - '0.165042'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
-      string: ! '{"id":545,"number":null,"issue_date":"2014-06-13","contact":{"id":760,"full_name":"\u0003
-        esatipa"},"po_number":null,"currency":"EUR","items":[{"id":699,"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
+      string: ! '{"id":492377,"number":null,"issue_date":"2014-07-01","contact":{"id":142297,"full_name":"Dummy"},"po_number":null,"currency":"EUR","items":[{"id":1294896,"description":"Aircraft","quantity":"1.0","unit_price":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal":"0.00
         \u20ac","discount":"0.00 \u20ac","gross_amount":"0.00 \u20ac"}],"subtotal":"0.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/545.json"}'
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"0.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492377.json"}'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:46 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:14 GMT
 - request:
     method: delete
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses/545.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492377.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 204
@@ -140,7 +125,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:47 GMT
+      - Tue, 01 Jul 2014 09:07:15 GMT
       connection:
       - close
       status:
@@ -148,34 +133,34 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1443'
+      - '1965'
       x-ua-compatible:
       - IE=Edge,chrome=1
       cache-control:
       - no-cache
       set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTFmOTkwNzdjOTBlYTQyODFjZjk2ZDc1NjM2MTE2ZjhlBjsAVA%3D%3D--63c0603b1b84f1064d8242ed42d7b198eb5c081d;
+      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWUxYmMxOTMwZjE2ZGIxMzE2MjFlOGIwMWI2ODc0NDFmBjsAVA%3D%3D--1761ffd9afe052186960ac9da55c98338f62a90c;
         domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 5a03be2fb921fb4c728840f5a6d5d0fb
+      - a505b94b8238a7fddf0fa4a867d2f6cb
       x-runtime:
-      - '0.233548'
+      - '0.125482'
       x-rack-cache:
       - invalidate, pass
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:47 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:15 GMT
 - request:
     method: get
-    uri: http://kAppsMggGcw8psUwdZBV@sandbox-quadernoapp.com/ninive-688/api/v1/expenses.json
+    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/expenses.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       authorization:
-      - Basic a0FwcHNNZ2dHY3c4cHNVd2RaQlY6
+      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
   response:
     status:
       code: 200
@@ -184,7 +169,7 @@ http_interactions:
       server:
       - nginx/1.4.5
       date:
-      - Fri, 13 Jun 2014 12:41:48 GMT
+      - Tue, 01 Jul 2014 09:07:16 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -196,7 +181,7 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-remaining:
-      - '1442'
+      - '1964'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -204,22 +189,26 @@ http_interactions:
       x-ua-compatible:
       - IE=Edge,chrome=1
       etag:
-      - ! '"f8c16df3cad07eca53aa3d6a08d8657b"'
+      - ! '"3e3f97d65226a933e567d56c0eec4407"'
       cache-control:
       - must-revalidate, private, max-age=0
       x-request-id:
-      - 71594ebfb8c9ac59ee7208bad465a03e
+      - e7d78e2a1e187b58e6f80095c9cec125
       x-runtime:
-      - '0.165001'
+      - '0.157094'
       x-rack-cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! '[{"id":543,"number":null,"issue_date":"2014-06-13","contact":{"id":790,"full_name":"Test
-        Contact"},"po_number":"","currency":"EUR","items":[{"id":697,"description":"Hello","quantity":"1.0","unit_price":"30.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","gross_amount":"30.00 \u20ac"}],"subtotal":"30.00
-        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"30.00 \u20ac","payments":[{"id":373,"date":"2014-06-13","payment_method":"cash","amount":"10,000.00
-        \u20ac","url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543/payments/373.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://ninive-688.sandbox-quadernoapp.com/api/v1/expenses/543.json"}]'
+      string: ! '[{"id":492370,"number":null,"issue_date":"2014-07-01","contact":{"id":142301,"full_name":"Vince
+        Offer"},"po_number":"","currency":"EUR","items":[{"id":1294888,"description":"ShamWow","quantity":"100.0","unit_price":"9.99","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"999.00 \u20ac"}],"subtotal":"999.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"999.00 \u20ac","payments":[{"id":328807,"date":"2014-07-01","payment_method":"cash","amount":"10,000.00
+        \u20ac","url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370/payments/328807.json"}],"notes":"","state":"paid","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492370.json"},{"id":492368,"number":null,"issue_date":"2014-07-01","contact":{"id":142299,"full_name":"Test_OCP
+        Stanman"},"po_number":"","currency":"EUR","items":[{"id":1294884,"description":"The
+        Cadillac of Coffins''","quantity":"1.0","unit_price":"100000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","gross_amount":"100,000.00 \u20ac"}],"subtotal":"100,000.00
+        \u20ac","discount":"0.00 \u20ac","taxes":[],"total":"100,000.00 \u20ac","payments":[],"notes":"","state":"outstanding","tag_list":[],"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/expenses/492368.json"}]'
     http_version: '1.1'
-  recorded_at: Fri, 13 Jun 2014 12:41:48 GMT
+  recorded_at: Tue, 01 Jul 2014 09:07:16 GMT
 recorded_with: VCR 2.9.2
