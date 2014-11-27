@@ -1,4 +1,8 @@
 #Changelog
+##1.4.0
+* Added taxes calculations support
+* Added webhooks documentation 
+
 ##1.3.2
 
 * Use new urls format

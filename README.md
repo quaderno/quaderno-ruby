@@ -321,6 +321,50 @@ will update the specified expense with the data of the hash passed as second par
 will delete the expense with the id passed as parameter.
 
 
+## Managing webhooks
+
+### Getting webhooks
+```ruby
+ Quaderno::Webhook.all() #=> Array
+```
+
+ will return an array with all the webhooks you have subscribed.
+ 
+### Finding an webhook
+```ruby
+ Quaderno::Webhook.find(id) #=> Quaderno::Webhook
+```
+
+will return the webhook with the id passed as parameter.
+
+### Creating a new webhook
+```ruby
+ Quaderno::Webhook.create(params) #=> Quaderno::Webhook
+```
+
+will create a webhook using the information of the hash passed as parameter and return an instance of Quaderno::Webhook with the created webhook.
+
+### Updating an existing webhook
+```ruby
+ Quaderno::Webhook.update(id, params) #=> Quaderno::Webhook
+```
+
+will update the specified webhook with the data of the hash passed as second parameter.
+
+### Deleting a webhook
+```ruby
+  Quaderno::Webhook.delete(id) #=> Boolean
+```
+
+## Taxes
+
+### Calculating taxes
+```ruby
+ Quaderno::Tax.calculate(params) #=> Quaderno::Tax
+```
+
+will calculate the taxes applied for a customer based on the data pased as parameters.
+
 ## Quaderno-api 
 
 For further information, please visit [quaderno api] (https://github.com/recrea/quaderno-api) wiki
