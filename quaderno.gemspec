@@ -51,6 +51,7 @@ Gem::Specification.new do |s|
     "test/fixtures/quaderno_cassettes/all_invoices.yml",
     "test/fixtures/quaderno_cassettes/all_items.yml",
     "test/fixtures/quaderno_cassettes/all_webhooks.yml",
+    "test/fixtures/quaderno_cassettes/calculate_tax.yml",
     "test/fixtures/quaderno_cassettes/deleted_contact.yml",
     "test/fixtures/quaderno_cassettes/deleted_estimate.yml",
     "test/fixtures/quaderno_cassettes/deleted_expense.yml",
@@ -82,12 +83,14 @@ Gem::Specification.new do |s|
     "test/fixtures/quaderno_cassettes/updated_invoice.yml",
     "test/fixtures/quaderno_cassettes/updated_item.yml",
     "test/fixtures/quaderno_cassettes/updated_webhook.yml",
+    "test/fixtures/quaderno_cassettes/wrong_token.yml",
     "test/helper.rb",
     "test/unit/test_quaderno_contacts.rb",
     "test/unit/test_quaderno_estimates.rb",
     "test/unit/test_quaderno_expenses.rb",
     "test/unit/test_quaderno_invoices.rb",
     "test/unit/test_quaderno_items.rb",
+    "test/unit/test_quaderno_tax.rb",
     "test/unit/test_quaderno_webhooks.rb"
   ]
   s.homepage = "http://github.com/recrea/quaderno-ruby"
