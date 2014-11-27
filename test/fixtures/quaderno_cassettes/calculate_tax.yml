@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://fMLf9TGWrRqNxJ4chcVi@assur-744.quadernoapp.com/api/v1/taxes/calculate.json?country=ES&postal_code=08080
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic Zk1MZjlUR1dyUnFOeEo0Y2hjVmk6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.6.0
+      date:
+      - Thu, 27 Nov 2014 12:26:48 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1972'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - '"f878d3db85579985c01bbf45f95467be"'
+      cache-control:
+      - must-revalidate, private, max-age=0
+      set-cookie:
+      - ahoy_visitor=79b5dcb1-53a0-4442-a610-9ce1b6eedc78; domain=.quadernoapp.com;
+        path=/; expires=Sun, 27-Nov-2016 12:26:48 GMT
+      - ahoy_visit=e7d4c176-89dc-45eb-a6ee-ec4192de018b; domain=.quadernoapp.com;
+        path=/; expires=Thu, 27-Nov-2014 16:26:48 GMT
+      - ahoy_track=true; domain=.quadernoapp.com; path=/
+      x-request-id:
+      - f54a921a8b1a89be6571392105406e1c
+      x-runtime:
+      - '0.121124'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"name":"VAT","rate":21.0,"notes":null}'
+    http_version: '1.1'
+  recorded_at: Thu, 27 Nov 2014 12:17:23 GMT
+- request:
+    method: get
+    uri: https://fMLf9TGWrRqNxJ4chcVi@assur-744.quadernoapp.com/api/v1/taxes/calculate.json?country=ES&postal_code=35007
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic Zk1MZjlUR1dyUnFOeEo0Y2hjVmk6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.6.0
+      date:
+      - Thu, 27 Nov 2014 12:26:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1971'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      etag:
+      - '"f6483dc8ea6256ea8793f35f31b443ab"'
+      cache-control:
+      - must-revalidate, private, max-age=0
+      set-cookie:
+      - ahoy_visitor=70bfb475-e0d9-4e88-af9d-fb8379142175; domain=.quadernoapp.com;
+        path=/; expires=Sun, 27-Nov-2016 12:26:49 GMT
+      - ahoy_visit=b8e08a6f-e4b1-4063-a6ab-c55e11f30ff4; domain=.quadernoapp.com;
+        path=/; expires=Thu, 27-Nov-2014 16:26:49 GMT
+      - ahoy_track=true; domain=.quadernoapp.com; path=/
+      x-request-id:
+      - 76c7b54377e3eaa47c9f1f3378d46cf1
+      x-runtime:
+      - '0.087348'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"name":null,"rate":0.0,"notes":"VAT reverse charged"}'
+    http_version: '1.1'
+  recorded_at: Thu, 27 Nov 2014 12:17:24 GMT
+recorded_with: VCR 2.9.2
