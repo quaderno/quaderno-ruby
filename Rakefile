@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "quaderno"
-  gem.homepage = "http://github.com/recrea/quaderno-ruby"
+  gem.homepage = "http://github.com/quaderno/quaderno-ruby"
   gem.license = "MIT"
   gem.summary = %Q{one-line summary of your gem}
-  gem.description = %Q{longer description of your gem}
+  gem.description = %Q{ A ruby wrapper for Quaderno API }
   gem.email = "carlos@recrea.es"
   gem.authors = ["Recrea"]
   # dependencies defined in Gemfile

@@ -1,5 +1,10 @@
 #Changelog
 ##1.4.0
+* Fix wrong method name
+* Use correct organization in url
+* Add short description of the gem
+
+##1.4.0
 * Added taxes calculations support
 * Added webhooks documentation 
 
