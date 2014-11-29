@@ -1,5 +1,5 @@
 #Changelog
-##1.4.0
+##1.4.1
 * Fix wrong method name
 * Use correct organization in url
 * Add short description of the gem
