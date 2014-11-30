@@ -1,6 +1,6 @@
-# Quaderno-ruby
+# quaderno-ruby
 
-Quaderno-ruby is a ruby wrapper for [quaderno api] (https://github.com/recrea/quaderno-api). 
+Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api). 
 As the API, it's mostly CRUD.
 
 Current version is 1.4.1. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
@@ -365,6 +365,6 @@ will update the specified webhook with the data of the hash passed as second par
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
-## Quaderno-api 
+## Quaderno API 
 
-For further information, please visit [quaderno api] (https://github.com/recrea/quaderno-api) wiki
+For further information, please visit the [Quaderno API wiki](https://github.com/quaderno/quaderno-api).
