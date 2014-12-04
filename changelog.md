@@ -1,4 +1,11 @@
 #Changelog
+##1.5.0
+* Added transactions
+* Raise `Quaderno::Exceptions::RequiredFieldsEmpty for 422 responses
+
+##1.4.2
+* Find method hotfix
+
 ##1.4.1
 * Fix wrong method name
 * Use correct organization in url
