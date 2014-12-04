@@ -69,7 +69,7 @@ class TestQuadernoTransaction < Test::Unit::TestCase
       VCR.use_cassette('deleted transaction') do
         new_transaction = Quaderno::Transaction.create(country: 'ES', postal_code: '08080', iin: '424242', amount: 1200, ip: '85.155.156.215')
         Quaderno::Transaction.delete new_transaction.id
-        assert_raise NoMethodError do
+        assert_raise Quaderno::Exceptions::InvalidSubdomainOrToken do
           Quaderno::Transaction.find new_transaction.id
         end
       end
