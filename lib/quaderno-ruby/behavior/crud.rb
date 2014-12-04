@@ -44,7 +44,7 @@ module Quaderno
         def find(id)
           party_response = get "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true })       
-          hash = parse party_response.parsed_response
+          hash = party_response.parsed_response
           if (api_model == Quaderno::Invoice) || (api_model == Quaderno::Estimate) || (api_model == Quaderno::Expense)
             api_model.parse(hash)
           end
