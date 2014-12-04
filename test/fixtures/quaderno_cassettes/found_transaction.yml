@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rkHqiPxs4VFHgtqqjYqw@test-account.sandbox-quadernoapp.com/api/v1/transactions/18.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic cmtIcWlQeHM0VkZIZ3RxcWpZcXc6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.6.2
+      date:
+      - Thu, 04 Dec 2014 13:45:20 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-remaining:
+      - '1901'
+      last-modified:
+      - Thu, 04 Dec 2014 12:14:01 GMT
+      cache-control:
+      - must-revalidate, private, max-age=0
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - ahoy_visitor=a3a7ea1f-ae44-4804-8509-5b901d685a9f; domain=.sandbox-quadernoapp.com;
+        path=/; expires=Sun, 04-Dec-2016 13:45:20 GMT
+      - ahoy_visit=d449d294-6f7f-4c4c-8710-d0db6010e863; domain=.sandbox-quadernoapp.com;
+        path=/; expires=Thu, 04-Dec-2014 17:45:20 GMT
+      - ahoy_track=true; domain=.sandbox-quadernoapp.com; path=/
+      x-request-id:
+      - 0c57a4f541a26832504285c5d15beb76
+      x-runtime:
+      - '0.056580'
+      x-rack-cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"id":18,"tax_name":"IGIC","tax_rate":7.0,"amount":1200,"tax_amount":84,"total_amount":1284}'
+    http_version: '1.1'
+  recorded_at: Thu, 04 Dec 2014 13:45:20 GMT
+recorded_with: VCR 2.9.2

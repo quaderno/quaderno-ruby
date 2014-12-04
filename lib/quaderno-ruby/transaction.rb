@@ -5,7 +5,7 @@ module Quaderno
     api_path 'transactions'
     
     class << self
-      undef :update
+      undef :all, :update
     end
   end
 end
