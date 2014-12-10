@@ -1,7 +1,11 @@
 #Changelog
+##1.5.1 and 1.5.2
+* Remove debugger
+* `Quaderno::Exceptions::RequiredFieldsEmpty` replaced with `Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid`
+
 ##1.5.0
 * Added transactions
-* Raise `Quaderno::Exceptions::RequiredFieldsEmpty for 422 responses
+* Raise `Quaderno::Exceptions::RequiredFieldsEmpty` for 422 responses
 
 ##1.4.2
 * Find method hotfix
