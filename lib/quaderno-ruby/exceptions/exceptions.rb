@@ -12,7 +12,7 @@ module Quaderno
     class HasAssociatedDocuments < Exception
     end
 
-    class RequiredFieldsEmpty < Exception
+    class RequiredFieldsEmptyOrInvalid < Exception
     end
 
     def self.included(receiver)

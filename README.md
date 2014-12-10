@@ -391,6 +391,19 @@ will delete the transaction with the id passed as parameter.
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
+
+## Exceptions
+Quaderno-ruby exceptions raise depending on the type of error:
+
+```ruby
+  Quaderno::Exceptions::InvalidSubdomainOrToken # Raised when the credentials are wrong, missing or do not match the permission for some object.
+
+  Quaderno::Exceptions::RateLimitExceeded # Raised when the rate limit is exceeded.
+
+  Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid # Raised if the format of the request is right but some validations failed.
+```
+
+
 ## More information
 
 Remember this is only a ruby wrapper for the original API. If you want more information about the API itself, head to the original [API documentation](https://github.com/quaderno/quaderno-api).
