@@ -32,7 +32,7 @@ module Quaderno
     
     def self.configure
       yield self
-      @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.sandbox-quadernoapp.com" : "https://#{@@subdomain}.quadernoapp.com"
+      @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.lvh.me:3000" : "https://#{@@subdomain}.quadernoapp.com"
     end
      
     def self.environment=(mode)
@@ -62,6 +62,7 @@ module Quaderno
     def self.ping
       begin
         party_response = get("#{@@base_url}/api/v1/ping.json", basic_auth: { username: auth_token })
+        check_exception_for(party_response, { subdomain_or_token: true })
       rescue Errno::ECONNREFUSED
         return false
       end
@@ -71,9 +72,9 @@ module Quaderno
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
       party_response = get("#{@@base_url}/api/v1/ping.json", basic_auth: { username: auth_token })
-      @@rate_limit_info = { limit: party_response.headers["x-ratelimit-limit"].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
+      check_exception_for(party_response, { subdomain_or_token: true })
+      @@rate_limit_info = { reset: party_response.headers['x-ratelimit-reset'].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
     end
-    
 
     # Instance methods
     def to_hash

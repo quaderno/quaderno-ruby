@@ -15,12 +15,18 @@ module Quaderno
     class RequiredFieldsEmptyOrInvalid < Exception
     end
 
+    class ThrottleLimitExceeded < Exception
+    end
+
     def self.included(receiver)
       receiver.send :extend, ClassMethods
     end  
 
     module ClassMethods
       def check_exception_for(party_response, params = {})
+        if params[:throttle_limit],nil == false
+         raise(Quaderno::Exceptions::ThrottleLimitExceeded, 'Throttle limit exceeded, please try again later') if party_response.response.class == Net::HTTPServiceUnavailable 
+        end
         if params[:rate_limit].nil? == false
           raise(Quaderno::Exceptions::RateLimitExceeded, 'Rate limit exceeded') if party_response.response.class == Net::HTTPForbidden
         end

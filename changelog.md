@@ -1,4 +1,8 @@
 #Changelog
+##1.5.3
+* Update `rate_limit_info` to fit the new rate limit
+* Added new throttle limit exception (will be activated in future releases)
+
 ##1.5.1 and 1.5.2
 * Remove debugger
 * `Quaderno::Exceptions::RequiredFieldsEmpty` replaced with `Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid`

@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api). 
 As the API, it's mostly CRUD.
 
-Current version is 1.5.2. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.5.3. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -50,10 +50,10 @@ This will return true if the service is up or false if it is not.
 ## Check the rate limit
 
 ```ruby
-  Quaderno::Base.rate_limit_info #=>  { :limit => 100, :remaining => 100 }
+  Quaderno::Base.rate_limit_info #=>  {:reset=>4, :remaining=>0} 
 ```
 
-This will return a hash with information about the rate limit and your remaining requestes
+This will return a hash with information about the seconds until the rate limit reset and your remaining requests per minute ([check the API documentation for more information](https://github.com/quaderno/quaderno-api#rate-limiting)).
 
 ## Reading the values
 
