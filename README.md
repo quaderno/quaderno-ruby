@@ -358,29 +358,6 @@ will update the specified webhook with the data of the hash passed as second par
 will delete the webhook with the id passed as parameter.
 
 
-## Managing transactions
-
-### Finding a transaction
-```ruby
- Quaderno::Transaction.find(id) #=> Quaderno::Transaction
-```
-
-will return the transaction with the id passed as parameter.
-
-### Creating a new transaction
-```ruby
- Quaderno::Transaction.create(params) #=> Quaderno::Transaction
-```
-
-will create a transaction using the information of the hash passed as parameter and return an instance of Quaderno::Transaction with the created transaction.
-
-
-### Deleting a transaction
-```ruby
-  Quaderno::Transaction.delete(id) #=> Boolean
-```
-will delete the transaction with the id passed as parameter.
-
 
 ## Taxes
 
