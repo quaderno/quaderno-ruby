@@ -1,4 +1,7 @@
 #Changelog
+##1.5.4
+* Remove transaction class.
+
 ##1.5.3
 * Update `rate_limit_info` to fit the new rate limit
 * Remove transaction information from README (future resource name change)
