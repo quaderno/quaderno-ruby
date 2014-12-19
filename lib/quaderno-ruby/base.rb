@@ -32,7 +32,7 @@ module Quaderno
     
     def self.configure
       yield self
-      @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.lvh.me:3000" : "https://#{@@subdomain}.quadernoapp.com"
+      @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.sandbox-quadernoapp.com" : "https://#{@@subdomain}.quadernoapp.com"
     end
      
     def self.environment=(mode)
