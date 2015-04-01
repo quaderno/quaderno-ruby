@@ -1,4 +1,7 @@
 #Changelog
+##1.5.5
+ * Move rdoc as a development dependency
+
 ##1.5.4
 * Remove transaction class.
 

@@ -95,7 +95,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/quaderno/quaderno-ruby"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.2.2"
+  s.rubygems_version = "2.4.6"
   s.summary = "one-line summary of your gem"
 
   if s.respond_to? :specification_version then
