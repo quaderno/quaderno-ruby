@@ -6,10 +6,10 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 gem 'httparty', '~> 0.13.1'
-gem "rdoc", "~> 3.12"
 
 group :development do
   gem "jeweler", "~> 2.0.1"
+  gem "rdoc",    "~> 3.12"
 end
 
 group :test do
