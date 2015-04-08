@@ -1,20 +1,21 @@
 module Quaderno
   require 'httparty'
   require 'json'
-  
+
   class Base < OpenStruct
     include HTTParty
     include Quaderno::Exceptions
-    include Quaderno::Behavior::Crud    
-    
+    include Quaderno::Behavior::Crud
+
     PRODUCTION_URL = 'https://quadernoapp.com'
     SANDBOX_URL = 'http://sandbox-quadernoapp.com'
 
-    @@auth_token = nil 
+    @@auth_token = nil
     @@subdomain = 'subdomain'
     @@rate_limit_info = nil
     @@base_url = PRODUCTION_URL
     @@environment = :production
+    @@document = false
 
     # Class methods
     def self.api_model(klass)
@@ -29,12 +30,12 @@ module Quaderno
         end
       END
     end
-    
+
     def self.configure
       yield self
       @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.sandbox-quadernoapp.com" : "https://#{@@subdomain}.quadernoapp.com"
     end
-     
+
     def self.environment=(mode)
       @@environment = mode
     end
@@ -42,11 +43,11 @@ module Quaderno
     def self.auth_token=(auth_token)
       @@auth_token = auth_token
     end
-    
+
     def self.subdomain=(subdomain)
       @@subdomain = subdomain
     end
-    
+
     def self.authorization(auth_token, mode = nil)
       begin
         mode ||= @@environment
@@ -68,7 +69,7 @@ module Quaderno
       end
       true
     end
-    
+
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
       party_response = get("#{@@base_url}/api/v1/ping.json", basic_auth: { username: auth_token })
@@ -80,7 +81,7 @@ module Quaderno
     def to_hash
       self.marshal_dump
     end
-    
+
     private
     def self.auth_token
       @@auth_token
@@ -89,7 +90,7 @@ module Quaderno
     def self.base_url
       @@base_url
     end
-    
+
     def self.subdomain
       @_subdomain = @@subdomain
     end
@@ -97,6 +98,10 @@ module Quaderno
     #Set or returns the model path for the url
     def self.api_path(api_path = nil)
       @_api_path ||= api_path
+    end
+
+    def self.is_a_document?(document)
+      @@document = document
     end
   end
 end

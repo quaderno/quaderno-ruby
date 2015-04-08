@@ -1,6 +1,6 @@
 module Quaderno
   module Behavior
-    module Crud         
+    module Crud
       def self.included(receiver)
         receiver.send :extend, ClassMethods
       end
@@ -32,30 +32,34 @@ module Quaderno
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true })
           array = party_response.parsed_response
           collection = []
-          array.each do |element|  
-            if (api_model == Quaderno::Invoice) || (api_model == Quaderno::Estimate) || (api_model == Quaderno::Expense)
+
+          if is_a_document?
+            array.each do |element|
               api_model.parse(element)
+              collection << (new element)
             end
-            collection << (new element)
-          end          
+          else
+            array.each { |element| collection << (new element) }
+          end
+
           collection
         end
 
         def find(id)
           party_response = get "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true })       
+          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true })
           hash = party_response.parsed_response
-          if (api_model == Quaderno::Invoice) || (api_model == Quaderno::Estimate) || (api_model == Quaderno::Expense)
+          if is_a_document?
             api_model.parse(hash)
           end
-          new hash          
+          new hash
         end
 
         def create(params)
           party_response = post "#{api_model.base_url}/api/v1/#{ api_model.api_path }.json", body: params, basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = party_response.parsed_response
-          if (api_model == Quaderno::Invoice) || (api_model == Quaderno::Estimate) || (api_model == Quaderno::Expense)
+          if is_a_document
             api_model.parse(hash)
           end
           new hash
@@ -64,8 +68,8 @@ module Quaderno
         def update(id, params)
           party_response = put "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true })
-          hash = party_response.parsed_response                      
-          if (api_model == Quaderno::Invoice) || (api_model == Quaderno::Estimate) || (api_model == Quaderno::Expense)
+          hash = party_response.parsed_response
+          if is_a_document?
             api_model.parse(hash)
           end
           new hash
@@ -73,7 +77,7 @@ module Quaderno
 
         def delete(id)
           party_response = HTTParty.delete "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })         
+          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
           true
         end
       end
