@@ -15,7 +15,6 @@ module Quaderno
     @@rate_limit_info = nil
     @@base_url = PRODUCTION_URL
     @@environment = :production
-    @@document = false
 
     # Class methods
     def self.api_model(klass)
@@ -100,8 +99,8 @@ module Quaderno
       @_api_path ||= api_path
     end
 
-    def self.is_a_document?(document)
-      @@document = document
+    def self.is_a_document?(document = nil)
+      @_document ||= document
     end
   end
 end

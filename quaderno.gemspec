@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/behavior/deliver.rb",
     "lib/quaderno-ruby/behavior/payment.rb",
     "lib/quaderno-ruby/contact.rb",
+    "lib/quaderno-ruby/credit.rb",
     "lib/quaderno-ruby/document_item.rb",
     "lib/quaderno-ruby/estimate.rb",
     "lib/quaderno-ruby/exceptions/exceptions.rb",

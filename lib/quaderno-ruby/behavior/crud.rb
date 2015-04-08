@@ -10,6 +10,7 @@ module Quaderno
           klass.new hash
         end
 
+        # Parse nested elements of a document
         def parse(element)
           payments_collection = []
           element['payments'].each do |payment|
@@ -49,9 +50,9 @@ module Quaderno
           party_response = get "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true })
           hash = party_response.parsed_response
-          if is_a_document?
-            api_model.parse(hash)
-          end
+
+          api_model.parse(hash) if is_a_document?
+
           new hash
         end
 
@@ -59,9 +60,9 @@ module Quaderno
           party_response = post "#{api_model.base_url}/api/v1/#{ api_model.api_path }.json", body: params, basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = party_response.parsed_response
-          if is_a_document
-            api_model.parse(hash)
-          end
+
+          api_model.parse(hash) if is_a_document
+
           new hash
         end
 
@@ -69,9 +70,9 @@ module Quaderno
           party_response = put "#{api_model.base_url}/api/v1/#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }
           check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true })
           hash = party_response.parsed_response
-          if is_a_document?
-            api_model.parse(hash)
-          end
+
+          api_model.parse(hash) if is_a_document?
+
           new hash
         end
 
