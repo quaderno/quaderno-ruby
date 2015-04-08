@@ -1,4 +1,8 @@
 #Changelog
+##1.6.0
+ * Crud module refactor
+ * Added support for credit notes
+
 ##1.5.5
  * Move rdoc as a development dependency
 

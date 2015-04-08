@@ -1,9 +1,9 @@
 # quaderno-ruby
 
-Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api). 
+Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.5.5. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.6.0. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -31,7 +31,7 @@ You can get your account subdomain by grabbing it from your account url or by ca
 
 ```ruby
   Quaderno::Base.authorization 'my_authenticate_token', environment
-  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/v1/"}} 
+  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/v1/"}}
 ```
 
 `environment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
@@ -39,8 +39,8 @@ You can get your account subdomain by grabbing it from your account url or by ca
 This will return a hash with the information about your api url, which includes the account subdomain.
 
 ## Ping the service
- You can ping the service in order to check if it is up with: 
- 
+ You can ping the service in order to check if it is up with:
+
 ```ruby
   Quaderno::Base.ping #=> Boolean
 ```
@@ -50,7 +50,7 @@ This will return true if the service is up or false if it is not.
 ## Check the rate limit
 
 ```ruby
-  Quaderno::Base.rate_limit_info #=>  {:reset=>4, :remaining=>0} 
+  Quaderno::Base.rate_limit_info #=>  {:reset=>4, :remaining=>0}
 ```
 
 This will return a hash with information about the seconds until the rate limit reset and your remaining requests per minute ([check the API documentation for more information](https://github.com/quaderno/quaderno-api#rate-limiting)).
@@ -60,14 +60,14 @@ This will return a hash with information about the seconds until the rate limit 
 Quaderno-ruby parses all the json responses in human readable data, so you can access each value just like this:
 
 ```ruby
-  contact.id 
+  contact.id
   invoice.items
   estimates.payments
   etc.
 ```
 
 ## Managing contacts
- 
+
 ### Getting contacts
 ```ruby
  Quaderno::Contact.all() #=> Array
@@ -75,11 +75,11 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 ```
 
  will return an array with all your contacts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name. For example:
- 
+
 ```ruby
  Quaderno::Contact.all(q: 'John Doe') #=> Array
 ```
- 
+
 ### Finding a contact
 ```ruby
  Quaderno::Contact.find(id) #=> Quaderno::Contact
@@ -154,7 +154,7 @@ will delete the item with the id passed as parameter.
   Quaderno::Invoice.all(page: 1) #=> Array
 ```
 
- will return an array with all your invoices on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date 
+ will return an array with all your invoices on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
 ### Finding an invoice
 ```ruby
@@ -186,10 +186,10 @@ will update the specified invoice with the data of the hash passed as second par
 
 will delete the invoice with the id passed as parameter.
 
- 
+
 ###Adding or removing a payment
  In order to  add a payment you will need the Invoice instance you want to update.
- 
+
 ```ruby
   invoice = Quaderno::Invoice.find(invoice_id)
   invoice.add_payment(params) #=> Quaderno::Payment
@@ -198,19 +198,87 @@ will delete the invoice with the id passed as parameter.
 Where params is a hash with the payment information. The method will return an instance of Quaderno::Payment wich contains the information of the payment.
 
 In order to  remove a payment you will need the Invoice instance you want to update.
- 
+
 ```ruby
   invoice = Quaderno::Invoice.find(invoice_id)
   invoice.remove_payment(payment_id) #=> Boolean
-``` 
- 
+```
+
 ###Delivering the invoice
 
   In order to deliver the estimate to the default recipient you will need the estimate you want to send.
-  
+
 ```ruby
   invoice = Quaderno::Invoice.find(invoice_id)
   invoice.deliver
+```
+
+
+## Managing credits
+
+### Getting credits
+```ruby
+  Quaderno::Credit.all #=> Array
+  Quaderno::Credit.all(page: 1) #=> Array
+```
+
+ will return an array with all your credit notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+
+### Finding an credit
+```ruby
+  Quaderno::Credit.find(id) #=> Quaderno::Credit
+```
+
+will return the credit with the id passed as parameter.
+
+### Creating a new credit
+
+```ruby
+  Quaderno::Credit.create(params) #=> Quaderno::Credit
+```
+
+will create an credit using the information of the hash passed as parameter.
+
+### Updating an existing credit
+```ruby
+  Quaderno::Credit.update(id, params) #=> Quaderno::Credit
+```
+
+will update the specified credit with the data of the hash passed as second parameter.
+
+### Deleting an credit
+
+```ruby
+  Quaderno::Credit.delete(id) #=> Boolean
+```
+
+will delete the credit with the id passed as parameter.
+
+
+###Adding or removing a payment
+ In order to  add a payment you will need the Credit instance you want to update.
+
+```ruby
+  credit = Quaderno::Credit.find(credit_id)
+  credit.add_payment(params) #=> Quaderno::Payment
+```
+
+Where params is a hash with the payment information. The method will return an instance of Quaderno::Payment wich contains the information of the payment.
+
+In order to  remove a payment you will need the Credit instance you want to update.
+
+```ruby
+  credit = Quaderno::Credit.find(credit_id)
+  credit.remove_payment(payment_id) #=> Boolean
+```
+
+###Delivering the credit
+
+  In order to deliver the estimate to the default recipient you will need the estimate you want to send.
+
+```ruby
+  credit = Quaderno::Credit.find(credit_id)
+  credit.deliver
 ```
 
 
@@ -224,7 +292,7 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 ```
 
  will return an array with all your estimates on the first page.
- 
+
 ### Finding an estimate
 ```ruby
   Quaderno::Estimate.find(id) #=> Quaderno::Estimate
@@ -255,10 +323,10 @@ will update the specified estimate with the data of the hash passed as second pa
 
 will delete the estimate with the id passed as parameter.
 
- 
+
 ###Adding or removing a payment
  In order to add a payment you will need the estimate you want to update.
- 
+
 ```ruby
   estimate = Quaderno::Estimate.find(estimate_id)
   estimate.add_payment(params) #=> Quaderno::Payment
@@ -267,21 +335,21 @@ will delete the estimate with the id passed as parameter.
 Where params is a hash with the payment information. The method will return an instance of Quaderno::Payment wich contains the information of the payment.
 
 In order to  remove a payment you will need the estimate you want to update.
- 
+
 ```ruby
   estimate = Quaderno::Estimate.find(estimate_id)
   estimate.remove_payment(payment_id) #=> Boolean
-``` 
- 
+```
+
 ###Delivering the estimate
   In order to deliver the estimate to the default recipient you will need the estimate you want to send.
-  
+
 ```ruby
   estimate = Quaderno::Estimate.find(estimate_id)
   estimate.deliver
 ```
 
- 
+
 ## Managing expenses
 
 ### Getting expenses
@@ -291,7 +359,7 @@ In order to  remove a payment you will need the estimate you want to update.
 ```
 
  will return an array with all your expenses on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date.
- 
+
 ### Finding an expense
 ```ruby
  Quaderno::Expense.find(id) #=> Quaderno::Expense
@@ -329,7 +397,7 @@ will delete the expense with the id passed as parameter.
 ```
 
  will return an array with all the webhooks you have subscribed.
- 
+
 ### Finding an webhook
 ```ruby
  Quaderno::Webhook.find(id) #=> Quaderno::Webhook
