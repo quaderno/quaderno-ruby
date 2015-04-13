@@ -1,5 +1,8 @@
 #Changelog
-##1.6.0
+##1.6.1
+ * Fixed typo from old version released as 1.6.0
+
+##1.6.0 (yanked)
  * Crud module refactor
  * Added support for credit notes
 
