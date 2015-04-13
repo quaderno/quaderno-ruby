@@ -61,7 +61,7 @@ module Quaderno
           check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = party_response.parsed_response
 
-          api_model.parse(hash) if is_a_document
+          api_model.parse(hash) if is_a_document?
 
           new hash
         end
