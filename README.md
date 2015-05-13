@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.6.1. See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.7.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -387,6 +387,47 @@ will update the specified expense with the data of the hash passed as second par
 ```
 
 will delete the expense with the id passed as parameter.
+
+
+## Managing recurrings
+
+### Getting recurrings
+```ruby
+  Quaderno::Recurring.all #=> Array
+  Quaderno::Recurring.all(page: 1) #=> Array
+```
+
+ will return an array with all your recurring notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+
+### Finding an recurring
+```ruby
+  Quaderno::Recurring.find(id) #=> Quaderno::Recurring
+```
+
+will return the recurring with the id passed as parameter.
+
+### Creating a new recurring
+
+```ruby
+  Quaderno::Recurring.create(params) #=> Quaderno::Recurring
+```
+
+will create an recurring using the information of the hash passed as parameter.
+
+### Updating an existing recurring
+```ruby
+  Quaderno::Recurring.update(id, params) #=> Quaderno::Recurring
+```
+
+will update the specified recurring with the data of the hash passed as second parameter.
+
+### Deleting an recurring
+
+```ruby
+  Quaderno::Recurring.delete(id) #=> Boolean
+```
+
+will delete the recurring with the id passed as parameter.
 
 
 ## Managing webhooks

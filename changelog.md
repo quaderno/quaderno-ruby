@@ -1,4 +1,8 @@
 #Changelog
+##1.7.0
+ * Added recurring documents
+ * Raise existent exception
+
 ##1.6.1
  * Fixed typo from old version released as 1.6.0
 
