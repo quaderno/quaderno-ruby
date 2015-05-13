@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/invoice.rb",
     "lib/quaderno-ruby/item.rb",
     "lib/quaderno-ruby/payment.rb",
+    "lib/quaderno-ruby/recurring.rb",
     "lib/quaderno-ruby/tax.rb",
     "lib/quaderno-ruby/webhook.rb",
     "quaderno.gemspec",

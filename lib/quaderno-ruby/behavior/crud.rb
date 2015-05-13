@@ -13,7 +13,7 @@ module Quaderno
         # Parse nested elements of a document
         def parse(element)
           payments_collection = []
-          element['payments'].each do |payment|
+          (element['payments'] || []).each do |payment|
             payments_collection << api_model.to_instance(Quaderno::Payment, payment)
           end unless api_model == Quaderno::Estimate
           element['payments'] = payments_collection
