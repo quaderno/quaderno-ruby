@@ -37,7 +37,7 @@ module Quaderno
           raise(Quaderno::Exceptions::InvalidID, "Invalid #{ api_model } instance identifier") if (party_response.response.class == Net::HTTPInternalServerError) || (party_response.response.class == Net::HTTPNotFound)
         end
         if params[:required_fields].nil? == false
-          raise(Quaderno::Exceptions::RequiredFieldsEmpty, "#{ JSON::parse party_response.body }") if party_response.response.class == Net::HTTPUnprocessableEntity
+          raise(Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid, "#{ JSON::parse party_response.body }") if party_response.response.class == Net::HTTPUnprocessableEntity
         end
         if params[:has_documents].nil? == false
           raise(Quaderno::Exceptions::HasAssociatedDocuments, "#{ JSON::parse party_response.body }") if party_response.response.class == Net::HTTPClientError 
