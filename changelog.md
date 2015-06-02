@@ -1,5 +1,5 @@
 #Changelog
-##1.8.0
+##1.7.1
  * Breaking change: change configuration options
 
 ##1.7.0

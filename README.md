@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.7.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.7.1 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -22,7 +22,7 @@ To configure just add this to your initializers
   end
 ```
 
-**1.8.0 Breaking changes:** If you are using a configuration based on versions `< '1.8.0'`, you will notice that the old configuration no longer works, so please update your configuration or specify the `1.8.0` version.enci
+**1.8.0 Breaking changes:** If you are using a configuration based on versions `< '1.7.1'`, you will notice that the old configuration no longer works, so please update your configuration or specify the `1.7.0` version.
 
 ## Get authorization data
 
