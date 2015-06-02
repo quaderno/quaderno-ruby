@@ -22,7 +22,7 @@ To configure just add this to your initializers
   end
 ```
 
-**1.8.0 Breaking changes:** If you are using a configuration based on versions `< '1.7.1'`, you will notice that the old configuration no longer works, so please update your configuration or specify the `1.7.0` version.
+**1.7.1 Breaking changes:** If you are using a configuration based on versions `< '1.7.1'`, you will notice that the old configuration no longer works, so please update your configuration or specify the `1.7.0` version.
 
 ## Get authorization data
 
