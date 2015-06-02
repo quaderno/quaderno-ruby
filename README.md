@@ -18,12 +18,11 @@ To configure just add this to your initializers
 ```ruby
   Quaderno::Base.configure do |config|
     config.auth_token = 'my_authenticate_token'
-    config.subdomain = 'my_subdomain'
-    config.environment = :production
+    config.url = 'https://my_subdomain.quadernoapp.com/api/v1/'
   end
 ```
 
-The `environment` attribute is optional and set to `:production` by default. Optionally, you can set it to `:sandbox` in order to test your application before deploying it to production.
+**1.8.0 Breaking changes:** If you are using a configuration based on versions `< '1.8.0'`, you will notice that the old configuration no longer works, so please update your configuration or specify the `1.8.0` version.enci
 
 ## Get authorization data
 

@@ -1,4 +1,7 @@
 #Changelog
+##1.8.0
+ * Breaking change: change configuration options
+
 ##1.7.0
  * Added recurring documents
  * Raise existent exception

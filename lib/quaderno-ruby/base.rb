@@ -7,14 +7,12 @@ module Quaderno
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud
 
-    PRODUCTION_URL = 'https://quadernoapp.com'
-    SANDBOX_URL = 'http://sandbox-quadernoapp.com'
+    PRODUCTION_URL = 'https://quadernoapp.com/api/v1/'
+    SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/v1/'
 
     @@auth_token = nil
-    @@subdomain = 'subdomain'
     @@rate_limit_info = nil
-    @@base_url = PRODUCTION_URL
-    @@environment = :production
+    @@url = PRODUCTION_URL
 
     # Class methods
     def self.api_model(klass)
@@ -32,26 +30,21 @@ module Quaderno
 
     def self.configure
       yield self
-      @@base_url = @@environment == :sandbox && !@@subdomain.nil? ? "http://#{@@subdomain}.sandbox-quadernoapp.com" : "https://#{@@subdomain}.quadernoapp.com"
-    end
-
-    def self.environment=(mode)
-      @@environment = mode
     end
 
     def self.auth_token=(auth_token)
       @@auth_token = auth_token
     end
 
-    def self.subdomain=(subdomain)
-      @@subdomain = subdomain
+    def self.url=(url)
+      @@url = url
     end
 
     def self.authorization(auth_token, mode = nil)
       begin
-        mode ||= @@environment
-        base_url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
-        party_response = get("#{base_url}/api/v1/authorization.json", basic_auth: { username: auth_token })
+        mode ||= :production
+        url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
+        party_response = get("#{url}authorization.json", basic_auth: { username: auth_token })
         return  JSON::parse party_response.body
       rescue Exception
         return false
@@ -61,7 +54,7 @@ module Quaderno
     #Check the connection
     def self.ping
       begin
-        party_response = get("#{@@base_url}/api/v1/ping.json", basic_auth: { username: auth_token })
+        party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token })
         check_exception_for(party_response, { subdomain_or_token: true })
       rescue Errno::ECONNREFUSED
         return false
@@ -71,7 +64,7 @@ module Quaderno
 
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
-      party_response = get("#{@@base_url}/api/v1/ping.json", basic_auth: { username: auth_token })
+      party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token })
       check_exception_for(party_response, { subdomain_or_token: true })
       @@rate_limit_info = { reset: party_response.headers['x-ratelimit-reset'].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
     end
@@ -86,8 +79,8 @@ module Quaderno
       @@auth_token
     end
 
-    def self.base_url
-      @@base_url
+    def self.url
+      @@url
     end
 
     def self.subdomain
