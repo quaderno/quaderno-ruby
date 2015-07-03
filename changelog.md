@@ -1,6 +1,6 @@
 #Changelog
 ##1.7.2
- * Fix URL in Quaderno::Tax.calculate [**@jcxplorer**] by (https://github.com/jcxplorer)
+ * Fix URL in Quaderno::Tax.calculate by [**@jcxplorer**] (https://github.com/jcxplorer)
 
 ##1.7.1
  * Breaking change: change configuration options
