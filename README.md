@@ -223,7 +223,7 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 
  will return an array with all your credit notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
-### Finding an credit
+### Finding a credit
 ```ruby
   Quaderno::Credit.find(id) #=> Quaderno::Credit
 ```
@@ -236,7 +236,7 @@ will return the credit with the id passed as parameter.
   Quaderno::Credit.create(params) #=> Quaderno::Credit
 ```
 
-will create an credit using the information of the hash passed as parameter.
+will create a credit using the information of the hash passed as parameter.
 
 ### Updating an existing credit
 ```ruby
@@ -245,7 +245,7 @@ will create an credit using the information of the hash passed as parameter.
 
 will update the specified credit with the data of the hash passed as second parameter.
 
-### Deleting an credit
+### Deleting a credit
 
 ```ruby
   Quaderno::Credit.delete(id) #=> Boolean
@@ -398,7 +398,7 @@ will delete the expense with the id passed as parameter.
 
  will return an array with all your recurring notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
-### Finding an recurring
+### Finding a recurring
 ```ruby
   Quaderno::Recurring.find(id) #=> Quaderno::Recurring
 ```
@@ -411,7 +411,7 @@ will return the recurring with the id passed as parameter.
   Quaderno::Recurring.create(params) #=> Quaderno::Recurring
 ```
 
-will create an recurring using the information of the hash passed as parameter.
+will create a recurring using the information of the hash passed as parameter.
 
 ### Updating an existing recurring
 ```ruby
@@ -420,7 +420,7 @@ will create an recurring using the information of the hash passed as parameter.
 
 will update the specified recurring with the data of the hash passed as second parameter.
 
-### Deleting an recurring
+### Deleting a recurring
 
 ```ruby
   Quaderno::Recurring.delete(id) #=> Boolean
@@ -438,7 +438,7 @@ will delete the recurring with the id passed as parameter.
 
  will return an array with all the webhooks you have subscribed.
 
-### Finding an webhook
+### Finding a webhook
 ```ruby
  Quaderno::Webhook.find(id) #=> Quaderno::Webhook
 ```
