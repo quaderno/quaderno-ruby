@@ -485,7 +485,8 @@ Quaderno-ruby exceptions raise depending on the type of error:
 
   Quaderno::Exceptions::RateLimitExceeded # Raised when the rate limit is exceeded.
 
-  Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid # Raised if the format of the request is right but some validations failed.
+  Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid # Raised if the format of the request is right but some validations failed. You can JSON parse the exception message to get which field triggered the exception. For example: '{"errors":{"vat_number":["is not a valid German vat number"]}}'
+
 ```
 
 

@@ -1,4 +1,6 @@
 #Changelog
+##1.7.3
+ * Raise exception on failed updates
 ##1.7.2
  * Fix URL in Quaderno::Tax.calculate by [**@jcxplorer**] (https://github.com/jcxplorer)
 

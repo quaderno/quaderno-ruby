@@ -68,7 +68,7 @@ module Quaderno
 
         def update(id, params)
           party_response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }
-          check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true })
+          check_exception_for(party_response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
           hash = party_response.parsed_response
 
           api_model.parse(hash) if is_a_document?
