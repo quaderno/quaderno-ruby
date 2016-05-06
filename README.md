@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.7.2 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.8.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -205,11 +205,60 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 
 ###Delivering the invoice
 
-  In order to deliver the estimate to the default recipient you will need the estimate you want to send.
+  In order to deliver the invoice to the default recipient you will need the invoice you want to send.
 
 ```ruby
   invoice = Quaderno::Invoice.find(invoice_id)
   invoice.deliver
+```
+
+## Managing receipts
+
+### Getting receipts
+```ruby
+  Quaderno::Receipt.all #=> Array
+  Quaderno::Receipt.all(page: 1) #=> Array
+```
+
+ will return an array with all your receipts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+
+### Finding a receipt
+```ruby
+  Quaderno::Receipt.find(id) #=> Quaderno::Receipt
+```
+
+will return the receipt with the id passed as parameter.
+
+### Creating a new receipt
+
+```ruby
+  Quaderno::Receipt.create(params) #=> Quaderno::Receipt
+```
+
+will create an receipt using the information of the hash passed as parameter.
+
+### Updating an existing receipt
+```ruby
+  Quaderno::Receipt.update(id, params) #=> Quaderno::Receipt
+```
+
+will update the specified receipt with the data of the hash passed as second parameter.
+
+### Deleting an receipt
+
+```ruby
+  Quaderno::Receipt.delete(id) #=> Boolean
+```
+
+will delete the receipt with the id passed as parameter.
+
+###Delivering the receipt
+
+  In order to deliver the receipt to the default recipient you will need the receipt you want to send.
+
+```ruby
+  receipt = Quaderno::Receipt.find(receipt_id)
+  receipt.deliver
 ```
 
 
@@ -273,7 +322,7 @@ In order to  remove a payment you will need the Credit instance you want to upda
 
 ###Delivering the credit
 
-  In order to deliver the estimate to the default recipient you will need the estimate you want to send.
+  In order to deliver the credit to the default recipient you will need the credit you want to send.
 
 ```ruby
   credit = Quaderno::Credit.find(credit_id)
