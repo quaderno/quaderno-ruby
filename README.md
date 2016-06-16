@@ -18,7 +18,8 @@ To configure just add this to your initializers
 ```ruby
   Quaderno::Base.configure do |config|
     config.auth_token = 'my_authenticate_token'
-    config.url = 'https://my_subdomain.quadernoapp.com/api/v1/'
+    config.url = 'https://my_subdomain.quadernoapp.com/api/'
+    config.api_version = 20160602 # Optional, defaults to the API version set in your account
   end
 ```
 
@@ -30,7 +31,7 @@ You can get your account subdomain by grabbing it from your account url or by ca
 
 ```ruby
   Quaderno::Base.authorization 'my_authenticate_token', environment
-  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/v1/"}}
+  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/"}}
 ```
 
 `environment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
