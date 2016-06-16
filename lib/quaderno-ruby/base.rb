@@ -7,8 +7,8 @@ module Quaderno
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud
 
-    PRODUCTION_URL = 'https://quadernoapp.com/api/v1/'
-    SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/v1/'
+    PRODUCTION_URL = 'https://quadernoapp.com/api/'
+    SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/'
 
     @@auth_token = nil
     @@rate_limit_info = nil
