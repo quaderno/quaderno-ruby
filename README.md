@@ -19,7 +19,7 @@ To configure just add this to your initializers
   Quaderno::Base.configure do |config|
     config.auth_token = 'my_authenticate_token'
     config.url = 'https://my_subdomain.quadernoapp.com/api/'
-    config.api_version = 20160602 # Optional, defaults to the API version set in your account
+    config.api_version = API_VERSION # Optional, defaults to the API version set in your account
   end
 ```
 
@@ -531,9 +531,17 @@ will calculate the taxes applied for a customer based on the data pased as param
 Quaderno-ruby exceptions raise depending on the type of error:
 
 ```ruby
+  Quaderno::Exceptions::UnsupportedApiVersion # Raised when the API version set is not supported.
+
   Quaderno::Exceptions::InvalidSubdomainOrToken # Raised when the credentials are wrong, missing or do not match the permission for some object.
 
+  Quaderno::Exceptions::InvalidID # Raised when the requested resource by ID does not exist in the account context.
+
+  Quaderno::Exceptions::ThrottleLimitExceeded # Raised when the throttle limit is exceeded.
+
   Quaderno::Exceptions::RateLimitExceeded # Raised when the rate limit is exceeded.
+
+  Quaderno::Exceptions::HasAssociatedDocuments # Raised when trying to delete a contact with associated documents.
 
   Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid # Raised if the format of the request is right but some validations failed. You can JSON parse the exception message to get which field triggered the exception. For example: '{"errors":{"vat_number":["is not a valid German vat number"]}}'
 

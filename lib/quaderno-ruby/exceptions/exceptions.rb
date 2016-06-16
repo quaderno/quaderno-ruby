@@ -18,12 +18,17 @@ module Quaderno
     class ThrottleLimitExceeded < Exception
     end
 
+    class UnsupportedApiVersion < Exception
+    end
+
     def self.included(receiver)
       receiver.send :extend, ClassMethods
-    end  
+    end
 
     module ClassMethods
       def check_exception_for(party_response, params = {})
+        raise(Quaderno::Exceptions::UnsupportedApiVersion, 'Unsupported API version') if !!(party_response.body =~ /Unsupported API version/)
+
         if params[:throttle_limit].nil? == false
          raise(Quaderno::Exceptions::ThrottleLimitExceeded, 'Throttle limit exceeded, please try again later') if party_response.response.class == Net::HTTPServiceUnavailable 
         end
