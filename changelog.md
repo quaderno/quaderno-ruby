@@ -1,5 +1,8 @@
 #Changelog
 
+##1.9.0
+ * Add support for new versioning system
+
 ##1.8.0
  * Add Quaderno::Receipt support
  * Fix errors in README

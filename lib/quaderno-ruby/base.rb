@@ -7,11 +7,12 @@ module Quaderno
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud
 
-    PRODUCTION_URL = 'https://quadernoapp.com/api/v1/'
-    SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/v1/'
+    PRODUCTION_URL = 'https://quadernoapp.com/api/'
+    SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/'
 
     @@auth_token = nil
     @@rate_limit_info = nil
+    @@api_version = nil
     @@url = PRODUCTION_URL
 
     # Class methods
@@ -32,6 +33,10 @@ module Quaderno
       yield self
     end
 
+    def self.api_version=(api_version)
+      @@api_version = api_version
+    end
+
     def self.auth_token=(auth_token)
       @@auth_token = auth_token
     end
@@ -44,7 +49,7 @@ module Quaderno
       begin
         mode ||= :production
         url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
-        party_response = get("#{url}authorization.json", basic_auth: { username: auth_token })
+        party_response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: version_header)
         return  JSON::parse party_response.body
       rescue Exception
         return false
@@ -54,7 +59,7 @@ module Quaderno
     #Check the connection
     def self.ping
       begin
-        party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token })
+        party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token }, headers: version_header)
         check_exception_for(party_response, { subdomain_or_token: true })
       rescue Errno::ECONNREFUSED
         return false
@@ -64,7 +69,7 @@ module Quaderno
 
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
-      party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token })
+      party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token }, headers: version_header)
       check_exception_for(party_response, { subdomain_or_token: true })
       @@rate_limit_info = { reset: party_response.headers['x-ratelimit-reset'].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
     end
@@ -75,6 +80,7 @@ module Quaderno
     end
 
     private
+    # Class methods
     def self.auth_token
       @@auth_token
     end
@@ -94,6 +100,10 @@ module Quaderno
 
     def self.is_a_document?(document = nil)
       @_document ||= document
+    end
+
+    def self.version_header
+      { 'Accept' => @@api_version.to_i.zero? ? "application/json" : "application/json; api_version=#{@@api_version.to_i}"}
     end
   end
 end
