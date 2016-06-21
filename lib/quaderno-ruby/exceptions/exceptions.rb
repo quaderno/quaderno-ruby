@@ -1,24 +1,27 @@
 module Quaderno
   module Exceptions
-    class InvalidSubdomainOrToken < Exception
+    class BaseException < Exception
     end
 
-    class InvalidID < Exception
+    class InvalidSubdomainOrToken < BaseException
     end
 
-    class RateLimitExceeded < Exception
+    class InvalidID < BaseException
     end
 
-    class HasAssociatedDocuments < Exception
+    class RateLimitExceeded < BaseException
     end
 
-    class RequiredFieldsEmptyOrInvalid < Exception
+    class HasAssociatedDocuments < BaseException
     end
 
-    class ThrottleLimitExceeded < Exception
+    class RequiredFieldsEmptyOrInvalid < BaseException
     end
 
-    class UnsupportedApiVersion < Exception
+    class ThrottleLimitExceeded < BaseException
+    end
+
+    class UnsupportedApiVersion < BaseException
     end
 
     def self.included(receiver)
@@ -30,7 +33,7 @@ module Quaderno
         raise(Quaderno::Exceptions::UnsupportedApiVersion, 'Unsupported API version') if !!(party_response.body =~ /Unsupported API version/)
 
         if params[:throttle_limit].nil? == false
-         raise(Quaderno::Exceptions::ThrottleLimitExceeded, 'Throttle limit exceeded, please try again later') if party_response.response.class == Net::HTTPServiceUnavailable 
+         raise(Quaderno::Exceptions::ThrottleLimitExceeded, 'Throttle limit exceeded, please try again later') if party_response.response.class == Net::HTTPServiceUnavailable
         end
         if params[:rate_limit].nil? == false
           raise(Quaderno::Exceptions::RateLimitExceeded, 'Rate limit exceeded') if party_response.response.class == Net::HTTPForbidden
@@ -45,7 +48,7 @@ module Quaderno
           raise(Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid, party_response.body) if party_response.response.class == Net::HTTPUnprocessableEntity
         end
         if params[:has_documents].nil? == false
-          raise(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body) if party_response.response.class == Net::HTTPClientError 
+          raise(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body) if party_response.response.class == Net::HTTPClientError
         end
       end
     end
