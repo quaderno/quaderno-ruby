@@ -1,6 +1,6 @@
 module Quaderno
   module Exceptions
-    class BaseException < Exception
+    class BaseException < StandardError
     end
 
     class InvalidSubdomainOrToken < BaseException
