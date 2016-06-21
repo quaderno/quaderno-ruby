@@ -46,13 +46,14 @@ module Quaderno
     end
 
     def self.authorization(auth_token, mode = nil)
-      begin
-        mode ||= :production
-        url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
-        party_response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: version_header)
-        return  JSON::parse party_response.body
-      rescue Exception
-        return false
+      mode ||= :production
+      url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
+      response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: version_header)
+
+      if response.code == 200
+        response.parsed_response
+      else
+        raise(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token')
       end
     end
 
