@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.9.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.9.1 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -547,10 +547,11 @@ Quaderno-ruby exceptions raise depending on the type of error:
 
 ```
 
+All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
 
 ## More information
 
-Remember this is only a ruby wrapper for the original API. If you want more information about the API itself, head to the original [API documentation](https://github.com/quaderno/quaderno-api).
+Remember this is only a ruby wrapper for the original API. If you want more information about the API itself, head to the original [API documentation](https://quaderno.io/docs/api/).
 
 ## License
 (The MIT License)

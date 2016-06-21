@@ -1,5 +1,9 @@
 #Changelog
 
+##1.9.1
+ * `Quaderno::Base.authorization` raises `Quaderno::Exceptions::InvalidSubdomainOrToken` instead returning false on wrong credentials
+ * Inherit from `StandardError` instead of `Exception` for `Quaderno::Exceptions` by **@mvelikov**
+
 ##1.9.0
  * Add support for new versioning system
 
