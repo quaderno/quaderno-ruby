@@ -14,7 +14,7 @@ module Quaderno
             element['payments'] = payments_collection
           end
 
-          items_collection = Arrray.new
+          items_collection = Array.new
           element['items'].each { |item| items_collection << Quaderno::DocumentItem.new(item) }
           element['items'] = items_collection
           element['contact'] = Quaderno::Contact.new(element['contact'])
