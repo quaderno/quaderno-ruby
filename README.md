@@ -87,7 +87,7 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 
 will return the contact with the id passed as parameter.
 
-## Retrieving a customer contact by its payment gatewaycustomer ID
+### Retrieving a customer contact by its payment gatewaycustomer ID
 ```ruby
  Quaderno::Contact.retrieve_customer(PAYMENT_GATEWAY_CUSTOMER_ID, PAYMENT_GATEWAY) #=> Quaderno::Contact
 ```
