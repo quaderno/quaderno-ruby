@@ -3,6 +3,7 @@
 ##1.9.2
  * Added `Quaderno::Contact.retrieve` method
  * Code cleanup
+ * Update tests
 
 ##1.9.1
  * `Quaderno::Base.authorization` raises `Quaderno::Exceptions::InvalidSubdomainOrToken` instead returning false on wrong credentials
