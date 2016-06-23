@@ -10,23 +10,20 @@ module Quaderno
         def add_payment(params)
           response = api_model.post "#{api_model.url}#{ api_model.api_path }/#{ id }/payments.json", body: params, basic_auth: { username: api_model.auth_token }, headers: self.class.version_header
           api_model.check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
-          reload_self
 
-          Quaderno::Payment.new parsed
+          instance = Quaderno::Payment.new(response.parsed_response)
+          self.payments << instance
+
+          Quaderno::Payment.new instance
         end
 
         def remove_payment(payment_id)
           response = HTTParty.delete "#{api_model.url}#{ api_model.api_path }/#{ id }/payments/#{ payment_id }.json", basic_auth: { username: api_model.auth_token }, headers: self.class.version_header
           api_model.check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
-          reload_self
+
+          self.payments.delete_if { |payment| payment.id == payment_id }
 
           true
-        end
-
-        private
-        def reload_self
-          reloaded_self = api_model.find(id)
-          reloaded_self.each_pair { |k, v| self.send("#{k}=", v) }
         end
       end
     end
