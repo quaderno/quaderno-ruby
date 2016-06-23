@@ -6,8 +6,7 @@ module Quaderno
       end
 
       module ClassMethods
-        # Parse nested objects in documents
-        def parse(element)
+        def parse_nested(element)
           if element.has_key?('payments')
             payments_collection = Array.new
             (element['payments'] || Array.new).each { |payment| payments_collection << Quaderno::Payment.new(payment) }
@@ -30,7 +29,7 @@ module Quaderno
 
           if is_a_document?
             array.each do |element|
-              api_model.parse(element)
+              api_model.parse_nested(element)
               collection << (new element)
             end
           else
@@ -45,7 +44,7 @@ module Quaderno
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
 
-          api_model.parse(hash) if is_a_document?
+          api_model.parse_nested(hash) if is_a_document?
 
           new hash
         end
@@ -55,7 +54,7 @@ module Quaderno
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = response.parsed_response
 
-          api_model.parse(hash) if is_a_document?
+          api_model.parse_nested(hash) if is_a_document?
 
           new hash
         end
@@ -65,7 +64,7 @@ module Quaderno
           check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
 
-          api_model.parse(hash) if is_a_document?
+          api_model.parse_nested(hash) if is_a_document?
 
           new hash
         end
