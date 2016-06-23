@@ -6,33 +6,27 @@ module Quaderno
       end
 
       module ClassMethods
-        def to_instance(klass, hash)
-          klass.new hash
-        end
-
-        # Parse nested elements of a document
+        # Parse nested objects in documents
         def parse(element)
-          payments_collection = []
-          (element['payments'] || []).each do |payment|
-            payments_collection << api_model.to_instance(Quaderno::Payment, payment)
-          end unless api_model == Quaderno::Estimate
-          element['payments'] = payments_collection
-
-          items_collection = []
-          element['items'].each do |item|
-            items_collection << api_model.to_instance(Quaderno::DocumentItem, item)
+          if element.has_key?('payments')
+            payments_collection = Array.new
+            (element['payments'] || Array.new).each { |payment| payments_collection << Quaderno::Payment.new(payment) }
+            element['payments'] = payments_collection
           end
-          element['items'] = items_collection
 
-          contact = api_model.to_instance(Quaderno::Contact, element['contact'])
-          element['contact'] = contact
+          items_collection = Arrray.new
+          element['items'].each { |item| items_collection << Quaderno::DocumentItem.new(item) }
+          element['items'] = items_collection
+          element['contact'] = Quaderno::Contact.new(element['contact'])
+
+          element
         end
 
         def all(filter = nil)
-          party_response = get("#{api_model.url}#{ api_model.api_path }.json", body: filter, basic_auth: { username: api_model.auth_token }, headers: version_header)
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true })
-          array = party_response.parsed_response
-          collection = []
+          response = get("#{api_model.url}#{ api_model.api_path }.json", body: filter, basic_auth: { username: api_model.auth_token }, headers: version_header)
+          check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
+          array = response.parsed_response
+          collection = Array.new
 
           if is_a_document?
             array.each do |element|
@@ -47,9 +41,9 @@ module Quaderno
         end
 
         def find(id)
-          party_response = get "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true })
-          hash = party_response.parsed_response
+          response = get "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
+          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
+          hash = response.parsed_response
 
           api_model.parse(hash) if is_a_document?
 
@@ -57,9 +51,9 @@ module Quaderno
         end
 
         def create(params)
-          party_response = post "#{api_model.url}#{ api_model.api_path }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, required_fields: true })
-          hash = party_response.parsed_response
+          response = post "#{api_model.url}#{ api_model.api_path }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
+          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
+          hash = response.parsed_response
 
           api_model.parse(hash) if is_a_document?
 
@@ -67,9 +61,9 @@ module Quaderno
         end
 
         def update(id, params)
-          party_response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
-          check_exception_for(party_response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
-          hash = party_response.parsed_response
+          response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
+          check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
+          hash = response.parsed_response
 
           api_model.parse(hash) if is_a_document?
 
@@ -77,8 +71,9 @@ module Quaderno
         end
 
         def delete(id)
-          party_response = HTTParty.delete "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
-          check_exception_for(party_response,  { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
+          response = HTTParty.delete "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
+          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
+
           true
         end
       end
