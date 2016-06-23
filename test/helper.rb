@@ -23,5 +23,9 @@ VCR.configure do |c|
   c.hook_into :fakeweb
 end
 
+TEST_URL = 'http://development.lvh.me:3000/api/'
+TEST_KEY = 'sk_test_B7xXrTspfeGukQqGN1pK'
+OLDEST_SUPPORTED_API_VERSION = 20160602
+
 class Test::Unit::TestCase
 end

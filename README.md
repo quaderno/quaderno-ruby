@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.9.1 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.9.2 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -86,6 +86,12 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 ```
 
 will return the contact with the id passed as parameter.
+
+## Retrieving a customer contact by its payment gatewaycustomer ID
+```ruby
+ Quaderno::Contact.retrieve_customer(PAYMENT_GATEWAY_CUSTOMER_ID, PAYMENT_GATEWAY) #=> Quaderno::Contact
+```
+will return the contact with the customer id passed as parameter.
 
 ### Creating a new contact
 ```ruby

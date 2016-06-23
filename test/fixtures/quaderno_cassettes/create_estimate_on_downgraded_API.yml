@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       accept:
-      - application/json
+      - application/json; api_version=20160602
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
@@ -21,9 +21,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '15'
+      - '7'
       x-ratelimit-remaining:
-      - '99'
+      - '92'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -35,9 +35,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 1e68b029-2729-495e-916d-9e8cb76a9639
+      - 68cb128b-5372-45d3-8ea4-4261043dfd28
       x-runtime:
-      - '0.477556'
+      - '1.311641'
       connection:
       - close
       server:
@@ -320,16 +320,16 @@ http_interactions:
         MTRjIiwidXJsIjoiaHR0cDovL2RldmVsb3BtZW50Lmx2aC5tZTozMDAwL2Fw
         aS9jb250YWN0cy81NiJ9XQ==
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:26:26 GMT
+  recorded_at: Thu, 23 Jun 2016 11:25:36 GMT
 - request:
     method: post
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/invoices.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates.json
     body:
       encoding: UTF-8
-      string: contact_id=52&contact_name=A.%20Lucas%20Mayoral&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
+      string: contact_id=52&number=test%20number%2042&contact_name=A.%20Lucas%20Mayoral&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_details=&notes=
     headers:
       accept:
-      - application/json
+      - application/json; api_version=20160602
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
@@ -342,19 +342,19 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '14'
+      - '7'
       x-ratelimit-remaining:
-      - '98'
+      - '91'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"3b146ca95fa0b41ac065b34a4efb7632"'
+      - '"8a004eac990ddd6312c7171c313f0971"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - bb6ba0b0-95c6-4c88-9551-b10912e11793
+      - ae1314cd-d375-4782-b5eb-e09ff94b1b3e
       x-runtime:
-      - '4.079040'
+      - '3.879669'
       connection:
       - close
       server:
@@ -362,43 +362,39 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6MTA2NSwibnVtYmVyIjoiUkI2R0JRIiwiaXNzdWVfZGF0ZSI6IjIw
-        MTYtMDYtMjMiLCJjcmVhdGVkX2F0IjoxNDY2NjgxMTg2LCJjb250YWN0Ijp7
-        ImlkIjo1MiwiZnVsbF9uYW1lIjoiQS4gTHVjYXMgTWF5b3JhbCJ9LCJzdHJl
-        ZXRfbGluZV8xIjoiQy9CZXJuYXJkbyBkZSBsYSBUb3JyZSBuwrogMTA0LCBh
-        cGFydGFtZW50byAyMDEsIGFwYXJ0YW1lbnRvIDIwMSIsInN0cmVldF9saW5l
-        XzIiOiJhcGFydGFtZW50byAyMDEiLCJjaXR5IjoiTGFzIFBhbG1hcyBkZSBH
-        cmFuIENhbmFyaWEiLCJyZWdpb24iOiJTZWxlY2Npb25hIiwicG9zdGFsX2Nv
-        ZGUiOiI5ODc2IiwicG9fbnVtYmVyIjpudWxsLCJkdWVfZGF0ZSI6bnVsbCwi
-        Y3VycmVuY3kiOiJFVVIiLCJleGNoYW5nZV9yYXRlIjoiMS45NTU4IiwiaXRl
-        bXMiOlt7ImlkIjozMDg0LCJkZXNjcmlwdGlvbiI6IkFpcmNyYWZ0IiwicXVh
-        bnRpdHkiOiIxLjAiLCJ1bml0X3ByaWNlX2NlbnRzIjoiMC4wIiwiZGlzY291
-        bnRfcmF0ZSI6IjAuMCIsInRheF8xX25hbWUiOm51bGwsInRheF8xX3JhdGUi
-        Om51bGwsInRheF8yX25hbWUiOm51bGwsInRheF8yX3JhdGUiOm51bGwsInJl
-        ZmVyZW5jZSI6bnVsbCwic3VidG90YWxfY2VudHMiOiIwLjAiLCJkaXNjb3Vu
-        dF9jZW50cyI6IjAuMCIsImdyb3NzX2Ftb3VudF9jZW50cyI6IjAuMCJ9XSwi
-        c3VidG90YWxfY2VudHMiOiIwLjAiLCJkaXNjb3VudF9jZW50cyI6IjAuMCIs
-        InRheGVzIjpbXSwidG90YWxfY2VudHMiOjAsInBheW1lbnRzIjpbXSwicGF5
-        bWVudF9kZXRhaWxzIjpudWxsLCJub3RlcyI6bnVsbCwic3RhdGUiOiJkcmFm
-        dCIsInRhZ19saXN0IjpbXSwic2VjdXJlX2lkIjoiNDY5MGI0M2Q3NzM1ZmY2
-        MDc4MzU0MzBmYjZhOWZjYzE0YzBlMWQwNyIsInBlcm1hbGluayI6Imh0dHA6
-        Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9pbnZvaWNlLzQ2OTBiNDNkNzcz
-        NWZmNjA3ODM1NDMwZmI2YTlmY2MxNGMwZTFkMDciLCJwZGYiOiJodHRwOi8v
-        ZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvaW52b2ljZS80NjkwYjQzZDc3MzVm
-        ZjYwNzgzNTQzMGZiNmE5ZmNjMTRjMGUxZDA3LnBkZiIsInVybCI6Imh0dHA6
-        Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9hcGkvaW52b2ljZXMvMTA2NS5q
-        c29uIiwicHJvY2Vzc29yIjpudWxsLCJwcm9jZXNzb3JfaWQiOm51bGx9
+        eyJpZCI6MTA1OSwibnVtYmVyIjoidGVzdCBudW1iZXIgNDIiLCJpc3N1ZV9k
+        YXRlIjoiMjAxNi0wNi0yMyIsImNyZWF0ZWRfYXQiOjE0NjY2ODExMzYsImNv
+        bnRhY3QiOnsiaWQiOjUyLCJmdWxsX25hbWUiOiJBLiBMdWNhcyBNYXlvcmFs
+        In0sInN0cmVldF9saW5lXzEiOiJDL0Jlcm5hcmRvIGRlIGxhIFRvcnJlIG7C
+        uiAxMDQsIGFwYXJ0YW1lbnRvIDIwMSwgYXBhcnRhbWVudG8gMjAxIiwic3Ry
+        ZWV0X2xpbmVfMiI6ImFwYXJ0YW1lbnRvIDIwMSIsImNpdHkiOiJMYXMgUGFs
+        bWFzIGRlIEdyYW4gQ2FuYXJpYSIsInJlZ2lvbiI6IlNlbGVjY2lvbmEiLCJw
+        b3N0YWxfY29kZSI6Ijk4NzYiLCJwb19udW1iZXIiOm51bGwsImN1cnJlbmN5
+        IjoiRVVSIiwiaXRlbXMiOlt7ImlkIjozMDc4LCJkZXNjcmlwdGlvbiI6IkFp
+        cmNyYWZ0IiwicXVhbnRpdHkiOiIxLjAiLCJ1bml0X3ByaWNlIjoiMC4wIiwi
+        ZGlzY291bnRfcmF0ZSI6IjAuMCIsInRheF8xX25hbWUiOm51bGwsInRheF8x
+        X3JhdGUiOm51bGwsInRheF8yX25hbWUiOm51bGwsInRheF8yX3JhdGUiOm51
+        bGwsInJlZmVyZW5jZSI6bnVsbCwic3VidG90YWwiOiIwLjAwIOKCrCIsImRp
+        c2NvdW50IjoiMC4wMCDigqwiLCJncm9zc19hbW91bnQiOiIwLjAwIOKCrCJ9
+        XSwic3VidG90YWwiOiIwLjAwIOKCrCIsImRpc2NvdW50IjoiMC4wMCDigqwi
+        LCJ0YXhlcyI6W10sInRvdGFsIjoiMC4wMCDigqwiLCJwYXltZW50X2RldGFp
+        bHMiOm51bGwsIm5vdGVzIjpudWxsLCJzdGF0ZSI6ImRyYWZ0IiwidGFnX2xp
+        c3QiOltdLCJzZWN1cmVfaWQiOiJhMjk4YjgxM2I4MjIzM2Q0Njc1OWYwMjNj
+        NmIxOTU2YmQzMTRiNzcwIiwicGVybWFsaW5rIjoiaHR0cDovL2RldmVsb3Bt
+        ZW50Lmx2aC5tZTozMDAwL2VzdGltYXRlL2EyOThiODEzYjgyMjMzZDQ2NzU5
+        ZjAyM2M2YjE5NTZiZDMxNGI3NzAiLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1l
+        bnQubHZoLm1lOjMwMDAvYXBpL2VzdGltYXRlcy8xMDU5Lmpzb24ifQ==
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:26:30 GMT
+  recorded_at: Thu, 23 Jun 2016 11:25:40 GMT
 - request:
     method: delete
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/invoices/1065.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates/1059.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       accept:
-      - application/json
+      - application/json; api_version=20160602
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
@@ -411,15 +407,15 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '10'
+      - '3'
       x-ratelimit-remaining:
-      - '97'
+      - '90'
       cache-control:
       - no-cache
       x-request-id:
-      - 84f94507-ee39-4ac9-b52d-7049d2b17a7d
+      - 9eecba53-f7fb-4b15-a5f7-8f602f61ebda
       x-runtime:
-      - '0.892046'
+      - '0.642070'
       connection:
       - close
       server:
@@ -428,5 +424,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:26:31 GMT
+  recorded_at: Thu, 23 Jun 2016 11:25:40 GMT
 recorded_with: VCR 2.9.2

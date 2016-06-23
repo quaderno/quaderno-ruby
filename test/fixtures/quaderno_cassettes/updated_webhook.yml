@@ -2,193 +2,170 @@
 http_interactions:
 - request:
     method: post
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/webhooks.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: url=http%3A%2F%2Fquadernoapp.com&events_types[]=invoice.created&events_types[]=expense.updated
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 201
       message: Created
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:33 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 201 Created
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '13'
       x-ratelimit-remaining:
-      - '1907'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '97'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"f3d8f007c39ad672e784cdea8584bd94"'
+      - '"6b237dc215b1a3130a0d968ff98ec5fb"'
       cache-control:
       - max-age=0, private, must-revalidate
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWI0ZGY3OWE5NDNmMDgxNDZiNjQ4ZTJkZDVlOGEwMDYwBjsAVA%3D%3D--be4ef828c4fb2655ed7e9a665eb15f0b2d01fe39;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 022c00594e6acdb460d8da0c9d8bdff6
+      - f6e6998d-d2c0-4251-8409-0c88e15b136c
       x-runtime:
-      - '0.358608'
-      x-rack-cache:
-      - invalidate, pass
+      - '15.033065'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"id":91,"url":"http://quadernoapp.com","auth_key":"AWV8Up3JdTkx-52ACYRyrw","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-07-01T09:08:33Z","updated_at":"2014-07-01T09:08:33Z"}'
+      encoding: UTF-8
+      string: '{"id":35,"url":"http://quadernoapp.com","auth_key":"qKa3Ok0WZgvldD5FjRpb0A","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:29:54.649Z","updated_at":"2016-06-23T11:29:54.649Z"}'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:33 GMT
+  recorded_at: Thu, 23 Jun 2016 11:29:54 GMT
 - request:
     method: get
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/webhooks.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 200
       message: OK
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:33 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '15'
       x-ratelimit-remaining:
-      - '1906'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
-      etag:
-      - ! '"43049229b201f4b31cac93f5fee83af9"'
-      cache-control:
-      - must-revalidate, private, max-age=0
-      x-request-id:
-      - cced170845eb2b972424e97649cc815a
-      x-runtime:
-      - '0.042989'
-      x-rack-cache:
-      - miss
-    body:
-      encoding: US-ASCII
-      string: ! '[{"id":91,"url":"http://quadernoapp.com","auth_key":"AWV8Up3JdTkx-52ACYRyrw","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-07-01T09:08:33Z","updated_at":"2014-07-01T09:08:33Z"}]'
-    http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:33 GMT
-- request:
-    method: put
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/webhooks/91.json
-    body:
-      encoding: US-ASCII
-      string: events_types[]=invoice.created&events_types[]=invoice.updated&events_types[]=contact.deleted
-    headers:
-      authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:34 GMT
+      - '100'
       content-type:
       - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
-      x-ratelimit-limit:
-      - '2000'
-      x-ratelimit-remaining:
-      - '1905'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
       etag:
-      - ! '"c06bad713050a97afa7be0ece686567c"'
+      - '"8b9ae2f8d987168201324f5263607c2f"'
       cache-control:
       - max-age=0, private, must-revalidate
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWE4N2I2NDliYjEzY2M5MDU5ODMyYjhhOTU5NTVhNjg5BjsAVA%3D%3D--b4dec65624fe8c73247cd545b4d7a8c2d5a10943;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 216482354f133d95989ca49f2675e0d8
+      - 0bcd7271-9436-4d6e-8d22-37f0f5a705e6
       x-runtime:
-      - '0.363208'
-      x-rack-cache:
-      - invalidate, pass
+      - '0.528242'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"id":91,"url":"http://quadernoapp.com","auth_key":"AWV8Up3JdTkx-52ACYRyrw","events_types":["invoice.created","invoice.updated","contact.deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2014-07-01T09:08:33Z","updated_at":"2014-07-01T09:08:34Z"}'
+      encoding: UTF-8
+      string: '[{"id":35,"url":"http://quadernoapp.com","auth_key":"qKa3Ok0WZgvldD5FjRpb0A","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:29:54.000Z","updated_at":"2016-06-23T11:29:54.000Z"}]'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:34 GMT
+  recorded_at: Thu, 23 Jun 2016 11:29:55 GMT
+- request:
+    method: put
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/35.json
+    body:
+      encoding: UTF-8
+      string: events_types[]=invoice.created&events_types[]=invoice.updated&events_types[]=contact.deleted
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '15'
+      x-ratelimit-remaining:
+      - '99'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"a66bc2099cc6f3d83bb3ac760725fbf5"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 3ddf7610-0bbc-4cad-bcc5-77be1e5995a2
+      x-runtime:
+      - '10.841410'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":35,"url":"http://quadernoapp.com","auth_key":"qKa3Ok0WZgvldD5FjRpb0A","events_types":["invoice.created","invoice.updated","contact.deleted"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:29:54.000Z","updated_at":"2016-06-23T11:30:06.066Z"}'
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:30:06 GMT
 - request:
     method: delete
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/webhooks/91.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/35.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 204
       message: No Content
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:35 GMT
-      connection:
-      - close
-      status:
-      - 204 No Content
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '4'
       x-ratelimit-remaining:
-      - '1904'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '98'
       cache-control:
       - no-cache
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTBiN2FlMzIwMTc2MGNjMzkyZjI0NWVlNWEwMDhlZmZjBjsAVA%3D%3D--0230346b648db9d8759a0e2351508c36cd3bfe2d;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 0175e40c2894f7d09b4140d444d258ca
+      - 0b4c8dbe-a204-4b87-9aed-6226b4dcc4a9
       x-runtime:
-      - '0.052273'
-      x-rack-cache:
-      - invalidate, pass
+      - '0.358537'
+      connection:
+      - close
+      server:
+      - thin
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:35 GMT
+  recorded_at: Thu, 23 Jun 2016 11:30:06 GMT
 recorded_with: VCR 2.9.2

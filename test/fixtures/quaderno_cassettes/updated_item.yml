@@ -1,101 +1,89 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: code=1466681272&name=Test_Skynet&unit_cost=21.0
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:06 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '1'
       x-ratelimit-remaining:
-      - '1925'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
-      etag:
-      - ! '"484111898eb77f3321009a9c45671d7c"'
-      cache-control:
-      - must-revalidate, private, max-age=0
-      x-request-id:
-      - 0defb6ddb2c5f57a1058470105b477bc
-      x-runtime:
-      - '0.075011'
-      x-rack-cache:
-      - miss
-    body:
-      encoding: US-ASCII
-      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
-        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}]'
-    http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:06 GMT
-- request:
-    method: put
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942.json
-    body:
-      encoding: US-ASCII
-      string: name=Test_OCP
-    headers:
-      authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:06 GMT
+      - '87'
       content-type:
       - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
-      x-ratelimit-limit:
-      - '2000'
-      x-ratelimit-remaining:
-      - '1924'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
       etag:
-      - ! '"8ef40fdfd4e20fc4d34861150f0d0513"'
+      - '"5abf2e3093e0e9f51b17371479e4aaa4"'
       cache-control:
       - max-age=0, private, must-revalidate
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTI2OGM0MzEyNzVlZjFmNDc4Njk2YTU2OGY3MjU1MzQ4BjsAVA%3D%3D--79aec1bb0e6af290718cd20fd7a2ca127768ea7a;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 3b39de1bc54431d30243c5c313d6fdae
+      - 0c9657cc-ae32-4a00-8375-4edd2ff5453e
       x-runtime:
-      - '0.092128'
-      x-rack-cache:
-      - invalidate, pass
+      - '0.502000'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"id":23942,"code":"007","name":"Test_OCP","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}'
+      encoding: UTF-8
+      string: '{"id":13,"code":"1466681272","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/13"}'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:06 GMT
+  recorded_at: Thu, 23 Jun 2016 11:27:53 GMT
+- request:
+    method: put
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/13.json
+    body:
+      encoding: UTF-8
+      string: name=Test_OCP
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '1'
+      x-ratelimit-remaining:
+      - '86'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"31a6dc173c5dd112016d6581ee9dffcc"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 5be78239-a128-443f-abb1-387399393c55
+      x-runtime:
+      - '0.488213'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":13,"code":"1466681272","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/13"}'
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:27:53 GMT
 recorded_with: VCR 2.9.2

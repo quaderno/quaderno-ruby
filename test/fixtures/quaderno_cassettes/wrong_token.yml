@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://7h15154f4k370k3n@assur-744.quadernoapp.com/api/v1/taxes/calculate.json?country=ES&postal_code=08080
+    uri: http://7h15154f4k370k3n@development.lvh.me:3000/api/taxes/calculate.json?country=ES&postal_code=08080
     body:
       encoding: US-ASCII
       string: ''
@@ -14,37 +14,23 @@ http_interactions:
       code: 401
       message: Unauthorized
     headers:
-      server:
-      - nginx/1.6.0
-      date:
-      - Thu, 27 Nov 2014 12:26:50 GMT
+      x-frame-options:
+      - ALLOWALL
       content-type:
       - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 97610b4b-4ca4-4c71-84db-ce9eb7daf230
+      x-runtime:
+      - '0.058704'
       connection:
       - close
-      status:
-      - 401 Unauthorized
-      x-ua-compatible:
-      - IE=Edge,chrome=1
-      cache-control:
-      - no-cache, private
-      set-cookie:
-      - ahoy_visitor=8e8063c8-23dd-4de2-bddc-6fe1f6f70c09; domain=.quadernoapp.com;
-        path=/; expires=Sun, 27-Nov-2016 12:26:50 GMT
-      - ahoy_visit=3be8bbfd-9aca-4073-99f0-061791482dc9; domain=.quadernoapp.com;
-        path=/; expires=Thu, 27-Nov-2014 16:26:50 GMT
-      - ahoy_track=true; domain=.quadernoapp.com; path=/
-      x-request-id:
-      - 3461fad34aa3517acf73bd10a9aa9cfa
-      x-runtime:
-      - '0.036473'
-      x-rack-cache:
-      - miss
+      server:
+      - thin
     body:
       encoding: UTF-8
       string: '{"error":"Wrong API key or the user does not exist."}'
     http_version: '1.1'
-  recorded_at: Thu, 27 Nov 2014 12:17:25 GMT
+  recorded_at: Thu, 23 Jun 2016 11:28:24 GMT
 recorded_with: VCR 2.9.2

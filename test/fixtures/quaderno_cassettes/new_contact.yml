@@ -2,52 +2,45 @@
 http_interactions:
 - request:
     method: post
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/contacts.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts.json
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 201
       message: Created
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:05:48 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 201 Created
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '15'
       x-ratelimit-remaining:
-      - '1999'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '99'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"5c3a053e216a9cd1b8bc3301f9caa4e7"'
+      - '"4d92dd7f465d302daeb8b6eaaa7d099b"'
       cache-control:
       - max-age=0, private, must-revalidate
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWJhMjk5OTM0OGFkZTgwNDI3ZWFiZTk3MTMxNjk4MzM3BjsAVA%3D%3D--e8c8435ced0e6770b4db1565f2115a94cdda60b7;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 7983944cdcd9a35df1f7c436ea2301e9
+      - 72f200bf-4e70-409c-8ccc-2b62e5bf4d92
       x-runtime:
-      - '0.138948'
-      x-rack-cache:
-      - invalidate, pass
+      - '3.015393'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"id":142303,"kind":"company","full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"US","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"language":"EN","notes":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/contacts/142303"}'
+      encoding: UTF-8
+      string: '{"id":86,"kind":"company","created_at":1466681108,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"17bbf9fb5e227af4bdb792fbda7050d914cceebf","permalink":"http://development.lvh.me:3000/billing/17bbf9fb5e227af4bdb792fbda7050d914cceebf","url":"http://development.lvh.me:3000/api/contacts/86"}'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:05:48 GMT
+  recorded_at: Thu, 23 Jun 2016 11:25:10 GMT
 recorded_with: VCR 2.9.2

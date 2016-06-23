@@ -1,0 +1,214 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts.json
+    body:
+      encoding: UTF-8
+      string: first_name=Test%20customer
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '8'
+      x-ratelimit-remaining:
+      - '93'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"c111daa3651e62fbf7a733420693ef10"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 174f76e6-80f9-4920-b7b6-cbec9fae6b9b
+      x-runtime:
+      - '0.615812'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":91,"kind":"company","created_at":1466681297,"full_name":"Test
+        customer","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"a36c8e2608ce94ac2c6ddc156ef06c2606688c2a","permalink":"http://development.lvh.me:3000/billing/a36c8e2608ce94ac2c6ddc156ef06c2606688c2a","url":"http://development.lvh.me:3000/api/contacts/91"}'
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:28:17 GMT
+- request:
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts.json
+    body:
+      encoding: UTF-8
+      string: contact_id=91&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_method=cash&notes=
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '8'
+      x-ratelimit-remaining:
+      - '92'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"3b8daf2008cf6060bc69ab9984d4d453"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 85a4a288-fba4-493a-ac81-56f7c8c78cab
+      x-runtime:
+      - '4.289370'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":1072,"number":"0000006","issue_date":"2016-06-23","created_at":1466681297,"contact":{"id":91,"full_name":"Test
+        customer"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.9558","items":[{"id":3091,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":35,"date":"2016-06-23","payment_method":"cash","amount_cents":0}],"notes":null,"state":"paid","tag_list":[],"secure_id":"fb58b3334e527c7dd485fb9aa9e19804e6856c7a","permalink":"http://development.lvh.me:3000/receipt/fb58b3334e527c7dd485fb9aa9e19804e6856c7a","pdf":"http://development.lvh.me:3000/receipt/fb58b3334e527c7dd485fb9aa9e19804e6856c7a.pdf","url":"http://development.lvh.me:3000/api/receipts/1072.json","processor":null,"processor_id":null}'
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:28:21 GMT
+- request:
+    method: put
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/1072.json
+    body:
+      encoding: UTF-8
+      string: notes=Show%20me%20the%20moneeeeeeeyy!!!!
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '3'
+      x-ratelimit-remaining:
+      - '91'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"7f8dc9cee20404c7cd8cd3b3f68615b9"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 367a989c-946d-4d5f-8c09-166b7e68261c
+      x-runtime:
+      - '0.804763'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":1072,"number":"0000006","issue_date":"2016-06-23","created_at":1466681297,"contact":{"id":91,"full_name":"Test
+        customer"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.9558","items":[{"id":3091,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":35,"date":"2016-06-23","payment_method":"cash","amount_cents":0}],"notes":"Show
+        me the moneeeeeeeyy!!!!","state":"paid","tag_list":[],"secure_id":"fb58b3334e527c7dd485fb9aa9e19804e6856c7a","permalink":"http://development.lvh.me:3000/receipt/fb58b3334e527c7dd485fb9aa9e19804e6856c7a","pdf":"http://development.lvh.me:3000/receipt/fb58b3334e527c7dd485fb9aa9e19804e6856c7a.pdf","url":"http://development.lvh.me:3000/api/receipts/1072.json","processor":null,"processor_id":null}'
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:28:22 GMT
+- request:
+    method: delete
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/1072.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '2'
+      x-ratelimit-remaining:
+      - '90'
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 9208eb39-1b9b-44dc-902e-530484a41e50
+      x-runtime:
+      - '0.597983'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:28:23 GMT
+- request:
+    method: delete
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts/91.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '2'
+      x-ratelimit-remaining:
+      - '89'
+      cache-control:
+      - no-cache
+      x-request-id:
+      - c3a29402-d140-448a-be42-e4b0ad2f008f
+      x-runtime:
+      - '0.421027'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 23 Jun 2016 11:28:23 GMT
+recorded_with: VCR 2.9.2

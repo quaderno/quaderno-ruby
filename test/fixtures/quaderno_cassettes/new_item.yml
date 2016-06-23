@@ -2,52 +2,45 @@
 http_interactions:
 - request:
     method: post
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: code=000000&name=Test_Skynet&unit_cost=21.0
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 201
       message: Created
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:02 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 201 Created
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '6'
       x-ratelimit-remaining:
-      - '1932'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '94'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"e0a1dfbe8dd0b3be5d9fcdaa22441e78"'
+      - '"be3e7a51f6dc6f33b784bb75bab96c33"'
       cache-control:
       - max-age=0, private, must-revalidate
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTE2NmEyODMzMTE1NjliMGE2NmUyOTg2NzY2NDRlOTkyBjsAVA%3D%3D--d86b46e33cdfe6f1ff23b5f1a78e77cd3e515773;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 4586d674c455e8fe1940a0a09fb39bf1
+      - 0d3c5a08-90db-4a3d-a2fb-833205f5330c
       x-runtime:
-      - '0.071937'
-      x-rack-cache:
-      - invalidate, pass
+      - '0.550066'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"id":23944,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944"}'
+      encoding: UTF-8
+      string: '{"id":11,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/11"}'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:02 GMT
+  recorded_at: Thu, 23 Jun 2016 11:27:48 GMT
 recorded_with: VCR 2.9.2

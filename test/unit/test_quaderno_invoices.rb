@@ -5,19 +5,19 @@ class TestQuadernoInvoice < Test::Unit::TestCase
 
     setup do
       Quaderno::Base.configure do |config|
-        config.auth_token = 'RsNaLsNr1KZcdrQRKKKk'
-        config.subdomain = 'uruk-1066'
-        config.environment = :sandbox
+        config.auth_token = TEST_KEY
+        config.url = TEST_URL
+        config.api_version = nil
       end
     end
 
     should 'get exception if pass wrong arguments' do
-      assert_raise ArgumentError do 
+      assert_raise ArgumentError do
         VCR.use_cassette('all invoices') do
           Quaderno::Invoice.all 1, 2, 3
         end
       end
-      assert_raise ArgumentError do 
+      assert_raise ArgumentError do
         VCR.use_cassette('found invoice') do
           Quaderno::Invoice.find
         end
@@ -43,22 +43,22 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         assert_equal invoices.first.id, invoice.id
       end
     end
-    
+
     should 'create a invoice' do
       VCR.use_cassette('new invoice') do
         contacts = Quaderno::Contact.all
         invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
-                                           contact_name: contacts[0].full_name, 
-                                           currency: 'EUR', 
+                                           contact_name: contacts[0].full_name,
+                                           currency: 'EUR',
                                            items_attributes: [
-                                             { 
-                                               description: 'Aircraft', 
-                                               quantity: '1.0', 
-                                               unit_price: '0.0' 
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
                                              }
                                            ],
-                                           tags: 'tnt', 
-                                           payment_details: '', 
+                                           tags: 'tnt',
+                                           payment_details: '',
                                            notes: '')
         assert_kind_of Quaderno::Invoice, invoice
         assert_equal contacts[0].id, invoice.contact.id
@@ -66,22 +66,22 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         Quaderno::Invoice.delete(invoice.id)
       end
     end
-    
+
     should 'update an invoice' do
       VCR.use_cassette('updated invoice') do
         contacts = Quaderno::Contact.all
         invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
-                                           contact_name: contacts[0].full_name, 
-                                           currency: 'EUR', 
+                                           contact_name: contacts[0].full_name,
+                                           currency: 'EUR',
                                            items_attributes: [
-                                             { 
-                                               description: 'Aircraft', 
-                                               quantity: '1.0', 
-                                               unit_price: '0.0' 
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
                                              }
                                            ],
-                                           tags: 'tnt', 
-                                           payment_details: '', 
+                                           tags: 'tnt',
+                                           payment_details: '',
                                            notes: '')
         invoice = Quaderno::Invoice.update(invoice.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
         assert_kind_of Quaderno::Invoice, invoice
@@ -89,29 +89,29 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         Quaderno::Invoice.delete(invoice.id)
       end
     end
-    
+
     should 'delete an invoice' do
         VCR.use_cassette('deleted invoice') do
           contacts = Quaderno::Contact.all
           invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
-                                             contact_name: contacts[0].full_name, 
-                                             currency: 'EUR', 
+                                             contact_name: contacts[0].full_name,
+                                             currency: 'EUR',
                                              items_attributes: [
-                                               { 
-                                                 description: 'Aircraft', 
-                                                 quantity: '1.0', 
-                                                 unit_price: '0.0' 
+                                               {
+                                                 description: 'Aircraft',
+                                                 quantity: '1.0',
+                                                 unit_price: '0.0'
                                                }
                                              ],
-                                             tags: 'tnt', 
-                                             payment_details: '', 
+                                             tags: 'tnt',
+                                             payment_details: '',
                                              notes: '')
           Quaderno::Invoice.delete invoice.id
           invoices = Quaderno::Invoice.all
           assert_not_equal invoices.first.id, invoice.id
         end
     end
-    
+
     should 'deliver an invoice' do
       VCR.use_cassette('delivered invoice') do
         invoices = Quaderno::Invoice.all
@@ -124,27 +124,54 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         assert_equal rate_limit_before[:remaining]-1, rate_limit_after[:remaining]
       end
     end
-    
+
     should 'add a payment' do
       VCR.use_cassette('paid invoice') do
         invoices = Quaderno::Invoice.all
-        payment = invoices.first.add_payment(payment_method: "cash", amount: "100000000")
+        payment = invoices.first.add_payment(payment_method: 'cash', amount: 100000000)
         assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.payment_method
-        assert_equal "100,000,000.00", payment.amount[0..payment.amount.length - 3]
-        assert_equal invoices.first.payments.last.id, payment.id 
+        assert_equal 'cash', payment.payment_method
+        assert_equal 10000000000, payment.amount_cents
+        assert_equal invoices.first.payments.last.id, payment.id
       end
     end
-    
+
     should 'remove a payment' do
-        VCR.use_cassette('unpay an invoice') do
-          invoices = Quaderno::Invoice.all
-          invoices.first.add_payment(payment_method: "cash", amount: "100000000")
-          payment = invoices.first.payments.last
-          array_length = invoices.first.payments.length
-          invoices.first.remove_payment(payment.id) unless payment.nil?
-          assert_equal (array_length.zero? ? array_length : array_length-1), invoices.first.payments.length
-        end
+      VCR.use_cassette('unpay an invoice') do
+        invoices = Quaderno::Invoice.all
+        invoices.first.add_payment(payment_method: 'cash', amount: 100000000)
+        payment = invoices.first.payments.last
+        array_length = invoices.first.payments.length
+        invoices.first.remove_payment(payment.id) unless payment.nil?
+        assert_equal (array_length.zero? ? array_length : array_length-1), invoices.first.payments.length
+      end
+    end
+
+    should 'override version' do
+      Quaderno::Base.api_version = OLDEST_SUPPORTED_API_VERSION
+
+      VCR.use_cassette('create invoice on downgraded API') do
+        contacts = Quaderno::Contact.all
+        invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
+                                           contact_name: contacts[0].full_name,
+                                           currency: 'EUR',
+                                           items_attributes: [
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
+                                             }
+                                           ],
+                                           tags: 'tnt',
+                                           payment_details: '',
+                                           notes: '')
+        assert invoice.total_cents.nil?
+        assert !invoice.total.nil?
+        assert_kind_of Quaderno::Invoice, invoice
+        assert_equal contacts[0].id, invoice.contact.id
+        assert_equal 'Aircraft', invoice.items[0].description
+        Quaderno::Invoice.delete(invoice.id)
+      end
     end
   end
 end

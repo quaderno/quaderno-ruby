@@ -2,142 +2,127 @@
 http_interactions:
 - request:
     method: get
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 200
       message: OK
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:02 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '5'
       x-ratelimit-remaining:
-      - '1931'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '93'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"dd53748ab46bda52a703f55094269639"'
+      - '"1f73118f8016f1b372686f7f951a224d"'
       cache-control:
-      - must-revalidate, private, max-age=0
+      - max-age=0, private, must-revalidate
       x-request-id:
-      - 5cafe6879cb2e2f3ed33d850db0a785b
+      - 6b501e51-cf77-4f8b-9cb4-04e849d4e97c
       x-runtime:
-      - '0.070997'
-      x-rack-cache:
-      - miss
+      - '0.665872'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
-        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"},{"id":23944,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944"}]'
+      encoding: UTF-8
+      string: '[{"id":4,"code":"1466679103","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/4"},{"id":7,"code":"1466679630","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/7"},{"id":10,"code":"1466680676","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/10"},{"id":3,"code":"1466679102","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/3"},{"id":6,"code":"1466679628","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/6"},{"id":9,"code":"1466680674","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/9"},{"id":11,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/11"}]'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:02 GMT
+  recorded_at: Thu, 23 Jun 2016 11:27:49 GMT
 - request:
     method: delete
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items/23944.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/11.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 204
       message: No Content
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:03 GMT
-      connection:
-      - close
-      status:
-      - 204 No Content
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '4'
       x-ratelimit-remaining:
-      - '1930'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '92'
       cache-control:
       - no-cache
-      set-cookie:
-      - _quaderno_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTUyZTg2YzQ4ZmI3NmRiYzRlYTdiYTE3NmQyYjc5OWYwBjsAVA%3D%3D--98b907c01c81f6a3831097aca93088d2d5bc127f;
-        domain=sandbox-quadernoapp.com; path=/; HttpOnly
       x-request-id:
-      - 1c52886a8e4524a6bd2bb5da46e6439d
+      - 661f8acf-6cae-4a30-90da-6a05b1ab3597
       x-runtime:
-      - '0.062330'
-      x-rack-cache:
-      - invalidate, pass
+      - '0.759815'
+      connection:
+      - close
+      server:
+      - thin
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:03 GMT
+  recorded_at: Thu, 23 Jun 2016 11:27:50 GMT
 - request:
     method: get
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/items.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 200
       message: OK
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:08:03 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '4'
       x-ratelimit-remaining:
-      - '1929'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '91'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"484111898eb77f3321009a9c45671d7c"'
+      - '"dd526d68d8d83045a7883bb006dec055"'
       cache-control:
-      - must-revalidate, private, max-age=0
+      - max-age=0, private, must-revalidate
       x-request-id:
-      - 3ba00456969a5c0c1149291a6ff9832c
+      - a2f9c403-13b3-46ca-a796-4f177c0de4ba
       x-runtime:
-      - '0.057727'
-      x-rack-cache:
-      - miss
+      - '0.733462'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '[{"id":23943,"code":"008","name":"Pizza the Hutt","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23943"},{"id":23942,"code":"007","name":"Techtoys
-        MechaGodzilla 13cm fully posable","unit_cost":"0.0","stock":null,"url":"http://uruk-1066.sandbox-quadernoapp.com/api/v1/items/23942"}]'
+      encoding: UTF-8
+      string: '[{"id":4,"code":"1466679103","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/4"},{"id":7,"code":"1466679630","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/7"},{"id":10,"code":"1466680676","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/10"},{"id":3,"code":"1466679102","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/3"},{"id":6,"code":"1466679628","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/6"},{"id":9,"code":"1466680674","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/9"}]'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:08:03 GMT
+  recorded_at: Thu, 23 Jun 2016 11:27:50 GMT
 recorded_with: VCR 2.9.2

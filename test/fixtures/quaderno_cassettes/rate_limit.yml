@@ -2,49 +2,45 @@
 http_interactions:
 - request:
     method: get
-    uri: http://RsNaLsNr1KZcdrQRKKKk@uruk-1066.sandbox-quadernoapp.com/api/v1/ping.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/ping.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/json
       authorization:
-      - Basic UnNOYUxzTnIxS1pjZHJRUktLS2s6
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
       code: 200
       message: OK
     headers:
-      server:
-      - nginx/1.4.5
-      date:
-      - Tue, 01 Jul 2014 09:05:53 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
+      x-frame-options:
+      - ALLOWALL
       x-ratelimit-limit:
       - '2000'
+      x-ratelimit-reset:
+      - '8'
       x-ratelimit-remaining:
-      - '1992'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - '91'
+      content-type:
+      - application/json; charset=utf-8
       etag:
-      - ! '"0c776997933eb60833b37beaf43814c8"'
+      - '"0c776997933eb60833b37beaf43814c8"'
       cache-control:
-      - must-revalidate, private, max-age=0
+      - max-age=0, private, must-revalidate
       x-request-id:
-      - 8b2d48d4b2ece720ab27123d5fa0303e
+      - 60c9ac78-9bac-409a-a15c-32939fa7792b
       x-runtime:
-      - '0.039538'
-      x-rack-cache:
-      - miss
+      - '0.406134'
+      connection:
+      - close
+      server:
+      - thin
     body:
-      encoding: US-ASCII
-      string: ! '{"status":"OK"}'
+      encoding: UTF-8
+      string: '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Tue, 01 Jul 2014 09:05:53 GMT
+  recorded_at: Thu, 23 Jun 2016 11:25:14 GMT
 recorded_with: VCR 2.9.2
