@@ -522,7 +522,6 @@ will update the specified webhook with the data of the hash passed as second par
 will delete the webhook with the id passed as parameter.
 
 
-
 ## Taxes
 
 ### Calculating taxes
@@ -532,6 +531,15 @@ will delete the webhook with the id passed as parameter.
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
+
+## Evidences
+
+### Creating location evidences
+```ruby
+ Quaderno::Evidence.create(params) #=> Quaderno::Evidence
+```
+
+will create an evidence based on the data pased as parameters.
 
 ## Exceptions
 Quaderno-ruby exceptions raise depending on the type of error:

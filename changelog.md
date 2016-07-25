@@ -1,5 +1,8 @@
 #Changelog
 
+##1.0.0
+ * Added location evidences support
+
 ##1.9.2
  * Added `Quaderno::Contact.retrieve` method
  * Code cleanup
@@ -20,7 +23,7 @@
  * Raise exception on failed updates
 
 ##1.7.2
- * Fix URL in Quaderno::Tax.calculate by [**@jcxplorer**] (https://github.com/jcxplorer)
+ * Fix URL in `Quaderno::Tax.calculate` by [**@jcxplorer**] (https://github.com/jcxplorer)
 
 ##1.7.1
  * Breaking change: change configuration options
@@ -65,7 +68,7 @@
 
 ##1.4.0
 * Added taxes calculations support
-* Added webhooks documentation 
+* Added webhooks documentation
 
 ##1.3.2
 
