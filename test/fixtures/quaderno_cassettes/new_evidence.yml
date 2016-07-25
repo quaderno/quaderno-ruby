@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/evidences.json
+    body:
+      encoding: UTF-8
+      string: document_id=3477&billing_country=RU&bank_country=RU
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '15'
+      x-ratelimit-remaining:
+      - '100'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"704fb7763a405f79bf75a0a56b3b1096"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 743c2ca5-9260-4121-aee4-bccff983ba7e
+      x-runtime:
+      - '0.394005'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":2313,"document_id":3477,"billing_country":"RU","ip_address":null,"ip_country":null,"vat_number":null,"notes":null}'
+    http_version: '1.1'
+  recorded_at: Mon, 25 Jul 2016 11:16:58 GMT
+recorded_with: VCR 2.9.2
