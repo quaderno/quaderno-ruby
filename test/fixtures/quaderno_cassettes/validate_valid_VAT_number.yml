@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/taxes/validate.json?country=IE&vat_number=IE6388047V
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '15'
+      x-ratelimit-remaining:
+      - '99'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"39837b2fcec9d416bda32e66244da470"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 2153abc6-2f6e-47da-9f37-f4edb50b16a9
+      x-runtime:
+      - '2.047779'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"valid":true}'
+    http_version: '1.1'
+  recorded_at: Tue, 30 Aug 2016 10:38:15 GMT
+recorded_with: VCR 2.9.2

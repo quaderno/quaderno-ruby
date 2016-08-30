@@ -27,14 +27,19 @@ class TestQuadernoTax < Test::Unit::TestCase
     end
 
     should 'calculate tax' do
-      VCR.use_cassette('calculate tax') do
-        tax = Quaderno::Tax.calculate(country: 'ES', postal_code: '08080')
-        assert_equal 'IVA', tax.name
-        assert_equal 21.0, tax.rate
+      VCR.use_cassette('validate valid VAT number') do
+        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047V')
+        assert vat_number_valid
+      end
 
-        tax = Quaderno::Tax.calculate(country: 'ES', postal_code: '35007')
-        assert_equal 'IVA',tax.name
-        assert tax.rate.zero?
+       VCR.use_cassette('validate invalid VAT number') do
+        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047X')
+        assert !vat_number_valid
+      end
+    end
+
+    should 'validate VAT number' do
+      VCR.use_cassette('calculate tax') do
       end
     end
   end

@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.9.2 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.11.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -531,6 +531,15 @@ will delete the webhook with the id passed as parameter.
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
+### Validate VAT numbers
+```ruby
+country = 'IE'
+vat_number = 'IE6388047V'
+
+ Quaderno::Tax.validate_vat_number(country, vat_number) #=> Boolean
+``
+
+will validate the vat number for the passed country
 
 ## Evidences
 

@@ -1,6 +1,9 @@
 #Changelog
 
-##1.0.0
+##1.11.0
+  * Added `Quaderno::Tax.validate_vat_number` method
+
+##1.10.0
  * Added location evidences support
 
 ##1.9.2

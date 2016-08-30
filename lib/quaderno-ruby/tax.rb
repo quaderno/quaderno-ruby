@@ -12,5 +12,12 @@ module Quaderno
       check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true })
       new party_response.parsed_response
     end
+
+    def self.validate_vat_number(country, vat_number)
+      party_response = get("#{self.url}taxes/validate.json", query: {country: country, vat_number: vat_number}, basic_auth: { username: api_model.auth_token } )
+      check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true })
+
+      party_response.parsed_response['valid']
+    end
   end
 end
