@@ -537,7 +537,7 @@ country = 'IE'
 vat_number = 'IE6388047V'
 
  Quaderno::Tax.validate_vat_number(country, vat_number) #=> Boolean
-``
+```
 
 will validate the vat number for the passed country.
 
