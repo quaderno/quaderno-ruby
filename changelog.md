@@ -1,7 +1,11 @@
 #Changelog
 
+##1.11.1
+* Added `retrieve` method for `Quaderno::Contact`, `Quaderno::Invoice`, `Quaderno::Credit`
+* Deprecate `retrieve_customer` as an alias of `retrieve`
+
 ##1.11.0
-  * Added `Quaderno::Tax.validate_vat_number` method
+* Added `Quaderno::Tax.validate_vat_number` method
 
 ##1.10.0
  * Added location evidences support

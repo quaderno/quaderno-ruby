@@ -4,5 +4,6 @@ module Quaderno
 
     api_model Quaderno::Contact
     api_path 'contacts'
+    retrieve_path 'customers'
   end
 end
