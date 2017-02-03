@@ -87,11 +87,14 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 
 will return the contact with the id passed as parameter.
 
-### Retrieving a customer contact by its payment gatewaycustomer ID
+### Retrieving a contact by its payment gateway customer ID
 ```ruby
- Quaderno::Contact.retrieve_customer(PAYMENT_GATEWAY_CUSTOMER_ID, PAYMENT_GATEWAY) #=> Quaderno::Contact
+ Quaderno::Contact.retrieve(PAYMENT_GATEWAY_CUSTOMER_ID, PAYMENT_GATEWAY) #=> Quaderno::Contact
 ```
 will return the contact with the customer id passed as parameter.
+
+*_Note_: `Quaderno::Contact.retrieve_customer` has been deprecated in favor of `Quaderno::Contact.retrieve`
+
 
 ### Creating a new contact
 ```ruby
@@ -168,6 +171,13 @@ will delete the item with the id passed as parameter.
 ```
 
 will return the invoice with the id passed as parameter.
+
+### Retrieving an invoice by its payment gateway transaction ID
+```ruby
+ Quaderno::Invoice.retrieve(PAYMENT_GATEWAY_TRANSACTION_ID, PAYMENT_GATEWAY) #=> Quaderno::Invoice
+```
+will return the invoice with the transaction id passed as parameter.
+
 
 ### Creating a new invoice
 
@@ -285,6 +295,12 @@ will delete the receipt with the id passed as parameter.
 ```
 
 will return the credit with the id passed as parameter.
+
+### Retrieving a credit by its payment gateway transaction ID
+```ruby
+ Quaderno::Credit.retrieve(PAYMENT_GATEWAY_TRANSACTION_ID, PAYMENT_GATEWAY) #=> Quaderno::Credit
+```
+will return the credit note with the transaction id passed as parameter.
 
 ### Creating a new credit
 
