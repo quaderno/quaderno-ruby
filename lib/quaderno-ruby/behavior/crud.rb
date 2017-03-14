@@ -50,7 +50,7 @@ module Quaderno
         end
 
         def create(params)
-          response = post "#{api_model.url}#{ api_model.api_path }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
+          response = post "#{api_model.url}#{ api_model.api_path }.json", body: params.to_json, basic_auth: { username: api_model.auth_token }, headers: version_header.merge('Content-Type' => 'application/json')
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = response.parsed_response
 
@@ -60,7 +60,7 @@ module Quaderno
         end
 
         def update(id, params)
-          response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params, basic_auth: { username: api_model.auth_token }, headers: version_header
+          response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params.to_json, basic_auth: { username: api_model.auth_token }, headers: version_header.merge('Content-Type' => 'application/json')
           check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
 
