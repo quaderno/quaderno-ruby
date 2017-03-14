@@ -1,5 +1,8 @@
 #Changelog
 
+##1.11.2
+* Specify `Content-Type` header so `HTTParty` don't merge the elements within the body content.
+
 ##1.11.1
 * Added `retrieve` method for `Quaderno::Contact`, `Quaderno::Invoice`, `Quaderno::Credit`
 * Deprecate `retrieve_customer` as an alias of `retrieve`
