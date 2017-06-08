@@ -21,8 +21,31 @@ module Quaderno
           element
         end
 
-        def all(filter = nil)
-          response = get("#{api_model.url}#{ api_model.api_path }.json", body: filter, basic_auth: { username: api_model.auth_token }, headers: version_header)
+        def get_authentication(options = {})
+          auth_token = options[:auth_token] || options['auth_token'] || api_model.auth_token
+          access_token = options[:access_token] || options['access_token']
+
+          authentication = { headers: {}, basic_auth: nil }
+
+          if access_token
+            authentication[:headers] = { 'Authorization' => "Bearer #{access_token}" }
+          elsif auth_token
+            authentication[:basic_auth] = { username: auth_token }
+          end
+
+          authentication
+        end
+
+        def all(options = {})
+          authentication = get_authentication(options)
+          filter = options.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+
+          response = get("#{api_model.url}#{api_model.api_path}.json",
+            query: filter,
+            basic_auth: authentication[:basic_auth],
+            headers: version_header.merge(authentication[:headers])
+          )
+
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
           array = response.parsed_response
           collection = Array.new
@@ -39,8 +62,14 @@ module Quaderno
           collection
         end
 
-        def find(id)
-          response = get "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
+        def find(id, options = {})
+          authentication = get_authentication(options)
+
+          response = get("#{api_model.url}#{api_model.api_path}/#{id}.json",
+            basic_auth: authentication[:basic_auth],
+            headers: version_header.merge(authentication[:headers])
+          )
+
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
 
@@ -49,8 +78,16 @@ module Quaderno
           new hash
         end
 
-        def create(params)
-          response = post "#{api_model.url}#{ api_model.api_path }.json", body: params.to_json, basic_auth: { username: api_model.auth_token }, headers: version_header.merge('Content-Type' => 'application/json')
+        def create(params = {})
+          authentication = get_authentication(params)
+          params.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+
+          response = post("#{api_model.url}#{api_model.api_path}.json",
+            body: params.to_json,
+            basic_auth: authentication[:basic_auth],
+            headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+          )
+
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = response.parsed_response
 
@@ -59,8 +96,16 @@ module Quaderno
           new hash
         end
 
-        def update(id, params)
-          response = put "#{api_model.url}#{ api_model.api_path }/#{ id }.json", body: params.to_json, basic_auth: { username: api_model.auth_token }, headers: version_header.merge('Content-Type' => 'application/json')
+        def update(id, params = {})
+          authentication = get_authentication(params)
+          params.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+
+          response = put("#{api_model.url}#{api_model.api_path}/#{id}.json",
+            body: params.to_json,
+            basic_auth: authentication[:basic_auth],
+            headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+          )
+
           check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
 
@@ -69,8 +114,13 @@ module Quaderno
           new hash
         end
 
-        def delete(id)
-          response = HTTParty.delete "#{api_model.url}#{ api_model.api_path }/#{ id }.json", basic_auth: { username: api_model.auth_token }, headers: version_header
+        def delete(id, options = {})
+          authentication = get_authentication(options)
+
+          response = HTTParty.delete("#{api_model.url}#{ api_model.api_path }/#{ id }.json",
+            basic_auth: authentication[:basic_auth],
+            headers: version_header.merge(authentication[:headers])
+          )
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
 
           true
