@@ -10,6 +10,8 @@ module Quaderno
         include Quaderno::Helpers::Authentication
 
         def add_payment(params)
+          self.authentication_data = get_authentication(options.merge(api_model: api_model)) if options.is_a?(Hash)
+
           response = api_model.post("#{authentication_data[:url]}#{api_model.api_path}/#{id}/payments.json",
             body: params,
             basic_auth: authentication_data[:basic_auth],

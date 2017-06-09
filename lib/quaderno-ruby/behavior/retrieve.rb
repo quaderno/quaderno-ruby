@@ -1,6 +1,7 @@
 module Quaderno
   module Behavior
     module Retrieve
+
       def self.included(receiver)
         receiver.send :extend, ClassMethods
       end
