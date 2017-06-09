@@ -60,6 +60,7 @@ module Quaderno
 
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
+          hash[:authentication_data] = authentication
 
           api_model.parse_nested(hash) if is_a_document?
 
@@ -78,6 +79,7 @@ module Quaderno
 
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
           hash = response.parsed_response
+          hash[:authentication_data] = authentication
 
           api_model.parse_nested(hash) if is_a_document?
 
@@ -96,6 +98,7 @@ module Quaderno
 
           check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
           hash = response.parsed_response
+          hash[:authentication_data] = authentication
 
           api_model.parse_nested(hash) if is_a_document?
 

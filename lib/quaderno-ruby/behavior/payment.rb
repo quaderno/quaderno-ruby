@@ -10,13 +10,10 @@ module Quaderno
         include Quaderno::Helpers::Authentication
 
         def add_payment(params)
-          authentication = get_authentication(params.merge(api_model: api_model))
-          params.delete_if { |k,v| %w(auth_token access_token url mode api_model').include? k.to_s }
-
-          response = api_model.post("#{authentication[:url]}#{api_model.api_path}/#{id}/payments.json",
+          response = api_model.post("#{authentication_data[:url]}#{api_model.api_path}/#{id}/payments.json",
             body: params,
-            basic_auth: authentication[:basic_auth],
-            headers: self.class.version_header.merge(authentication[:headers])
+            basic_auth: authentication_data[:basic_auth],
+            headers: self.class.version_header.merge(authentication_data[:headers])
           )
 
           api_model.check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
@@ -28,11 +25,9 @@ module Quaderno
         end
 
         def remove_payment(payment_id)
-          authentication = get_authentication(params.merge(api_model: api_model))
-
           response = HTTParty.delete("#{authentication[:url]}#{api_model.api_path}/#{id}/payments/#{payment_id}.json",
-            basic_auth: authentication[:basic_auth],
-            headers: self.class.version_header.merge(authentication[:headers])
+            basic_auth: authentication_data[:basic_auth],
+            headers: self.class.version_header.merge(authentication_data[:headers])
           )
 
           api_model.check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
