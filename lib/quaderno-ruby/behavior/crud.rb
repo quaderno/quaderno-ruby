@@ -1,6 +1,8 @@
 module Quaderno
   module Behavior
     module Crud
+      include Quaderno::Behavior::Authentication
+
       def self.included(receiver)
         receiver.send :extend, ClassMethods
       end
@@ -21,26 +23,11 @@ module Quaderno
           element
         end
 
-        def get_authentication(options = {})
-          auth_token = options[:auth_token] || options['auth_token'] || api_model.auth_token
-          access_token = options[:access_token] || options['access_token']
-
-          authentication = { headers: {}, basic_auth: nil }
-
-          if access_token
-            authentication[:headers] = { 'Authorization' => "Bearer #{access_token}" }
-          elsif auth_token
-            authentication[:basic_auth] = { username: auth_token }
-          end
-
-          authentication
-        end
-
         def all(options = {})
           authentication = get_authentication(options)
-          filter = options.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+          filter = options.delete(:auth_token, :access_token, :url, :mode, 'auth_token', 'access_token', 'url', 'mode')
 
-          response = get("#{api_model.url}#{api_model.api_path}.json",
+          response = get("#{authentication[:url]}#{api_model.api_path}.json",
             query: filter,
             basic_auth: authentication[:basic_auth],
             headers: version_header.merge(authentication[:headers])
@@ -82,7 +69,7 @@ module Quaderno
           authentication = get_authentication(params)
           params.delete(:auth_token, :access_token, 'auth_token', 'access_token')
 
-          response = post("#{api_model.url}#{api_model.api_path}.json",
+          response = post("#{authentication[:url]}#{api_model.api_path}.json",
             body: params.to_json,
             basic_auth: authentication[:basic_auth],
             headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')

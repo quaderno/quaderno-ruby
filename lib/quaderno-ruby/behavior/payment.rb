@@ -1,6 +1,7 @@
 module Quaderno
   module Behavior
     module Payment
+
       def self.included(base)
         base.send :include, InstanceMethods
       end
