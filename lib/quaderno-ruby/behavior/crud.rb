@@ -40,6 +40,7 @@ module Quaderno
 
           if is_a_document?
             array.each do |element|
+              element[:authentication_data] = authentication
               api_model.parse_nested(element)
               collection << (new element)
             end

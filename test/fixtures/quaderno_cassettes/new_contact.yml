@@ -5,9 +5,11 @@ http_interactions:
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts.json
     body:
       encoding: UTF-8
-      string: kind=company&first_name=Test_Skynet&email=my_little%40po.ny
+      string: '{"kind":"company","first_name":"Test_Skynet","email":"my_little@po.ny"}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -23,24 +25,24 @@ http_interactions:
       x-ratelimit-reset:
       - '15'
       x-ratelimit-remaining:
-      - '99'
+      - '100'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"4d92dd7f465d302daeb8b6eaaa7d099b"'
+      - '"cc86da182178ec31d29ca5ac67e1651f"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 72f200bf-4e70-409c-8ccc-2b62e5bf4d92
+      - 9dedb072-e441-4d2d-ab84-3fd828a650e6
       x-runtime:
-      - '3.015393'
+      - '0.730536'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":86,"kind":"company","created_at":1466681108,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"17bbf9fb5e227af4bdb792fbda7050d914cceebf","permalink":"http://development.lvh.me:3000/billing/17bbf9fb5e227af4bdb792fbda7050d914cceebf","url":"http://development.lvh.me:3000/api/contacts/86"}'
+      string: '{"id":47,"kind":"company","created_at":1497013255,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","permalink":"http://development.lvh.me:3000/billing/e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","url":"http://development.lvh.me:3000/api/contacts/47"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:10 GMT
+  recorded_at: Fri, 09 Jun 2017 13:00:55 GMT
 recorded_with: VCR 2.9.2

@@ -21,9 +21,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '8'
+      - '12'
       x-ratelimit-remaining:
-      - '91'
+      - '92'
       content-type:
       - application/json; charset=utf-8
       etag:
@@ -31,9 +31,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 60c9ac78-9bac-409a-a15c-32939fa7792b
+      - 0a65fb49-4bc3-44d0-8361-5d494574bcbf
       x-runtime:
-      - '0.406134'
+      - '0.169790'
       connection:
       - close
       server:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:14 GMT
+  recorded_at: Fri, 09 Jun 2017 13:00:57 GMT
 recorded_with: VCR 2.9.2

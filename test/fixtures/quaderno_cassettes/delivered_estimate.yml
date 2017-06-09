@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '13'
+      - '15'
       x-ratelimit-remaining:
-      - '98'
+      - '100'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -31,28 +31,24 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"74819ab6a2b52790377d5890e49d72fa"'
+      - '"b1aa095a3d37cb3a66bdf93f658ff2ee"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - c105d414-492d-4d11-aad8-a96ec7ea3e9f
+      - 4b668b53-4776-45f0-b6f3-515e65e9a5d4
       x-runtime:
-      - '1.116629'
+      - '0.395275'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '[{"id":999,"number":"0000003","issue_date":"2016-06-08","created_at":1465391771,"contact":{"id":58,"full_name":"Test_OCP
-        Diepstraten"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","items":[{"id":1012,"description":"1","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":"BTW","tax_1_rate":21.0,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount":"1000.0"},{"id":1013,"description":"2","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount":"1000.0"}],"subtotal_cents":"2000.0","discount_cents":"0.0","taxes":[{"label":"BTW
-        (21.00%)","amount_cents":210}],"total_cents":2210,"payment_details":null,"notes":null,"state":"invoiced","tag_list":[],"secure_id":"3ba0301fb141753b1a9e81f8e2e87f8e4d27436b","permalink":"http://development.lvh.me:3000/estimate/3ba0301fb141753b1a9e81f8e2e87f8e4d27436b","url":"http://development.lvh.me:3000/api/estimates/999.json"},{"id":995,"number":"0000002","issue_date":"2016-06-08","created_at":1465391049,"contact":{"id":58,"full_name":"Test_OCP
-        Diepstraten"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","items":[{"id":1005,"description":"1","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":"BTW","tax_1_rate":21.0,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount":"1000.0"},{"id":1006,"description":"2","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount":"1000.0"}],"subtotal_cents":"2000.0","discount_cents":"0.0","taxes":[{"label":"BTW
-        (21.00%)","amount_cents":210}],"total_cents":2210,"payment_details":null,"notes":null,"state":"invoiced","tag_list":[],"secure_id":"a95cc19fd4def0024964a8d6aedd6d24de960e3f","permalink":"http://development.lvh.me:3000/estimate/a95cc19fd4def0024964a8d6aedd6d24de960e3f","url":"http://development.lvh.me:3000/api/estimates/995.json"},{"id":992,"number":"0000001","issue_date":"2016-06-02","created_at":1464869069,"contact":{"id":58,"full_name":"Test_OCP
-        Diepstraten"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","items":[{"id":1000,"description":"1","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":"BTW","tax_1_rate":21.0,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"0.0","discount_cents":"0.0","gross_amount":"0.0"},{"id":1001,"description":"2","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"0.0","discount_cents":"0.0","gross_amount":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[{"label":"BTW
-        (21.00%)","amount_cents":0}],"total_cents":0,"payment_details":null,"notes":null,"state":"invoiced","tag_list":[],"secure_id":"91e361b2d900856d8e7e230b4175956d0f163162","permalink":"http://development.lvh.me:3000/estimate/91e361b2d900856d8e7e230b4175956d0f163162","url":"http://development.lvh.me:3000/api/estimates/992.json"}]'
+      string: '[{"id":175,"number":"0001","issue_date":"2017-06-09","created_at":1497013347,"contact":{"id":42,"full_name":"Cidi
+        Campidocti"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","items":[{"id":176,"description":"Something","quantity":"1.0","unit_price_cents":"2000.0","discount_rate":"0.0","tax_1_name":"IVA","tax_1_rate":21.0,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"2000.0","discount_cents":"0.0","gross_amount":"2000.0"}],"subtotal_cents":"2000.0","discount_cents":"0.0","taxes":[{"label":"IVA
+        (21.00%)","amount_cents":420}],"total_cents":2420,"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"f2f35a037263fe1d78a94ca62ffa1b768e8e16c6","permalink":"http://development.lvh.me:3000/estimate/f2f35a037263fe1d78a94ca62ffa1b768e8e16c6","url":"http://development.lvh.me:3000/api/estimates/175.json","custom_metadata":{}}]'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:30 GMT
+  recorded_at: Fri, 09 Jun 2017 13:06:24 GMT
 - request:
     method: get
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/ping.json
@@ -74,9 +70,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '12'
+      - '15'
       x-ratelimit-remaining:
-      - '97'
+      - '99'
       content-type:
       - application/json; charset=utf-8
       etag:
@@ -84,9 +80,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 1abffd04-54f4-4238-a34b-2119e0897497
+      - 90fc57c3-a86a-48e5-8045-5b7024ff5a67
       x-runtime:
-      - '0.555849'
+      - '0.166282'
       connection:
       - close
       server:
@@ -95,10 +91,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:31 GMT
+  recorded_at: Fri, 09 Jun 2017 13:06:24 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates/999/deliver.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/estimates/175/deliver.json
     body:
       encoding: US-ASCII
       string: ''
@@ -109,35 +105,32 @@ http_interactions:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       x-frame-options:
       - ALLOWALL
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '12'
+      - '14'
       x-ratelimit-remaining:
-      - '96'
+      - '98'
       content-type:
       - application/json; charset=utf-8
-      etag:
-      - '"bfa123c11b608a95baca6b72c1cea8b5"'
       cache-control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       x-request-id:
-      - 20e8d60e-e446-4411-945c-fe94de74bdd9
+      - 69f5b9c7-d537-4660-97a4-bbd07df6f0eb
       x-runtime:
-      - '1.201669'
+      - '0.308794'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":999,"account_id":2,"contact_id":58,"document_id":null,"number":"0000003","issue_date":"2016-06-08","contact_name":"Test_OCP
-        Diepstraten","currency":"EUR","gross_amount_cents":2000,"total_cents":2210,"amount_paid_cents":0,"exchange_rate":"1.0","exchange_cents":2210,"po_number":null,"due_days":null,"due_date":null,"valid_until":null,"payment_details":null,"notes":null,"permalink":"3ba0301fb141753b1a9e81f8e2e87f8e4d27436b","recurring_document":null,"start_date":null,"end_date":null,"renewal_date":null,"frequency":null,"delivery":null,"state":"invoiced","created_at":"2016-06-08T13:16:11.000Z","updated_at":"2016-06-23T11:25:32.078Z","attachments_count":0,"processor_id":null,"subject":null,"transaction_id":null,"street_line_1":null,"street_line_2":null,"city":null,"postal_code":null,"region":null,"country":"NL","processor":null,"processor_fee_cents":null,"interval_count":0,"delivery_state":"delivered","vat_number":null,"tax_id":""}'
+      string: '{"delivery_recipients":["can''t be blank","is invalid"]}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:32 GMT
+  recorded_at: Fri, 09 Jun 2017 13:06:24 GMT
 recorded_with: VCR 2.9.2
