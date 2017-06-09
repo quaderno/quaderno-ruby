@@ -6,6 +6,7 @@ module Quaderno
     include HTTParty
     include Quaderno::Exceptions
     include Quaderno::Behavior::Crud
+    include Quaderno::Helpers::Authentication
 
     PRODUCTION_URL = 'https://quadernoapp.com/api/'
     SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/'
@@ -58,9 +59,18 @@ module Quaderno
     end
 
     #Check the connection
-    def self.ping
+    def self.ping(options = {})
       begin
-        party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token }, headers: version_header)
+        options[:auth_token] ||= auth_token
+        options[:url] ||= url
+
+        authentication = get_authentication(options)
+
+        party_response = get("#{authentication[:url]}ping.json",
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers])
+        )
+
         check_exception_for(party_response, { subdomain_or_token: true })
       rescue Errno::ECONNREFUSED
         return false

@@ -6,6 +6,7 @@ module Quaderno
       end
 
       module ClassMethods
+        include Quaderno::Helpers::Authentication
 
         def retrieve(gateway_id, gateway = nil)
           response = get "#{api_model.url}#{gateway || 'stripe'}/#{@_retrieve_path}/#{gateway_id}.json", basic_auth: { username: api_model.auth_token }, headers: version_header

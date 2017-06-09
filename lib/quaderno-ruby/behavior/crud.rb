@@ -1,13 +1,14 @@
 module Quaderno
   module Behavior
     module Crud
-      include Quaderno::Behavior::Authentication
 
       def self.included(receiver)
         receiver.send :extend, ClassMethods
       end
 
       module ClassMethods
+        include Quaderno::Helpers::Authentication
+
         def parse_nested(element)
           if element.has_key?('payments')
             payments_collection = Array.new
@@ -24,8 +25,8 @@ module Quaderno
         end
 
         def all(options = {})
-          authentication = get_authentication(options)
-          filter = options.delete(:auth_token, :access_token, :url, :mode, 'auth_token', 'access_token', 'url', 'mode')
+          authentication = get_authentication(options.merge(api_model: api_model))
+          filter = options.delete_if { |k,v| %w(auth_token access_token url mode api_model).include? k.to_s }
 
           response = get("#{authentication[:url]}#{api_model.api_path}.json",
             query: filter,
@@ -50,9 +51,9 @@ module Quaderno
         end
 
         def find(id, options = {})
-          authentication = get_authentication(options)
+          authentication = get_authentication(options.merge(api_model: api_model))
 
-          response = get("#{api_model.url}#{api_model.api_path}/#{id}.json",
+          response = get("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
             basic_auth: authentication[:basic_auth],
             headers: version_header.merge(authentication[:headers])
           )
@@ -66,8 +67,8 @@ module Quaderno
         end
 
         def create(params = {})
-          authentication = get_authentication(params)
-          params.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+          authentication = get_authentication(params.merge(api_model: api_model))
+          params.delete_if { |k,v| %w(auth_token access_token url mode api_model').include? k.to_s }
 
           response = post("#{authentication[:url]}#{api_model.api_path}.json",
             body: params.to_json,
@@ -84,10 +85,10 @@ module Quaderno
         end
 
         def update(id, params = {})
-          authentication = get_authentication(params)
-          params.delete(:auth_token, :access_token, 'auth_token', 'access_token')
+          authentication = get_authentication(params.merge(api_model: api_model))
+          params = params.delete_if { |k,v| %w(auth_token access_token url mode api_model').include? k.to_s }
 
-          response = put("#{api_model.url}#{api_model.api_path}/#{id}.json",
+          response = put("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
             body: params.to_json,
             basic_auth: authentication[:basic_auth],
             headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
@@ -102,9 +103,9 @@ module Quaderno
         end
 
         def delete(id, options = {})
-          authentication = get_authentication(options)
+          authentication = get_authentication(options.merge(api_model: api_model))
 
-          response = HTTParty.delete("#{api_model.url}#{ api_model.api_path }/#{ id }.json",
+          response = HTTParty.delete("#{authentication[:url]}#{ api_model.api_path }/#{ id }.json",
             basic_auth: authentication[:basic_auth],
             headers: version_header.merge(authentication[:headers])
           )
