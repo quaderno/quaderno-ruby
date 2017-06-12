@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts.json?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json; api_version=20160602
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '10'
+      x-ratelimit-remaining:
+      - '98'
+      x-pages-currentpage:
+      - '1'
+      x-pages-totalpages:
+      - '1'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"9f61db3c521dbbd6fa0aec27f6813410"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 32c4c07d-6222-471a-990e-bf332bf5f252
+      x-runtime:
+      - '1.210230'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":44,"kind":"company","created_at":1496660076,"full_name":"Albus
+        Dumbledoge","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"BE","phone_1":null,"phone_2":null,"fax":null,"email":"john@recrea.es","web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"DE","notes":null,"processor_id":"cst_yBHtjcSFhR","secure_id":"51ed8dd564d46a3e8f6550686dea84750c5d4b80","permalink":"http://development.lvh.me:3000/billing/51ed8dd564d46a3e8f6550686dea84750c5d4b80","url":"http://development.lvh.me:3000/api/contacts/44"},{"id":42,"kind":"person","created_at":1495535760,"first_name":"Cidi","last_name":"Campidocti","full_name":"Cidi
+        Campidocti","street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"7e17fe690137a91f7d1b8c1602fb7667ab981b00","permalink":"http://development.lvh.me:3000/billing/7e17fe690137a91f7d1b8c1602fb7667ab981b00","url":"http://development.lvh.me:3000/api/contacts/42"},{"id":43,"kind":"company","created_at":1496653655,"full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"processor_id":"tr_VpKBExBQxU","secure_id":"240d872343b09c0e4f095cfd6484c6eabc74c6eb","permalink":"http://development.lvh.me:3000/billing/240d872343b09c0e4f095cfd6484c6eabc74c6eb","url":"http://development.lvh.me:3000/api/contacts/43"},{"id":45,"kind":"company","created_at":1497013162,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"0c102e324af99ba80911b5040f8c3ac253c76890","permalink":"http://development.lvh.me:3000/billing/0c102e324af99ba80911b5040f8c3ac253c76890","url":"http://development.lvh.me:3000/api/contacts/45"},{"id":47,"kind":"company","created_at":1497013255,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","permalink":"http://development.lvh.me:3000/billing/e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","url":"http://development.lvh.me:3000/api/contacts/47"}]'
+    http_version: '1.1'
+  recorded_at: Mon, 12 Jun 2017 11:44:49 GMT
+- request:
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/invoices.json
+    body:
+      encoding: UTF-8
+      string: '{"contact_id":44,"contact_name":"Albus Dumbledoge","currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_details":"","notes":""}'
+    headers:
+      accept:
+      - application/json; api_version=20160602
+      content-type:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '9'
+      x-ratelimit-remaining:
+      - '97'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"257dfe1ffb849ba20bc804912b98a192"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 6e19f9c0-72a6-4891-82b6-c60743721f77
+      x-runtime:
+      - '6.047995'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTk1LCJudW1iZXIiOiIwMDA2IiwiaXNzdWVfZGF0ZSI6IjIwMTct
+        MDYtMTIiLCJjcmVhdGVkX2F0IjoxNDk3MjY3ODkxLCJjb250YWN0Ijp7Imlk
+        Ijo0NCwiZnVsbF9uYW1lIjoiQWxidXMgRHVtYmxlZG9nZSJ9LCJzdHJlZXRf
+        bGluZV8xIjpudWxsLCJzdHJlZXRfbGluZV8yIjpudWxsLCJjaXR5IjpudWxs
+        LCJyZWdpb24iOm51bGwsInBvc3RhbF9jb2RlIjpudWxsLCJwb19udW1iZXIi
+        Om51bGwsImR1ZV9kYXRlIjpudWxsLCJjdXJyZW5jeSI6IkVVUiIsIml0ZW1z
+        IjpbeyJpZCI6MTk2LCJkZXNjcmlwdGlvbiI6IkFpcmNyYWZ0IiwicXVhbnRp
+        dHkiOiIxLjAiLCJ1bml0X3ByaWNlIjoiMC4wIiwiZGlzY291bnRfcmF0ZSI6
+        IjAuMCIsInRheF8xX25hbWUiOm51bGwsInRheF8xX3JhdGUiOm51bGwsInRh
+        eF8yX25hbWUiOm51bGwsInRheF8yX3JhdGUiOm51bGwsInJlZmVyZW5jZSI6
+        bnVsbCwic3VidG90YWwiOiLigqwwLjAwIiwiZGlzY291bnQiOiLigqwwLjAw
+        IiwiZ3Jvc3NfYW1vdW50Ijoi4oKsMC4wMCJ9XSwic3VidG90YWwiOiLigqww
+        LjAwIiwiZGlzY291bnQiOiLigqwwLjAwIiwidGF4ZXMiOltdLCJ0b3RhbCI6
+        IuKCrDAuMDAiLCJwYXltZW50cyI6W10sInBheW1lbnRfZGV0YWlscyI6bnVs
+        bCwibm90ZXMiOm51bGwsInN0YXRlIjoib3V0c3RhbmRpbmciLCJ0YWdfbGlz
+        dCI6W10sInNlY3VyZV9pZCI6IjM1ODQzNzZhNzg4OTRkYzBkZjI2MzZhMzI4
+        ZDA0ZDNiMmU1MDcxZmUiLCJwZXJtYWxpbmsiOiJodHRwOi8vZGV2ZWxvcG1l
+        bnQubHZoLm1lOjMwMDAvaW52b2ljZS8zNTg0Mzc2YTc4ODk0ZGMwZGYyNjM2
+        YTMyOGQwNGQzYjJlNTA3MWZlIiwicGRmIjoiaHR0cDovL2RldmVsb3BtZW50
+        Lmx2aC5tZTozMDAwL2ludm9pY2UvMzU4NDM3NmE3ODg5NGRjMGRmMjYzNmEz
+        MjhkMDRkM2IyZTUwNzFmZS5wZGYiLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1l
+        bnQubHZoLm1lOjMwMDAvYXBpL2ludm9pY2VzLzE5NS5qc29uIiwicHJvY2Vz
+        c29yIjpudWxsLCJwcm9jZXNzb3JfaWQiOm51bGx9
+    http_version: '1.1'
+  recorded_at: Mon, 12 Jun 2017 11:44:55 GMT
+- request:
+    method: delete
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/invoices/195.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json; api_version=20160602
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '2'
+      x-ratelimit-remaining:
+      - '96'
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 92099e25-7b01-411e-b810-8a8376eb19df
+      x-runtime:
+      - '2.429109'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Mon, 12 Jun 2017 11:44:58 GMT
+recorded_with: VCR 2.9.2

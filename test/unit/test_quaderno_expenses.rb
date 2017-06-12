@@ -69,8 +69,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
 
     should 'update an expense' do
       VCR.use_cassette('updated expense') do
-      contacts = Quaderno::Contact.all
-      expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
+        contacts = Quaderno::Contact.all
+        expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
                                  contact_name: contacts.first.full_name,
                                  currency: 'EUR',
                                  items_attributes: [
@@ -82,9 +82,9 @@ class TestQuadernoExpense < Test::Unit::TestCase
                                  ],
                                  tags: 'tnt', payment_details: '',
                                  notes: '')
-        expense = Quaderno::Expense.update(expense.id, currency: 'USD')
+        expense = Quaderno::Expense.update(expense.id, po_number: 'Updated expense!')
         assert_kind_of Quaderno::Expense, expense
-        assert_equal 'USD', expense.currency
+        assert_equal 'Updated expense!', expense.po_number
         Quaderno::Expense.delete(expense.id)
       end
     end
@@ -127,7 +127,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
         expenses.first.add_payment(payment_method: "cash", amount: "10000")
         payment = expenses.first.payments.last
         array_length = expenses.first.payments.length
-        expenses.first.remove_payment(payment.id) unless payment.nil?
+        expenses.first.remove_payment(payment.id)
         assert_equal (array_length.zero? ? array_length : array_length-1), expenses.first.payments.length
       end
     end

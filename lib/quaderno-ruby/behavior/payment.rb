@@ -27,7 +27,7 @@ module Quaderno
         end
 
         def remove_payment(payment_id)
-          response = HTTParty.delete("#{authentication[:url]}#{api_model.api_path}/#{id}/payments/#{payment_id}.json",
+          response = HTTParty.delete("#{authentication_data[:url]}#{api_model.api_path}/#{id}/payments/#{payment_id}.json",
             basic_auth: authentication_data[:basic_auth],
             headers: self.class.version_header.merge(authentication_data[:headers])
           )

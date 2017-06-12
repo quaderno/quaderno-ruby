@@ -6,7 +6,7 @@ module Quaderno
         mode = options[:mode] || :production
 
         local_api_model = options[:api_model]
-        url = options[:url] || (local_api_model && local_api_model.url) || (mode == :production ? 'https://quadernoapp.com/api/' : 'http://sandbox-quadernoapp.com/api/')
+        url = options[:api_url] || (local_api_model && local_api_model.url) || (mode == :production ? 'https://quadernoapp.com/api/' : 'http://sandbox-quadernoapp.com/api/')
 
         auth_token = options[:auth_token] || options['auth_token'] || (local_api_model && local_api_model.auth_token)
         access_token = options[:access_token] || options['access_token']

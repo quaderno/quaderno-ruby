@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
+    body:
+      encoding: UTF-8
+      string: '{"code":"000000","name":"Test_Skynet","unit_cost":21.0}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json
+      authorization:
+      - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      x-frame-options:
+      - ALLOWALL
+      x-ratelimit-limit:
+      - '2000'
+      x-ratelimit-reset:
+      - '15'
+      x-ratelimit-remaining:
+      - '100'
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - '"b67748dbc7a4b108905719a11ac088b2"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 89015e0b-0035-42a9-96f0-55ac879cdc6d
+      x-runtime:
+      - '1.702892'
+      connection:
+      - close
+      server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":2,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://development.lvh.me:3000/api/items/2"}'
+    http_version: '1.1'
+  recorded_at: Mon, 12 Jun 2017 11:45:33 GMT
+recorded_with: VCR 2.9.2
