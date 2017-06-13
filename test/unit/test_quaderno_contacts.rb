@@ -1,8 +1,8 @@
 require 'helper'
 
 class TestQuadernoContact < Test::Unit::TestCase
-  context 'A user with an authenticate token with contacts' do
 
+  context 'using the default configuration with an authentication token' do
     setup do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY

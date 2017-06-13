@@ -36,7 +36,7 @@ module Quaderno
 
           check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
           array = response.parsed_response
-          collection = Array.new
+          collection = Quaderno::Collection.new
 
           if is_a_document?
             array.each do |element|
@@ -47,6 +47,9 @@ module Quaderno
           else
             array.each { |element| collection << (new element) }
           end
+
+          collection.current_page = response.headers['x-pages-currentpage']
+          collection.total_pages = response.headers['x-pages-totalpages']
 
           collection
         end
