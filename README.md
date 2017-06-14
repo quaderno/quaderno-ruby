@@ -3,7 +3,7 @@
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 As the API, it's mostly CRUD.
 
-Current version is 1.11.2 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.12.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -587,6 +587,58 @@ Quaderno-ruby exceptions raise depending on the type of error:
 ```
 
 All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
+
+### Pagination information
+Whenever you call the `all` method on one of the classes, the result will be a `Quaderno::Collection`. For example:
+
+```ruby
+collection = Quaderno::Contact.all(page: 2)
+
+collection.class #=> Quaderno::Collection
+collection.pagination_info #=> {:current_page=>"1", :total_pages=>"3"}
+collection.current_page #=> "2"
+collection.total_pages #=> "3"
+```
+
+### Thread-safe configuration
+
+If you are managing multiple accounts you may need a thread-safe way to configure the credentials. You can do it by passing the credentials on each request:
+
+```ruby
+Quaderno::Invoice.all(
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+
+Quaderno::Invoice.find(INVOICE_ID,
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+
+Quaderno::Invoice.update(INVOICE_ID,
+  po_number: '12345',
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+
+invoice = Quaderno::Invoice.find(INVOICE_ID,
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+
+invoice.add_payment(params) # Credentials are already stored on the Quaderno::Invoice instance from the first request
+
+invoice = Quaderno::Invoice.find(INVOICE_ID,
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+invoice.remove_payment(PAYMENT_ID) # Credentials are already stored on the Quaderno::Invoice instance from the first request
+
+Quaderno::Invoice.delete(INVOICE_ID,
+  api_url: 'https://my_subdomain.quadernoapp.com/api/',
+  auth_token: 'my_authenticate_token'
+)
+```
 
 ## More information
 

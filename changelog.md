@@ -1,4 +1,7 @@
 #Changelog
+##1.12.0
+* Added thread-safe credentials configuration.
+* `all` methods returns a `Quaderno::Object` with pagination info instead of an `Array`
 
 ##1.11.2
 * Specify `Content-Type` header so `HTTParty` don't merge the elements within the body content.
