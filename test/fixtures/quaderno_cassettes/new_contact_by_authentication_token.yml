@@ -23,26 +23,26 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '15'
+      - '10'
       x-ratelimit-remaining:
-      - '100'
+      - '92'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"cc86da182178ec31d29ca5ac67e1651f"'
+      - '"32908f591a2c9a94a4b012544403fb8f"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 9dedb072-e441-4d2d-ab84-3fd828a650e6
+      - 75135e5f-6461-4a39-a30d-54a10791c43d
       x-runtime:
-      - '0.730536'
+      - '0.278524'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":47,"kind":"company","created_at":1497013255,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","permalink":"http://development.lvh.me:3000/billing/e09d2dd3b8781a417a0ee1b43bdb5499a8e925a7","url":"http://development.lvh.me:3000/api/contacts/47"}'
+      string: '{"id":64,"kind":"company","created_at":1497351490,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"08638259e35b5864ad37f6c5776113d794fa2ac2","permalink":"http://development.lvh.me:3000/billing/08638259e35b5864ad37f6c5776113d794fa2ac2","url":"http://development.lvh.me:3000/api/contacts/64"}'
     http_version: '1.1'
-  recorded_at: Fri, 09 Jun 2017 13:00:55 GMT
+  recorded_at: Tue, 13 Jun 2017 10:58:10 GMT
 recorded_with: VCR 2.9.2

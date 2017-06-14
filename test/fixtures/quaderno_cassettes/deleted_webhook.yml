@@ -5,9 +5,11 @@ http_interactions:
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
     body:
       encoding: UTF-8
-      string: url=http%3A%2F%2Fgoogle.com&events_types[]=invoice.created&events_types[]=expense.updated
+      string: '{"url":"http://google.com","events_types":["invoice.created","expense.updated"]}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -21,36 +23,38 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '15'
+      - '9'
       x-ratelimit-remaining:
-      - '99'
+      - '97'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"92e794f6dfade79007eb6440600b7f3b"'
+      - '"9ed2c299de9bfb455be4f92f91a751bb"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - dbd50442-292f-4708-baa7-5416573abfee
+      - 56b4d038-9c97-4faf-bcf1-c0146ed2282e
       x-runtime:
-      - '3.512932'
+      - '1.133878'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":30,"url":"http://google.com","auth_key":"IQGTwY6ANnp2br-uFUVArA","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:28:40.362Z","updated_at":"2016-06-23T11:28:40.362Z"}'
+      string: '{"id":3,"url":"http://google.com","auth_key":"NGSLi-ewU_9MkUjNFA8H6g","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:54:14.841Z","updated_at":"2017-06-12T11:54:14.841Z"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:40 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:15 GMT
 - request:
     method: post
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
     body:
       encoding: UTF-8
-      string: url=http%3A%2F%2Fquadernoapp.com&events_types[]=invoice.created&events_types[]=expense.updated
+      string: '{"url":"http://quadernoapp.com","events_types":["invoice.created","expense.updated"]}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -64,31 +68,31 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '11'
+      - '7'
       x-ratelimit-remaining:
-      - '98'
+      - '96'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"4e09e3e820e3408f8ff279ad09621e87"'
+      - '"efc1e4c767dae7155fd7062f869b6864"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 4f607ec3-4e5b-4ba0-a38b-c4dc8d550a73
+      - fb379d20-89c7-4f44-b03a-8218e8ba6876
       x-runtime:
-      - '10.722992'
+      - '1.651680'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":31,"url":"http://quadernoapp.com","auth_key":"Ge_NQlzRFWEV_OvomIrsYw","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:28:51.035Z","updated_at":"2016-06-23T11:28:51.035Z"}'
+      string: '{"id":4,"url":"http://quadernoapp.com","auth_key":"PPhqTNGnksKmkLIE-HN12w","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:54:16.816Z","updated_at":"2017-06-12T11:54:16.816Z"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:51 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:17 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -107,31 +111,31 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '15'
+      - '5'
       x-ratelimit-remaining:
-      - '100'
+      - '95'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"eb898c3049b9a254d392f340aa0aeb96"'
+      - '"7724af66c58f04bb8d43b34af89cbeb0"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 2990180c-e43e-4359-a79e-6ab9f887eebb
+      - a83a42c7-1de0-4f2a-85ef-e98d38079d83
       x-runtime:
-      - '1.324438'
+      - '0.967519'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '[{"id":30,"url":"http://google.com","auth_key":"IQGTwY6ANnp2br-uFUVArA","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:28:40.000Z","updated_at":"2016-06-23T11:28:40.000Z"},{"id":31,"url":"http://quadernoapp.com","auth_key":"Ge_NQlzRFWEV_OvomIrsYw","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:28:51.000Z","updated_at":"2016-06-23T11:28:51.000Z"}]'
+      string: '[{"id":1,"url":"http://quadernoapp.com","auth_key":"Ze024XpO9CJ6Fy2frwWV4Q","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:53:54.000Z","updated_at":"2017-06-12T11:53:54.000Z"},{"id":3,"url":"http://google.com","auth_key":"NGSLi-ewU_9MkUjNFA8H6g","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:54:14.000Z","updated_at":"2017-06-12T11:54:14.000Z"},{"id":4,"url":"http://quadernoapp.com","auth_key":"PPhqTNGnksKmkLIE-HN12w","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:54:16.000Z","updated_at":"2017-06-12T11:54:16.000Z"}]'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:52 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:18 GMT
 - request:
     method: delete
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/31.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/4.json
     body:
       encoding: US-ASCII
       string: ''
@@ -150,15 +154,15 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '15'
+      - '4'
       x-ratelimit-remaining:
-      - '99'
+      - '94'
       cache-control:
       - no-cache
       x-request-id:
-      - 6a082838-5537-42d7-b04b-991f1ef6dbfc
+      - d9d2a591-b3e2-4ba2-af85-e6d5fa634e46
       x-runtime:
-      - '0.451251'
+      - '0.969496'
       connection:
       - close
       server:
@@ -167,10 +171,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:53 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:19 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -189,31 +193,31 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '14'
+      - '3'
       x-ratelimit-remaining:
-      - '98'
+      - '93'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"9835c4543859d74bc2f2ab9a7c2d9c7e"'
+      - '"49b2fb709af079dc34bb5ae479d17052"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - f6e3cac6-e9d1-4e3c-af0a-3a6a9af52f1a
+      - b43f132e-1500-4cfa-87cf-d76232257163
       x-runtime:
-      - '0.339346'
+      - '0.938838'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '[{"id":30,"url":"http://google.com","auth_key":"IQGTwY6ANnp2br-uFUVArA","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2016-06-23T11:28:40.000Z","updated_at":"2016-06-23T11:28:40.000Z"}]'
+      string: '[{"id":1,"url":"http://quadernoapp.com","auth_key":"Ze024XpO9CJ6Fy2frwWV4Q","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:53:54.000Z","updated_at":"2017-06-12T11:53:54.000Z"},{"id":3,"url":"http://google.com","auth_key":"NGSLi-ewU_9MkUjNFA8H6g","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-06-12T11:54:14.000Z","updated_at":"2017-06-12T11:54:14.000Z"}]'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:53 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:20 GMT
 - request:
     method: delete
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/30.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/webhooks/3.json
     body:
       encoding: US-ASCII
       string: ''
@@ -232,15 +236,15 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '13'
+      - '3'
       x-ratelimit-remaining:
-      - '97'
+      - '92'
       cache-control:
       - no-cache
       x-request-id:
-      - 77992c95-93db-454d-884f-4698e47b73f5
+      - 4ace2036-ebde-4c54-a6ba-92e9fe57c39c
       x-runtime:
-      - '0.470050'
+      - '0.948995'
       connection:
       - close
       server:
@@ -249,5 +253,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:53 GMT
+  recorded_at: Mon, 12 Jun 2017 11:54:21 GMT
 recorded_with: VCR 2.9.2

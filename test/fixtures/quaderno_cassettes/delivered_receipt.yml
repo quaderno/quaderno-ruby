@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '1'
+      - '12'
       x-ratelimit-remaining:
-      - '91'
+      - '97'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -31,28 +31,25 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"b3b66954c987c74b8ebbdba19fda50af"'
+      - '"2fbe5b66d01a5d67afd7be37b64c395a"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - fe8e3bbf-0839-44b2-a51d-954e9ed32b1c
+      - 49c9cbce-9946-4c82-85d1-867e02a37eab
       x-runtime:
-      - '0.966646'
+      - '2.123997'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '[{"id":1056,"number":"0000005","issue_date":"2016-06-23","created_at":1466680696,"contact":{"id":85,"full_name":"Test
-        customer"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.9558","items":[{"id":3075,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":27,"date":"2016-06-23","payment_method":"cash","amount_cents":0}],"notes":"Show
-        me the moneeeeeeeyy!!!!","state":"paid","tag_list":[],"secure_id":"24c7be97cfdae58052852e11a7df8f5968f90e06","permalink":"http://development.lvh.me:3000/receipt/24c7be97cfdae58052852e11a7df8f5968f90e06","pdf":"http://development.lvh.me:3000/receipt/24c7be97cfdae58052852e11a7df8f5968f90e06.pdf","url":"http://development.lvh.me:3000/api/receipts/1056.json","processor":null,"processor_id":null},{"id":1055,"number":"0000004","issue_date":"2016-06-23","created_at":1466680690,"contact":{"id":84,"full_name":"Test
-        customer"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.9558","items":[{"id":3074,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":26,"date":"2016-06-23","payment_method":"cash","amount_cents":0}],"notes":null,"state":"paid","tag_list":[],"secure_id":"2e21a8451f234c2a673d3576f178faab516ec017","permalink":"http://development.lvh.me:3000/receipt/2e21a8451f234c2a673d3576f178faab516ec017","pdf":"http://development.lvh.me:3000/receipt/2e21a8451f234c2a673d3576f178faab516ec017.pdf","url":"http://development.lvh.me:3000/api/receipts/1055.json","processor":null,"processor_id":null},{"id":1054,"number":"0000003","issue_date":"2016-06-23","created_at":1466680679,"contact":{"id":82,"full_name":"Test
-        customer"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.9558","items":[{"id":3073,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":25,"date":"2016-06-23","payment_method":"cash","amount_cents":0}],"notes":null,"state":"paid","tag_list":[],"secure_id":"80ff611baa512d72f5132b28feacce20997adb4e","permalink":"http://development.lvh.me:3000/receipt/80ff611baa512d72f5132b28feacce20997adb4e","pdf":"http://development.lvh.me:3000/receipt/80ff611baa512d72f5132b28feacce20997adb4e.pdf","url":"http://development.lvh.me:3000/api/receipts/1054.json","processor":null,"processor_id":null},{"id":985,"number":"0000002","issue_date":"2016-06-01","created_at":1464785121,"contact":{"id":56,"full_name":"William
-        Tell"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.0","items":[{"id":991,"description":"Something","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":4,"date":"2016-06-01","payment_method":"credit_card","amount_cents":0}],"notes":null,"state":"invoiced","tag_list":[],"secure_id":"885fc61e0b83f9d507fcbb6fa9495ba0dcc31d96","permalink":"http://development.lvh.me:3000/receipt/885fc61e0b83f9d507fcbb6fa9495ba0dcc31d96","pdf":"http://development.lvh.me:3000/receipt/885fc61e0b83f9d507fcbb6fa9495ba0dcc31d96.pdf","url":"http://development.lvh.me:3000/api/receipts/985.json","processor":null,"processor_id":null},{"id":983,"number":"0000001","issue_date":"2016-05-30","created_at":1464785067,"contact":{"id":52,"full_name":"A.
-        Lucas Mayoral"},"street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","exchange_rate":"1.0","items":[{"id":989,"description":"Something","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":2,"date":"2016-05-30","payment_method":"credit_card","amount_cents":0}],"notes":null,"state":"invoiced","tag_list":[],"secure_id":"9d00a9c881965f04758c4d5627c38cc8d4182713","permalink":"http://development.lvh.me:3000/receipt/9d00a9c881965f04758c4d5627c38cc8d4182713","pdf":"http://development.lvh.me:3000/receipt/9d00a9c881965f04758c4d5627c38cc8d4182713.pdf","url":"http://development.lvh.me:3000/api/receipts/983.json","processor":null,"processor_id":null}]'
+      string: '[{"id":200,"blocked":false,"number":"0002","issue_date":"2017-06-12","created_at":1497268132,"contact":{"id":44,"full_name":"Albus
+        Dumbledoge"},"country":"BE","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":201,"description":"Hey,
+        Liste!","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount_cents":"1000.0"}],"subtotal_cents":"1000.0","discount_cents":"0.0","taxes":[],"payments":[{"id":50,"date":"2017-06-12","payment_method":"other","amount_cents":1000}],"notes":null,"state":"paid","tag_list":[],"secure_id":"64649b40d7fc4bcc0b1a0493b87fa030789235d4","permalink":"http://development.lvh.me:3000/receipt/64649b40d7fc4bcc0b1a0493b87fa030789235d4","pdf":"http://development.lvh.me:3000/receipt/64649b40d7fc4bcc0b1a0493b87fa030789235d4.pdf","url":"http://development.lvh.me:3000/api/receipts/200.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":199,"blocked":false,"number":"0001","issue_date":"2017-06-12","created_at":1497267995,"contact":{"id":50,"full_name":"Test
+        customer"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":200,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":49,"date":"2017-06-12","payment_method":"cash","amount_cents":0}],"notes":null,"state":"paid","tag_list":[],"secure_id":"f62c1beb598394e6072fa18af8a3eed0ba05833b","permalink":"http://development.lvh.me:3000/receipt/f62c1beb598394e6072fa18af8a3eed0ba05833b","pdf":"http://development.lvh.me:3000/receipt/f62c1beb598394e6072fa18af8a3eed0ba05833b.pdf","url":"http://development.lvh.me:3000/api/receipts/199.json","processor":null,"processor_id":null,"custom_metadata":{}}]'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:08 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:30 GMT
 - request:
     method: get
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/ping.json
@@ -74,9 +71,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '0'
+      - '10'
       x-ratelimit-remaining:
-      - '90'
+      - '96'
       content-type:
       - application/json; charset=utf-8
       etag:
@@ -84,9 +81,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - d73f0ac3-9b9e-46df-bd47-0f22935da41b
+      - 135bafe4-45a9-4acb-b6a1-3d26f5d8432b
       x-runtime:
-      - '0.389910'
+      - '0.501923'
       connection:
       - close
       server:
@@ -95,10 +92,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"status":"OK"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:08 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:31 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/1056/deliver.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/200/deliver.json
     body:
       encoding: US-ASCII
       string: ''
@@ -109,32 +106,35 @@ http_interactions:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
     status:
-      code: 422
-      message: Unprocessable Entity
+      code: 200
+      message: OK
     headers:
       x-frame-options:
       - ALLOWALL
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '0'
+      - '9'
       x-ratelimit-remaining:
-      - '89'
+      - '95'
       content-type:
       - application/json; charset=utf-8
+      etag:
+      - '"e750aaba03eb7eb3639f8684e5465fc7"'
       cache-control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       x-request-id:
-      - 2ac74cca-5f73-4f20-bc8a-aace39eec577
+      - 0c756416-5973-4ab2-a638-7fd7df96839c
       x-runtime:
-      - '0.417796'
+      - '1.825039'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"delivery_recipients":["can''t be blank"]}'
+      string: '{"id":200,"account_id":9,"contact_id":44,"document_id":null,"number":"0002","issue_date":"2017-06-12","contact_name":"Albus
+        Dumbledoge","currency":"EUR","gross_amount_cents":1000,"total_cents":1000,"amount_paid_cents":1000,"exchange_rate":"1.0","exchange_cents":null,"po_number":null,"due_days":null,"due_date":null,"valid_until":null,"payment_details":null,"notes":null,"permalink":"64649b40d7fc4bcc0b1a0493b87fa030789235d4","recurring_document":null,"start_date":null,"end_date":null,"renewal_date":null,"frequency":null,"delivery":null,"state":"paid","created_at":"2017-06-12T11:48:52.000Z","updated_at":"2017-06-12T11:49:32.728Z","attachments_count":0,"processor_id":null,"subject":null,"transaction_id":null,"street_line_1":null,"street_line_2":null,"city":null,"postal_code":null,"region":null,"country":"BE","processor":null,"processor_fee_cents":null,"interval_count":0,"delivery_state":"delivered","vat_number":null,"tax_id":null,"metadata":{},"blocked":false}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:09 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:33 GMT
 recorded_with: VCR 2.9.2

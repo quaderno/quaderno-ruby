@@ -29,7 +29,7 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.9)
+    i18n (0.7.0)
     jeweler (2.0.1)
       builder
       bundler (>= 1.0)

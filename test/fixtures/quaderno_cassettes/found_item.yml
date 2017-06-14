@@ -5,9 +5,11 @@ http_interactions:
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
       encoding: UTF-8
-      string: code=1466681270&name=Test_Skynet&unit_cost=21.0
+      string: '{"code":"1497267937","name":"Test_Skynet","unit_cost":21.0}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -21,31 +23,31 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '3'
+      - '10'
       x-ratelimit-remaining:
-      - '90'
+      - '96'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"2b1d7621e76538bd066381618cc88d7d"'
+      - '"732b61bb67f0464d5c743410b75b9dd5"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - a7415359-5206-4e36-aa3e-cdc1adc5d82f
+      - c9a3bfda-f822-4d1f-81ff-9709765b7b16
       x-runtime:
-      - '0.640244'
+      - '1.152317'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":12,"code":"1466681270","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/12"}'
+      string: '{"id":3,"code":"1497267937","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://development.lvh.me:3000/api/items/3"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:27:51 GMT
+  recorded_at: Mon, 12 Jun 2017 11:45:38 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/12.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/3.json
     body:
       encoding: US-ASCII
       string: ''
@@ -64,26 +66,26 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '2'
+      - '9'
       x-ratelimit-remaining:
-      - '89'
+      - '95'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"2b1d7621e76538bd066381618cc88d7d"'
+      - '"732b61bb67f0464d5c743410b75b9dd5"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 319d4d17-475f-4ce1-8e76-6b40f8707a48
+      - d80f54ce-3adc-49be-a916-df534626a43f
       x-runtime:
-      - '0.637247'
+      - '0.665111'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":12,"code":"1466681270","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/12"}'
+      string: '{"id":3,"code":"1497267937","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://development.lvh.me:3000/api/items/3"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:27:52 GMT
+  recorded_at: Mon, 12 Jun 2017 11:45:39 GMT
 recorded_with: VCR 2.9.2

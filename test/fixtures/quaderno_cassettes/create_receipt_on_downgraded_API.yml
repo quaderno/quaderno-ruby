@@ -5,10 +5,12 @@ http_interactions:
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts.json
     body:
       encoding: UTF-8
-      string: first_name=Test%20customer
+      string: '{"first_name":"Test customer"}'
     headers:
       accept:
       - application/json; api_version=20160602
+      content-type:
+      - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
@@ -21,38 +23,40 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '13'
+      - '1'
       x-ratelimit-remaining:
-      - '97'
+      - '91'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"8cd0ec65a32e0b36089531371235d7cb"'
+      - '"f710d0238ce57e50b83b3da2b7ecfe0d"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 4341ff66-d336-426d-beaf-f2bca6c64d7f
+      - 3170e289-db15-444c-a66a-c4f2a710b344
       x-runtime:
-      - '0.496498'
+      - '1.638696'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":90,"kind":"company","created_at":1466681292,"full_name":"Test
-        customer","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"ea7a341abb4da4705a8a5942aca120e706f3fb65","permalink":"http://development.lvh.me:3000/billing/ea7a341abb4da4705a8a5942aca120e706f3fb65","url":"http://development.lvh.me:3000/api/contacts/90"}'
+      string: '{"id":53,"kind":"company","created_at":1497268179,"full_name":"Test
+        customer","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"658db8fdb0ae926ce37a239aab1619bf5f8fc4f4","permalink":"http://development.lvh.me:3000/billing/658db8fdb0ae926ce37a239aab1619bf5f8fc4f4","url":"http://development.lvh.me:3000/api/contacts/53"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:12 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:40 GMT
 - request:
     method: post
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts.json
     body:
       encoding: UTF-8
-      string: contact_id=90&currency=EUR&items_attributes[][description]=Aircraft&items_attributes[][quantity]=1.0&items_attributes[][unit_price]=0.0&tags=tnt&payment_method=cash&notes=
+      string: '{"contact_id":53,"currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_method":"cash","notes":""}'
     headers:
       accept:
       - application/json; api_version=20160602
+      content-type:
+      - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
   response:
@@ -65,19 +69,19 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '13'
+      - '0'
       x-ratelimit-remaining:
-      - '96'
+      - '90'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"65e000b93eee76e35dc5d1514dfb8a1d"'
+      - '"f7bfc685efa964fc8fad6e84b042358c"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 15b016d9-1f14-47ee-ba85-483a76dda856
+      - 923be158-1857-4184-8631-54001e3d8835
       x-runtime:
-      - '3.251276'
+      - '4.633702'
       connection:
       - close
       server:
@@ -85,36 +89,35 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6MTA3MSwibnVtYmVyIjoiMDAwMDAwNiIsImlzc3VlX2RhdGUiOiIy
-        MDE2LTA2LTIzIiwiY3JlYXRlZF9hdCI6MTQ2NjY4MTI5MiwiY29udGFjdCI6
-        eyJpZCI6OTAsImZ1bGxfbmFtZSI6IlRlc3QgY3VzdG9tZXIifSwic3RyZWV0
-        X2xpbmVfMSI6bnVsbCwic3RyZWV0X2xpbmVfMiI6bnVsbCwiY2l0eSI6bnVs
-        bCwicmVnaW9uIjpudWxsLCJwb3N0YWxfY29kZSI6bnVsbCwicG9fbnVtYmVy
-        IjpudWxsLCJjdXJyZW5jeSI6IkVVUiIsImV4Y2hhbmdlX3JhdGUiOiIxLjk1
-        NTgiLCJpdGVtcyI6W3siaWQiOjMwOTAsImRlc2NyaXB0aW9uIjoiQWlyY3Jh
-        ZnQiLCJxdWFudGl0eSI6IjEuMCIsInVuaXRfcHJpY2UiOiIwLjAiLCJkaXNj
-        b3VudF9yYXRlIjoiMC4wIiwidGF4XzFfbmFtZSI6bnVsbCwidGF4XzFfcmF0
-        ZSI6bnVsbCwidGF4XzJfbmFtZSI6bnVsbCwidGF4XzJfcmF0ZSI6bnVsbCwi
-        cmVmZXJlbmNlIjpudWxsLCJzdWJ0b3RhbCI6IjAuMDAg4oKsIiwiZGlzY291
-        bnQiOiIwLjAwIOKCrCIsImdyb3NzX2Ftb3VudCI6IjAuMDAg4oKsIn1dLCJz
-        dWJ0b3RhbCI6IjAuMDAg4oKsIiwiZGlzY291bnQiOiIwLjAwIOKCrCIsInRh
-        eGVzIjpbXSwidG90YWwiOiIwLjAwIOKCrCIsInBheW1lbnRzIjpbeyJpZCI6
-        MzQsImRhdGUiOiIyMDE2LTA2LTIzIiwicGF5bWVudF9tZXRob2QiOiJjYXNo
-        IiwiYW1vdW50IjoiMC4wMCDigqwifV0sIm5vdGVzIjpudWxsLCJzdGF0ZSI6
-        InBhaWQiLCJ0YWdfbGlzdCI6W10sInNlY3VyZV9pZCI6IjkwMzg2YWUwMTBi
-        ZDVjODY4MjM4NWJjNDYyYTZmOTMwZGM5NDQ2NjMiLCJwZXJtYWxpbmsiOiJo
-        dHRwOi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvcmVjZWlwdC85MDM4NmFl
-        MDEwYmQ1Yzg2ODIzODViYzQ2MmE2ZjkzMGRjOTQ0NjYzIiwicGRmIjoiaHR0
-        cDovL2RldmVsb3BtZW50Lmx2aC5tZTozMDAwL3JlY2VpcHQvOTAzODZhZTAx
-        MGJkNWM4NjgyMzg1YmM0NjJhNmY5MzBkYzk0NDY2My5wZGYiLCJ1cmwiOiJo
-        dHRwOi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvYXBpL3JlY2VpcHRzLzEw
-        NzEuanNvbiIsInByb2Nlc3NvciI6bnVsbCwicHJvY2Vzc29yX2lkIjpudWxs
-        fQ==
+        eyJpZCI6MjAzLCJudW1iZXIiOiIwMDAzIiwiaXNzdWVfZGF0ZSI6IjIwMTct
+        MDYtMTIiLCJjcmVhdGVkX2F0IjoxNDk3MjY4MTgxLCJjb250YWN0Ijp7Imlk
+        Ijo1MywiZnVsbF9uYW1lIjoiVGVzdCBjdXN0b21lciJ9LCJzdHJlZXRfbGlu
+        ZV8xIjpudWxsLCJzdHJlZXRfbGluZV8yIjpudWxsLCJjaXR5IjpudWxsLCJy
+        ZWdpb24iOm51bGwsInBvc3RhbF9jb2RlIjpudWxsLCJwb19udW1iZXIiOm51
+        bGwsImN1cnJlbmN5IjoiRVVSIiwiaXRlbXMiOlt7ImlkIjoyMDQsImRlc2Ny
+        aXB0aW9uIjoiQWlyY3JhZnQiLCJxdWFudGl0eSI6IjEuMCIsInVuaXRfcHJp
+        Y2UiOiIwLjAiLCJkaXNjb3VudF9yYXRlIjoiMC4wIiwidGF4XzFfbmFtZSI6
+        bnVsbCwidGF4XzFfcmF0ZSI6bnVsbCwidGF4XzJfbmFtZSI6bnVsbCwidGF4
+        XzJfcmF0ZSI6bnVsbCwicmVmZXJlbmNlIjpudWxsLCJzdWJ0b3RhbCI6IuKC
+        rDAuMDAiLCJkaXNjb3VudCI6IuKCrDAuMDAiLCJncm9zc19hbW91bnQiOiLi
+        gqwwLjAwIn1dLCJzdWJ0b3RhbCI6IuKCrDAuMDAiLCJkaXNjb3VudCI6IuKC
+        rDAuMDAiLCJ0YXhlcyI6W10sInRvdGFsIjoi4oKsMC4wMCIsInBheW1lbnRz
+        IjpbeyJpZCI6NTMsImRhdGUiOiIyMDE3LTA2LTEyIiwicGF5bWVudF9tZXRo
+        b2QiOiJjYXNoIiwiYW1vdW50Ijoi4oKsMC4wMCJ9XSwibm90ZXMiOm51bGws
+        InN0YXRlIjoicGFpZCIsInRhZ19saXN0IjpbXSwic2VjdXJlX2lkIjoiN2Nl
+        Yjg5YmE3ZWRjMWNiOTI2YmU4NDczMjA2N2NkNjYwY2U5MTJlNSIsInBlcm1h
+        bGluayI6Imh0dHA6Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9yZWNlaXB0
+        LzdjZWI4OWJhN2VkYzFjYjkyNmJlODQ3MzIwNjdjZDY2MGNlOTEyZTUiLCJw
+        ZGYiOiJodHRwOi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvcmVjZWlwdC83
+        Y2ViODliYTdlZGMxY2I5MjZiZTg0NzMyMDY3Y2Q2NjBjZTkxMmU1LnBkZiIs
+        InVybCI6Imh0dHA6Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9hcGkvcmVj
+        ZWlwdHMvMjAzLmpzb24iLCJwcm9jZXNzb3IiOm51bGwsInByb2Nlc3Nvcl9p
+        ZCI6bnVsbH0=
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:15 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:45 GMT
 - request:
     method: delete
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/1071.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/receipts/203.json
     body:
       encoding: US-ASCII
       string: ''
@@ -133,15 +136,15 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '9'
+      - '15'
       x-ratelimit-remaining:
-      - '95'
+      - '100'
       cache-control:
       - no-cache
       x-request-id:
-      - b13d75b5-fde2-497f-9e74-332a41d47975
+      - 804eb5ef-a74e-4e8c-85db-5955b07357d5
       x-runtime:
-      - '0.816442'
+      - '2.946196'
       connection:
       - close
       server:
@@ -150,10 +153,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:16 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:48 GMT
 - request:
     method: delete
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts/90.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/contacts/53.json
     body:
       encoding: US-ASCII
       string: ''
@@ -172,15 +175,15 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '8'
+      - '15'
       x-ratelimit-remaining:
-      - '94'
+      - '99'
       cache-control:
       - no-cache
       x-request-id:
-      - 3ca5afbf-0bad-4a5b-a88d-9df2749ced18
+      - f85ce166-ddd4-4254-bd61-a877fefd13b9
       x-runtime:
-      - '0.255832'
+      - '1.077894'
       connection:
       - close
       server:
@@ -189,5 +192,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:28:16 GMT
+  recorded_at: Mon, 12 Jun 2017 11:49:49 GMT
 recorded_with: VCR 2.9.2

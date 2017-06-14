@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/expenses.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/expenses.json?
     body:
       encoding: US-ASCII
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '2'
+      - '11'
       x-ratelimit-remaining:
-      - '88'
+      - '98'
       x-pages-currentpage:
       - '1'
       x-pages-totalpages:
@@ -31,63 +31,30 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"8d78811bffbec882d3a115c0c1cd55f7"'
+      - '"1096b389a8934c3608b59ed5c52ff5c1"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 8224e6f9-0b28-46da-b126-6a0c80949d94
+      - 30dec817-cd9a-4d08-bd39-3ff3431cdea7
       x-runtime:
-      - '0.785573'
+      - '3.485057'
       connection:
       - close
       server:
       - thin
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        W3siaWQiOjk5NCwiaXNzdWVfZGF0ZSI6IjIwMTYtMDYtMDgiLCJjcmVhdGVk
-        X2F0IjoxNDY1Mzg1NjQwLCJjb250YWN0Ijp7ImlkIjo1MywiZnVsbF9uYW1l
-        IjoiVGVzdF9PQ1AgVW1wacOpcnJleiJ9LCJzdHJlZXRfbGluZV8xIjpudWxs
-        LCJzdHJlZXRfbGluZV8yIjpudWxsLCJjaXR5IjpudWxsLCJyZWdpb24iOm51
-        bGwsInBvc3RhbF9jb2RlIjpudWxsLCJwb19udW1iZXIiOm51bGwsImN1cnJl
-        bmN5IjoiRVVSIiwiZXhjaGFuZ2VfcmF0ZSI6IjEuMCIsIml0ZW1zIjpbeyJp
-        ZCI6MTAwNCwiZGVzY3JpcHRpb24iOiJTb21ldGhpbmciLCJxdWFudGl0eSI6
-        IjEuMCIsInVuaXRfcHJpY2VfY2VudHMiOiIyMDAwLjAiLCJkaXNjb3VudF9y
-        YXRlIjoiMC4wIiwidGF4XzFfbmFtZSI6Ik13U3QuL1VTdC4iLCJ0YXhfMV9y
-        YXRlIjoxOS4wLCJ0YXhfMl9uYW1lIjoiIiwidGF4XzJfcmF0ZSI6bnVsbCwi
-        cmVmZXJlbmNlIjpudWxsLCJzdWJ0b3RhbF9jZW50cyI6IjIwMDAuMCIsImRp
-        c2NvdW50X2NlbnRzIjoiMC4wIiwiZ3Jvc3NfYW1vdW50X2NlbnRzIjoiMjAw
-        MC4wIn1dLCJzdWJ0b3RhbF9jZW50cyI6IjIwMDAuMCIsImRpc2NvdW50X2Nl
-        bnRzIjoiMC4wIiwidGF4ZXMiOlt7ImxhYmVsIjoiTXdTdC4vVVN0LiAoMTku
-        MDAlKSIsImFtb3VudF9jZW50cyI6MzgwfV0sImV4dHJhY3QiOnsidG90YWxf
-        Y2VudHMiOjIzODB9LCJwYXltZW50cyI6W3siaWQiOjgsImRhdGUiOiIyMDE2
-        LTA2LTA4IiwicGF5bWVudF9tZXRob2QiOiJjYXNoIiwiYW1vdW50X2NlbnRz
-        IjoyMzgwLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAv
-        YXBpL2V4cGVuc2VzLzk5NC9wYXltZW50cy84Lmpzb24ifSx7ImlkIjo5LCJk
-        YXRlIjoiMjAxNi0wNi0yMyIsInBheW1lbnRfbWV0aG9kIjoiY2FzaCIsImFt
-        b3VudF9jZW50cyI6MTAwMDAwMCwidXJsIjoiaHR0cDovL2RldmVsb3BtZW50
-        Lmx2aC5tZTozMDAwL2FwaS9leHBlbnNlcy85OTQvcGF5bWVudHMvOS5qc29u
-        In0seyJpZCI6MTMsImRhdGUiOiIyMDE2LTA2LTIzIiwicGF5bWVudF9tZXRo
-        b2QiOiJjYXNoIiwiYW1vdW50X2NlbnRzIjoxMDAwMDAwLCJ1cmwiOiJodHRw
-        Oi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvYXBpL2V4cGVuc2VzLzk5NC9w
-        YXltZW50cy8xMy5qc29uIn0seyJpZCI6MTcsImRhdGUiOiIyMDE2LTA2LTIz
-        IiwicGF5bWVudF9tZXRob2QiOiJjYXNoIiwiYW1vdW50X2NlbnRzIjoxMDAw
-        MDAwLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvYXBp
-        L2V4cGVuc2VzLzk5NC9wYXltZW50cy8xNy5qc29uIn0seyJpZCI6MjEsImRh
-        dGUiOiIyMDE2LTA2LTIzIiwicGF5bWVudF9tZXRob2QiOiJjYXNoIiwiYW1v
-        dW50X2NlbnRzIjoxMDAwMDAwLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1lbnQu
-        bHZoLm1lOjMwMDAvYXBpL2V4cGVuc2VzLzk5NC9wYXltZW50cy8yMS5qc29u
-        In0seyJpZCI6MjgsImRhdGUiOiIyMDE2LTA2LTIzIiwicGF5bWVudF9tZXRo
-        b2QiOiJjYXNoIiwiYW1vdW50X2NlbnRzIjoxMDAwMDAwLCJ1cmwiOiJodHRw
-        Oi8vZGV2ZWxvcG1lbnQubHZoLm1lOjMwMDAvYXBpL2V4cGVuc2VzLzk5NC9w
-        YXltZW50cy8yOC5qc29uIn1dLCJub3RlcyI6bnVsbCwic3RhdGUiOiJwYWlk
-        IiwidGFnX2xpc3QiOltdLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1lbnQubHZo
-        Lm1lOjMwMDAvYXBpL2V4cGVuc2VzLzk5NC5qc29uIn1d
+      encoding: UTF-8
+      string: '[{"id":184,"blocked":false,"issue_date":"2017-06-12","created_at":1497266330,"contact":{"id":44,"full_name":"Albus
+        Dumbledoge"},"country":"BE","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":185,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"extract":{"total_cents":0},"payments":[{"id":40,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/40.json"},{"id":41,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/41.json"},{"id":42,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/42.json"}],"notes":null,"state":"paid","tag_list":[],"url":"http://development.lvh.me:3000/api/expenses/184.json","custom_metadata":{}},{"id":137,"blocked":true,"issue_date":"2017-05-29","created_at":1496060112,"contact":{"id":42,"full_name":"Cidi
+        Campidocti"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":138,"description":"asdasd","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"extract":{"total_cents":0},"payments":[],"notes":null,"state":"paid","tag_list":["dundundugan","rap"],"url":"http://development.lvh.me:3000/api/expenses/137.json","custom_metadata":{}},{"id":135,"blocked":false,"issue_date":"2017-05-26","created_at":1495789529,"contact":{"id":42,"full_name":"Cidi
+        Campidocti"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":136,"description":"Dreamhack
+        valencia","quantity":"1.0","unit_price_cents":"23000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"23000.0","discount_cents":"0.0","gross_amount_cents":"23000.0"}],"subtotal_cents":"23000.0","discount_cents":"0.0","taxes":[],"extract":{"total_cents":23000},"payments":[{"id":7,"date":"2017-05-31","payment_method":"credit_card","amount_cents":23000,"url":"http://development.lvh.me:3000/api/expenses/135/payments/7.json"}],"notes":null,"state":"paid","tag_list":["balls"],"url":"http://development.lvh.me:3000/api/expenses/135.json","custom_metadata":{}},{"id":134,"blocked":false,"issue_date":"2017-05-26","created_at":1495789490,"contact":{"id":42,"full_name":"Cidi
+        Campidocti"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":135,"description":"Something","quantity":"1.0","unit_price_cents":"1000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_2_name":"","tax_2_rate":null,"reference":"","subtotal_cents":"1000.0","discount_cents":"0.0","gross_amount_cents":"1000.0"}],"subtotal_cents":"1000.0","discount_cents":"0.0","taxes":[],"extract":{"total_cents":1000},"payments":[{"id":4,"date":"2017-05-31","payment_method":"credit_card","amount_cents":1000,"url":"http://development.lvh.me:3000/api/expenses/134/payments/4.json"}],"notes":null,"state":"paid","tag_list":["rap","god"],"url":"http://development.lvh.me:3000/api/expenses/134.json","custom_metadata":{}}]'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:25:59 GMT
+  recorded_at: Mon, 12 Jun 2017 11:38:29 GMT
 - request:
     method: get
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/expenses/994.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/expenses/184.json
     body:
       encoding: US-ASCII
       string: ''
@@ -106,64 +73,27 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '1'
+      - '8'
       x-ratelimit-remaining:
-      - '87'
+      - '97'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"9336b6f7fc3ce3401ea624b4d7c0202d"'
+      - '"37b5f9d49ed3d5abfd0c53251866ed35"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 4f332b6f-926e-4fe7-b200-1086edd6e7ed
+      - bdeddee1-f073-461e-bffe-c66c380f0979
       x-runtime:
-      - '0.717276'
+      - '1.381088'
       connection:
       - close
       server:
       - thin
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6OTk0LCJpc3N1ZV9kYXRlIjoiMjAxNi0wNi0wOCIsImNyZWF0ZWRf
-        YXQiOjE0NjUzODU2NDAsImNvbnRhY3QiOnsiaWQiOjUzLCJmdWxsX25hbWUi
-        OiJUZXN0X09DUCBVbXBpw6lycmV6In0sInN0cmVldF9saW5lXzEiOm51bGws
-        InN0cmVldF9saW5lXzIiOm51bGwsImNpdHkiOm51bGwsInJlZ2lvbiI6bnVs
-        bCwicG9zdGFsX2NvZGUiOm51bGwsInBvX251bWJlciI6bnVsbCwiY3VycmVu
-        Y3kiOiJFVVIiLCJleGNoYW5nZV9yYXRlIjoiMS4wIiwiaXRlbXMiOlt7Imlk
-        IjoxMDA0LCJkZXNjcmlwdGlvbiI6IlNvbWV0aGluZyIsInF1YW50aXR5Ijoi
-        MS4wIiwidW5pdF9wcmljZV9jZW50cyI6IjIwMDAuMCIsImRpc2NvdW50X3Jh
-        dGUiOiIwLjAiLCJ0YXhfMV9uYW1lIjoiTXdTdC4vVVN0LiIsInRheF8xX3Jh
-        dGUiOjE5LjAsInRheF8yX25hbWUiOiIiLCJ0YXhfMl9yYXRlIjpudWxsLCJy
-        ZWZlcmVuY2UiOm51bGwsInN1YnRvdGFsX2NlbnRzIjoiMjAwMC4wIiwiZGlz
-        Y291bnRfY2VudHMiOiIwLjAiLCJncm9zc19hbW91bnRfY2VudHMiOiIyMDAw
-        LjAifV0sInN1YnRvdGFsX2NlbnRzIjoiMjAwMC4wIiwiZGlzY291bnRfY2Vu
-        dHMiOiIwLjAiLCJ0YXhlcyI6W3sibGFiZWwiOiJNd1N0Li9VU3QuICgxOS4w
-        MCUpIiwiYW1vdW50X2NlbnRzIjozODB9XSwiZXh0cmFjdCI6eyJ0b3RhbF9j
-        ZW50cyI6MjM4MH0sInBheW1lbnRzIjpbeyJpZCI6OCwiZGF0ZSI6IjIwMTYt
-        MDYtMDgiLCJwYXltZW50X21ldGhvZCI6ImNhc2giLCJhbW91bnRfY2VudHMi
-        OjIzODAsInVybCI6Imh0dHA6Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9h
-        cGkvZXhwZW5zZXMvOTk0L3BheW1lbnRzLzguanNvbiJ9LHsiaWQiOjksImRh
-        dGUiOiIyMDE2LTA2LTIzIiwicGF5bWVudF9tZXRob2QiOiJjYXNoIiwiYW1v
-        dW50X2NlbnRzIjoxMDAwMDAwLCJ1cmwiOiJodHRwOi8vZGV2ZWxvcG1lbnQu
-        bHZoLm1lOjMwMDAvYXBpL2V4cGVuc2VzLzk5NC9wYXltZW50cy85Lmpzb24i
-        fSx7ImlkIjoxMywiZGF0ZSI6IjIwMTYtMDYtMjMiLCJwYXltZW50X21ldGhv
-        ZCI6ImNhc2giLCJhbW91bnRfY2VudHMiOjEwMDAwMDAsInVybCI6Imh0dHA6
-        Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9hcGkvZXhwZW5zZXMvOTk0L3Bh
-        eW1lbnRzLzEzLmpzb24ifSx7ImlkIjoxNywiZGF0ZSI6IjIwMTYtMDYtMjMi
-        LCJwYXltZW50X21ldGhvZCI6ImNhc2giLCJhbW91bnRfY2VudHMiOjEwMDAw
-        MDAsInVybCI6Imh0dHA6Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9hcGkv
-        ZXhwZW5zZXMvOTk0L3BheW1lbnRzLzE3Lmpzb24ifSx7ImlkIjoyMSwiZGF0
-        ZSI6IjIwMTYtMDYtMjMiLCJwYXltZW50X21ldGhvZCI6ImNhc2giLCJhbW91
-        bnRfY2VudHMiOjEwMDAwMDAsInVybCI6Imh0dHA6Ly9kZXZlbG9wbWVudC5s
-        dmgubWU6MzAwMC9hcGkvZXhwZW5zZXMvOTk0L3BheW1lbnRzLzIxLmpzb24i
-        fSx7ImlkIjoyOCwiZGF0ZSI6IjIwMTYtMDYtMjMiLCJwYXltZW50X21ldGhv
-        ZCI6ImNhc2giLCJhbW91bnRfY2VudHMiOjEwMDAwMDAsInVybCI6Imh0dHA6
-        Ly9kZXZlbG9wbWVudC5sdmgubWU6MzAwMC9hcGkvZXhwZW5zZXMvOTk0L3Bh
-        eW1lbnRzLzI4Lmpzb24ifV0sIm5vdGVzIjpudWxsLCJzdGF0ZSI6InBhaWQi
-        LCJ0YWdfbGlzdCI6W10sInVybCI6Imh0dHA6Ly9kZXZlbG9wbWVudC5sdmgu
-        bWU6MzAwMC9hcGkvZXhwZW5zZXMvOTk0Lmpzb24ifQ==
+      encoding: UTF-8
+      string: '{"id":184,"blocked":false,"issue_date":"2017-06-12","created_at":1497266330,"contact":{"id":44,"full_name":"Albus
+        Dumbledoge"},"country":"BE","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"items":[{"id":185,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_2_name":null,"tax_2_rate":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"extract":{"total_cents":0},"payments":[{"id":40,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/40.json"},{"id":41,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/41.json"},{"id":42,"date":"2017-06-12","payment_method":"cash","amount_cents":1000000,"url":"http://development.lvh.me:3000/api/expenses/184/payments/42.json"}],"notes":null,"state":"paid","tag_list":[],"url":"http://development.lvh.me:3000/api/expenses/184.json","custom_metadata":{}}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:26:00 GMT
+  recorded_at: Mon, 12 Jun 2017 11:38:30 GMT
 recorded_with: VCR 2.9.2

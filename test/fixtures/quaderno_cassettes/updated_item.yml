@@ -5,9 +5,11 @@ http_interactions:
     uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items.json
     body:
       encoding: UTF-8
-      string: code=1466681272&name=Test_Skynet&unit_cost=21.0
+      string: '{"code":"1497267940","name":"Test_Skynet","unit_cost":21.0}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -21,36 +23,38 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '1'
+      - '8'
       x-ratelimit-remaining:
-      - '87'
+      - '93'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"5abf2e3093e0e9f51b17371479e4aaa4"'
+      - '"e736479a9364217c3573d19fbe170c7b"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 0c9657cc-ae32-4a00-8375-4edd2ff5453e
+      - a8da756e-1c83-4aec-bd31-443c2c70c4d1
       x-runtime:
-      - '0.502000'
+      - '1.080966'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":13,"code":"1466681272","name":"Test_Skynet","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/13"}'
+      string: '{"id":4,"code":"1497267940","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://development.lvh.me:3000/api/items/4"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:27:53 GMT
+  recorded_at: Mon, 12 Jun 2017 11:45:41 GMT
 - request:
     method: put
-    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/13.json
+    uri: http://sk_test_B7xXrTspfeGukQqGN1pK@development.lvh.me:3000/api/items/4.json
     body:
       encoding: UTF-8
-      string: name=Test_OCP
+      string: '{"name":"Test_OCP"}'
     headers:
       accept:
+      - application/json
+      content-type:
       - application/json
       authorization:
       - Basic c2tfdGVzdF9CN3hYclRzcGZlR3VrUXFHTjFwSzo=
@@ -64,26 +68,26 @@ http_interactions:
       x-ratelimit-limit:
       - '2000'
       x-ratelimit-reset:
-      - '1'
+      - '6'
       x-ratelimit-remaining:
-      - '86'
+      - '92'
       content-type:
       - application/json; charset=utf-8
       etag:
-      - '"31a6dc173c5dd112016d6581ee9dffcc"'
+      - '"7184607322676bd93ea3da539be685ee"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 5be78239-a128-443f-abb1-387399393c55
+      - b72a5725-a134-458e-841f-3509c681095a
       x-runtime:
-      - '0.488213'
+      - '0.800370'
       connection:
       - close
       server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":13,"code":"1466681272","name":"Test_OCP","unit_cost":"21.0","stock":null,"url":"http://development.lvh.me:3000/api/items/13"}'
+      string: '{"id":4,"code":"1497267940","name":"Test_OCP","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://development.lvh.me:3000/api/items/4"}'
     http_version: '1.1'
-  recorded_at: Thu, 23 Jun 2016 11:27:53 GMT
+  recorded_at: Mon, 12 Jun 2017 11:45:42 GMT
 recorded_with: VCR 2.9.2
