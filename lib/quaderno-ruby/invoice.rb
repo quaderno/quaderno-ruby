@@ -3,6 +3,7 @@ module Quaderno
     include Quaderno::Behavior::Deliver
     include Quaderno::Behavior::Payment
     include Quaderno::Behavior::Retrieve
+    include Quaderno::Behavior::Block
 
     api_model Quaderno::Invoice
     api_path 'invoices'
