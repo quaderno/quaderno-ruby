@@ -78,6 +78,22 @@ module Quaderno
       true
     end
 
+    def self.me(options = {})
+      options[:auth_token] ||= auth_token
+      options[:url] ||= url
+
+      authentication = get_authentication(options)
+
+      party_response = get("#{authentication[:url]}me.json",
+        basic_auth: authentication[:basic_auth],
+        headers: version_header.merge(authentication[:headers])
+      )
+
+      check_exception_for(party_response, { subdomain_or_token: true })
+
+      party_response.parsed_response
+    end
+
     #Returns the rate limit information: limit and remaining requests
     def self.rate_limit_info
       party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token }, headers: version_header)
