@@ -1,4 +1,7 @@
 #Changelog
+##1.12.2
+* Added `me` method.
+
 ##1.12.0
 * Added thread-safe credentials configuration.
 * `all` methods returns a `Quaderno::Object` with pagination info instead of an `Array`
