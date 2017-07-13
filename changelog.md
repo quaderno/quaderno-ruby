@@ -1,4 +1,7 @@
 #Changelog
+##1.12.3
+* Return integers insteado of strings on pagination readers.
+
 ##1.12.2
 * Added `me` method.
 

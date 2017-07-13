@@ -5,7 +5,7 @@ class Quaderno::Collection < Array
   end
 
   def current_page
-    @page || 1
+    @page.to_i || 1
   end
 
   def total_pages=(total_pages)
@@ -13,7 +13,7 @@ class Quaderno::Collection < Array
   end
 
   def total_pages
-    @total_pages || 1
+    @total_pages.to_i || 1
   end
 
   def pagination_info
