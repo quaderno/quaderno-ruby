@@ -1,4 +1,7 @@
 #Changelog
+##1.12.4
+* Use version headers on taxes requests.
+
 ##1.12.3
 * Return integers insteado of strings on pagination readers.
 
