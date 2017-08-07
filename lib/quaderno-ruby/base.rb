@@ -62,7 +62,7 @@ module Quaderno
     def self.ping(options = {})
       begin
         options[:auth_token] ||= auth_token
-        options[:url] ||= url
+        options[:api_url] ||= url
 
         authentication = get_authentication(options)
 
@@ -80,7 +80,7 @@ module Quaderno
 
     def self.me(options = {})
       options[:auth_token] ||= auth_token
-      options[:url] ||= url
+      options[:api_url] ||= url
 
       authentication = get_authentication(options)
 

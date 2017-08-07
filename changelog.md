@@ -1,4 +1,8 @@
 #Changelog
+##1.12.5
+* Added `create` method to `Quaderno::Income`.
+* Fix `Quaderno::Base.ping` and `Quaderno::Base.me` methods.
+
 ##1.12.4
 * Use version headers on taxes requests.
 

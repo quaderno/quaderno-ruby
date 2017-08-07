@@ -3,7 +3,7 @@ module Quaderno
     include Quaderno::Behavior::Block
 
     class << self
-      undef :find, :create, :update, :delete
+      undef :find, :update, :delete
     end
 
     api_model Quaderno::Income
