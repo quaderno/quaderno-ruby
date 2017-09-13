@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Recrea"]
-  s.date = "2017-08-07"
+  s.date = "2017-09-13"
   s.description = " A ruby wrapper for Quaderno API "
   s.email = "carlos@recrea.es"
   s.extra_rdoc_files = [
@@ -49,6 +49,7 @@ Gem::Specification.new do |s|
     "lib/quaderno-ruby/payment.rb",
     "lib/quaderno-ruby/receipt.rb",
     "lib/quaderno-ruby/recurring.rb",
+    "lib/quaderno-ruby/report.rb",
     "lib/quaderno-ruby/tax.rb",
     "lib/quaderno-ruby/webhook.rb",
     "quaderno.gemspec",

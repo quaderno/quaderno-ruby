@@ -1,4 +1,7 @@
 #Changelog
+##1.13.0
+* Added `Quaderno::Report`
+
 ##1.12.5
 * Added `create` method to `Quaderno::Income`.
 * Fix `Quaderno::Base.ping` and `Quaderno::Base.me` methods.
