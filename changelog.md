@@ -1,4 +1,7 @@
 #Changelog
+##1.13.1
+* Added `taxes` report to `Quaderno::Report`
+
 ##1.13.0
 * Added `Quaderno::Report`
 
