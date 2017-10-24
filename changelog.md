@@ -1,9 +1,12 @@
 #Changelog
+##1.13.2
+* Added index method to `Quaderno::Tax` as `Quaderno::Tax.all()`.
+
 ##1.13.1
-* Added `taxes` report to `Quaderno::Report`
+* Added `taxes` report to `Quaderno::Report`.
 
 ##1.13.0
-* Added `Quaderno::Report`
+* Added `Quaderno::Report`.
 
 ##1.12.5
 * Added `create` method to `Quaderno::Income`.

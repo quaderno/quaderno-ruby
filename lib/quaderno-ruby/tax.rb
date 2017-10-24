@@ -7,7 +7,7 @@ module Quaderno
     api_path 'taxes'
 
     class << self
-      undef :all, :find, :create, :update, :delete, :parse_nested
+      undef :find, :create, :update, :delete, :parse_nested
     end
 
     def self.calculate(options = {})
