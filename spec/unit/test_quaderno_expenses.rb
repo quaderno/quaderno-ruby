@@ -3,7 +3,7 @@ require 'helper'
 class TestQuadernoExpense < Test::Unit::TestCase
   context 'A user with an authenticate token with expenses' do
 
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -11,7 +11,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'get exception if pass wrong arguments' do
+    it 'should get exception if pass wrong arguments' do
       assert_raise ArgumentError do
         VCR.use_cassette('all expenses') do
           Quaderno::Expense.all 1, 2, 3
@@ -24,7 +24,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'get all expenses (populated db)' do
+    it 'should get all expenses (populated db)' do
       VCR.use_cassette('all expenses') do
         expenses = Quaderno::Expense.all
         assert_not_nil expenses
@@ -35,7 +35,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'find a expense' do
+    it 'should find a expense' do
       VCR.use_cassette('found expense') do
         expenses = Quaderno::Expense.all
         expense = Quaderno::Expense.find expenses.first.id
@@ -44,7 +44,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'create a expense' do
+    it 'should create a expense' do
       VCR.use_cassette('new expense') do
         expenses = Quaderno::Expense.all
         contacts = Quaderno::Contact.all
@@ -67,7 +67,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'update an expense' do
+    it 'should update an expense' do
       VCR.use_cassette('updated expense') do
         contacts = Quaderno::Contact.all
         expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
@@ -89,7 +89,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'delete an expense' do
+    it 'should delete an expense' do
         VCR.use_cassette('deleted expense') do
           contacts = Quaderno::Contact.all
           expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
@@ -110,7 +110,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
         end
     end
 
-    should 'add a payment' do
+    it 'should add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
         payment = expenses.first.add_payment(payment_method: "cash", amount: "10000")
@@ -121,7 +121,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'remove a payment' do
+    it 'should remove a payment' do
       VCR.use_cassette('unpay an expense') do
         expenses = Quaderno::Expense.all
         expenses.first.add_payment(payment_method: "cash", amount: "10000")
@@ -132,7 +132,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    should 'override version' do
+    it 'should override version' do
       Quaderno::Base.api_version = OLDEST_SUPPORTED_API_VERSION
 
       VCR.use_cassette('create expense on downgraded API') do

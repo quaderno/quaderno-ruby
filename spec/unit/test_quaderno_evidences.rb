@@ -1,8 +1,8 @@
 require 'helper'
 
-class TestQuadernoEstimate < Test::Unit::TestCase
+describe Quaderno::Evidence do
   context 'A user with an authenticate token with invoices' do
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -24,17 +24,17 @@ class TestQuadernoEstimate < Test::Unit::TestCase
                                            tags: 'tnt',
                                            payment_details: '',
                                            notes: '')
-        assert_kind_of Quaderno::Invoice, @invoice
-        assert_equal @contacts[0].id, @invoice.contact.id
-        assert_equal 'Aircraft', @invoice.items[0].description
+        expect(@invoice.is_a? Quaderno::Invoice).to be true
+        expect(@invoice.contact.id).to eq @contacts[0].id
+        expect(@invoice.items[0].description).to eq 'Aircraft'
       end
     end
 
-    should 'create an evidence' do
+    it 'should create an evidence' do
       VCR.use_cassette('new evidence') do
         evidence = Quaderno::Evidence.create(document_id: @invoice.id, billing_country: @contacts[0].country, bank_country: @contacts[0].country)
-        assert_kind_of Quaderno::Evidence, evidence
-        assert_equal @contacts[0].country, evidence.billing_country
+        expect(evidence.is_a? Quaderno::Evidence).to be true
+        expect(evidence.billing_country).to eq @contacts[0].country
       end
     end
   end

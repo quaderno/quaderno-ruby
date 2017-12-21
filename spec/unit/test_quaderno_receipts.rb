@@ -3,7 +3,7 @@ require 'helper'
 class TestQuadernoReceipt < Test::Unit::TestCase
   context 'A user with an authenticate token with receipts' do
 
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -11,7 +11,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'get exception if pass wrong arguments' do
+    it 'should get exception if pass wrong arguments' do
       assert_raise ArgumentError do
         VCR.use_cassette('all receipts') do
           Quaderno::Receipt.all 1, 2, 3
@@ -24,7 +24,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'get all receipts (populated db)' do
+    it 'should get all receipts (populated db)' do
       VCR.use_cassette('all receipts') do
         receipts = Quaderno::Receipt.all
         assert_not_nil receipts
@@ -35,7 +35,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'find a receipt' do
+    it 'should find a receipt' do
       VCR.use_cassette('found receipt') do
         receipts = Quaderno::Receipt.all
         receipt = Quaderno::Receipt.find receipts.first.id
@@ -44,7 +44,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'create a receipt' do
+    it 'should create a receipt' do
       VCR.use_cassette('new receipt') do
         contact = Quaderno::Contact.create(first_name: 'Test customer')
         receipt = Quaderno::Receipt.create(contact_id: contact.id ,
@@ -67,7 +67,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'update an receipt' do
+    it 'should update an receipt' do
       VCR.use_cassette('updated receipt') do
         contact = Quaderno::Contact.create(first_name: 'Test customer')
         receipt = Quaderno::Receipt.create(contact_id: contact.id ,
@@ -90,7 +90,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'delete an receipt' do
+    it 'should delete an receipt' do
         VCR.use_cassette('deleted receipt') do
           contact = Quaderno::Contact.create(first_name: 'Test customer')
           receipt = Quaderno::Receipt.create(contact_id: contact.id ,
@@ -113,7 +113,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
         end
     end
 
-    should 'deliver an receipt' do
+    it 'should deliver an receipt' do
       VCR.use_cassette('delivered receipt') do
         receipts = Quaderno::Receipt.all
         rate_limit_before = Quaderno::Base.rate_limit_info
@@ -126,7 +126,7 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    should 'override version' do
+    it 'should override version' do
       Quaderno::Base.api_version = OLDEST_SUPPORTED_API_VERSION
 
       VCR.use_cassette('create receipt on downgraded API') do

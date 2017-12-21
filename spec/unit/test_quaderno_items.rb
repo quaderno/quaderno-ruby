@@ -3,7 +3,7 @@ require 'helper'
 class TestQuadernoItem < Test::Unit::TestCase
   context 'A user with an authenticate token with items' do
 
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -11,7 +11,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'get exception if pass wrong arguments' do
+    it 'should get exception if pass wrong arguments' do
       assert_raise ArgumentError do
         VCR.use_cassette('all items') do
           Quaderno::Item.all 1, 2, 3
@@ -24,7 +24,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'get all items (populated db)' do
+    it 'should get all items (populated db)' do
       VCR.use_cassette('all items') do
         items = Quaderno::Item.all
         assert_not_nil items
@@ -35,7 +35,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'find an item' do
+    it 'should find an item' do
       VCR.use_cassette('found item') do
         new_item = Quaderno::Item.create(code: Time.now.to_i.to_s, name: 'Test_Skynet', unit_cost: 21.00)
         item = Quaderno::Item.find new_item.id
@@ -45,7 +45,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'create an item' do
+    it 'should create an item' do
       VCR.use_cassette('new item') do
         item = Quaderno::Item.create(code: '000000', name: 'Test_Skynet', unit_cost: 21.00)
         assert_kind_of Quaderno::Item, item
@@ -54,7 +54,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'update an item' do
+    it 'should update an item' do
       VCR.use_cassette('updated item') do
         new_item = Quaderno::Item.create(code: Time.now.to_i.to_s, name: 'Test_Skynet', unit_cost: 21.00)
         item = Quaderno::Item.update(new_item.id, name: 'Test_OCP')
@@ -64,7 +64,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'delete a item' do
+    it 'should delete a item' do
       VCR.use_cassette('deleted item') do
         items_before = Quaderno::Item.all
         item_id = items_before.last.id
@@ -74,7 +74,7 @@ class TestQuadernoItem < Test::Unit::TestCase
       end
     end
 
-    should 'know the rate limit' do
+    it 'should know the rate limit' do
       VCR.use_cassette('rate limit') do
         rate_limit_info = Quaderno::Base.rate_limit_info
         assert_operator rate_limit_info[:remaining], :< ,2000

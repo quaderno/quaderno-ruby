@@ -3,7 +3,7 @@ require 'helper'
 class TestQuadernoWebhook < Test::Unit::TestCase
   context 'A user with an authenticate token with webhooks' do
 
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -11,7 +11,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'get exception if pass wrong arguments' do
+    it 'should get exception if pass wrong arguments' do
       assert_raise ArgumentError do
         VCR.use_cassette('all webhooks') do
           Quaderno::Webhook.all 1, 2, 3
@@ -24,7 +24,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'get all webhooks (populated db)' do
+    it 'should get all webhooks (populated db)' do
       VCR.use_cassette('all webhooks') do
       	webhook_1 = Quaderno::Webhook.create(url: 'http://google.com', events_types: ['invoice.created', 'invoice.updated'])
         webhook_2 = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['expense.created', 'expense.updated', 'contact.deleted'])
@@ -39,7 +39,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'find a webhook' do
+    it 'should find a webhook' do
       VCR.use_cassette('found webhook') do
         webhook = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
         webhooks = Quaderno::Webhook.all
@@ -49,7 +49,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'create a webhook' do
+    it 'should create a webhook' do
       VCR.use_cassette('new webhook') do
         webhook = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
         assert_kind_of Quaderno::Webhook, webhook
@@ -59,7 +59,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'update a webhook' do
+    it 'should update a webhook' do
       VCR.use_cassette('updated webhook') do
       	Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
         webhooks = Quaderno::Webhook.all
@@ -70,7 +70,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    should 'delete a webhook' do
+    it 'should delete a webhook' do
         VCR.use_cassette('deleted webhook') do
           webhook_1 = Quaderno::Webhook.create(url: 'http://google.com', events_types: ['invoice.created', 'expense.updated'])
           webhook_2 = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
@@ -83,7 +83,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
         end
     end
 
-    should 'know the rate limit' do
+    it 'should know the rate limit' do
       VCR.use_cassette('rate limit') do
         rate_limit_info = Quaderno::Base.rate_limit_info
         assert_operator rate_limit_info[:remaining], :< ,2000

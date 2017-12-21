@@ -3,7 +3,7 @@ require 'helper'
 class TestQuadernoInvoice < Test::Unit::TestCase
   context 'A user with an authenticate token with invoices' do
 
-    setup do
+    before(:each) do
       Quaderno::Base.configure do |config|
         config.auth_token = TEST_KEY
         config.url = TEST_URL
@@ -11,7 +11,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'get exception if pass wrong arguments' do
+    it 'should get exception if pass wrong arguments' do
       assert_raise ArgumentError do
         VCR.use_cassette('all invoices') do
           Quaderno::Invoice.all 1, 2, 3
@@ -24,7 +24,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'get all invoices (populated db)' do
+    it 'should get all invoices (populated db)' do
       VCR.use_cassette('all invoices') do
         invoices = Quaderno::Invoice.all
         assert_not_nil invoices
@@ -35,7 +35,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'find a invoice' do
+    it 'should find a invoice' do
       VCR.use_cassette('found invoice') do
         invoices = Quaderno::Invoice.all
         invoice = Quaderno::Invoice.find invoices.first.id
@@ -44,7 +44,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'create a invoice' do
+    it 'should create a invoice' do
       VCR.use_cassette('new invoice') do
         contacts = Quaderno::Contact.all
         invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
@@ -67,7 +67,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'update an invoice' do
+    it 'should update an invoice' do
       VCR.use_cassette('updated invoice') do
         contacts = Quaderno::Contact.all
         invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
@@ -90,7 +90,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'delete an invoice' do
+    it 'should delete an invoice' do
         VCR.use_cassette('deleted invoice') do
           contacts = Quaderno::Contact.all
           invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
@@ -112,7 +112,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         end
     end
 
-    should 'deliver an invoice' do
+    it 'should deliver an invoice' do
       VCR.use_cassette('delivered invoice') do
         invoices = Quaderno::Invoice.all
         rate_limit_before = Quaderno::Base.rate_limit_info
@@ -125,7 +125,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'add a payment' do
+    it 'should add a payment' do
       VCR.use_cassette('paid invoice') do
         invoices = Quaderno::Invoice.all
         payment = invoices.first.add_payment(payment_method: 'cash', amount: 100000000)
@@ -136,7 +136,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'remove a payment' do
+    it 'should remove a payment' do
       VCR.use_cassette('unpay an invoice') do
         invoices = Quaderno::Invoice.all
         invoices.first.add_payment(payment_method: 'cash', amount: 100000000)
@@ -147,7 +147,7 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    should 'override version' do
+    it 'should override version' do
       Quaderno::Base.api_version = OLDEST_SUPPORTED_API_VERSION
 
       VCR.use_cassette('create invoice on downgraded API') do

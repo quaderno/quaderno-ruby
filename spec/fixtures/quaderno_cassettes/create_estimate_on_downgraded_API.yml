@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; api_version=20160602
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '7'
+      X-Ratelimit-Remaining:
+      - '83'
+      X-Pages-Currentpage:
+      - '1'
+      X-Pages-Totalpages:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"487d984a09c5c3fb113e09bf2ad28126"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0fc658d2-0318-4453-9e25-5468a75e682f
+      X-Runtime:
+      - '0.384341'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":677,"kind":"person","created_at":1513078278,"first_name":"asdasd","last_name":"sdasd","full_name":"asdasd
+        sdasd","street_line_1":null,"street_line_2":null,"postal_code":"2206","city":null,"region":"NSW","country":"AU","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"50
+        120 276 431","vat_number":"91134998020","language":"ES","notes":null,"secure_id":"0079dd8fc11e93cb76afa36ff5d8e108c2732682","permalink":"http://quaderno.lvh.me:3000/billing/0079dd8fc11e93cb76afa36ff5d8e108c2732682","url":"http://quaderno.lvh.me:3000/api/contacts/677"},{"id":678,"kind":"person","created_at":1513594244,"first_name":"Daphne","last_name":null,"full_name":"Daphne","street_line_1":"9TH
+        FLOOR 107 CHEAPSIDE LONDON EC2V 6DN","street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"GB","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":"GB222161751","language":"ES","notes":null,"secure_id":"7b8e6c1e4b8b793152312d7be65a64efc584ca33","permalink":"http://quaderno.lvh.me:3000/billing/7b8e6c1e4b8b793152312d7be65a64efc584ca33","url":"http://quaderno.lvh.me:3000/api/contacts/678"},{"id":671,"kind":"company","created_at":1510654395,"full_name":"James","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"AU","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"EN","notes":null,"secure_id":"f2783cb57860c8bfe343683edd6c52da26866886","permalink":"http://quaderno.lvh.me:3000/billing/f2783cb57860c8bfe343683edd6c52da26866886","url":"http://quaderno.lvh.me:3000/api/contacts/671"},{"id":672,"kind":"company","created_at":1510654706,"full_name":"James","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"AU","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":"12042168743","language":"EN","notes":null,"secure_id":"06ab8c3cbee828a803fc6d4b4e1fcceff93f52e3","permalink":"http://quaderno.lvh.me:3000/billing/06ab8c3cbee828a803fc6d4b4e1fcceff93f52e3","url":"http://quaderno.lvh.me:3000/api/contacts/672"},{"id":675,"kind":"person","created_at":1513076256,"first_name":"James","last_name":"Joyce","full_name":"James
+        Joyce","street_line_1":"Cheapside 107","street_line_2":"9th floor","postal_code":"EC2V
+        6DN","city":"London","region":null,"country":"GB","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":"GB222161751","language":"EN","notes":null,"secure_id":"946085de5a55ae52df75d7938e3e77dbb0ed4925","permalink":"http://quaderno.lvh.me:3000/billing/946085de5a55ae52df75d7938e3e77dbb0ed4925","url":"http://quaderno.lvh.me:3000/api/contacts/675"},{"id":668,"kind":"company","created_at":1510049679,"full_name":"Jimbowzz","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"GB","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":"GB531525177","language":"EN","notes":null,"secure_id":"9454863656572c1607ce69b12cf72b50181d736a","permalink":"http://quaderno.lvh.me:3000/billing/9454863656572c1607ce69b12cf72b50181d736a","url":"http://quaderno.lvh.me:3000/api/contacts/668"},{"id":674,"kind":"company","created_at":1510827249,"full_name":"MIguel","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"d6d7ff7d4c86409aa9d7b904d68a419d0c57b876","permalink":"http://quaderno.lvh.me:3000/billing/d6d7ff7d4c86409aa9d7b904d68a419d0c57b876","url":"http://quaderno.lvh.me:3000/api/contacts/674"},{"id":676,"kind":"person","created_at":1513078082,"first_name":"Paul","last_name":"Hogan","full_name":"Paul
+        Hogan","street_line_1":null,"street_line_2":null,"postal_code":"2114","city":null,"region":"NSW","country":"AU","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":"","vat_number":"49165852362","language":"ES","notes":null,"secure_id":"6ebb700ea35a9b82d66c70e35bbfd34fc582fe68","permalink":"http://quaderno.lvh.me:3000/billing/6ebb700ea35a9b82d66c70e35bbfd34fc582fe68","url":"http://quaderno.lvh.me:3000/api/contacts/676"},{"id":673,"kind":"company","created_at":1510666591,"full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"AU","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":"","vat_number":"518247535567","language":"ES","notes":null,"secure_id":"e69d905b6d7990fbe32ed21efdfb9ac8f591b91c","permalink":"http://quaderno.lvh.me:3000/billing/e69d905b6d7990fbe32ed21efdfb9ac8f591b91c","url":"http://quaderno.lvh.me:3000/api/contacts/673"},{"id":679,"kind":"person","created_at":1513771544,"first_name":"Test_OCP","last_name":null,"full_name":"Test_OCP","street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"ES","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":"","vat_number":null,"bank_account":null,"language":"ES","notes":null,"secure_id":"c5b312933767461aee0596b1513ce1ed3fe253a0","permalink":"http://quaderno.lvh.me:3000/billing/c5b312933767461aee0596b1513ce1ed3fe253a0","url":"http://quaderno.lvh.me:3000/api/contacts/679"},{"id":680,"kind":"company","created_at":1513771564,"full_name":"Test_OCP","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":"dont@stop.believing","web":null,"discount":null,"tax_id":"","vat_number":null,"language":"FR","notes":null,"secure_id":"07aad335ea4a28fece799c9594013e6c19023318","permalink":"http://quaderno.lvh.me:3000/billing/07aad335ea4a28fece799c9594013e6c19023318","url":"http://quaderno.lvh.me:3000/api/contacts/680"},{"id":681,"kind":"company","created_at":1513855393,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"ES","notes":null,"secure_id":"138a72fae3292698344c2cdcce3ffca359f57541","permalink":"http://quaderno.lvh.me:3000/billing/138a72fae3292698344c2cdcce3ffca359f57541","url":"http://quaderno.lvh.me:3000/api/contacts/681"},{"id":683,"kind":"company","created_at":1513855923,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"ES","notes":null,"secure_id":"ac5041d97a90d23332278c51486215b5bca787c1","permalink":"http://quaderno.lvh.me:3000/billing/ac5041d97a90d23332278c51486215b5bca787c1","url":"http://quaderno.lvh.me:3000/api/contacts/683"},{"id":685,"kind":"company","created_at":1513863388,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"ES","notes":null,"secure_id":"d2dad2da07440e6dcd2dd64b914df54ba50d8b2e","permalink":"http://quaderno.lvh.me:3000/billing/d2dad2da07440e6dcd2dd64b914df54ba50d8b2e","url":"http://quaderno.lvh.me:3000/api/contacts/685"}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 13:49:46 GMT
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/estimates.json
+    body:
+      encoding: UTF-8
+      string: '{"contact_id":677,"number":"test number 42","contact_name":"asdasd
+        sdasd","currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_details":"","notes":""}'
+    headers:
+      Accept:
+      - application/json; api_version=20160602
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '7'
+      X-Ratelimit-Remaining:
+      - '82'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"e93430d6ac1772980139bdb922522e8d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e0a1e61-7f51-4d49-80dd-35be4416651f
+      X-Runtime:
+      - '0.468072'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTk4NiwibnVtYmVyIjoidGVzdCBudW1iZXIgNDIiLCJpc3N1ZV9k
+        YXRlIjoiMjAxNy0xMi0yMSIsImNyZWF0ZWRfYXQiOjE1MTM4NjQxODYsImNv
+        bnRhY3QiOnsiaWQiOjY3NywiZnVsbF9uYW1lIjoiYXNkYXNkIHNkYXNkIn0s
+        InN0cmVldF9saW5lXzEiOm51bGwsInN0cmVldF9saW5lXzIiOm51bGwsImNp
+        dHkiOm51bGwsInJlZ2lvbiI6Ik5TVyIsInBvc3RhbF9jb2RlIjoiMjIwNiIs
+        InBvX251bWJlciI6bnVsbCwiY3VycmVuY3kiOiJFVVIiLCJpdGVtcyI6W3si
+        aWQiOjIwMTYsImRlc2NyaXB0aW9uIjoiQWlyY3JhZnQiLCJxdWFudGl0eSI6
+        IjEuMCIsInVuaXRfcHJpY2UiOiIwLjAiLCJkaXNjb3VudF9yYXRlIjoiMC4w
+        IiwidGF4XzFfbmFtZSI6bnVsbCwidGF4XzFfcmF0ZSI6bnVsbCwidGF4XzJf
+        bmFtZSI6bnVsbCwidGF4XzJfcmF0ZSI6bnVsbCwicmVmZXJlbmNlIjpudWxs
+        LCJzdWJ0b3RhbCI6IuKCrDAuMDAiLCJkaXNjb3VudCI6IuKCrDAuMDAiLCJn
+        cm9zc19hbW91bnQiOiLigqwwLjAwIn1dLCJzdWJ0b3RhbCI6IuKCrDAuMDAi
+        LCJkaXNjb3VudCI6IuKCrDAuMDAiLCJ0YXhlcyI6W10sInRvdGFsIjoi4oKs
+        MC4wMCIsInBheW1lbnRfZGV0YWlscyI6bnVsbCwibm90ZXMiOm51bGwsInN0
+        YXRlIjoib3V0c3RhbmRpbmciLCJ0YWdfbGlzdCI6W10sInNlY3VyZV9pZCI6
+        IjU0YTRkODM3ODYyMWJhZWZmY2M3N2U5YTYxNTJlOGI2MjJhNGIzZDQiLCJw
+        ZXJtYWxpbmsiOiJodHRwOi8vcXVhZGVybm8ubHZoLm1lOjMwMDAvZXN0aW1h
+        dGUvNTRhNGQ4Mzc4NjIxYmFlZmZjYzc3ZTlhNjE1MmU4YjYyMmE0YjNkNCIs
+        InVybCI6Imh0dHA6Ly9xdWFkZXJuby5sdmgubWU6MzAwMC9hcGkvZXN0aW1h
+        dGVzLzE5ODYuanNvbiJ9
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 13:49:46 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/estimates/1986.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; api_version=20160602
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '81'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3b4ea45c-0e40-4451-8a61-62aff94b6fc4
+      X-Runtime:
+      - '0.254404'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 13:49:47 GMT
+recorded_with: VCR 4.0.0
