@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestQuadernoWebhook < Test::Unit::TestCase
+describe Quaderno::Webhook do
   context 'A user with an authenticate token with webhooks' do
 
     before(:each) do
@@ -11,29 +11,13 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       end
     end
 
-    it 'should get exception if pass wrong arguments' do
-      assert_raise ArgumentError do
-        VCR.use_cassette('all webhooks') do
-          Quaderno::Webhook.all 1, 2, 3
-        end
-      end
-      assert_raise ArgumentError do
-        VCR.use_cassette('found webhook') do
-          Quaderno::Webhook.find
-        end
-      end
-    end
-
     it 'should get all webhooks (populated db)' do
       VCR.use_cassette('all webhooks') do
       	webhook_1 = Quaderno::Webhook.create(url: 'http://google.com', events_types: ['invoice.created', 'invoice.updated'])
         webhook_2 = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['expense.created', 'expense.updated', 'contact.deleted'])
         webhooks = Quaderno::Webhook.all
-        assert_not_nil webhooks
-        assert_kind_of Array, webhooks
-        webhooks.each do |webhook|
-          assert_kind_of Quaderno::Webhook, webhook
-        end
+        expect(webhooks.is_a? Array).to be true
+        webhooks.each { |webhook| expect(webhook.is_a?(Quaderno::Webhook)).to be true }
         Quaderno::Webhook.delete webhook_1.id
         Quaderno::Webhook.delete webhook_2.id
       end
@@ -43,8 +27,8 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       VCR.use_cassette('found webhook') do
         webhook = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
         webhooks = Quaderno::Webhook.all
-        assert_kind_of Quaderno::Webhook, webhook
-        assert_equal webhooks.last.id, webhook.id
+        expect(webhook.is_a?(Quaderno::Webhook)).to be true
+        expect(webhook.id).to eq(webhooks.last.id)
         Quaderno::Webhook.delete webhook.id
       end
     end
@@ -52,9 +36,9 @@ class TestQuadernoWebhook < Test::Unit::TestCase
     it 'should create a webhook' do
       VCR.use_cassette('new webhook') do
         webhook = Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
-        assert_kind_of Quaderno::Webhook, webhook
-        assert_equal 'http://quadernoapp.com', webhook.url
-        assert_equal ['invoice.created', 'expense.updated'], webhook.events_types
+        expect(webhook.is_a?(Quaderno::Webhook)).to be true
+        expect(webhook.url).to eq 'http://quadernoapp.com'
+        expect(webhook.events_types).to match_array ['invoice.created', 'expense.updated']
         Quaderno::Webhook.delete webhook.id
       end
     end
@@ -64,8 +48,8 @@ class TestQuadernoWebhook < Test::Unit::TestCase
       	Quaderno::Webhook.create(url: 'http://quadernoapp.com', events_types: ['invoice.created', 'expense.updated'])
         webhooks = Quaderno::Webhook.all
         webhook = Quaderno::Webhook.update(webhooks.last.id, events_types: ['invoice.created', 'invoice.updated', 'contact.deleted'])
-        assert_kind_of Quaderno::Webhook, webhook
-        assert_equal ['invoice.created', 'invoice.updated', 'contact.deleted'], webhook.events_types
+        expect(webhook.is_a?(Quaderno::Webhook)).to be true
+        expect(webhook.events_types).to match_array ['invoice.created', 'invoice.updated', 'contact.deleted']
         Quaderno::Webhook.delete webhook.id
       end
     end
@@ -78,7 +62,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
           webhook_id = webhooks_before.last.id
           Quaderno::Webhook.delete webhook_id
           webhooks_after = Quaderno::Webhook.all
-          assert_not_equal webhooks_after.last.id, webhook_id
+          expect(webhook_id).not_to eq webhooks_after.last.id
           Quaderno::Webhook.delete webhooks_after.last.id
         end
     end
@@ -86,7 +70,7 @@ class TestQuadernoWebhook < Test::Unit::TestCase
     it 'should know the rate limit' do
       VCR.use_cassette('rate limit') do
         rate_limit_info = Quaderno::Base.rate_limit_info
-        assert_operator rate_limit_info[:remaining], :< ,2000
+        expect(rate_limit_info[:remaining] < 2000).to be true
       end
     end
   end

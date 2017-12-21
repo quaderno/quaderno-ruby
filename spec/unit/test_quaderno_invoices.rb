@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestQuadernoInvoice < Test::Unit::TestCase
+describe Quaderno::Invoice do
   context 'A user with an authenticate token with invoices' do
 
     before(:each) do
@@ -11,27 +11,11 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       end
     end
 
-    it 'should get exception if pass wrong arguments' do
-      assert_raise ArgumentError do
-        VCR.use_cassette('all invoices') do
-          Quaderno::Invoice.all 1, 2, 3
-        end
-      end
-      assert_raise ArgumentError do
-        VCR.use_cassette('found invoice') do
-          Quaderno::Invoice.find
-        end
-      end
-    end
-
     it 'should get all invoices (populated db)' do
       VCR.use_cassette('all invoices') do
         invoices = Quaderno::Invoice.all
-        assert_not_nil invoices
-        assert_kind_of Array, invoices
-        invoices.each do |invoice|
-          assert_kind_of Quaderno::Invoice, invoice
-        end
+        expect(invoices.is_a? Array).to be true
+        invoices.each { |invoice| expect(invoice.is_a? Quaderno::Invoice).to be true }
       end
     end
 
@@ -39,8 +23,8 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       VCR.use_cassette('found invoice') do
         invoices = Quaderno::Invoice.all
         invoice = Quaderno::Invoice.find invoices.first.id
-        assert_kind_of Quaderno::Invoice, invoice
-        assert_equal invoices.first.id, invoice.id
+        expect(invoice.is_a? Quaderno::Invoice).to be true
+        expect(invoice.id).to eq  invoices.first.id
       end
     end
 
@@ -60,9 +44,10 @@ class TestQuadernoInvoice < Test::Unit::TestCase
                                            tags: 'tnt',
                                            payment_details: '',
                                            notes: '')
-        assert_kind_of Quaderno::Invoice, invoice
-        assert_equal contacts[0].id, invoice.contact.id
-        assert_equal 'Aircraft', invoice.items[0].description
+        expect(invoice.is_a? Quaderno::Invoice).to be true
+        expect(invoice.contact.id).to eq contacts[0].id
+        expect(invoice.items[0].description).to eq 'Aircraft'
+
         Quaderno::Invoice.delete(invoice.id)
       end
     end
@@ -84,32 +69,33 @@ class TestQuadernoInvoice < Test::Unit::TestCase
                                            payment_details: '',
                                            notes: '')
         invoice = Quaderno::Invoice.update(invoice.id, payment_details: 'Show me the moneeeeeeeyy!!!!')
-        assert_kind_of Quaderno::Invoice, invoice
-        assert_equal 'Show me the moneeeeeeeyy!!!!', invoice.payment_details
+        expect(invoice.is_a? Quaderno::Invoice).to be true
+        expect(invoice.payment_details).to eq 'Show me the moneeeeeeeyy!!!!'
+
         Quaderno::Invoice.delete(invoice.id)
       end
     end
 
     it 'should delete an invoice' do
-        VCR.use_cassette('deleted invoice') do
-          contacts = Quaderno::Contact.all
-          invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
-                                             contact_name: contacts[0].full_name,
-                                             currency: 'EUR',
-                                             items_attributes: [
-                                               {
-                                                 description: 'Aircraft',
-                                                 quantity: '1.0',
-                                                 unit_price: '0.0'
-                                               }
-                                             ],
-                                             tags: 'tnt',
-                                             payment_details: '',
-                                             notes: '')
-          Quaderno::Invoice.delete invoice.id
-          invoices = Quaderno::Invoice.all
-          assert_not_equal invoices.first.id, invoice.id
-        end
+      VCR.use_cassette('deleted invoice') do
+        contacts = Quaderno::Contact.all
+        invoice = Quaderno::Invoice.create(contact_id: contacts[0].id ,
+                                           contact_name: contacts[0].full_name,
+                                           currency: 'EUR',
+                                           items_attributes: [
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
+                                             }
+                                           ],
+                                           tags: 'tnt',
+                                           payment_details: '',
+                                           notes: '')
+        Quaderno::Invoice.delete invoice.id
+        invoices = Quaderno::Invoice.all
+        expect(invoice.id).not_to eq invoices.first.id
+      end
     end
 
     it 'should deliver an invoice' do
@@ -121,7 +107,8 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         rescue Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end
-        assert_equal rate_limit_before[:remaining]-1, rate_limit_after[:remaining]
+
+        expect(rate_limit_after[:remaining]).to eq(rate_limit_before[:remaining] - 1)
       end
     end
 
@@ -129,10 +116,11 @@ class TestQuadernoInvoice < Test::Unit::TestCase
       VCR.use_cassette('paid invoice') do
         invoices = Quaderno::Invoice.all
         payment = invoices.first.add_payment(payment_method: 'cash', amount: 100000000)
-        assert_kind_of Quaderno::Payment, payment
-        assert_equal 'cash', payment.payment_method
-        assert_equal 10000000000, payment.amount_cents
-        assert_equal invoices.first.payments.last.id, payment.id
+
+        expect(payment.is_a? Quaderno::Payment).to be true
+        expect(payment.payment_method).to eq 'cash'
+        expect(payment.amount_cents).to eq 10000000000
+        expect(payment.id).to eq invoices.first.payments.last.id
       end
     end
 
@@ -143,7 +131,8 @@ class TestQuadernoInvoice < Test::Unit::TestCase
         payment = invoices.first.payments.last
         array_length = invoices.first.payments.length
         invoices.first.remove_payment(payment.id) unless payment.nil?
-        assert_equal (array_length.zero? ? array_length : array_length-1), invoices.first.payments.length
+
+        expect(invoices.first.payments.length).to eq(array_length.zero? ? array_length : array_length - 1)
       end
     end
 
@@ -165,11 +154,12 @@ class TestQuadernoInvoice < Test::Unit::TestCase
                                            tags: 'tnt',
                                            payment_details: '',
                                            notes: '')
-        assert invoice.total_cents.nil?
-        assert !invoice.total.nil?
-        assert_kind_of Quaderno::Invoice, invoice
-        assert_equal contacts[0].id, invoice.contact.id
-        assert_equal 'Aircraft', invoice.items[0].description
+        expect(invoice.total_cents.nil?).to be true
+        expect(!invoice.total.nil?).to be true
+        expect(invoice.is_a? Quaderno::Invoice).to be true
+        expect(invoice.contact.id).to eq contacts[0].id
+        expect(invoice.items[0].description).to eq('Aircraft')
+
         Quaderno::Invoice.delete(invoice.id)
       end
     end

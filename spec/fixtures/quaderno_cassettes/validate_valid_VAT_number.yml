@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/taxes/validate.json?country=IE&vat_number=IE6388047V
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '15'
+      X-Ratelimit-Remaining:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"39837b2fcec9d416bda32e66244da470"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 54e5ee2e-9c4e-4221-a163-2c8ef639f7d5
+      X-Runtime:
+      - '1.416814'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"valid":true}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:56:37 GMT
+recorded_with: VCR 4.0.0

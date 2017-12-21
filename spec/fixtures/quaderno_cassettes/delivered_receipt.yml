@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/receipts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '5'
+      X-Ratelimit-Remaining:
+      - '83'
+      X-Pages-Currentpage:
+      - '1'
+      X-Pages-Totalpages:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"65663a7853c278a2a0d11e6e6198c616"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3a933b5f-a735-492d-a2f1-e64e089eff4f
+      X-Runtime:
+      - '0.332342'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":1969,"blocked":false,"number":"0001","issue_date":"2017-11-07","created_at":1510049968,"contact":{"id":668,"full_name":"Jimbowzz"},"country":"GB","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"exchange_rate":"0.8839","items":[{"id":1997,"description":"Something","quantity":"1.0","unit_price_cents":"9900.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_1_country":"","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"9900.0","discount_cents":"0.0","gross_amount_cents":"9900.0"}],"subtotal_cents":"9900.0","discount_cents":"0.0","taxes":[],"payments":[{"id":1209,"date":"2017-11-07","payment_method":"credit_card","amount_cents":9900}],"notes":null,"state":"paid","tag_list":[],"secure_id":"81dcd6175cd8cbb845305c30aadab27572dbc399","permalink":"http://quaderno.lvh.me:3000/receipt/81dcd6175cd8cbb845305c30aadab27572dbc399","pdf":"http://quaderno.lvh.me:3000/receipt/81dcd6175cd8cbb845305c30aadab27572dbc399.pdf","url":"http://quaderno.lvh.me:3000/api/receipts/1969.json","processor":null,"processor_id":null,"custom_metadata":{}}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:53 GMT
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/ping.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '5'
+      X-Ratelimit-Remaining:
+      - '82'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0c776997933eb60833b37beaf43814c8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0aab12a7-5b63-45cc-8c62-8e45030e6a9a
+      X-Runtime:
+      - '0.157465'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"status":"OK"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:53 GMT
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/receipts/1969/deliver.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '5'
+      X-Ratelimit-Remaining:
+      - '81'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - ed50343e-67c2-4f4a-817a-5890e5eb5a49
+      X-Runtime:
+      - '0.376593'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"delivery_recipients":["can''t be blank","is invalid"]}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:54 GMT
+recorded_with: VCR 4.0.0

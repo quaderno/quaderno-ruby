@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestQuadernoTax < Test::Unit::TestCase
+describe Quaderno::Tax do
   context 'A user with an authenticate token with webhooks' do
 
     before(:each) do
@@ -11,35 +11,22 @@ class TestQuadernoTax < Test::Unit::TestCase
       end
     end
 
-    it 'should raise exception if pass wrong arguments' do
-      assert_raise ArgumentError do
-        Quaderno::Tax.calculate 1, 2, 3
-      end
-    end
-
     it 'should raise exception if token is wrong' do
       VCR.use_cassette('wrong token') do
-        assert_raise Quaderno::Exceptions::InvalidSubdomainOrToken do
-          Quaderno::Base.auth_token = '7h15154f4k370k3n'
-          Quaderno::Tax.calculate(country: 'ES', postal_code: '08080')
-        end
+        Quaderno::Base.auth_token = '7h15154f4k370k3n'
+        expect { Quaderno::Tax.calculate(country: 'ES', postal_code: '08080') }.to raise_error(Quaderno::Exceptions::InvalidSubdomainOrToken)
       end
     end
 
-    it 'should calculate tax' do
+    it 'should validate VAT numbe' do
       VCR.use_cassette('validate valid VAT number') do
         vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047V')
-        assert vat_number_valid
+        expect(vat_number_valid).to be true
       end
 
        VCR.use_cassette('validate invalid VAT number') do
         vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047X')
-        assert !vat_number_valid
-      end
-    end
-
-    it 'should validate VAT number' do
-      VCR.use_cassette('calculate tax') do
+        expect(!vat_number_valid).to be true
       end
     end
   end

@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/expenses.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '7'
+      X-Ratelimit-Remaining:
+      - '85'
+      X-Pages-Currentpage:
+      - '1'
+      X-Pages-Totalpages:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"8a64d8e21f8637d1144c0ceebecaf2af"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b64fbf39-158b-424e-88e4-d9e4c7c279e4
+      X-Runtime:
+      - '0.450084'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":1975,"blocked":false,"issue_date":"2017-12-18","created_at":1513594193,"contact":{"id":675,"full_name":"James
+        Joyce"},"country":"GB","street_line_1":"Cheapside 107","street_line_2":"9th
+        floor","city":"London","region":null,"postal_code":"EC2V 6DN","po_number":null,"currency":"EUR","subject":null,"exchange_rate":"0.88253","items":[{"id":2005,"description":"asdasd","quantity":"1.0","unit_price_cents":"23000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_1_country":"","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"23000.0","discount_cents":"0.0","gross_amount_cents":"23000.0"}],"subtotal_cents":"23000.0","discount_cents":"0.0","taxes":[],"total_cents":23000,"payments":[],"notes":null,"state":"outstanding","tag_list":[],"url":"http://quaderno.lvh.me:3000/api/expenses/1975.json","custom_metadata":{}},{"id":1978,"blocked":false,"issue_date":"2017-09-20","created_at":1513771596,"contact":{"id":680,"full_name":"Test_OCP"},"country":"FR","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"exchange_rate":"0.885","items":[{"id":2008,"description":"123123","quantity":"1.0","unit_price_cents":"2223000.0","discount_rate":"0.0","tax_1_name":"TVA","tax_1_rate":20.0,"tax_1_country":"FR","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"2223000.0","discount_cents":"0.0","gross_amount_cents":"2223000.0"}],"subtotal_cents":"2223000.0","discount_cents":"0.0","taxes":[{"label":"TVA
+        (20.00%)","name":"TVA","rate":20.0,"country":"FR","taxable_base_cents":"2223000.0","amount_cents":444600}],"total_cents":2667600,"payments":[],"notes":null,"state":"outstanding","tag_list":[],"url":"http://quaderno.lvh.me:3000/api/expenses/1978.json","custom_metadata":{}}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:03:38 GMT
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/expenses/1975/payments.json
+    body:
+      encoding: UTF-8
+      string: payment_method=cash&amount=10000
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '84'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"725f981a16f8a26344ea15c2b5ff92fc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1e6696e4-1793-4991-80e8-2c2ba9dee893
+      X-Runtime:
+      - '0.438922'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":1211,"date":"2017-12-21","payment_method":"cash","amount_cents":1000000,"url":"http://quaderno.lvh.me:3000/api/expenses/1975/payments/1211.json"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:03:38 GMT
+recorded_with: VCR 4.0.0

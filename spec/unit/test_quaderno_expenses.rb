@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestQuadernoExpense < Test::Unit::TestCase
+describe Quaderno::Expense do
   context 'A user with an authenticate token with expenses' do
 
     before(:each) do
@@ -11,27 +11,11 @@ class TestQuadernoExpense < Test::Unit::TestCase
       end
     end
 
-    it 'should get exception if pass wrong arguments' do
-      assert_raise ArgumentError do
-        VCR.use_cassette('all expenses') do
-          Quaderno::Expense.all 1, 2, 3
-        end
-      end
-      assert_raise ArgumentError do
-        VCR.use_cassette('found expense') do
-          Quaderno::Expense.find
-        end
-      end
-    end
-
     it 'should get all expenses (populated db)' do
       VCR.use_cassette('all expenses') do
         expenses = Quaderno::Expense.all
-        assert_not_nil expenses
-        assert_kind_of Array, expenses
-        expenses.each do |expense|
-          assert_kind_of Quaderno::Expense, expense
-        end
+        expect(expenses.is_a? Array).to be true
+        expenses.each { |expense| expect(expense.is_a? Quaderno::Expense).to be true }
       end
     end
 
@@ -39,8 +23,8 @@ class TestQuadernoExpense < Test::Unit::TestCase
       VCR.use_cassette('found expense') do
         expenses = Quaderno::Expense.all
         expense = Quaderno::Expense.find expenses.first.id
-        assert_kind_of Quaderno::Expense, expense
-        assert_equal expenses.first.id, expense.id
+        expect(expense.is_a? Quaderno::Expense).to be true
+        expect(expense.id).to eq expenses.first.id
       end
     end
 
@@ -60,9 +44,10 @@ class TestQuadernoExpense < Test::Unit::TestCase
                                            ],
                                            tags: 'tnt', payment_details: '',
                                            notes: '')
-        assert_kind_of Quaderno::Expense, expense
-        assert_equal contacts.first.id, expense.contact.id
-        assert_equal 'Aircraft', expense.items.first.description
+        expect(expense.is_a? Quaderno::Expense).to be true
+        expect(expense.contact.id).to eq contacts.first.id
+        expect(expense.items.first.description).to eq 'Aircraft'
+
         Quaderno::Expense.delete(expense.id)
       end
     end
@@ -83,41 +68,42 @@ class TestQuadernoExpense < Test::Unit::TestCase
                                  tags: 'tnt', payment_details: '',
                                  notes: '')
         expense = Quaderno::Expense.update(expense.id, po_number: 'Updated expense!')
-        assert_kind_of Quaderno::Expense, expense
-        assert_equal 'Updated expense!', expense.po_number
+        expect(expense.is_a? Quaderno::Expense).to be true
+        expect(expense.po_number).to eq 'Updated expense!'
+
         Quaderno::Expense.delete(expense.id)
       end
     end
 
     it 'should delete an expense' do
-        VCR.use_cassette('deleted expense') do
-          contacts = Quaderno::Contact.all
-          expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
-                                             contact_name: contacts.first.full_name,
-                                             currency: 'EUR',
-                                             items_attributes: [
-                                               {
-                                                 description: 'Aircraft',
-                                                 quantity: '1.0',
-                                                 unit_price: '0.0'
-                                               }
-                                             ],
-                                             tags: 'tnt', payment_details: '',
-                                             notes: '')
-          Quaderno::Expense.delete expense.id
-          expenses = Quaderno::Expense.all
-          assert_not_equal expenses.first.id, expense.id
-        end
+      VCR.use_cassette('deleted expense') do
+        contacts = Quaderno::Contact.all
+        expense = Quaderno::Expense.create(contact_id: contacts.first.id ,
+                                           contact_name: contacts.first.full_name,
+                                           currency: 'EUR',
+                                           items_attributes: [
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
+                                             }
+                                           ],
+                                           tags: 'tnt', payment_details: '',
+                                           notes: '')
+        Quaderno::Expense.delete expense.id
+        expenses = Quaderno::Expense.all
+        expect(expense.id).not_to eq expenses.first.id
+      end
     end
 
     it 'should add a payment' do
       VCR.use_cassette('paid expense') do
         expenses = Quaderno::Expense.all
         payment = expenses.first.add_payment(payment_method: "cash", amount: "10000")
-        assert_kind_of Quaderno::Payment, payment
-        assert_equal "cash", payment.payment_method
-        assert_equal 1000000, payment.amount_cents
-        assert_equal expenses.first.payments.last.id, payment.id
+        expect(payment.is_a? Quaderno::Payment).to be true
+        expect(payment.payment_method).to eq 'cash'
+        expect(payment.amount_cents).to eq 1000000
+        expect(payment.id).to eq expenses.first.payments.last.id
       end
     end
 
@@ -128,7 +114,7 @@ class TestQuadernoExpense < Test::Unit::TestCase
         payment = expenses.first.payments.last
         array_length = expenses.first.payments.length
         expenses.first.remove_payment(payment.id)
-        assert_equal (array_length.zero? ? array_length : array_length-1), expenses.first.payments.length
+        expect(expenses.first.payments.length).to eq(array_length.zero? ? array_length : array_length-1)
       end
     end
 
@@ -150,11 +136,12 @@ class TestQuadernoExpense < Test::Unit::TestCase
                                            ],
                                            tags: 'tnt', payment_details: '',
                                            notes: '')
-        assert_kind_of Quaderno::Expense, expense
-        assert !expense.total.nil?
-        assert expense.total_cents.nil?
-        assert_equal contacts.first.id, expense.contact.id
-        assert_equal 'Aircraft', expense.items.first.description
+        expect(expense.is_a? Quaderno::Expense).to be true
+        expect(!expense.total.nil?).to be true
+        expect(expense.total_cents.nil?).to be true
+        expect(expense.contact.id).to eq contacts.first.id
+        expect(expense.items.first.description).to eq 'Aircraft'
+
         Quaderno::Expense.delete(expense.id)
       end
     end

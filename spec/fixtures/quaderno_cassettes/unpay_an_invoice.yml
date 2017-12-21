@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '3'
+      X-Ratelimit-Remaining:
+      - '81'
+      X-Pages-Currentpage:
+      - '1'
+      X-Pages-Totalpages:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"9f17f0fb0e744e873ca0a98b84103e2c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 953c73a6-1d16-42d2-91f3-441432ade6df
+      X-Runtime:
+      - '0.809037'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":1987,"blocked":false,"number":"0006","issue_date":"2017-12-21","created_at":1513864353,"contact":{"id":677,"full_name":"asdasd
+        sdasd"},"country":"AU","street_line_1":null,"street_line_2":null,"city":null,"region":"NSW","postal_code":"2206","po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.8832","items":[{"id":2017,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_1_country":null,"tax_2_name":null,"tax_2_rate":null,"tax_2_country":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"total_cents":0,"payments":[{"id":1213,"date":"2017-12-21","payment_method":"cash","amount_cents":10000000000,"url":"http://quaderno.lvh.me:3000/api/invoices/1987/payments/1213.json"}],"payment_details":null,"notes":null,"state":"paid","tag_list":[],"secure_id":"4a91f63739e9d05f3a7c09df981c35e38d78b61c","permalink":"http://quaderno.lvh.me:3000/invoice/4a91f63739e9d05f3a7c09df981c35e38d78b61c","pdf":"http://quaderno.lvh.me:3000/invoice/4a91f63739e9d05f3a7c09df981c35e38d78b61c.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1987.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1976,"blocked":false,"number":"0005","issue_date":"2017-12-18","created_at":1513594257,"contact":{"id":678,"full_name":"Daphne"},"country":"GB","street_line_1":"9TH
+        FLOOR 107 CHEAPSIDE LONDON EC2V 6DN","street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.88253","items":[{"id":2006,"description":"asd","quantity":"1.0","unit_price_cents":"123000.0","discount_rate":"0.0","tax_1_name":"","tax_1_rate":null,"tax_1_country":"","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"123000.0","discount_cents":"0.0","gross_amount_cents":"123000.0"}],"subtotal_cents":"123000.0","discount_cents":"0.0","taxes":[],"total_cents":123000,"payments":[],"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"d7b1ee08e289ccdcf3d5635d87264dcd3d953eb4","permalink":"http://quaderno.lvh.me:3000/invoice/d7b1ee08e289ccdcf3d5635d87264dcd3d953eb4","pdf":"http://quaderno.lvh.me:3000/invoice/d7b1ee08e289ccdcf3d5635d87264dcd3d953eb4.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1976.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1974,"blocked":false,"number":"0004","issue_date":"2017-11-16","created_at":1510827308,"contact":{"id":674,"full_name":"MIguel"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.8991","items":[{"id":2004,"description":"Michel
+        Ancel","quantity":"1.0","unit_price_cents":"3000.0","discount_rate":"10.0","tax_1_name":"VAT","tax_1_rate":20.0,"tax_1_country":"GB","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"3000.0","discount_cents":"300.0","gross_amount_cents":"2700.0"}],"subtotal_cents":"3000.0","discount_cents":"300.0","taxes":[{"label":"VAT
+        (20.00%)","rate":20.0,"country":"GB","amount_cents":540}],"total_cents":3240,"payments":[],"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"6f2eedd8661b0d2c17b8f158cbe54894118ef01c","permalink":"http://quaderno.lvh.me:3000/invoice/6f2eedd8661b0d2c17b8f158cbe54894118ef01c","pdf":"http://quaderno.lvh.me:3000/invoice/6f2eedd8661b0d2c17b8f158cbe54894118ef01c.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1974.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1973,"blocked":false,"number":"0003","issue_date":"2017-11-16","created_at":1510827252,"contact":{"id":674,"full_name":"MIguel"},"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.8991","items":[{"id":2003,"description":"Michel
+        Ancel","quantity":"1.0","unit_price_cents":"3000.0","discount_rate":"10.0","tax_1_name":"VAT","tax_1_rate":20.0,"tax_1_country":"GB","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"3000.0","discount_cents":"300.0","gross_amount_cents":"2700.0"}],"subtotal_cents":"3000.0","discount_cents":"300.0","taxes":[{"label":"VAT
+        (20.00%)","rate":20.0,"country":"GB","amount_cents":540}],"total_cents":3240,"payments":[],"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"51a9a0f5293fcb480a76a7850c45cedcf8f92a77","permalink":"http://quaderno.lvh.me:3000/invoice/51a9a0f5293fcb480a76a7850c45cedcf8f92a77","pdf":"http://quaderno.lvh.me:3000/invoice/51a9a0f5293fcb480a76a7850c45cedcf8f92a77.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1973.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1971,"blocked":false,"number":"0002","issue_date":"2017-11-07","created_at":1510062118,"contact":{"id":668,"full_name":"Jimbowzz"},"country":"GB","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.8839","items":[{"id":1999,"description":"Something","quantity":"1.0","unit_price_cents":"3000.0","discount_rate":"0.0","tax_1_name":"VAT","tax_1_rate":20.0,"tax_1_country":"GB","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"3000.0","discount_cents":"0.0","gross_amount_cents":"3000.0"}],"subtotal_cents":"3000.0","discount_cents":"0.0","taxes":[{"label":"VAT
+        (20.00%)","rate":20.0,"country":"GB","amount_cents":600}],"total_cents":3600,"payments":[],"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"49319bf717d517be26329ff20dc3b49a8a084ebc","permalink":"http://quaderno.lvh.me:3000/invoice/49319bf717d517be26329ff20dc3b49a8a084ebc","pdf":"http://quaderno.lvh.me:3000/invoice/49319bf717d517be26329ff20dc3b49a8a084ebc.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1971.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1968,"blocked":false,"number":"0001","issue_date":"2017-11-07","created_at":1510049685,"contact":{"id":668,"full_name":"Jimbowzz"},"country":"GB","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.8839","items":[{"id":1996,"description":"Something","quantity":"1.0","unit_price_cents":"3000.0","discount_rate":"0.0","tax_1_name":"VAT","tax_1_rate":20.0,"tax_1_country":"GB","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"3000.0","discount_cents":"0.0","gross_amount_cents":"3000.0"}],"subtotal_cents":"3000.0","discount_cents":"0.0","taxes":[{"label":"VAT
+        (20.00%)","rate":20.0,"country":"GB","amount_cents":600}],"total_cents":3600,"payments":[{"id":1210,"date":"2017-11-07","payment_method":"credit_card","amount_cents":3600,"url":"http://quaderno.lvh.me:3000/api/invoices/1968/payments/1210.json"}],"payment_details":"aasdasd","notes":null,"state":"paid","tag_list":[],"secure_id":"21a1af688fc97a7fc9567fcaa365a2a88953a318","permalink":"http://quaderno.lvh.me:3000/invoice/21a1af688fc97a7fc9567fcaa365a2a88953a318","pdf":"http://quaderno.lvh.me:3000/invoice/21a1af688fc97a7fc9567fcaa365a2a88953a318.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1968.json","processor":null,"processor_id":null,"custom_metadata":{}},{"id":1977,"blocked":false,"number":"0000","issue_date":"2017-09-20","created_at":1513771570,"contact":{"id":680,"full_name":"Test_OCP"},"country":"FR","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"due_date":null,"currency":"EUR","subject":null,"exchange_rate":"0.885","items":[{"id":2007,"description":"asd","quantity":"1.0","unit_price_cents":"23000.0","discount_rate":"0.0","tax_1_name":"TVA","tax_1_rate":20.0,"tax_1_country":"FR","tax_2_name":"","tax_2_rate":null,"tax_2_country":"","reference":"","subtotal_cents":"23000.0","discount_cents":"0.0","gross_amount_cents":"23000.0"}],"subtotal_cents":"23000.0","discount_cents":"0.0","taxes":[{"label":"TVA
+        (20.00%)","rate":20.0,"country":"FR","amount_cents":4600}],"total_cents":27600,"payments":[],"payment_details":null,"notes":null,"state":"outstanding","tag_list":[],"secure_id":"23729fcacd3e377b673d1ea5df9eb11f5f127ef4","permalink":"http://quaderno.lvh.me:3000/invoice/23729fcacd3e377b673d1ea5df9eb11f5f127ef4","pdf":"http://quaderno.lvh.me:3000/invoice/23729fcacd3e377b673d1ea5df9eb11f5f127ef4.pdf","url":"http://quaderno.lvh.me:3000/api/invoices/1977.json","processor":null,"processor_id":null,"custom_metadata":{}}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:31:07 GMT
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1987/payments.json
+    body:
+      encoding: UTF-8
+      string: payment_method=cash&amount=100000000
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '2'
+      X-Ratelimit-Remaining:
+      - '80'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"92c71016eb50b0726b08a6dd386550b2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d5720041-a253-42e4-8d0e-bc92372b48bd
+      X-Runtime:
+      - '0.319774'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":1214,"date":"2017-12-21","payment_method":"cash","amount_cents":10000000000,"url":"http://quaderno.lvh.me:3000/api/invoices/1987/payments/1214.json"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:31:07 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1987/payments/1214.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '2'
+      X-Ratelimit-Remaining:
+      - '79'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 36b9a8a9-c26f-4614-9aac-47131167a74d
+      X-Runtime:
+      - '0.322667'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:31:08 GMT
+recorded_with: VCR 4.0.0

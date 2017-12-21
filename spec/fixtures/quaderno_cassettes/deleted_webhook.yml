@@ -1,0 +1,249 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://google.com","events_types":["invoice.created","expense.updated"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '86'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a4769a9ed7dd872f6fa3ac03289bd998"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2b4132cf-c97f-4c04-ad9f-2b2b5cb7d7a5
+      X-Runtime:
+      - '0.535146'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":9,"url":"http://google.com","auth_key":"EX3I18WyiEZ6TN-dbiJsLg","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-12-21T15:07:10.952Z","updated_at":"2017-12-21T15:07:10.952Z"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:11 GMT
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://quadernoapp.com","events_types":["invoice.created","expense.updated"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '85'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"d976128ea754380c627feab674f500a5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 530a8f6f-27e3-4b6d-af6c-c993c2e73a61
+      X-Runtime:
+      - '1.110364'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":10,"url":"http://quadernoapp.com","auth_key":"OsBT2VvQvzJYGcQ3qvw3ZQ","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-12-21T15:07:12.075Z","updated_at":"2017-12-21T15:07:12.075Z"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:12 GMT
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '5'
+      X-Ratelimit-Remaining:
+      - '84'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"37f9a6ff0dc86510527a75e4694549d8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d6f312b-8303-4cea-9c5b-7bff55d5305f
+      X-Runtime:
+      - '0.242539'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"url":"http://lvh.me:3000/sales/","auth_key":"ZUC_cwNC-tD3eaoWTmksgg","events_types":["invoice.created"],"last_sent_at":"2017-12-20T14:24:22.000Z","last_error":"Response
+        code 404 returned at 2017-12-20 14:24:30 +0000","events_sent":103,"created_at":"2017-11-03T12:02:35.000Z","updated_at":"2017-11-03T12:02:35.000Z"},{"id":3,"url":"http://lvh.me:3000/invoices","auth_key":"tnvSAI6KdZ7gXal_Yh9f5w","events_types":["checkout.succeeded"],"last_sent_at":"2017-12-07T10:39:28.000Z","last_error":"Response
+        code 500 returned at 2017-12-07 10:39:32 +0000","events_sent":23,"created_at":"2017-11-03T12:11:13.000Z","updated_at":"2017-11-03T12:11:13.000Z"},{"id":9,"url":"http://google.com","auth_key":"EX3I18WyiEZ6TN-dbiJsLg","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-12-21T15:07:10.000Z","updated_at":"2017-12-21T15:07:10.000Z"},{"id":10,"url":"http://quadernoapp.com","auth_key":"OsBT2VvQvzJYGcQ3qvw3ZQ","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-12-21T15:07:12.000Z","updated_at":"2017-12-21T15:07:12.000Z"}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:12 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks/10.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '4'
+      X-Ratelimit-Remaining:
+      - '83'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d657c944-4a76-4e79-9ade-cd0c0170819f
+      X-Runtime:
+      - '0.216300'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:12 GMT
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '4'
+      X-Ratelimit-Remaining:
+      - '82'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"78076404c007ce9e916e95034246e6e0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - defd1c31-583b-4543-974d-2ee3539e899c
+      X-Runtime:
+      - '0.241056'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"url":"http://lvh.me:3000/sales/","auth_key":"ZUC_cwNC-tD3eaoWTmksgg","events_types":["invoice.created"],"last_sent_at":"2017-12-20T14:24:22.000Z","last_error":"Response
+        code 404 returned at 2017-12-20 14:24:30 +0000","events_sent":103,"created_at":"2017-11-03T12:02:35.000Z","updated_at":"2017-11-03T12:02:35.000Z"},{"id":3,"url":"http://lvh.me:3000/invoices","auth_key":"tnvSAI6KdZ7gXal_Yh9f5w","events_types":["checkout.succeeded"],"last_sent_at":"2017-12-07T10:39:28.000Z","last_error":"Response
+        code 500 returned at 2017-12-07 10:39:32 +0000","events_sent":23,"created_at":"2017-11-03T12:11:13.000Z","updated_at":"2017-11-03T12:11:13.000Z"},{"id":9,"url":"http://google.com","auth_key":"EX3I18WyiEZ6TN-dbiJsLg","events_types":["invoice.created","expense.updated"],"last_sent_at":null,"last_error":null,"events_sent":0,"created_at":"2017-12-21T15:07:10.000Z","updated_at":"2017-12-21T15:07:10.000Z"}]'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:13 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks/9.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '4'
+      X-Ratelimit-Remaining:
+      - '81'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 2756ddab-89fa-40ce-881d-7b821c0db8ae
+      X-Runtime:
+      - '0.218152'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 15:07:13 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    body:
+      encoding: UTF-8
+      string: '{"first_name":"Test customer"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '14'
+      X-Ratelimit-Remaining:
+      - '97'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"8b91f222115c372edbd04127343c18b8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c74dabe6-a01d-4132-a60b-e4cbd0102bcc
+      X-Runtime:
+      - '0.478974'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":687,"kind":"company","created_at":1513868025,"full_name":"Test
+        customer","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":null,"web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"ES","notes":null,"secure_id":"f850bc87332efed90ed2e420ad374fd5453814d6","permalink":"http://quaderno.lvh.me:3000/billing/f850bc87332efed90ed2e420ad374fd5453814d6","url":"http://quaderno.lvh.me:3000/api/contacts/687"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:45 GMT
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/receipts.json
+    body:
+      encoding: UTF-8
+      string: '{"contact_id":687,"currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_method":"cash","notes":""}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '13'
+      X-Ratelimit-Remaining:
+      - '96'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"932108b3629b5746924fc49b1305c2dc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cd79f1da-ed62-4930-95b3-ba55eb1e3597
+      X-Runtime:
+      - '1.276500'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":1996,"blocked":false,"number":"0002","issue_date":"2017-12-21","created_at":1513868026,"contact":{"id":687,"full_name":"Test
+        customer"},"country":"FR","street_line_1":null,"street_line_2":null,"city":null,"region":null,"postal_code":null,"po_number":null,"currency":"EUR","subject":null,"exchange_rate":"0.8832","items":[{"id":2026,"description":"Aircraft","quantity":"1.0","unit_price_cents":"0.0","discount_rate":"0.0","tax_1_name":null,"tax_1_rate":null,"tax_1_country":null,"tax_2_name":null,"tax_2_rate":null,"tax_2_country":null,"reference":null,"subtotal_cents":"0.0","discount_cents":"0.0","gross_amount_cents":"0.0"}],"subtotal_cents":"0.0","discount_cents":"0.0","taxes":[],"payments":[{"id":1215,"date":"2017-12-21","payment_method":"cash","amount_cents":0}],"notes":null,"state":"paid","tag_list":[],"secure_id":"400b76b9728822717c7ed7189f4b2abcc0c82427","permalink":"http://quaderno.lvh.me:3000/receipt/400b76b9728822717c7ed7189f4b2abcc0c82427","pdf":"http://quaderno.lvh.me:3000/receipt/400b76b9728822717c7ed7189f4b2abcc0c82427.pdf","url":"http://quaderno.lvh.me:3000/api/receipts/1996.json","processor":null,"processor_id":null,"custom_metadata":{}}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:47 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/receipts/1996.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '12'
+      X-Ratelimit-Remaining:
+      - '95'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - fac627bb-b2dc-4c1c-bd65-5826c471b548
+      X-Runtime:
+      - '0.537709'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:47 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts/687.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '11'
+      X-Ratelimit-Remaining:
+      - '94'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 2fbbdc17-7555-403b-bdae-aa9fa38c45f0
+      X-Runtime:
+      - '0.234634'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:53:47 GMT
+recorded_with: VCR 4.0.0

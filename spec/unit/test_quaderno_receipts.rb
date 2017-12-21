@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestQuadernoReceipt < Test::Unit::TestCase
+describe Quaderno::Receipt do
   context 'A user with an authenticate token with receipts' do
 
     before(:each) do
@@ -11,27 +11,12 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       end
     end
 
-    it 'should get exception if pass wrong arguments' do
-      assert_raise ArgumentError do
-        VCR.use_cassette('all receipts') do
-          Quaderno::Receipt.all 1, 2, 3
-        end
-      end
-      assert_raise ArgumentError do
-        VCR.use_cassette('found receipt') do
-          Quaderno::Receipt.find
-        end
-      end
-    end
 
     it 'should get all receipts (populated db)' do
       VCR.use_cassette('all receipts') do
         receipts = Quaderno::Receipt.all
-        assert_not_nil receipts
-        assert_kind_of Array, receipts
-        receipts.each do |receipt|
-          assert_kind_of Quaderno::Receipt, receipt
-        end
+        expect(receipts.is_a? Array).to be true
+        receipts.each { |receipt| expect(receipt.is_a? Quaderno::Receipt).to be true }
       end
     end
 
@@ -39,8 +24,8 @@ class TestQuadernoReceipt < Test::Unit::TestCase
       VCR.use_cassette('found receipt') do
         receipts = Quaderno::Receipt.all
         receipt = Quaderno::Receipt.find receipts.first.id
-        assert_kind_of Quaderno::Receipt, receipt
-        assert_equal receipts.first.id, receipt.id
+        expect(receipt.is_a? Quaderno::Receipt).to be true
+        expect(receipt.id).to eq receipts.first.id
       end
     end
 
@@ -59,9 +44,10 @@ class TestQuadernoReceipt < Test::Unit::TestCase
                                            tags: 'tnt',
                                            payment_method: :cash,
                                            notes: '')
-        assert_kind_of Quaderno::Receipt, receipt
-        assert_equal contact.id, receipt.contact.id
-        assert_equal 'Aircraft', receipt.items[0].description
+        expect(receipt.is_a? Quaderno::Receipt).to be true
+        expect(receipt.contact.id).to eq contact.id
+        expect(receipt.items[0].description).to eq 'Aircraft'
+
         Quaderno::Receipt.delete(receipt.id)
         Quaderno::Contact.delete(contact.id)
       end
@@ -83,34 +69,35 @@ class TestQuadernoReceipt < Test::Unit::TestCase
                                            payment_method: :cash,
                                            notes: '')
         receipt = Quaderno::Receipt.update(receipt.id, notes: 'Show me the moneeeeeeeyy!!!!')
-        assert_kind_of Quaderno::Receipt, receipt
-        assert_equal 'Show me the moneeeeeeeyy!!!!', receipt.notes
+        expect(receipt.is_a? Quaderno::Receipt).to be true
+        expect(receipt.notes).to eq 'Show me the moneeeeeeeyy!!!!'
+
         Quaderno::Receipt.delete(receipt.id)
         Quaderno::Contact.delete(contact.id)
       end
     end
 
     it 'should delete an receipt' do
-        VCR.use_cassette('deleted receipt') do
-          contact = Quaderno::Contact.create(first_name: 'Test customer')
-          receipt = Quaderno::Receipt.create(contact_id: contact.id ,
-                                             currency: 'EUR',
-                                             items_attributes: [
-                                               {
-                                                 description: 'Aircraft',
-                                                 quantity: '1.0',
-                                                 unit_price: '0.0'
-                                               }
-                                             ],
-                                             tags: 'tnt',
-                                             payment_method: :cash,
-                                             notes: '')
-          Quaderno::Receipt.delete receipt.id
-          Quaderno::Contact.delete(contact.id)
+      VCR.use_cassette('deleted receipt') do
+        contact = Quaderno::Contact.create(first_name: 'Test customer')
+        receipt = Quaderno::Receipt.create(contact_id: contact.id ,
+                                           currency: 'EUR',
+                                           items_attributes: [
+                                             {
+                                               description: 'Aircraft',
+                                               quantity: '1.0',
+                                               unit_price: '0.0'
+                                             }
+                                           ],
+                                           tags: 'tnt',
+                                           payment_method: :cash,
+                                           notes: '')
+        Quaderno::Receipt.delete receipt.id
+        Quaderno::Contact.delete(contact.id)
 
-          receipts = Quaderno::Receipt.all
-          assert_not_equal receipts.first.id, receipt.id
-        end
+        receipts = Quaderno::Receipt.all
+        expect(receipt.id).not_to eq(receipts.first.id)
+      end
     end
 
     it 'should deliver an receipt' do
@@ -122,7 +109,8 @@ class TestQuadernoReceipt < Test::Unit::TestCase
         rescue Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid
           rate_limit_after = { remaining: (rate_limit_before[:remaining] - 1) }
         end
-        assert_equal rate_limit_before[:remaining]-1, rate_limit_after[:remaining]
+
+        expect(rate_limit_after[:remaining]).to eq(rate_limit_before[:remaining] - 1)
       end
     end
 
@@ -143,11 +131,13 @@ class TestQuadernoReceipt < Test::Unit::TestCase
                                            tags: 'tnt',
                                            payment_method: :cash,
                                            notes: '')
-        assert receipt.total_cents.nil?
-        assert !receipt.total.nil?
-        assert_kind_of Quaderno::Receipt, receipt
-        assert_equal contact.id, receipt.contact.id
-        assert_equal 'Aircraft', receipt.items[0].description
+
+        expect(receipt.total_cents.nil?).to be true
+        expect(!receipt.total.nil?).to be true
+        expect(receipt.is_a? Quaderno::Receipt).to be true
+        expect(receipt.contact.id).to eq contact.id
+        expect(receipt.items[0].description).to eq 'Aircraft'
+
         Quaderno::Receipt.delete(receipt.id)
         Quaderno::Contact.delete(contact.id)
       end
