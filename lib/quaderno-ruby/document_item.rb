@@ -1,4 +1,2 @@
-module Quaderno
-  class DocumentItem < OpenStruct
-  end
+class Quaderno::DocumentItem < OpenStruct
 end

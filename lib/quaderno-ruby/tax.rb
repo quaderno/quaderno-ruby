@@ -1,63 +1,61 @@
-module Quaderno
-  class TaxReport < OpenStruct
+class Quaderno::TaxReport < OpenStruct
+end
+
+class Quaderno::Tax < Quaderno::Base
+  api_model Quaderno::Tax
+  api_path 'taxes'
+
+  class << self
+    undef :find, :create, :update, :delete, :parse_nested
   end
 
-  class Tax < Base
-    api_model Quaderno::Tax
-    api_path 'taxes'
+  def self.calculate(options = {})
+    authentication = get_authentication(options.merge(api_model: api_model))
+    params = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
-    class << self
-      undef :find, :create, :update, :delete, :parse_nested
-    end
+    response = get("#{authentication[:url]}taxes/calculate.json",
+      query: params,
+      basic_auth: authentication[:basic_auth],
+      headers: version_header.merge(authentication[:headers])
+    )
 
-    def self.calculate(options = {})
-      authentication = get_authentication(options.merge(api_model: api_model))
-      params = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
+    new response.parsed_response
+  end
 
-      response = get("#{authentication[:url]}taxes/calculate.json",
-        query: params,
-        basic_auth: authentication[:basic_auth],
-        headers: version_header.merge(authentication[:headers])
-      )
+  def self.validate_vat_number(country, vat_number, options = {})
+    authentication = get_authentication(options.merge(api_model: api_model))
 
-      check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
-      new response.parsed_response
-    end
+    response = get("#{authentication[:url]}taxes/validate.json",
+      query: { country: country, vat_number: vat_number },
+      basic_auth: authentication[:basic_auth],
+      headers: version_header.merge(authentication[:headers])
+    )
 
-    def self.validate_vat_number(country, vat_number, options = {})
-      authentication = get_authentication(options.merge(api_model: api_model))
+    check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
 
-      response = get("#{authentication[:url]}taxes/validate.json",
-        query: { country: country, vat_number: vat_number },
-        basic_auth: authentication[:basic_auth],
-        headers: version_header.merge(authentication[:headers])
-      )
+    response.parsed_response['valid']
+  end
 
-      check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
+  def self.reports(options = {})
+    authentication = get_authentication(options.merge(api_model: api_model))
+    params = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
-      response.parsed_response['valid']
-    end
+    response = get("#{authentication[:url]}taxes/reports.json",
+      query: params,
+      basic_auth: authentication[:basic_auth],
+      headers: version_header.merge(authentication[:headers])
+    )
 
-    def self.reports(options = {})
-      authentication = get_authentication(options.merge(api_model: api_model))
-      params = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    array = response.parsed_response
+    collection = Quaderno::Collection.new
+    collection.current_page = response.headers['x-pages-currentpage']
+    collection.total_pages = response.headers['x-pages-totalpages']
 
-      response = get("#{authentication[:url]}taxes/reports.json",
-        query: params,
-        basic_auth: authentication[:basic_auth],
-        headers: version_header.merge(authentication[:headers])
-      )
+    array.each { |report| collection << Quaderno::TaxReport.new(report) }
 
-      array = response.parsed_response
-      collection = Quaderno::Collection.new
-      collection.current_page = response.headers['x-pages-currentpage']
-      collection.total_pages = response.headers['x-pages-totalpages']
+    check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
 
-      array.each { |report| collection << Quaderno::TaxReport.new(report) }
-
-      check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
-
-      collection
-    end
+    collection
   end
 end

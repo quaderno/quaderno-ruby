@@ -1,4 +1,2 @@
-module Quaderno
-  class Payment < OpenStruct
-  end
+class Quaderno::Payment < OpenStruct
 end

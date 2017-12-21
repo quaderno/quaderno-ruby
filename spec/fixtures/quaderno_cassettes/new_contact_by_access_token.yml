@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
+    body:
+      encoding: UTF-8
+      string: '{"kind":"company","first_name":"Test_Skynet","email":"my_little@po.ny"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '14'
+      X-Ratelimit-Remaining:
+      - '98'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"e773b58fc0fedb615bb3ef0c08354393"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 87dd2b3a-6b1a-4660-b161-be0a86b526b5
+      X-Runtime:
+      - '1.463753'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":685,"kind":"company","created_at":1513863388,"full_name":"Test_Skynet","contact_name":null,"street_line_1":null,"street_line_2":null,"postal_code":null,"city":null,"region":null,"country":"FR","phone_1":null,"phone_2":null,"fax":null,"email":"my_little@po.ny","web":null,"discount":null,"tax_id":null,"vat_number":null,"language":"ES","notes":null,"secure_id":"d2dad2da07440e6dcd2dd64b914df54ba50d8b2e","permalink":"http://quaderno.lvh.me:3000/billing/d2dad2da07440e6dcd2dd64b914df54ba50d8b2e","url":"http://quaderno.lvh.me:3000/api/contacts/685"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 13:36:28 GMT
+recorded_with: VCR 4.0.0
