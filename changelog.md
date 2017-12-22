@@ -1,4 +1,10 @@
 #Changelog
+##1.15.0
+* Removed `jeweler` and updated the gem structure.
+
+##1.14.0
+* Added `domestic_taxes`, `sales_taxes`, `vat_moss`, `ec_sales` and `international_taxes` to `Quaderno::Report`
+
 ##1.13.2
 * Added index method to `Quaderno::Tax` as `Quaderno::Tax.all()`.
 
