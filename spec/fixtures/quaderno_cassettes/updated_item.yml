@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/items.json
+    body:
+      encoding: UTF-8
+      string: '{"code":"1513867484","name":"Test_Skynet","unit_cost":21.0}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '13'
+      X-Ratelimit-Remaining:
+      - '96'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"027c6d6f1a906273ca2d4aa8394a1f88"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fd35a6d1-0e4a-4acd-89af-4b99287819fb
+      X-Runtime:
+      - '0.306993'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":4,"code":"1513867484","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://quaderno.lvh.me:3000/api/items/4"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:44:45 GMT
+- request:
+    method: put
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/items/4.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"Test_OCP"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '13'
+      X-Ratelimit-Remaining:
+      - '95'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"41f5341f4ca73b8d6592adbb0cb7e4e4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1a16d2f2-b667-4d92-8503-93b23ef92b03
+      X-Runtime:
+      - '0.284225'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":4,"code":"1513867484","name":"Test_OCP","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://quaderno.lvh.me:3000/api/items/4"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:44:45 GMT
+recorded_with: VCR 4.0.0

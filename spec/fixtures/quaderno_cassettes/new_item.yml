@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/items.json
+    body:
+      encoding: UTF-8
+      string: '{"code":"000000","name":"Test_Skynet","unit_cost":21.0}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '13'
+      X-Ratelimit-Remaining:
+      - '97'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"04f048033223dd12d1540fbfb93ed0a9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7a079498-326a-4a92-98b2-14510feacb54
+      X-Runtime:
+      - '0.311028'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":3,"code":"000000","name":"Test_Skynet","unit_cost":"21.0","stock":null,"tax_class":"eservice","url":"http://quaderno.lvh.me:3000/api/items/3"}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 14:44:44 GMT
+recorded_with: VCR 4.0.0

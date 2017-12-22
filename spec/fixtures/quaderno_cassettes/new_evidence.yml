@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/evidences.json
+    body:
+      encoding: UTF-8
+      string: '{"document_id":1987,"billing_country":"AU","bank_country":"AU"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '13'
+      X-Ratelimit-Remaining:
+      - '98'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0596b30fb975dc8467f9e3d41c1fd574"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9ff637ca-1ea4-4391-86d6-8ce4f0a4c0cc
+      X-Runtime:
+      - '0.324267'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":14,"document_id":1987,"state":"confirmed","billing_country":"AU","ip_address":null,"ip_country":null,"bank_country":"AU","vat_number":"91134998020","notes":null}'
+    http_version: 
+  recorded_at: Thu, 21 Dec 2017 13:52:34 GMT
+recorded_with: VCR 4.0.0

@@ -1,125 +1,123 @@
-module Quaderno
-  module Behavior
-    module Crud
+module Quaderno::Behavior
+  module Crud
 
-      def self.included(receiver)
-        receiver.send :extend, ClassMethods
+    def self.included(receiver)
+      receiver.send :extend, ClassMethods
+    end
+
+    module ClassMethods
+      include Quaderno::Helpers::Authentication
+
+      def parse_nested(element)
+        if element.has_key?('payments')
+          payments_collection = Array.new
+          (element['payments'] || Array.new).each { |payment| payments_collection << Quaderno::Payment.new(payment) }
+          element['payments'] = payments_collection
+        end
+
+        items_collection = Array.new
+        element['items'].each { |item| items_collection << Quaderno::DocumentItem.new(item) }
+        element['items'] = items_collection
+        element['contact'] = Quaderno::Contact.new(element['contact'])
+
+        element
       end
 
-      module ClassMethods
-        include Quaderno::Helpers::Authentication
+      def all(options = {})
+        authentication = get_authentication(options.merge(api_model: api_model))
+        filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
-        def parse_nested(element)
-          if element.has_key?('payments')
-            payments_collection = Array.new
-            (element['payments'] || Array.new).each { |payment| payments_collection << Quaderno::Payment.new(payment) }
-            element['payments'] = payments_collection
+        response = get("#{authentication[:url]}#{api_model.api_path}.json",
+          query: filter,
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers])
+        )
+
+        check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
+        array = response.parsed_response
+        collection = Quaderno::Collection.new
+
+        if is_a_document?
+          array.each do |element|
+            element[:authentication_data] = authentication
+            api_model.parse_nested(element)
+            collection << (new element)
           end
-
-          items_collection = Array.new
-          element['items'].each { |item| items_collection << Quaderno::DocumentItem.new(item) }
-          element['items'] = items_collection
-          element['contact'] = Quaderno::Contact.new(element['contact'])
-
-          element
+        else
+          array.each { |element| collection << (new element) }
         end
 
-        def all(options = {})
-          authentication = get_authentication(options.merge(api_model: api_model))
-          filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+        collection.current_page = response.headers['x-pages-currentpage']
+        collection.total_pages = response.headers['x-pages-totalpages']
 
-          response = get("#{authentication[:url]}#{api_model.api_path}.json",
-            query: filter,
-            basic_auth: authentication[:basic_auth],
-            headers: version_header.merge(authentication[:headers])
-          )
+        collection
+      end
 
-          check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
-          array = response.parsed_response
-          collection = Quaderno::Collection.new
+      def find(id, options = {})
+        authentication = get_authentication(options.merge(api_model: api_model))
 
-          if is_a_document?
-            array.each do |element|
-              element[:authentication_data] = authentication
-              api_model.parse_nested(element)
-              collection << (new element)
-            end
-          else
-            array.each { |element| collection << (new element) }
-          end
+        response = get("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers])
+        )
 
-          collection.current_page = response.headers['x-pages-currentpage']
-          collection.total_pages = response.headers['x-pages-totalpages']
+        check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
+        hash = response.parsed_response
+        hash[:authentication_data] = authentication
 
-          collection
-        end
+        api_model.parse_nested(hash) if is_a_document?
 
-        def find(id, options = {})
-          authentication = get_authentication(options.merge(api_model: api_model))
+        new hash
+      end
 
-          response = get("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
-            basic_auth: authentication[:basic_auth],
-            headers: version_header.merge(authentication[:headers])
-          )
+      def create(params = {})
+        authentication = get_authentication(params.merge(api_model: api_model))
+        params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
 
-          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
-          hash = response.parsed_response
-          hash[:authentication_data] = authentication
+        response = post("#{authentication[:url]}#{api_model.api_path}.json",
+          body: params.to_json,
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+        )
 
-          api_model.parse_nested(hash) if is_a_document?
+        check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
+        hash = response.parsed_response
+        hash[:authentication_data] = authentication
 
-          new hash
-        end
+        api_model.parse_nested(hash) if is_a_document?
 
-        def create(params = {})
-          authentication = get_authentication(params.merge(api_model: api_model))
-          params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
+        new hash
+      end
 
-          response = post("#{authentication[:url]}#{api_model.api_path}.json",
-            body: params.to_json,
-            basic_auth: authentication[:basic_auth],
-            headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
-          )
+      def update(id, params = {})
+        authentication = get_authentication(params.merge(api_model: api_model))
+        params = params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
 
-          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
-          hash = response.parsed_response
-          hash[:authentication_data] = authentication
+        response = put("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
+          body: params.to_json,
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+        )
 
-          api_model.parse_nested(hash) if is_a_document?
+        check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
+        hash = response.parsed_response
+        hash[:authentication_data] = authentication
 
-          new hash
-        end
+        api_model.parse_nested(hash) if is_a_document?
 
-        def update(id, params = {})
-          authentication = get_authentication(params.merge(api_model: api_model))
-          params = params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
+        new hash
+      end
 
-          response = put("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
-            body: params.to_json,
-            basic_auth: authentication[:basic_auth],
-            headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
-          )
+      def delete(id, options = {})
+        authentication = get_authentication(options.merge(api_model: api_model))
 
-          check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
-          hash = response.parsed_response
-          hash[:authentication_data] = authentication
+        response = HTTParty.delete("#{authentication[:url]}#{ api_model.api_path }/#{ id }.json",
+          basic_auth: authentication[:basic_auth],
+          headers: version_header.merge(authentication[:headers])
+        )
+        check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
 
-          api_model.parse_nested(hash) if is_a_document?
-
-          new hash
-        end
-
-        def delete(id, options = {})
-          authentication = get_authentication(options.merge(api_model: api_model))
-
-          response = HTTParty.delete("#{authentication[:url]}#{ api_model.api_path }/#{ id }.json",
-            basic_auth: authentication[:basic_auth],
-            headers: version_header.merge(authentication[:headers])
-          )
-          check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
-
-          true
-        end
+        true
       end
     end
   end
