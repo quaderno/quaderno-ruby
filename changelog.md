@@ -1,4 +1,7 @@
 #Changelog
+##1.15.1
+* Fix `Quaderno` load order.
+
 ##1.15.0
 * Removed `jeweler` and updated the gem structure.
 
