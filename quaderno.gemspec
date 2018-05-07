@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = %w(lib)
-  spec.date = "2017-12-21"
+  spec.date = "2018-05-07"
   spec.extra_rdoc_files = %w(LICENSE.txt README.md)
 
 
