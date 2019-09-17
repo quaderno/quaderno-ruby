@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/checkout/sessions.json
+    body:
+      encoding: UTF-8
+      string: '{"billing_details_collection":"auto","cancel_url":"http://example.com/cancel","success_url":"http://example.com/success","coupon_collection":true,"items":[{"product":"000000"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '85'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"0dcbd7753e91a59cc7b031c4f956fc34"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fb8d44fc-3c87-4c7a-a06e-f6d67ad63d87
+      X-Runtime:
+      - '0.147664'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":35,"status":"pending","billing_details_collection":"auto","cancel_url":"http://example.com/cancel","coupon_collection":true,"locale":"auto","payment_methods":["card"],"success_url":"http://example.com/success","custom":{},"metadata":{},"items":[{"product":"000000","amount":2100.0,"name":"Test_Skynet","description":null,"currency":"EUR","quantity":1}],"customer":{"billing_city":null,"billing_country":null,"billing_postal_code":null,"billing_street_line_1":null,"billing_street_line_2":null,"company":null,"email":null,"first_name":null,"last_name":null,"tax_id":null,"business_number":null},"permalink":"http://quaderno.lvh.me:3000/checkout/session/e471b4a839a0e3ab62262c0f26bd8f46b5c2ce66"}'
+    http_version: 
+  recorded_at: Tue, 17 Sep 2019 11:45:34 GMT
+- request:
+    method: get
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/checkout/sessions/35.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '84'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"0dcbd7753e91a59cc7b031c4f956fc34"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9ea859cf-a81c-411b-981f-be095899a704
+      X-Runtime:
+      - '0.143890'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":35,"status":"pending","billing_details_collection":"auto","cancel_url":"http://example.com/cancel","coupon_collection":true,"locale":"auto","payment_methods":["card"],"success_url":"http://example.com/success","custom":{},"metadata":{},"items":[{"product":"000000","amount":2100.0,"name":"Test_Skynet","description":null,"currency":"EUR","quantity":1}],"customer":{"billing_city":null,"billing_country":null,"billing_postal_code":null,"billing_street_line_1":null,"billing_street_line_2":null,"company":null,"email":null,"first_name":null,"last_name":null,"tax_id":null,"business_number":null},"permalink":"http://quaderno.lvh.me:3000/checkout/session/e471b4a839a0e3ab62262c0f26bd8f46b5c2ce66"}'
+    http_version: 
+  recorded_at: Tue, 17 Sep 2019 11:45:34 GMT
+- request:
+    method: delete
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/checkout/sessions/35.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '2000'
+      X-Ratelimit-Reset:
+      - '6'
+      X-Ratelimit-Remaining:
+      - '83'
+      Vary:
+      - Origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e705f61e-7389-4a1e-8bc5-76a156316d9d
+      X-Runtime:
+      - '0.106841'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 17 Sep 2019 11:45:35 GMT
+recorded_with: VCR 5.0.0
