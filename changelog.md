@@ -1,4 +1,10 @@
 #Changelog
+##1.16.0
+* Added `Quaderno::CheckoutSession`
+
+##1.15.2
+* Relax `httparty` version requirement.
+
 ##1.15.1
 * Fix `Quaderno` load order.
 
