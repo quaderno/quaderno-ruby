@@ -565,6 +565,43 @@ will validate the vat number for the passed country.
 
 will create an evidence based on the data pased as parameters.
 
+## Checkout Sessions
+
+### Getting checkout sessions
+```ruby
+ Quaderno::CheckoutSession.all() #=> Array
+```
+
+ will return an array with all the checkout sessions in your account.
+
+### Finding a checkout session
+```ruby
+ Quaderno::CheckoutSession.find(id) #=> Quaderno::CheckoutSession
+```
+
+will return the checkout session with the id passed as parameter.
+
+### Creating a new checkout session
+```ruby
+ Quaderno::CheckoutSession.create(params) #=> Quaderno::CheckoutSession
+```
+
+will create a checkout session using the information of the hash passed as parameter and return an instance of Quaderno::CheckoutSession with the created checout session.
+
+### Updating an existing checkout session
+```ruby
+ Quaderno::CheckoutSession.update(id, params) #=> Quaderno::CheckoutSession
+```
+
+will update the specified checkout session with the data of the hash passed as second parameter.
+
+### Deleting a checkout session
+```ruby
+  Quaderno::CheckoutSession.delete(id) #=> Boolean
+```
+will delete the checkout session with the id passed as parameter.
+
+
 ## Exceptions
 Quaderno-ruby exceptions raise depending on the type of error:
 
