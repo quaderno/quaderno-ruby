@@ -65,6 +65,15 @@ Alternatively, you can check the rate limit for each request by checking the `ra
   invoice = Quaderno::Invoice.find INVOICE_ID
   invoice.rate_limit_info #=> {:reset=>4, :remaining=>5}
 
+  begin
+    deleted_invoice = Quaderno::Invoice.delete(ANOTHER_INVOICE_ID)
+  rescue Quaderno::Exceptions::InvalidSubdomainOrToken => e
+    # If the exception is triggered you can check the rate limit on the raised exception
+    e.rate_limit_info #=> {:reset=>3, :remaining=>4}
+  end
+
+  deleted_invoice.rate_limit_info #=> {:reset=>3, :remaining=>4}
+
   # etc.
 ```
 

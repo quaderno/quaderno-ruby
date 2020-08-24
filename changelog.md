@@ -2,7 +2,7 @@
 
 ## 1.17.0
 * Added `rate_limit_info` to each response
-* **Breaking change:** `#delete` no longer returns a `Boolean` but an instance of the removed object with a `deleted` attribute set to `true`
+* **Breaking change:** `.delete` methods no longer return a `Boolean` but an instance of the removed object with a `deleted` attribute set to `true`
 * **Breaking change:** `Quaderno::Base.ping` no longer returns a boolean but a `Hash` with a `status` attribute and the `rate_limit_info` if available.
 * **Breaking change:** Removed `Quaderno::Base.rate_limit_info`. Now it's an alias of `Quaderno::Base.ping`.
 
