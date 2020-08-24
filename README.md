@@ -41,15 +41,15 @@ This will return a hash with the information about your api url, which includes 
  You can ping the service in order to check if it is up with:
 
 ```ruby
-  Quaderno::Base.ping #=> { status: true }
+  Quaderno::Base.ping #=> { status: true, rate_limit_info: { reset: 4, remaining: 0} }
 ```
 
-This will return true if the service is up or false if it is not.
+This will return `status: true` if the service is up or `status: false` if it is not.
 
 ## Check the rate limit
 
 ```ruby
-  Quaderno::Base.ping #=>  { status: false, rate_limit_info: {:reset=>4, :remaining=>0} }
+  Quaderno::Base.ping #=>  { status: false, rate_limit_info: { reset: 4, remaining: 0} }
 
 ```
 
