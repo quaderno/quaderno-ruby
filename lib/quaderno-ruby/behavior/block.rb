@@ -19,7 +19,10 @@ module Quaderno::Behavior
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
         doc = response.parsed_response
 
-        new doc
+        object = new doc
+        object.rate_limit_info = response
+
+        object
       end
     end
   end

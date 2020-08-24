@@ -20,7 +20,10 @@ module Quaderno::Behavior
         hash = response.parsed_response
         hash[:authentication_data] = authentication
 
-        new hash
+        object = new hash
+        object.rate_limit_info = response
+
+        object
       end
       alias_method :retrieve_customer, :retrieve
 

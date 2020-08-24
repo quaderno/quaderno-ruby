@@ -2,7 +2,7 @@
 
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 
-Current version is 1.16.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 1.17.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -41,7 +41,7 @@ This will return a hash with the information about your api url, which includes 
  You can ping the service in order to check if it is up with:
 
 ```ruby
-  Quaderno::Base.ping #=> Boolean
+  Quaderno::Base.ping #=> { status: true }
 ```
 
 This will return true if the service is up or false if it is not.
@@ -49,10 +49,24 @@ This will return true if the service is up or false if it is not.
 ## Check the rate limit
 
 ```ruby
-  Quaderno::Base.rate_limit_info #=>  {:reset=>4, :remaining=>0}
+  Quaderno::Base.ping #=>  { status: false, rate_limit_info: {:reset=>4, :remaining=>0} }
+
 ```
 
 This will return a hash with information about the seconds until the rate limit reset and your remaining requests per minute ([check the API documentation for more information](https://github.com/quaderno/quaderno-api#rate-limiting)).
+
+Alternatively, you can check the rate limit for each request by checking the `rate_limit_info` method on the response:
+
+```ruby
+
+  invoices = Quaderno::Invoice.all
+  invoices.rate_limit_info #=> {:reset=> 5, :remaning=>6}
+
+  invoice = Quaderno::Invoice.find INVOICE_ID
+  invoice.rate_limit_info #=> {:reset=>4, :remaining=>5}
+
+  # etc.
+```
 
 ## Reading the values
 
@@ -111,10 +125,10 @@ will update the specified contact with the data of the hash passed as second par
 
 ### Deleting a contact
 ```ruby
-  Quaderno::Contact.delete(id) #=> Boolean
+  Quaderno::Contact.delete(id) #=> Quaderno::Contact
 ```
 
-will delete the contact with the id passed as parameter.
+will delete the contact with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Contact` with the `deleted` attribute set to `true` will be returned.
 
 ## Managing items
 
@@ -148,10 +162,10 @@ will update the specified item with the data of the hash passed as second parame
 
 ### Deleting an item
 ```ruby
-  Quaderno::Item.delete(id) #=> Boolean
+  Quaderno::Item.delete(id) #=> Quaderno::Item
 ```
 
-will delete the item with the id passed as parameter.
+will delete the item with the id passed as parameter.  If the deletion was successful, an instance of `Quaderno::Item` with the `deleted` attribute set to `true` will be returned.
 
 
 ## Managing invoices
@@ -196,10 +210,10 @@ will update the specified invoice with the data of the hash passed as second par
 ### Deleting an invoice
 
 ```ruby
-  Quaderno::Invoice.delete(id) #=> Boolean
+  Quaderno::Invoice.delete(id) #=> Quaderno::Invoice
 ```
 
-will delete the invoice with the id passed as parameter.
+will delete the invoice with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Item` with the `deleted` attribute set to `true` will be returned.
 
 
 ###Adding or removing a payment
@@ -219,7 +233,7 @@ In order to  remove a payment you will need the Invoice instance you want to upd
   invoice.remove_payment(payment_id) #=> Boolean
 ```
 
-###Delivering the invoice
+### Delivering the invoice
 
   In order to deliver the invoice to the default recipient you will need the invoice you want to send.
 
@@ -263,12 +277,12 @@ will update the specified receipt with the data of the hash passed as second par
 ### Deleting an receipt
 
 ```ruby
-  Quaderno::Receipt.delete(id) #=> Boolean
+  Quaderno::Receipt.delete(id) #=> Quaderno::Receipt
 ```
 
-will delete the receipt with the id passed as parameter.
+will delete the receipt with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Receipt` with the `deleted` attribute set to `true` will be returned.
 
-###Delivering the receipt
+### Delivering the receipt
 
   In order to deliver the receipt to the default recipient you will need the receipt you want to send.
 
@@ -319,13 +333,13 @@ will update the specified credit with the data of the hash passed as second para
 ### Deleting a credit
 
 ```ruby
-  Quaderno::Credit.delete(id) #=> Boolean
+  Quaderno::Credit.delete(id) #=> Quaderno::Credit
 ```
 
-will delete the credit with the id passed as parameter.
+will delete the credit with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Credit` with the `deleted` attribute set to `true` will be returned.
 
 
-###Adding or removing a payment
+### Adding or removing a payment
  In order to  add a payment you will need the Credit instance you want to update.
 
 ```ruby
@@ -339,10 +353,12 @@ In order to  remove a payment you will need the Credit instance you want to upda
 
 ```ruby
   credit = Quaderno::Credit.find(credit_id)
-  credit.remove_payment(payment_id) #=> Boolean
+  credit.remove_payment(payment_id) #=> Quaderno::Payment
 ```
 
-###Delivering the credit
+If the deletion was successful, an instance of `Quaderno::Payment` with the `deleted` attribute set to `true` will be returned.
+
+### Delivering the credit
 
   In order to deliver the credit to the default recipient you will need the credit you want to send.
 
@@ -388,10 +404,10 @@ will update the specified estimate with the data of the hash passed as second pa
 ### Deleting an estimate
 
 ```ruby
-  Quaderno::Estimate.delete(id) #=> Boolean
+  Quaderno::Estimate.delete(id) #=> Quaderno::Estimate
 ```
 
-will delete the estimate with the id passed as parameter.
+will delete the estimate with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Contact` with the `deleted` attribute set to `true` will be returned.
 
 
 ###Adding or removing a payment
@@ -411,7 +427,7 @@ In order to  remove a payment you will need the estimate you want to update.
   estimate.remove_payment(payment_id) #=> Boolean
 ```
 
-###Delivering the estimate
+### Delivering the estimate
   In order to deliver the estimate to the default recipient you will need the estimate you want to send.
 
 ```ruby
@@ -453,10 +469,10 @@ will update the specified expense with the data of the hash passed as second par
 
 ### Deleting an expense
 ```ruby
-  Quaderno::Expense.delete(id) #=> Boolean
+  Quaderno::Expense.delete(id) #=> Quaderno::Expense
 ```
 
-will delete the expense with the id passed as parameter.
+will delete the expense with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Expense` with the `deleted` attribute set to `true` will be returned.
 
 
 ## Managing recurrings
@@ -494,10 +510,10 @@ will update the specified recurring with the data of the hash passed as second p
 ### Deleting a recurring
 
 ```ruby
-  Quaderno::Recurring.delete(id) #=> Boolean
+  Quaderno::Recurring.delete(id) #=> Quaderno::Recurring
 ```
 
-will delete the recurring with the id passed as parameter.
+will delete the recurring with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Recurring` with the `deleted` attribute set to `true` will be returned.
 
 
 ## Managing webhooks
@@ -532,9 +548,9 @@ will update the specified webhook with the data of the hash passed as second par
 
 ### Deleting a webhook
 ```ruby
-  Quaderno::Webhook.delete(id) #=> Boolean
+  Quaderno::Webhook.delete(id) #=> Quaderno::Webhook
 ```
-will delete the webhook with the id passed as parameter.
+will delete the webhook with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Webhook` with the `deleted` attribute set to `true` will be returned.
 
 
 ## Taxes
@@ -597,9 +613,9 @@ will update the specified checkout session with the data of the hash passed as s
 
 ### Deleting a checkout session
 ```ruby
-  Quaderno::CheckoutSession.delete(id) #=> Boolean
+  Quaderno::CheckoutSession.delete(id) #=> Quaderno::CheckoutSession
 ```
-will delete the checkout session with the id passed as parameter.
+will delete the checkout session with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::CheckoutSession` with the `deleted` attribute set to `true` will be returned.
 
 
 ## Exceptions

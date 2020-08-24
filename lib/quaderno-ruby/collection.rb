@@ -1,4 +1,5 @@
 class Quaderno::Collection < Array
+  include Quaderno::Helpers::RateLimit
 
   def current_page=(page_number)
     @page = page_number
