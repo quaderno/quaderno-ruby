@@ -25,12 +25,13 @@ module Quaderno::Behavior
         instance = Quaderno::Payment.new(response.parsed_response)
         self.payments << instance
 
-        Quaderno::Payment.new instance
+        instance.rate_limit_info = response
+
+        instance
       end
 
       def remove_payment(payment_id, options = nil)
         self.authentication_data = get_authentication(options.merge(api_model: api_model)) if options.is_a?(Hash)
-
 
         response = HTTParty.delete("#{authentication_data[:url]}#{api_model.api_path}/#{id}/payments/#{payment_id}.json",
           basic_auth: authentication_data[:basic_auth],
@@ -41,7 +42,12 @@ module Quaderno::Behavior
 
         self.payments.delete_if { |payment| payment.id == payment_id }
 
-        true
+        hash = { deleted: true, id: payment_id}
+
+        object = Quaderno::Payment.new(hash)
+        object.rate_limit_info = response
+
+        object
       end
     end
   end

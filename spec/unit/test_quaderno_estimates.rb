@@ -99,7 +99,7 @@ describe Quaderno::Estimate do
     it 'should deliver an estimate' do
       VCR.use_cassette('delivered estimate') do
         estimates = Quaderno::Estimate.all
-        rate_limit_before = Quaderno::Base.rate_limit_info
+        rate_limit_before = Quaderno::Base.ping.rate_limit_info
         begin
           rate_limit_after = estimates.first.deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid

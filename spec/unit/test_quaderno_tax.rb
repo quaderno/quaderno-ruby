@@ -20,12 +20,12 @@ describe Quaderno::Tax do
 
     it 'should validate VAT numbe' do
       VCR.use_cassette('validate valid VAT number') do
-        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047V')
+        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047V').valid
         expect(vat_number_valid).to be true
       end
 
        VCR.use_cassette('validate invalid VAT number') do
-        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047X')
+        vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047X').valid
         expect(!vat_number_valid).to be true
       end
     end

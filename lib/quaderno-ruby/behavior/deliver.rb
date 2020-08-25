@@ -17,7 +17,11 @@ module Quaderno::Behavior
         )
 
         api_model.check_exception_for(party_response, { rate_limit: true, subdomain_or_token: true, id: true, required_fields: true })
-        { limit: party_response.headers["x-ratelimit-limit"].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
+
+        data = Quaderno::Base.new(success: true)
+        data.rate_limit_info = party_response
+
+        data
       end
     end
   end

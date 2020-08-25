@@ -47,6 +47,7 @@ module Quaderno::Behavior
           array.each { |element| collection << (new element) }
         end
 
+        collection.rate_limit_info = response
         collection.current_page = response.headers['x-pages-currentpage']
         collection.total_pages = response.headers['x-pages-totalpages']
 
@@ -67,7 +68,10 @@ module Quaderno::Behavior
 
         api_model.parse_nested(hash) if is_a_document?
 
-        new hash
+        object = new hash
+        object.rate_limit_info = response
+
+        object
       end
 
       def create(params = {})
@@ -86,7 +90,10 @@ module Quaderno::Behavior
 
         api_model.parse_nested(hash) if is_a_document?
 
-        new hash
+        object = new hash
+        object.rate_limit_info = response
+
+        object
       end
 
       def update(id, params = {})
@@ -105,7 +112,10 @@ module Quaderno::Behavior
 
         api_model.parse_nested(hash) if is_a_document?
 
-        new hash
+        object = new hash
+        object.rate_limit_info = response
+
+        object
       end
 
       def delete(id, options = {})
@@ -117,7 +127,12 @@ module Quaderno::Behavior
         )
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
 
-        true
+        hash = { deleted: true, id: id }
+
+        object = new hash
+        object.rate_limit_info = response
+
+        object
       end
     end
   end

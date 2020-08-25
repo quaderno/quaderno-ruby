@@ -6,6 +6,7 @@ class Quaderno::Base < OpenStruct
   include Quaderno::Exceptions
   include Quaderno::Behavior::Crud
   include Quaderno::Helpers::Authentication
+  include Quaderno::Helpers::RateLimit
 
   PRODUCTION_URL = 'https://quadernoapp.com/api/'
   SANDBOX_URL = 'http://sandbox-quadernoapp.com/api/'
@@ -51,9 +52,12 @@ class Quaderno::Base < OpenStruct
     response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: version_header)
 
     if response.code == 200
-      response.parsed_response
+      data = self.new(response.parsed_response)
+      data.rate_limit_info = response
+
+      data
     else
-      raise(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token')
+      raise_exception(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token', response)
     end
   end
 
@@ -72,9 +76,16 @@ class Quaderno::Base < OpenStruct
 
       check_exception_for(party_response, { subdomain_or_token: true })
     rescue Errno::ECONNREFUSED
-      return false
+      return Quaderno::Base.new({ status: false })
     end
-    true
+
+    data = self.new({ status: true })
+    data.rate_limit_info = party_response
+
+    data
+  end
+  class <<self
+    alias_method :rate_limit_info, :ping
   end
 
   def self.me(options = {})
@@ -90,14 +101,10 @@ class Quaderno::Base < OpenStruct
 
     check_exception_for(party_response, { subdomain_or_token: true })
 
-    party_response.parsed_response
-  end
+    data = self.new(party_response.parsed_response)
+    data.rate_limit_info = party_response
 
-  #Returns the rate limit information: limit and remaining requests
-  def self.rate_limit_info
-    party_response = get("#{@@url}ping.json", basic_auth: { username: auth_token }, headers: version_header)
-    check_exception_for(party_response, { subdomain_or_token: true })
-    @@rate_limit_info = { reset: party_response.headers['x-ratelimit-reset'].to_i, remaining: party_response.headers["x-ratelimit-remaining"].to_i }
+    data
   end
 
   # Instance methods
