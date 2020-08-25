@@ -103,7 +103,7 @@ describe Quaderno::Receipt do
     it 'should deliver an receipt' do
       VCR.use_cassette('delivered receipt') do
         receipts = Quaderno::Receipt.all
-        rate_limit_before = Quaderno::Base.rate_limit_info
+        rate_limit_before = Quaderno::Base.ping.rate_limit_info
         begin
           rate_limit_after = receipts.first.deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid

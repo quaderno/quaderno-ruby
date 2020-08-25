@@ -20,7 +20,10 @@ class Quaderno::Tax < Quaderno::Base
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
-    new response.parsed_response
+    data = new response.parsed_response
+    data.rate_limit_info = response
+
+    data
   end
 
   def self.validate_vat_number(country, vat_number, options = {})
@@ -34,7 +37,10 @@ class Quaderno::Tax < Quaderno::Base
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
 
-    response.parsed_response['valid']
+    data = new({ valid: response.parsed_response['valid'] })
+    data.rate_limit_info = response
+
+    data
   end
 
   def self.reports(options = {})
@@ -49,6 +55,7 @@ class Quaderno::Tax < Quaderno::Base
 
     array = response.parsed_response
     collection = Quaderno::Collection.new
+    collection.rate_limit_info = response
     collection.current_page = response.headers['x-pages-currentpage']
     collection.total_pages = response.headers['x-pages-totalpages']
 

@@ -101,7 +101,7 @@ describe Quaderno::Invoice do
     it 'should deliver an invoice' do
       VCR.use_cassette('delivered invoice') do
         invoices = Quaderno::Invoice.all
-        rate_limit_before = Quaderno::Base.rate_limit_info
+        rate_limit_before = Quaderno::Base.ping.rate_limit_info
         begin
           rate_limit_after = invoices.first.deliver
         rescue Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid

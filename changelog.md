@@ -1,9 +1,13 @@
 # Changelog
 
 ## 1.17.0
-* Added `rate_limit_info` to each response
-* **Breaking change:** `.delete` methods no longer return a `Boolean` but an instance of the removed object with a `deleted` attribute set to `true`
-* **Breaking change:** `Quaderno::Base.ping` no longer returns a boolean but a `Hash` with a `status` attribute and the `rate_limit_info` if available.
+* Added `rate_limit_info` method to each API response
+* **Breaking change:** `.delete` methods no longer returns a boolean but an instance of the removed object with a `deleted` attribute set to `true`
+* **Breaking change:** `Quaderno::Base.ping` no longer returns a boolean but a `Quaderno::Base` instance with a `status` attribute.
+* **Breaking change:** `Quaderno::Base.authorization` no longer returns a `Hash` but a `Quaderno::Base` instance with an `identity` attribute.
+* **Breaking change:** `Quaderno::Base.me` no longer returns a `Hash` but a `Quaderno::Base` instance with all the attributes contained in the previous format.
+* **Breaking change:** `Quaderno::Tax.validate_vat_number` no longer returns a boolean but a `Quaderno::Tax` instance with a `valid` attribute.
+* **Breaking change:** `.deliver` no longer returns a `Hash` but a `Quaderno::Base` instance with a `success` attribute.
 * **Breaking change:** Removed `Quaderno::Base.rate_limit_info`. Now it's an alias of `Quaderno::Base.ping`.
 
 ## 1.16.0

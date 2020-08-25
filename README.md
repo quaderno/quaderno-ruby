@@ -29,8 +29,8 @@ To configure just add this to your initializers
 You can get your account subdomain by grabbing it from your account url or by calling the authorization method with your personal api token.
 
 ```ruby
-  Quaderno::Base.authorization 'my_authenticate_token', environment
-  # => {"identity"=>{"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/"}}
+  response = Quaderno::Base.authorization 'my_authenticate_token', environment #=> Quaderno::Base
+  response.identity # => {"id"=>737000, "name"=>"Walter White", "email"=>"cooking@br.bd", "href"=>"https://my_subdomain.quadernoapp.com/api/"}
 ```
 
 `environment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
@@ -41,7 +41,9 @@ This will return a hash with the information about your api url, which includes 
  You can ping the service in order to check if it is up with:
 
 ```ruby
-  Quaderno::Base.ping #=> { status: true, rate_limit_info: { reset: 4, remaining: 0} }
+  response = Quaderno::Base.ping #=> Quaderno::Base
+
+  response.status #=> Boolean
 ```
 
 This will return `status: true` if the service is up or `status: false` if it is not.
@@ -49,30 +51,34 @@ This will return `status: true` if the service is up or `status: false` if it is
 ## Check the rate limit
 
 ```ruby
-  Quaderno::Base.ping #=>  { status: false, rate_limit_info: { reset: 4, remaining: 0} }
+  response = Quaderno::Base.ping #=> Quaderno::Base
+  response.rate_limit_info #=>  { :reset=> 4, :remaining=> 0 }
 
 ```
 
 This will return a hash with information about the seconds until the rate limit reset and your remaining requests per minute ([check the API documentation for more information](https://github.com/quaderno/quaderno-api#rate-limiting)).
 
-Alternatively, you can check the rate limit for each request by checking the `rate_limit_info` method on the response:
+You can also check the rate limit for each request by checking the `rate_limit_info` method on the response:
 
 ```ruby
 
-  invoices = Quaderno::Invoice.all
+  invoices = Quaderno::Invoice.all #=> Quaderno::Collection
   invoices.rate_limit_info #=> {:reset=> 5, :remaning=>6}
 
-  invoice = Quaderno::Invoice.find INVOICE_ID
+  invoice = Quaderno::Invoice.find INVOICE_ID #=> Quaderno::Invoice
   invoice.rate_limit_info #=> {:reset=>4, :remaining=>5}
 
+  result = invoice.deliver #=> Quaderno::Base
+  result.rate_limit_info #=> {:reset=>3, :remaining=>4}
+
   begin
-    deleted_invoice = Quaderno::Invoice.delete(ANOTHER_INVOICE_ID)
+    deleted_invoice = Quaderno::Invoice.delete(ANOTHER_INVOICE_ID) #=> Quaderno::Invoice
   rescue Quaderno::Exceptions::InvalidSubdomainOrToken => e
     # If the exception is triggered you can check the rate limit on the raised exception
-    e.rate_limit_info #=> {:reset=>3, :remaining=>4}
+    e.rate_limit_info #=> {:reset=>2, :remaining=>3}
   end
 
-  deleted_invoice.rate_limit_info #=> {:reset=>3, :remaining=>4}
+  deleted_invoice.rate_limit_info #=> {:reset=>2, :remaining=>3}
 
   # etc.
 ```
@@ -92,7 +98,7 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 
 ### Getting contacts
 ```ruby
- Quaderno::Contact.all() #=> Array
+ Quaderno::Contact.all #=> Array
  Quaderno::Contact.all(page: 1) #=> Array
 ```
 
@@ -143,7 +149,7 @@ will delete the contact with the id passed as parameter. If the deletion was suc
 
 ### Getting items
 ```ruby
-  Quaderno::Item.all() #=> Array
+  Quaderno::Item.all #=> Array
 ```
 
 will return an array with all your items.
@@ -248,7 +254,9 @@ In order to  remove a payment you will need the Invoice instance you want to upd
 
 ```ruby
   invoice = Quaderno::Invoice.find(invoice_id)
-  invoice.deliver
+  result = invoice.deliver #=> Quaderno::Base
+
+  result.success #=> Boolean
 ```
 
 ## Managing receipts
@@ -297,7 +305,9 @@ will delete the receipt with the id passed as parameter. If the deletion was suc
 
 ```ruby
   receipt = Quaderno::Receipt.find(receipt_id)
-  receipt.deliver
+  result = receipt.deliver #=> Quaderno::Base
+
+  result.success #=> Boolean
 ```
 
 
@@ -373,7 +383,9 @@ If the deletion was successful, an instance of `Quaderno::Payment` with the `del
 
 ```ruby
   credit = Quaderno::Credit.find(credit_id)
-  credit.deliver
+  result = credit.deliver #=> Quaderno::Base
+
+  result.success #=> Boolean
 ```
 
 
@@ -382,7 +394,7 @@ If the deletion was successful, an instance of `Quaderno::Payment` with the `del
 
 ### Getting estimates
 ```ruby
-  Quaderno::Estimate.all() #=> Array
+  Quaderno::Estimate.all #=> Array
   Quaderno::Estimate.all(page: 1) #=> Array
 ```
 
@@ -441,7 +453,9 @@ In order to  remove a payment you will need the estimate you want to update.
 
 ```ruby
   estimate = Quaderno::Estimate.find(estimate_id)
-  estimate.deliver
+  result = estimate.deliver #=> Quaderno::Base
+
+  result.success #=> Boolean
 ```
 
 
@@ -449,7 +463,7 @@ In order to  remove a payment you will need the estimate you want to update.
 
 ### Getting expenses
 ```ruby
- Quaderno::Expense.all() #=> Array
+ Quaderno::Expense.all #=> Array
  Quaderno::Expense.all(page: 1) #=> Array
 ```
 
@@ -529,7 +543,7 @@ will delete the recurring with the id passed as parameter. If the deletion was s
 
 ### Getting webhooks
 ```ruby
- Quaderno::Webhook.all() #=> Array
+ Quaderno::Webhook.all #=> Array
 ```
 
  will return an array with all the webhooks you have subscribed.
@@ -573,10 +587,12 @@ will calculate the taxes applied for a customer based on the data pased as param
 
 ### Validate VAT numbers
 ```ruby
-country = 'IE'
-vat_number = 'IE6388047V'
+ country = 'IE'
+ vat_number = 'IE6388047V'
 
- Quaderno::Tax.validate_vat_number(country, vat_number) #=> Boolean
+ result = Quaderno::Tax.validate_vat_number(country, vat_number) #=> Quaderno::Tax
+
+ result.valid #=> Boolean or nil
 ```
 
 will validate the vat number for the passed country.
@@ -594,7 +610,7 @@ will create an evidence based on the data pased as parameters.
 
 ### Getting checkout sessions
 ```ruby
- Quaderno::CheckoutSession.all() #=> Array
+ Quaderno::CheckoutSession.all #=> Array
 ```
 
  will return an array with all the checkout sessions in your account.

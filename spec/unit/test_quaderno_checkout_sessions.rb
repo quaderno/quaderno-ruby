@@ -137,8 +137,8 @@ describe Quaderno::CheckoutSession do
 
     it 'should know the rate limit' do
       VCR.use_cassette('rate limit') do
-        rate_limit_info = Quaderno::Base.rate_limit_info
-        expect(rate_limit_info[:remaining] < 2000).to be true
+        result = Quaderno::Base.rate_limit_info
+        expect(result.rate_limit_info[:remaining] < 2000).to be true
       end
     end
   end
