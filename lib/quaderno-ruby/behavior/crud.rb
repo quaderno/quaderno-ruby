@@ -25,7 +25,7 @@ module Quaderno::Behavior
 
       def all(options = {})
         authentication = get_authentication(options.merge(api_model: api_model))
-        filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+        filter = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
         response = get("#{authentication[:url]}#{api_model.api_path}.json",
           query: filter,
@@ -76,7 +76,7 @@ module Quaderno::Behavior
 
       def create(params = {})
         authentication = get_authentication(params.merge(api_model: api_model))
-        params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
+        params.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
 
         response = post("#{authentication[:url]}#{api_model.api_path}.json",
           body: params.to_json,
@@ -98,7 +98,7 @@ module Quaderno::Behavior
 
       def update(id, params = {})
         authentication = get_authentication(params.merge(api_model: api_model))
-        params = params.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
+        params = params.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model').include? k.to_s }
 
         response = put("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
           body: params.to_json,

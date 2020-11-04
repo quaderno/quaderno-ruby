@@ -8,7 +8,7 @@ class Quaderno::Report < Quaderno::Base
 
   def self.journal(options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
-    filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    filter = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
     response = get("#{authentication[:url]}#{api_model.api_path}/journal.json",
       query: filter,
@@ -23,7 +23,7 @@ class Quaderno::Report < Quaderno::Base
 
   def self.taxes(options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
-    filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    filter = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
     response = get("#{authentication[:url]}#{api_model.api_path}/taxes.json",
       query: filter,
@@ -60,7 +60,7 @@ class Quaderno::Report < Quaderno::Base
 
   def self.request_tax_report(tax_report_type, options)
     authentication = get_authentication(options.merge(api_model: api_model))
-    filter = options.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    filter = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
     response = get("#{authentication[:url]}#{api_model.api_path}/#{tax_report_type}.json",
       query: filter,

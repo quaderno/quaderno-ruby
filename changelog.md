@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.17.1
+* Do not modify the input arguments when the thread-safe mode is used.
+
 ## 1.17.0
 * Added `rate_limit_info` method to each API response
 * **Breaking change:** `.delete` methods no longer returns a boolean but an instance of the removed object with a `deleted` attribute set to `true`

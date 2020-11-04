@@ -11,7 +11,7 @@ module Quaderno::Behavior
       def add_payment(params = {})
         if (params.keys.map(&:to_s) & %w(auth_token access_token api_url mode api_model)).any?
           self.authentication_data = get_authentication(params.merge(api_model: api_model))
-          params = params.delete_if { |k, _| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+          params = params.dup.delete_if { |k, _| %w(auth_token access_token api_url mode api_model).include? k.to_s }
         end
 
         response = api_model.post("#{authentication_data[:url]}#{api_model.api_path}/#{id}/payments.json",
