@@ -29,7 +29,7 @@ class Quaderno::Tax < Quaderno::Base
   def self.validate_vat_number(country, vat_number, options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
 
-    response = get("#{authentication[:url]}taxes/validate.json",
+    response = get("#{authentication[:url]}tax_ids/validate.json",
       query: { country: country, vat_number: vat_number },
       basic_auth: authentication[:basic_auth],
       headers: default_headers.merge(authentication[:headers])
