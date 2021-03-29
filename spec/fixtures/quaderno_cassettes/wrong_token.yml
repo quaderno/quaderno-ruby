@@ -2,35 +2,48 @@
 http_interactions:
 - request:
     method: get
-    uri: http://7h15154f4k370k3n:@quaderno.lvh.me:3000/api/taxes/calculate.json?country=ES&postal_code=08080
+    uri: http://quaderno.lvh.me:3000/api/tax_rates/calculate.json?to_country=ES&to_postal_code=08080
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 401
       message: Unauthorized
     headers:
       X-Frame-Options:
-      - ALLOWALL
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
+      Vary:
+      - Origin
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - e46c66df-96ab-498c-8e66-2e03a013cfbc
+      - b4da57ac-0f40-4278-aad0-64122a9eaf77
       X-Runtime:
-      - '0.654035'
-      Connection:
-      - close
-      Server:
-      - thin
+      - '0.034834'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Wrong API key or the user does not exist."}'
-    http_version: 
-  recorded_at: Thu, 21 Dec 2017 14:56:35 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Mon, 29 Mar 2021 13:53:26 GMT
+recorded_with: VCR 6.0.0

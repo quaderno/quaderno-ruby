@@ -13,7 +13,7 @@ class Quaderno::Tax < Quaderno::Base
     authentication = get_authentication(options.merge(api_model: api_model))
     params = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
 
-    response = get("#{authentication[:url]}taxes/calculate.json",
+    response = get("#{authentication[:url]}tax_rates/calculate.json",
       query: params,
       basic_auth: authentication[:basic_auth],
       headers: version_header.merge(authentication[:headers])
