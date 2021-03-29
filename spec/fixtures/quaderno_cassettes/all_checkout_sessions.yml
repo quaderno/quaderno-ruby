@@ -7,6 +7,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"billing_details_collection":"auto","cancel_url":"http://example.com/cancel","success_url":"http://example.com/success","coupon_collection":true,"items":[{"product":"000000"}]}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:
@@ -52,6 +54,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"billing_details_collection":"auto","cancel_url":"http://example.com/cancel","success_url":"http://example.com/success","coupon_collection":true,"items":[{"product":"000000"}]}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:
@@ -97,6 +101,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:
@@ -551,6 +557,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:
@@ -590,6 +598,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:

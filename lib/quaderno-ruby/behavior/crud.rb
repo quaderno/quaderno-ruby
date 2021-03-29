@@ -30,7 +30,7 @@ module Quaderno::Behavior
         response = get("#{authentication[:url]}#{api_model.api_path}.json",
           query: filter,
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers])
+          headers: default_headers.merge(authentication[:headers])
         )
 
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
@@ -59,7 +59,7 @@ module Quaderno::Behavior
 
         response = get("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers])
+          headers: default_headers.merge(authentication[:headers])
         )
 
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
@@ -81,7 +81,7 @@ module Quaderno::Behavior
         response = post("#{authentication[:url]}#{api_model.api_path}.json",
           body: params.to_json,
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+          headers: default_headers.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
         )
 
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, required_fields: true })
@@ -103,7 +103,7 @@ module Quaderno::Behavior
         response = put("#{authentication[:url]}#{api_model.api_path}/#{id}.json",
           body: params.to_json,
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
+          headers: default_headers.merge(authentication[:headers]).merge('Content-Type' => 'application/json')
         )
 
         check_exception_for(response, { rate_limit: true, required_fields: true, subdomain_or_token: true, id: true })
@@ -123,7 +123,7 @@ module Quaderno::Behavior
 
         response = HTTParty.delete("#{authentication[:url]}#{ api_model.api_path }/#{ id }.json",
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers])
+          headers: default_headers.merge(authentication[:headers])
         )
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true, has_documents: true })
 

@@ -16,7 +16,7 @@ class Quaderno::Tax < Quaderno::Base
     response = get("#{authentication[:url]}tax_rates/calculate.json",
       query: params,
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
@@ -32,7 +32,7 @@ class Quaderno::Tax < Quaderno::Base
     response = get("#{authentication[:url]}taxes/validate.json",
       query: { country: country, vat_number: vat_number },
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })
@@ -50,7 +50,7 @@ class Quaderno::Tax < Quaderno::Base
     response = get("#{authentication[:url]}taxes/reports.json",
       query: params,
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     array = response.parsed_response

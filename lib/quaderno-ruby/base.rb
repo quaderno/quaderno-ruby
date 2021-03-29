@@ -49,7 +49,7 @@ class Quaderno::Base < OpenStruct
   def self.authorization(auth_token, mode = nil)
     mode ||= :production
     url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
-    response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: version_header)
+    response = get("#{url}authorization.json", basic_auth: { username: auth_token }, headers: default_headers)
 
     if response.code == 200
       data = self.new(response.parsed_response)
@@ -71,7 +71,7 @@ class Quaderno::Base < OpenStruct
 
       party_response = get("#{authentication[:url]}ping.json",
         basic_auth: authentication[:basic_auth],
-        headers: version_header.merge(authentication[:headers])
+        headers: default_headers.merge(authentication[:headers])
       )
 
       check_exception_for(party_response, { subdomain_or_token: true })
@@ -96,7 +96,7 @@ class Quaderno::Base < OpenStruct
 
     party_response = get("#{authentication[:url]}me.json",
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(party_response, { subdomain_or_token: true })
@@ -135,7 +135,17 @@ class Quaderno::Base < OpenStruct
     @_document ||= document
   end
 
+  def self.default_headers
+    user_agent_header.merge(version_header)
+  end
+
+  def self.user_agent_header
+    { "User-Agent" => "Quaderno Ruby Gem #{Quaderno::VERSION}" }
+  end
+
   def self.version_header
     { 'Accept' => @@api_version.to_i.zero? ? "application/json" : "application/json; api_version=#{@@api_version.to_i}"}
   end
+
+  headers self.default_headers
 end

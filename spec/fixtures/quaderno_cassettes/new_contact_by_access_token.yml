@@ -7,6 +7,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"kind":"company","first_name":"Test_Skynet","email":"my_little@po.ny"}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Authorization:
