@@ -257,57 +257,6 @@ In order to  remove a payment you will need the Invoice instance you want to upd
   result.success #=> Boolean
 ```
 
-## Managing receipts
-
-### Getting receipts
-```ruby
-  Quaderno::Receipt.all #=> Array
-```
-
- will return an array with all your receipts. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
-
-### Finding a receipt
-```ruby
-  Quaderno::Receipt.find(id) #=> Quaderno::Receipt
-```
-
-will return the receipt with the id passed as parameter.
-
-### Creating a new receipt
-
-```ruby
-  Quaderno::Receipt.create(params) #=> Quaderno::Receipt
-```
-
-will create an receipt using the information of the hash passed as parameter.
-
-### Updating an existing receipt
-```ruby
-  Quaderno::Receipt.update(id, params) #=> Quaderno::Receipt
-```
-
-will update the specified receipt with the data of the hash passed as second parameter.
-
-### Deleting an receipt
-
-```ruby
-  Quaderno::Receipt.delete(id) #=> Quaderno::Receipt
-```
-
-will delete the receipt with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Receipt` with the `deleted` attribute set to `true` will be returned.
-
-### Delivering the receipt
-
-  In order to deliver the receipt to the default recipient you will need the receipt you want to send.
-
-```ruby
-  receipt = Quaderno::Receipt.find(receipt_id)
-  result = receipt.deliver #=> Quaderno::Base
-
-  result.success #=> Boolean
-```
-
-
 ## Managing credits
 
 ### Getting credits
