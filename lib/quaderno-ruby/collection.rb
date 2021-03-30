@@ -1,23 +1,28 @@
 class Quaderno::Collection < Array
   include Quaderno::Helpers::RateLimit
 
-  def current_page=(page_number)
-    @page = page_number
+  def request_options=(options)
+    @request_options = options
   end
 
-  def current_page
-    @page.to_i || 1
+  def collection_type=(collection_type)
+    @collection_type = collection_type
   end
 
-  def total_pages=(total_pages)
-    @total_pages = total_pages
+  def has_more=(has_more_response)
+    @has_more = has_more_response
   end
 
-  def total_pages
-    @total_pages.to_i || 1
+  def next_page_url=(next_page_url)
+    @next_page_url = next_page_url
   end
 
-  def pagination_info
-    { current_page: current_page, total_pages: total_pages }
+  def has_more?
+    @has_more == 'true'
+  end
+
+  def next_page
+    return Quaderno::Collection.new unless has_more?
+    @collection_type.all_from_url(@next_page_url, @request_options)
   end
 end
