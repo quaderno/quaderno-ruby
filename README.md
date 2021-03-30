@@ -282,10 +282,10 @@ will return the credit note with the transaction id passed as parameter.
 ### Creating a new credit
 
 ```ruby
-  Quaderno::Credit.create(params) #=> Quaderno::Credit
+  Quaderno::Credit.create(invoice_id: 42) #=> Quaderno::Credit
 ```
 
-will create a credit using the information of the hash passed as parameter.
+will create a credit from the invoice specified in the parameter.
 
 ### Updating an existing credit
 ```ruby
