@@ -7,6 +7,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"first_name":"Test customer"}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:
@@ -51,6 +53,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"contact_id":688,"currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_method":"cash","notes":""}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:
@@ -95,6 +99,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"notes":"Show me the moneeeeeeeyy!!!!"}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:
@@ -140,6 +146,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:
@@ -177,6 +185,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:

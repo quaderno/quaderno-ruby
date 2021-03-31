@@ -19,6 +19,15 @@ describe Quaderno::Invoice do
       end
     end
 
+    it 'should paginate invoices' do
+      VCR.use_cassette('paginated_invoices') do
+        invoices = Quaderno::Invoice.all
+        expect(invoices.has_more?).to be true
+        second_page = invoices.next_page
+        expect(second_page.map(&:id)).not_to include(invoices.map(&:id))
+      end
+    end
+
     it 'should find a invoice' do
       VCR.use_cassette('found invoice') do
         invoices = Quaderno::Invoice.all

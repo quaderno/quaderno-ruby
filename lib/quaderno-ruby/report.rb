@@ -13,7 +13,7 @@ class Quaderno::Report < Quaderno::Base
     response = get("#{authentication[:url]}#{api_model.api_path}/journal.json",
       query: filter,
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
@@ -28,7 +28,7 @@ class Quaderno::Report < Quaderno::Base
     response = get("#{authentication[:url]}#{api_model.api_path}/taxes.json",
       query: filter,
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true })
@@ -65,7 +65,7 @@ class Quaderno::Report < Quaderno::Base
     response = get("#{authentication[:url]}#{api_model.api_path}/#{tax_report_type}.json",
       query: filter,
       basic_auth: authentication[:basic_auth],
-      headers: version_header.merge(authentication[:headers])
+      headers: default_headers.merge(authentication[:headers])
     )
 
     check_exception_for(response, { rate_limit: true, subdomain_or_token: true })

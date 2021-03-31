@@ -13,7 +13,7 @@ module Quaderno::Behavior
 
         response = put("#{authentication[:url]}#{api_model.api_path}/#{id}/block.json",
           basic_auth: authentication[:basic_auth],
-          headers: version_header.merge(authentication[:headers])
+          headers: default_headers.merge(authentication[:headers])
         )
 
         check_exception_for(response, { rate_limit: true, subdomain_or_token: true, id: true })

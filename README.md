@@ -99,10 +99,9 @@ Quaderno-ruby parses all the json responses in human readable data, so you can a
 ### Getting contacts
 ```ruby
  Quaderno::Contact.all #=> Array
- Quaderno::Contact.all(page: 1) #=> Array
 ```
 
- will return an array with all your contacts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name. For example:
+ will return an array with all your contacts. You can also pass query strings using the attribute :q in order to filter the results by contact name. For example:
 
 ```ruby
  Quaderno::Contact.all(q: 'John Doe') #=> Array
@@ -188,10 +187,9 @@ will delete the item with the id passed as parameter.  If the deletion was succe
 ### Getting invoices
 ```ruby
   Quaderno::Invoice.all #=> Array
-  Quaderno::Invoice.all(page: 1) #=> Array
 ```
 
- will return an array with all your invoices on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+ will return an array with all your invoices. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
 ### Finding an invoice
 ```ruby
@@ -259,67 +257,14 @@ In order to  remove a payment you will need the Invoice instance you want to upd
   result.success #=> Boolean
 ```
 
-## Managing receipts
-
-### Getting receipts
-```ruby
-  Quaderno::Receipt.all #=> Array
-  Quaderno::Receipt.all(page: 1) #=> Array
-```
-
- will return an array with all your receipts on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
-
-### Finding a receipt
-```ruby
-  Quaderno::Receipt.find(id) #=> Quaderno::Receipt
-```
-
-will return the receipt with the id passed as parameter.
-
-### Creating a new receipt
-
-```ruby
-  Quaderno::Receipt.create(params) #=> Quaderno::Receipt
-```
-
-will create an receipt using the information of the hash passed as parameter.
-
-### Updating an existing receipt
-```ruby
-  Quaderno::Receipt.update(id, params) #=> Quaderno::Receipt
-```
-
-will update the specified receipt with the data of the hash passed as second parameter.
-
-### Deleting an receipt
-
-```ruby
-  Quaderno::Receipt.delete(id) #=> Quaderno::Receipt
-```
-
-will delete the receipt with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Receipt` with the `deleted` attribute set to `true` will be returned.
-
-### Delivering the receipt
-
-  In order to deliver the receipt to the default recipient you will need the receipt you want to send.
-
-```ruby
-  receipt = Quaderno::Receipt.find(receipt_id)
-  result = receipt.deliver #=> Quaderno::Base
-
-  result.success #=> Boolean
-```
-
-
 ## Managing credits
 
 ### Getting credits
 ```ruby
   Quaderno::Credit.all #=> Array
-  Quaderno::Credit.all(page: 1) #=> Array
 ```
 
- will return an array with all your credit notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+ will return an array with all your credit notes. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
 ### Finding a credit
 ```ruby
@@ -337,10 +282,10 @@ will return the credit note with the transaction id passed as parameter.
 ### Creating a new credit
 
 ```ruby
-  Quaderno::Credit.create(params) #=> Quaderno::Credit
+  Quaderno::Credit.create(invoice_id: 42) #=> Quaderno::Credit
 ```
 
-will create a credit using the information of the hash passed as parameter.
+will create a credit from the invoice specified in the parameter.
 
 ### Updating an existing credit
 ```ruby
@@ -395,10 +340,9 @@ If the deletion was successful, an instance of `Quaderno::Payment` with the `del
 ### Getting estimates
 ```ruby
   Quaderno::Estimate.all #=> Array
-  Quaderno::Estimate.all(page: 1) #=> Array
 ```
 
- will return an array with all your estimates on the first page.
+ will return an array with all your estimates.
 
 ### Finding an estimate
 ```ruby
@@ -464,10 +408,9 @@ In order to  remove a payment you will need the estimate you want to update.
 ### Getting expenses
 ```ruby
  Quaderno::Expense.all #=> Array
- Quaderno::Expense.all(page: 1) #=> Array
 ```
 
- will return an array with all your expenses on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date.
+ will return an array with all your expenses. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date.
 
 ### Finding an expense
 ```ruby
@@ -503,10 +446,9 @@ will delete the expense with the id passed as parameter. If the deletion was suc
 ### Getting recurrings
 ```ruby
   Quaderno::Recurring.all #=> Array
-  Quaderno::Recurring.all(page: 1) #=> Array
 ```
 
- will return an array with all your recurring notes on the first page. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
+ will return an array with all your recurring notes. You can also pass query strings using the attribute :q in order to filter the results by contact name, :state to filter by state or :date to filter by date
 
 ### Finding a recurring
 ```ruby
@@ -669,12 +611,27 @@ All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
 Whenever you call the `all` method on one of the classes, the result will be a `Quaderno::Collection`. For example:
 
 ```ruby
-collection = Quaderno::Contact.all(page: 2)
+collection = Quaderno::Contact.all
 
 collection.class #=> Quaderno::Collection
-collection.pagination_info #=> {:current_page=>"1", :total_pages=>"3"}
-collection.current_page #=> "2"
-collection.total_pages #=> "3"
+collection.has_next? #=> true
+collection.next_page #=> another instance of
+```
+
+The `next_page` method is an abstraction for the `created_before` parameter, which you may also use with the `all` method.
+
+```ruby
+collection = Quaderno::Contact.all
+
+Quaderno::Contact.all(created_before: collection.last.id)
+```
+
+You can also use the `limit` parameter to determine how many results to retrieve. Its default is `25`, and Quaderno will cap the limit at `100`.
+
+```ruby
+collection = Quaderno::Contact.all(limit: 50)
+
+collection.length #=> 50
 ```
 
 ### Thread-safe configuration
@@ -731,5 +688,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-

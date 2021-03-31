@@ -7,6 +7,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:
@@ -215,6 +217,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"first_name":"Test_OCP","email":"dont@stop.believing"}'
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
       Content-Type:

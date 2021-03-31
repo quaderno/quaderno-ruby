@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+* **Breaking change** Pagination strategy has been updated to be cursor based. Collections no longer offer the `current_page` and `total_pages` methods, and offer `has_more?` and `next_page` instead. The `page` parameter is no longer supported either, in favour of the `created_before` parameter. [See more information in the documentation](https://developers.quaderno.io/api/#pagination).
+* **Breaking change** `Quaderno::Tax.calculate` uses the [new tax calculation endpoint](https://developers.quaderno.io/api/#calculate-a-tax-rate). This endpoint accepts address parameters with the prefix `to_`. For example, `postal_code` is deprecated in favour of `to_postal_code`.
+* `Quaderno::Tax.validate` uses the [new tax ID validation endpoint](https://developers.quaderno.io/api/#validate-a-tax-id). The signature did not change, and no updates are necessary.
+* All requests now send the gem version in their User Agent header.
+
 ## 1.17.1
 * Do not modify the input arguments when the thread-safe mode is used.
 

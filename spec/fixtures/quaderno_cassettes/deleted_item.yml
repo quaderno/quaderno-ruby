@@ -48,6 +48,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
   response:
