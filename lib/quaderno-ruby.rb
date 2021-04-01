@@ -3,6 +3,7 @@ end
 
 require 'ostruct'
 
+require 'quaderno-ruby/version'
 require 'quaderno-ruby/helpers/rate_limit'
 require 'quaderno-ruby/exceptions/exceptions'
 require 'quaderno-ruby/helpers/authentication'
