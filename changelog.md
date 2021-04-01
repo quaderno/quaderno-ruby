@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1
+* Fix an issue where requests would result in an error due to a missing `require`
+
 ## 2.0.0
 * **Breaking change** Pagination strategy has been updated to be cursor based. Collections no longer offer the `current_page` and `total_pages` methods, and offer `has_more?` and `next_page` instead. The `page` parameter is no longer supported either, in favour of the `created_before` parameter. [See more information in the documentation](https://developers.quaderno.io/api/#pagination).
 * **Breaking change** `Quaderno::Tax.calculate` uses the [new tax calculation endpoint](https://developers.quaderno.io/api/#calculate-a-tax-rate). This endpoint accepts address parameters with the prefix `to_`. For example, `postal_code` is deprecated in favour of `to_postal_code`.
