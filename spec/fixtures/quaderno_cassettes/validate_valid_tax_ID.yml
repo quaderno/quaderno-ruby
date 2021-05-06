@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/tax_ids/validate.json?country=IE&vat_number=IE6388047V
+    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/tax_ids/validate.json?country=IE&tax_id=IE6388047V
     body:
       encoding: US-ASCII
       string: ''
