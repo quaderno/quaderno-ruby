@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2
+* Fix an issue with the parameters sent during the `validate_vat_number` request
+* Renames `validate_vat_number` into `validate_tax_id`
+
 ## 2.0.1
 * Fix an issue where requests would result in an error due to a missing `require`
 
