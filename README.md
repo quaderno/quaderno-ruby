@@ -527,17 +527,17 @@ will delete the webhook with the id passed as parameter. If the deletion was suc
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
-### Validate VAT numbers
+### Validate tax ID
 ```ruby
  country = 'IE'
- vat_number = 'IE6388047V'
+ tax_id = 'IE6388047V'
 
- result = Quaderno::Tax.validate_vat_number(country, vat_number) #=> Quaderno::Tax
+ result = Quaderno::Tax.validate_tax_id(country, tax_id) #=> Quaderno::Tax
 
  result.valid #=> Boolean or nil
 ```
 
-will validate the vat number for the passed country.
+will validate the tax ID or business number for the specified country.
 
 ## Evidences
 

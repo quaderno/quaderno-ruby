@@ -14,19 +14,30 @@ describe Quaderno::Tax do
     it 'should raise exception if token is wrong' do
       VCR.use_cassette('wrong token') do
         Quaderno::Base.auth_token = '7h15154f4k370k3n'
-        expect { Quaderno::Tax.calculate(country: 'ES', postal_code: '08080') }.to raise_error(Quaderno::Exceptions::InvalidSubdomainOrToken)
+        expect { Quaderno::Tax.calculate(to_country: 'ES', to_postal_code: '08080') }.to raise_error(Quaderno::Exceptions::InvalidSubdomainOrToken)
       end
     end
 
-    it 'should validate VAT numbe' do
-      VCR.use_cassette('validate valid VAT number') do
+    it 'should validate tax ID' do
+      # TODO: validate_vat_number is a legacy alias. Should be removed in an upcoming release
+      VCR.use_cassette('validate valid tax ID') do
         vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047V').valid
         expect(vat_number_valid).to be true
       end
 
-       VCR.use_cassette('validate invalid VAT number') do
+       VCR.use_cassette('validate invalid tax ID') do
         vat_number_valid = Quaderno::Tax.validate_vat_number('IE', 'IE6388047X').valid
         expect(!vat_number_valid).to be true
+      end
+
+      VCR.use_cassette('validate valid tax ID') do
+        tax_id_valid = Quaderno::Tax.validate_tax_id('IE', 'IE6388047V').valid
+        expect(tax_id_valid).to be true
+      end
+
+       VCR.use_cassette('validate invalid tax ID') do
+        tax_id_valid = Quaderno::Tax.validate_tax_id('IE', 'IE6388047X').valid
+        expect(!tax_id_valid).to be true
       end
     end
   end

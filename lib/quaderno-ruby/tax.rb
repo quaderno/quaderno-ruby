@@ -26,11 +26,11 @@ class Quaderno::Tax < Quaderno::Base
     data
   end
 
-  def self.validate_vat_number(country, vat_number, options = {})
+  def self.validate_tax_id(country, tax_id, options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
 
     response = get("#{authentication[:url]}tax_ids/validate.json",
-      query: { country: country, vat_number: vat_number },
+      query: { country: country, tax_id: tax_id },
       basic_auth: authentication[:basic_auth],
       headers: default_headers.merge(authentication[:headers])
     )
@@ -42,6 +42,8 @@ class Quaderno::Tax < Quaderno::Base
 
     data
   end
+  # TODO: Temporary alias to be removed in future releases
+  self.singleton_class.send(:alias_method, :validate_vat_number, :validate_tax_id)
 
   def self.reports(options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
