@@ -584,6 +584,29 @@ will update the specified checkout session with the data of the hash passed as s
 ```
 will delete the checkout session with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::CheckoutSession` with the `deleted` attribute set to `true` will be returned.
 
+## Managing report requests
+
+### Getting report requests
+```ruby
+  Quaderno::ReportRequest.all #=> Array
+```
+
+ will return an array with all your report requests.
+
+### Finding a report request
+```ruby
+  Quaderno::ReportRequest.find(id) #=> Quaderno::ReportRequest
+```
+
+will return the report request with the id passed as parameter.
+
+### Creating a new report request
+
+```ruby
+  Quaderno::ReportRequest.create(params) #=> Quaderno::ReportRequest
+```
+
+will create a report request using the information of the hash passed as parameter and return an instance of Quaderno::ReportRequest with the created report request.
 
 ## Exceptions
 Quaderno-ruby exceptions raise depending on the type of error:
