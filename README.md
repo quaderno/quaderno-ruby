@@ -637,7 +637,7 @@ Whenever you call the `all` method on one of the classes, the result will be a `
 collection = Quaderno::Contact.all
 
 collection.class #=> Quaderno::Collection
-collection.has_next? #=> true
+collection.has_more? #=> true
 collection.next_page #=> another instance of
 ```
 
