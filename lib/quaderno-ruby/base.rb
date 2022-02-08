@@ -15,6 +15,7 @@ class Quaderno::Base < OpenStruct
   @@rate_limit_info = nil
   @@api_version = nil
   @@url = PRODUCTION_URL
+  @@user_agent_suffix = nil
 
   # Class methods
   def self.api_model(klass)
@@ -140,7 +141,7 @@ class Quaderno::Base < OpenStruct
   end
 
   def self.user_agent_header
-    { "User-Agent" => "Quaderno Ruby Gem #{Quaderno::VERSION}" }
+    @_user_agent_header ||= { "User-Agent" => ["Quaderno Ruby Gem #{Quaderno::VERSION}", @@user_agent_suffix].compact.join(' - ') }
   end
 
   def self.version_header
