@@ -19,6 +19,7 @@ To configure just add this to your initializers
     config.auth_token = 'my_authenticate_token'
     config.url = 'https://my_subdomain.quadernoapp.com/api/'
     config.api_version = API_VERSION # Optional, defaults to the API version set in your account
+    config.user_agent_header = 'my custom user agent' # Optional, will make support for your account more efficient if you are doing oauth integrations
   end
 ```
 
