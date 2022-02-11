@@ -57,6 +57,8 @@ class Quaderno::Base < OpenStruct
       data.rate_limit_info = response
 
       data
+    elsif response.response.is_a?(Net::HTTPServerError)
+      raise_exception(Quaderno::Exceptions::ServerError, 'Server error', response)
     else
       raise_exception(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token', response)
     end

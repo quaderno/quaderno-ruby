@@ -24,6 +24,9 @@ module Quaderno::Exceptions
   class UnsupportedApiVersion < BaseException
   end
 
+  class ServerError < BaseException
+  end
+
   def self.included(receiver)
     receiver.send :extend, ClassMethods
   end
@@ -50,6 +53,8 @@ module Quaderno::Exceptions
       if params[:has_documents].nil? == false
         raise_exception(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body, party_response) if party_response.response.class == Net::HTTPClientError
       end
+
+      raise_exception(Quaderno::Exceptions::ServerError, 'Server error', response) if party_response.response.is_a?(Net::HTTPServerError)
     end
 
     def raise_exception(klass, message, response)
