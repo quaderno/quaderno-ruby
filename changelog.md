@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+* Added a new `Quaderno::Exceptions::ServerError` exception for more transparency, and better control of workflows
+* Added a `user_agent_header` optional configuration to make debugging oauth integrations easier
+
 ## 2.0.2
 * Fix an issue with the parameters sent during the `validate_vat_number` request
 * Renames `validate_vat_number` into `validate_tax_id`

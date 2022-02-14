@@ -2,7 +2,7 @@
 
 Quaderno-ruby is a ruby wrapper for [Quaderno API] (https://github.com/quaderno/quaderno-api).
 
-Current version is 2.0.1 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
+Current version is 2.1.0 See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md)
 
 ## Installation & Configuration
 
@@ -627,6 +627,7 @@ Quaderno-ruby exceptions raise depending on the type of error:
 
   Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid # Raised if the format of the request is right but some validations failed. You can JSON parse the exception message to get which field triggered the exception. For example: '{"errors":{"vat_number":["is not a valid German vat number"]}}'
 
+  Quaderno::Exceptions::ServerError # Raised when Quaderno returns an HTTP response code of the 50X family. Try again later or contact support if the issue persists
 ```
 
 All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
