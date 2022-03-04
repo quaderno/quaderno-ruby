@@ -47,6 +47,10 @@ class Quaderno::Base < OpenStruct
     @@url = url
   end
 
+  def self.user_agent_header=(custom_user_agent)
+    @@user_agent_suffix = custom_user_agent
+  end
+
   def self.authorization(auth_token, mode = nil)
     mode ||= :production
     url = mode == :sandbox ? SANDBOX_URL : PRODUCTION_URL
@@ -143,7 +147,7 @@ class Quaderno::Base < OpenStruct
   end
 
   def self.user_agent_header
-    @_user_agent_header ||= { "User-Agent" => ["Quaderno Ruby Gem #{Quaderno::VERSION}", @@user_agent_suffix].compact.join(' - ') }
+    { "User-Agent" => ["Quaderno Ruby Gem #{Quaderno::VERSION}", @@user_agent_suffix].compact.join(' - ') }
   end
 
   def self.version_header

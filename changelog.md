@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.1
+* Added assign operator to the user_agent_header
+
 ## 2.1.0
 * Added a new `Quaderno::Exceptions::ServerError` exception for more transparency, and better control of workflows
 * Added a `user_agent_header` optional configuration to make debugging oauth integrations easier
