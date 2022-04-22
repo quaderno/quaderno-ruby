@@ -54,7 +54,7 @@ module Quaderno::Exceptions
         raise_exception(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body, party_response) if party_response.response.class == Net::HTTPClientError
       end
 
-      raise_exception(Quaderno::Exceptions::ServerError, 'Server error', response) if party_response.response.is_a?(Net::HTTPServerError)
+      raise_exception(Quaderno::Exceptions::ServerError, 'Server error', party_response) if party_response.response.is_a?(Net::HTTPServerError)
     end
 
     def raise_exception(klass, message, response)
