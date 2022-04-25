@@ -1,5 +1,7 @@
 # Changelog
 
+## 2.1.2
+* Fixed a reference to non-existent variable by [**@fwitzke**](https://github.com/fwitzke)
 ## 2.1.1
 * Added assign operator to the user_agent_header
 
