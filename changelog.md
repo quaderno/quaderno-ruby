@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.3
+* Bumped dependency httparty to 0.21.0 by [**adamgiounas**](https://github.com/adamgiounas): https://github.com/quaderno/quaderno-ruby/pull/28
+
 ## 2.1.2
 * Fixed a reference to non-existent variable by [**@fwitzke**](https://github.com/fwitzke)
 ## 2.1.1
