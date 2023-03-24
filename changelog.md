@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2.2.0
-* Added support for transacstions API
+* Added support for transactions API
 * Bumped webmock to 3.18
 
 ## 2.1.3
