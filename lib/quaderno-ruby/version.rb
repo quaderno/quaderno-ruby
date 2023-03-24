@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Quaderno
-  VERSION = "2.1.3"
+  VERSION = "2.2.0"
 end
