@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0
+* Added support for transacstions API
+* Bumped webmock to 3.18
+
 ## 2.1.3
 * Bumped dependency httparty to 0.21.0 by [**adamgiounas**](https://github.com/adamgiounas): https://github.com/quaderno/quaderno-ruby/pull/28
 

@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/transactions.json
+    body:
+      encoding: UTF-8
+      string: '{"type":"sale","customer":{"first_name":"John","last_name":"Smith","email":"an_email@example.com"},"evidence":{"billing_country":"US","ip_address":"255.255.255.255","bank_country":"US"},"currency":"USD","items":[{"description":"Awesome
+        ebook","quantity":1,"amount":19,"tax":{"city":null,"country":"US","county":null,"currency":"USD","name":null,"notes":null,"notice":"","product_type":"service","rate":0.0,"region":"NY","tax_behavior":"exclusive","tax_code":"ebook","taxable_part":null,"import":true,"subtotal":null,"tax_amount":null,"total_amount":null}},{"description":"Awesome
+        SaaS","quantity":1,"amount":89,"tax":{"city":"NEW YORK","country":"US","county":"NEW
+        YORK","currency":"USD","name":"Sales tax","notes":null,"notice":"","product_type":"service","rate":8.875,"region":"NY","tax_behavior":"exclusive","tax_code":"saas","taxable_part":100.0,"import":true,"subtotal":null,"tax_amount":null,"total_amount":null}}],"payment":{"method":"credit_card","processor":"processor12345","processor_id":"txn_12345"},"processor":"processor12345","processor_id":"txn_12345","po_number":"PO_12345","tags":"tag-a,tag-b,tag-c","custom_metadata":{"anything_you_want":"extra
+        info"}}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.1.3
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1679612880'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"e8725b28fd40eb4a6a77c084dfbcec87"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 3fc2a858-376a-48bc-b7e1-595aac4c29dc
+      X-Runtime:
+      - '2.371389'
+      Server-Timing:
+      - cache_write.active_support;dur=0.11, start_processing.action_controller;dur=0.16,
+        sql.active_record;dur=173.00, instantiation.active_record;dur=12.29, unpermitted_parameters.action_controller;dur=2.24,
+        render_partial.action_view;dur=8.30, render_collection.action_view;dur=1.59,
+        render_template.action_view;dur=8.15, process_action.action_controller;dur=2307.63
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":4,"contact":{"id":4,"city":null,"country":"ES","created_at":1679612878,"email":"an_email@example.com","first_name":"John","full_name":"John
+        Smith","kind":"person","language":"ES","last_name":"Smith","notes":null,"permalink":"http://quaderno.lvh.me:3000/billing/5a1cc0e71e1510eee3233fc08c150a583647921b?otp=027123","phone_1":null,"postal_code":null,"processor":null,"processor_id":null,"region":null,"street_line_1":null,"street_line_2":null,"tax_id":null,"tax_status":"taxable","web":null},"created_at":1679612879,"currency":"USD","custom_metadata":{"anything_you_want":"extra
+        info"},"discount_cents":0,"evidence":{"bank_country":"US","billing_country":"US","created_at":1679612879,"ip_address":"255.255.255.255","ip_country":null,"state":"confirmed"},"issue_date":"2023-03-24","items":[{"id":4,"created_at":1679612879,"description":"Awesome
+        ebook","discount_cents":0,"discount_rate":0.0,"product_code":null,"quantity":1.0,"subtotal_cents":1900,"total_amount_cents":1900,"unit_price":19.0},{"id":5,"created_at":1679612879,"description":"Awesome
+        SaaS","discount_cents":0,"discount_rate":0.0,"product_code":null,"quantity":1.0,"subtotal_cents":8175,"tax_code":"saas","tax_country":"US","tax_name":"Sales
+        tax","tax_rate":8.875,"tax_region":"NY","taxable_part":"100.0","total_amount_cents":8900,"unit_price":81.75}],"notes":null,"number":"00004","payments":[{"id":4,"amount_cents":10800,"created_at":1679612879,"date":"2023-03-24","payment_method":"credit_card","processor":"processor12345","processor_id":"txn_12345"}],"pdf":"http://lvh.me:3000/invoice/f30714d09c22a1b821677f066cf30373ebda293f.pdf?otp=027123\u0026q=1679612879","permalink":"http://lvh.me:3000/invoice/f30714d09c22a1b821677f066cf30373ebda293f?otp=027123\u0026q=1679612879","po_number":"PO_12345","processor":"processor12345","processor_id":"txn_12345","state":"outstanding","subtotal_cents":10075,"tags":"tag-a,
+        tag-b, tag-c","taxes":[{"amount_cents":725,"country":"US","label":"Sales tax
+        (8.875%)","rate":8.875,"region":"NY","tax_code":"saas"}],"total_cents":10800,"type":"Invoice"}'
+  recorded_at: Thu, 23 Mar 2023 23:07:59 GMT
+recorded_with: VCR 6.1.0

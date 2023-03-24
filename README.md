@@ -182,6 +182,16 @@ will update the specified item with the data of the hash passed as second parame
 
 will delete the item with the id passed as parameter.  If the deletion was successful, an instance of `Quaderno::Item` with the `deleted` attribute set to `true` will be returned.
 
+## Managing transactions
+
+### Creating a new transaction
+
+```ruby
+  Quaderno::Transaction.create(params) #=> Quaderno::Transaction
+```
+
+will create a sale or refund transaction using the information of the hash passed as parameter.
+
 
 ## Managing invoices
 
