@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://7h15154f4k370k3n:@quaderno.lvh.me:3000/api/tax_rates/calculate.json?to_country=ES&to_postal_code=08080
+    uri: http://quaderno.lvh.me:3000/api/tax_rates/calculate.json?to_country=ES&to_postal_code=08080
     body:
       encoding: US-ASCII
       string: ''
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic N2gxNTE1NGY0azM3MGszbg==
   response:
     status:
       code: 401

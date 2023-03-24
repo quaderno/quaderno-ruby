@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/items.json
+    uri: http://quaderno.lvh.me:3000/api/items.json
     body:
       encoding: UTF-8
       string: '{"code":"1513867482","name":"Test_Skynet","unit_cost":21.0}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -47,7 +49,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:44:43 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/items/2.json
+    uri: http://quaderno.lvh.me:3000/api/items/2.json
     body:
       encoding: US-ASCII
       string: ''
@@ -56,6 +58,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200

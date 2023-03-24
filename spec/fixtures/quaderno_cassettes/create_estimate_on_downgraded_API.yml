@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: US-ASCII
       string: ''
@@ -55,7 +55,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 13:49:46 GMT
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/estimates.json
+    uri: http://quaderno.lvh.me:3000/api/estimates.json
     body:
       encoding: UTF-8
       string: '{"contact_id":677,"number":"test number 42","contact_name":"asdasd
@@ -121,7 +121,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 13:49:46 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/estimates/1986.json
+    uri: http://quaderno.lvh.me:3000/api/estimates/1986.json
     body:
       encoding: US-ASCII
       string: ''

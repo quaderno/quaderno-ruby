@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    uri: http://quaderno.lvh.me:3000/api/invoices.json
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -58,7 +60,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:07 GMT
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1987/payments.json
+    uri: http://quaderno.lvh.me:3000/api/invoices/1987/payments.json
     body:
       encoding: UTF-8
       string: payment_method=cash&amount=100000000
@@ -67,6 +69,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -101,7 +105,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:07 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1987/payments/1214.json
+    uri: http://quaderno.lvh.me:3000/api/invoices/1987/payments/1214.json
     body:
       encoding: US-ASCII
       string: ''

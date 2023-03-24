@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    uri: http://quaderno.lvh.me:3000/api/invoices.json
     body:
       encoding: US-ASCII
       string: ''
@@ -98,7 +98,7 @@ http_interactions:
   recorded_at: Tue, 30 Mar 2021 15:26:34 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json?created_before=1925185
+    uri: http://quaderno.lvh.me:3000/api/invoices.json?created_before=1925185
     body:
       encoding: US-ASCII
       string: ''
