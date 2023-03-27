@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/expenses.json
+    uri: http://quaderno.lvh.me:3000/api/expenses.json
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -52,7 +54,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:03:32 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: US-ASCII
       string: ''
@@ -61,6 +63,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -105,7 +109,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:03:32 GMT
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/expenses.json
+    uri: http://quaderno.lvh.me:3000/api/expenses.json
     body:
       encoding: UTF-8
       string: '{"contact_id":677,"contact_name":"asdasd sdasd","currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_details":"","notes":""}'
@@ -116,6 +120,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -151,7 +157,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:03:33 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/expenses/1988.json
+    uri: http://quaderno.lvh.me:3000/api/expenses/1988.json
     body:
       encoding: US-ASCII
       string: ''
@@ -160,6 +166,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 204

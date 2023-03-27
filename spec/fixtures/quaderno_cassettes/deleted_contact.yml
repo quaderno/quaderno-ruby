@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: UTF-8
       string: '{"kind":"company","first_name":"Z, Mazinger Z","email":"koji@kabuto.ftw"}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -48,7 +50,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 11:23:14 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: US-ASCII
       string: ''
@@ -57,6 +59,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -258,7 +262,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 11:23:15 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts/682.json
+    uri: http://quaderno.lvh.me:3000/api/contacts/682.json
     body:
       encoding: US-ASCII
       string: ''
@@ -267,6 +271,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 204
@@ -297,7 +303,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 11:23:15 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: US-ASCII
       string: ''
@@ -306,6 +312,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200

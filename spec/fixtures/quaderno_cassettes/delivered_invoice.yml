@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    uri: http://quaderno.lvh.me:3000/api/invoices.json
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -58,7 +60,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:04 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/ping.json
+    uri: http://quaderno.lvh.me:3000/api/ping.json
     body:
       encoding: US-ASCII
       string: ''
@@ -67,6 +69,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -101,7 +105,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:04 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1987/deliver.json
+    uri: http://quaderno.lvh.me:3000/api/invoices/1987/deliver.json
     body:
       encoding: US-ASCII
       string: ''
@@ -110,6 +114,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 422

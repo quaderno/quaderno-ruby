@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: UTF-8
       string: '{"kind":"company","first_name":"Test_Skynet","email":"my_little@po.ny"}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201

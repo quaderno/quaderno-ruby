@@ -2,15 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    uri: http://quaderno.lvh.me:3000/api/invoices.json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Quaderno Ruby Gem 1.17.1
+      - Quaderno Ruby Gem 2.2.0
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200

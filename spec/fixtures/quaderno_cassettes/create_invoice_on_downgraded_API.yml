@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/contacts.json
+    uri: http://quaderno.lvh.me:3000/api/contacts.json
     body:
       encoding: US-ASCII
       string: ''
@@ -55,7 +55,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:08 GMT
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices.json
+    uri: http://quaderno.lvh.me:3000/api/invoices.json
     body:
       encoding: UTF-8
       string: '{"contact_id":677,"contact_name":"asdasd sdasd","currency":"EUR","items_attributes":[{"description":"Aircraft","quantity":"1.0","unit_price":"0.0"}],"tags":"tnt","payment_details":"","notes":""}'
@@ -124,7 +124,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 14:31:09 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/invoices/1995.json
+    uri: http://quaderno.lvh.me:3000/api/invoices/1995.json
     body:
       encoding: US-ASCII
       string: ''

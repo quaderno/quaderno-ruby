@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    uri: http://quaderno.lvh.me:3000/api/webhooks.json
     body:
       encoding: UTF-8
       string: '{"url":"http://google.com","events_types":["invoice.created","invoice.updated"]}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -47,7 +49,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 15:07:01 GMT
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    uri: http://quaderno.lvh.me:3000/api/webhooks.json
     body:
       encoding: UTF-8
       string: '{"url":"http://quadernoapp.com","events_types":["expense.created","expense.updated","contact.deleted"]}'
@@ -58,6 +60,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -92,7 +96,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 15:07:03 GMT
 - request:
     method: get
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks.json
+    uri: http://quaderno.lvh.me:3000/api/webhooks.json
     body:
       encoding: US-ASCII
       string: ''
@@ -101,6 +105,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 200
@@ -137,7 +143,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 15:07:03 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks/4.json
+    uri: http://quaderno.lvh.me:3000/api/webhooks/4.json
     body:
       encoding: US-ASCII
       string: ''
@@ -146,6 +152,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 204
@@ -176,7 +184,7 @@ http_interactions:
   recorded_at: Thu, 21 Dec 2017 15:07:03 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/webhooks/5.json
+    uri: http://quaderno.lvh.me:3000/api/webhooks/5.json
     body:
       encoding: US-ASCII
       string: ''
@@ -185,6 +193,8 @@ http_interactions:
       - Quaderno Ruby Gem 1.17.1
       Accept:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 204

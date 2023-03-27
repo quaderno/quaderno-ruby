@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/checkout/sessions.json
+    uri: http://quaderno.lvh.me:3000/api/checkout/sessions.json
     body:
       encoding: UTF-8
       string: '{"billing_details_collection":"auto","cancel_url":"http://example.com/cancel","success_url":"http://example.com/success","coupon_collection":true,"items":[{"product":"000000"}]}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
   response:
     status:
       code: 201
@@ -49,7 +51,7 @@ http_interactions:
   recorded_at: Tue, 17 Sep 2019 11:14:49 GMT
 - request:
     method: delete
-    uri: http://sk_test_bMz9mJJ5bZnWPwWGuV8y:@quaderno.lvh.me:3000/api/checkout/sessions/28.json
+    uri: http://quaderno.lvh.me:3000/api/checkout/sessions/28.json
     body:
       encoding: US-ASCII
       string: ''
