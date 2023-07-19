@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.date = '2018-05-07'
   spec.extra_rdoc_files = %w(LICENSE.txt README.md)
 
-  spec.add_dependency('httparty', '~> 0.21.0')
+  spec.add_dependency('httparty', '~> 0.21')
   spec.add_development_dependency('rdoc', '>= 6.3.1')
   spec.add_development_dependency('activesupport', '~> 4.2.0')
   spec.add_development_dependency('webmock', '~> 3.18')

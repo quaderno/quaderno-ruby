@@ -12,4 +12,4 @@ require 'quaderno-ruby/helpers/authentication'
 require 'quaderno-ruby/collection'
 
 %w(block crud deliver payment retrieve).each { |filename| require "quaderno-ruby/behavior/#{filename}" }
-%w(base contact item transaction invoice receipt credit income estimate expense recurring document_item report report_request evidence payment webhook tax checkout_session).each { |filename| require "quaderno-ruby/#{filename}" }
+%w(base account contact item transaction invoice receipt credit income estimate expense recurring document_item report report_request evidence payment webhook tax checkout_session).each { |filename| require "quaderno-ruby/#{filename}" }
