@@ -2,7 +2,7 @@
 
 require 'helper'
 
-describe Quaderno::Tax do
+describe Quaderno::TaxJurisdiction do
   context 'A user with an authentication token' do
     before(:each) do
       Quaderno::Base.configure do |config|

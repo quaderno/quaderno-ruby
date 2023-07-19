@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_codes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689787830'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      X-Pages-Hasmore:
+      - 'false'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"90579d8e04eae4efdaa1a07f8a74646f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - b384af87-fe2b-4227-8601-194a4c95ddf0
+      X-Runtime:
+      - '0.062064'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.03,
+        sql.active_record;dur=33.69, instantiation.active_record;dur=0.78, render_partial.action_view;dur=0.17,
+        render_template.action_view;dur=1.83, process_action.action_controller;dur=46.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":"consulting","description":"Any consulting and professional
+        service (e.g., lawyers, designers, engineers, tax advisors, etc.).","name":"Consulting"},{"id":"ebook","description":"An
+        electronic book that is sold with unlimited use.","name":"eBook"},{"id":"eservice","description":"Service
+        that is delivered over the internet. It is essentially automated, involves
+        minimal human intervention and in the absence of information technology does
+        not have viability.","name":"Electronically supplied services"},{"id":"exempt","description":"Any
+        nontaxable good or service. No tax is applied for jurisdictions that impose
+        a tax.","name":"Non-taxable"},{"id":"reduced","description":"Specific goods
+        and services with a reduced tax rate.","name":"Reduced tax rate"},{"id":"saas","description":"Cloud
+        services software delivered over the internet. The software is not customized
+        for the specific buyer. Assumes no software is downloaded by the buyer.","name":"Software
+        as a service (SaaS)"},{"id":"standard","description":"Any taxable good or
+        service. For jurisdictions that impose a tax, the standard rate is applied.","name":"Generally
+        taxable"}]'
+  recorded_at: Wed, 19 Jul 2023 17:30:23 GMT
+recorded_with: VCR 6.1.0

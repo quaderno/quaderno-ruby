@@ -11,5 +11,5 @@ require 'quaderno-ruby/exceptions/exceptions'
 require 'quaderno-ruby/helpers/authentication'
 require 'quaderno-ruby/collection'
 
-%w(block crud deliver payment retrieve).each { |filename| require "quaderno-ruby/behavior/#{filename}" }
-%w(base account contact item transaction invoice receipt credit income estimate expense recurring document_item report report_request evidence payment webhook tax tax_jurisdiction checkout_session).each { |filename| require "quaderno-ruby/#{filename}" }
+%w[block crud deliver payment retrieve].each { |filename| require "quaderno-ruby/behavior/#{filename}" }
+%w[base account contact item transaction invoice receipt credit income estimate expense recurring document_item report report_request evidence payment webhook tax tax_code tax_jurisdiction checkout_session].each { |filename| require "quaderno-ruby/#{filename}" }
