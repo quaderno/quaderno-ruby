@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/tax_ids.json
+    body:
+      encoding: UTF-8
+      string: '{"value":"1111111","jurisdiction_id":11,"valid_from":"2018-01-03"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689838455'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"61dd47558792aa77aff9f89744d7ceb1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 73bb36d6-dcdd-47c8-b660-9aa52012f221
+      X-Runtime:
+      - '0.170263'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.05,
+        sql.active_record;dur=10.61, instantiation.active_record;dur=1.00, unpermitted_parameters.action_controller;dur=0.05,
+        render_partial.action_view;dur=0.34, render_template.action_view;dur=0.38,
+        process_action.action_controller;dur=153.76
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":72,"jurisdiction":{"id":11,"country":"FR","name":"France"},"state":"unverified","valid_from":"2018-01-03","valid_until":null,"value":"1111111","created_at":1689838454}'
+  recorded_at: Thu, 20 Jul 2023 07:34:14 GMT
+- request:
+    method: put
+    uri: http://quaderno.lvh.me:3000/api/tax_ids/72.json
+    body:
+      encoding: UTF-8
+      string: '{"value":"2222222222","valid_until":"2023-04-01"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689838455'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"b8cd5e20306de8e52c7bb746fe9fc4e4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - '0539c8a4-782d-46e1-a9c8-41160d01ddeb'
+      X-Runtime:
+      - '0.172426'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=20.42, instantiation.active_record;dur=0.79, unpermitted_parameters.action_controller;dur=0.04,
+        render_partial.action_view;dur=0.66, render_template.action_view;dur=0.64,
+        process_action.action_controller;dur=157.99
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":72,"jurisdiction":{"id":11,"country":"FR","name":"France"},"state":"unverified","valid_from":"2018-01-03","valid_until":"2023-04-01","value":"2222222222","created_at":1689838454}'
+  recorded_at: Thu, 20 Jul 2023 07:34:14 GMT
+recorded_with: VCR 6.1.0
