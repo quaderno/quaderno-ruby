@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'helper'
 
 describe Quaderno::TaxId do
@@ -63,13 +65,6 @@ describe Quaderno::TaxId do
       end
     end
 
-    it 'should know the rate limit' do
-      VCR.use_cassette('rate limit') do
-        result = Quaderno::Base.rate_limit_info
-        expect(result.rate_limit_info[:remaining] < 2000).to be true
-      end
-    end
-
     it 'should validate a tax id' do
       VCR.use_cassette('validate tax id') do
         result = Quaderno::TaxId.validate('IE', 'IE9825613N')
@@ -77,6 +72,13 @@ describe Quaderno::TaxId do
 
         result = Quaderno::TaxId.validate('IE', '123456789U')
         expect(result.valid).to be false
+      end
+    end
+
+    it 'should know the rate limit' do
+      VCR.use_cassette('rate limit') do
+        result = Quaderno::Base.rate_limit_info
+        expect(result.rate_limit_info[:remaining] < 2000).to be true
       end
     end
   end
@@ -119,6 +121,16 @@ describe Quaderno::TaxId do
         end
       end
 
+      it 'should validate a tax id' do
+        VCR.use_cassette('validate tax id by authentication token') do
+          result = Quaderno::TaxId.validate('IE', 'IE9825613N', api_url: TEST_URL, auth_token: TEST_KEY)
+          expect(result.valid).to be true
+
+          result = Quaderno::TaxId.validate('IE', '123456789U', api_url: TEST_URL, auth_token: TEST_KEY)
+          expect(result.valid).to be false
+        end
+      end
+
       it 'should delete a tax id' do
         VCR.use_cassette('deleted tax id by authentication token') do
           new_tax_id = Quaderno::TaxId.create(value: '1111111', jurisdiction_id: italy_id, api_url: TEST_URL, auth_token: TEST_KEY)
@@ -129,16 +141,6 @@ describe Quaderno::TaxId do
 
           tax_ids_after = Quaderno::TaxId.all(api_url: TEST_URL, auth_token: TEST_KEY)
           expect(tax_ids_after.include?(new_tax_id.id)).to be false
-        end
-      end
-
-      it 'should validate a tax id' do
-        VCR.use_cassette('validate tax id by authentication token') do
-          result = Quaderno::TaxId.validate('IE', 'IE9825613N', api_url: TEST_URL, auth_token: TEST_KEY)
-          expect(result.valid).to be true
-
-          result = Quaderno::TaxId.validate('IE', '123456789U', api_url: TEST_URL, auth_token: TEST_KEY)
-          expect(result.valid).to be false
         end
       end
     end
