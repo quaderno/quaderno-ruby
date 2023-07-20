@@ -2,7 +2,7 @@
 
 ## 3.0.0
 * Added support for accounts API
-* Added suppport for tax rates API
+* Added support for tax rates API
 * Added support for tax jurisdictions API
 * Added support for tax codes API
 * Clean parameters sent in the create request
