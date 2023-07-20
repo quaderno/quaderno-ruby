@@ -745,6 +745,56 @@ will return the report request with the id passed as parameter.
 
 will create a report request using the information of the hash passed as parameter and return an instance of Quaderno::ReportRequest with the created report request.
 
+## Connect: Managing custom accounts
+
+### Getting custom accounts
+
+```ruby
+  Quaderno::Account.all #=> Array
+```
+
+ will return an array with all your custom accounts
+
+### Finding a custom account
+
+```ruby
+  Quaderno::Account.find(id) #=> Quaderno::Account
+```
+
+will return the recurring with the id passed as parameter.
+
+### Creating a new custom account
+
+```ruby
+  Quaderno::Account.create(params) #=> Quaderno::Account
+```
+
+will create a custom account using the information of the hash passed as parameter.
+
+### Updating an existing custom account
+
+```ruby
+  Quaderno::Account.update(id, params) #=> Quaderno::Account
+```
+
+will update the specified custom account with the data of the hash passed as second parameter.
+
+### Deactivating a custom account
+
+```ruby
+  Quaderno::Account.deactivate(id) #=> Quaderno::Account
+```
+
+will deactivate the custom account with the id passed as parameter.
+
+### Activating a custom account
+
+```ruby
+  Quaderno::Account.activate(id) #=> Quaderno::Account
+```
+
+will activate the custom account with the id passed as parameter.
+
 ## Exceptions
 
 Quaderno-ruby exceptions raise depending on the type of error:
