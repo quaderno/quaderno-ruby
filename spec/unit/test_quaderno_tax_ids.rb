@@ -69,6 +69,16 @@ describe Quaderno::TaxId do
         expect(result.rate_limit_info[:remaining] < 2000).to be true
       end
     end
+
+    it 'should validate a tax id' do
+      VCR.use_cassette('validate tax id') do
+        result = Quaderno::TaxId.validate('IE', 'IE9825613N')
+        expect(result.valid).to be true
+
+        result = Quaderno::TaxId.validate('IE', '123456789U')
+        expect(result.valid).to be false
+      end
+    end
   end
 
   context 'using the thread-safe configuration' do
@@ -121,6 +131,16 @@ describe Quaderno::TaxId do
           expect(tax_ids_after.include?(new_tax_id.id)).to be false
         end
       end
+
+      it 'should validate a tax id' do
+        VCR.use_cassette('validate tax id by authentication token') do
+          result = Quaderno::TaxId.validate('IE', 'IE9825613N', api_url: TEST_URL, auth_token: TEST_KEY)
+          expect(result.valid).to be true
+
+          result = Quaderno::TaxId.validate('IE', '123456789U', api_url: TEST_URL, auth_token: TEST_KEY)
+          expect(result.valid).to be false
+        end
+      end
     end
 
     context 'with an OAuth 2.0 access token' do
@@ -170,6 +190,16 @@ describe Quaderno::TaxId do
 
           tax_ids_after = Quaderno::TaxId.all(api_url: TEST_URL, access_token: TEST_OAUTH_ACCESS_TOKEN)
           expect(tax_ids_after.include?(new_tax_id.id)).to be false
+        end
+      end
+
+      it 'should validate a tax id' do
+        VCR.use_cassette('validate tax id by access token') do
+          result = Quaderno::TaxId.validate('IE', 'IE9825613N', api_url: TEST_URL, access_token: TEST_OAUTH_ACCESS_TOKEN)
+          expect(result.valid).to be true
+
+          result = Quaderno::TaxId.validate('IE', '123456789U', api_url: TEST_URL, access_token: TEST_OAUTH_ACCESS_TOKEN)
+          expect(result.valid).to be false
         end
       end
     end
