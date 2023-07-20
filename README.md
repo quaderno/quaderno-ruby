@@ -2,7 +2,7 @@
 
 Quaderno-ruby is a ruby wrapper for the [Quaderno API](https://developers.quaderno.io/api).
 
-Current version is 2.2.0 → See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md).
+Current version is 3.0.0 → See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md).
 
 To learn more about our API and ecosystem, check [developers.quaderno.io](https://developers.quaderno.io).
 
@@ -567,23 +567,101 @@ will update the specified webhook with the data of the hash passed as second par
 
 will delete the webhook with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Webhook` with the `deleted` attribute set to `true` will be returned.
 
-## Taxes
+## Tax rates
 
 ### Calculating taxes
 
 ```ruby
- Quaderno::Tax.calculate(params) #=> Quaderno::Tax
+ Quaderno::TaxRate.calculate(params) #=> Quaderno::TaxRate
 ```
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
-### Validate tax ID
+## Tax jurisdictions
+
+### Listing tax jurisdictions
+
+```ruby
+ Quaderno::TaxJurisdiction.all #=> Array
+```
+
+ will return an array with all the tax jurisdictions supported in Quaderno.
+
+### Finding a tax jurisdiction
+
+```ruby
+ Quaderno::TaxJurisdiction.find(id) #=> Quaderno::TaxJurisdiction
+```
+
+will return the tax jurisdiction with the id passed as parameter.
+
+## Tax codes
+
+### Listing tax codes
+
+```ruby
+ Quaderno::TaxCode.all #=> Array
+```
+
+ will return an array with all the tax codes supported in Quaderno.
+
+### Finding a tax jurisdiction
+
+```ruby
+ Quaderno::TaxCode.find(id) #=> Quaderno::TaxCode
+```
+
+will return the tax code with the id passed as parameter.
+
+## Managing Tax ids
+
+### Getting tax ids
+
+```ruby
+ Quaderno::TaxId.all #=> Array
+```
+
+ will return an array with all the tax ids in the target account.
+
+### Finding a tax id
+
+```ruby
+ Quaderno::TaxId.find(id) #=> Quaderno::TaxId
+```
+
+will return the tax id with the id passed as parameter.
+
+### Adding a new tax id
+
+```ruby
+ Quaderno::TaxId.create(params) #=> Quaderno::TaxId
+```
+
+will create a tax id using the information of the hash passed as parameter and return an instance of Quaderno::TaxId with the created tax id.
+
+### Updating an existing tax id
+
+```ruby
+ Quaderno::TaxId.update(id, params) #=> Quaderno::TaxId
+```
+
+will update the specified tax id with the data of the hash passed as second parameter.
+
+### Deleting a tax id
+
+```ruby
+  Quaderno::TaxId.delete(id) #=> Quaderno::TaxId
+```
+
+will delete the tax id with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::TaxId` with the `deleted` attribute set to `true` will be returned.
+
+### Validate a tax id
 
 ```ruby
  country = 'IE'
  tax_id = 'IE6388047V'
 
- result = Quaderno::Tax.validate_tax_id(country, tax_id) #=> Quaderno::Tax
+ result = Quaderno::TaxId.validate(country, tax_id) #=> Quaderno::TaxId
 
  result.valid #=> Boolean or nil
 ```
