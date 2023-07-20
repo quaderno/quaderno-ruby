@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/tax_rates.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"Custom Italian Tax","value":50,"jurisdiction_id":68}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689841500'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"5c069a2da0b4dbd1a723a5e4f3ef70f8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 2a213fdd-4bcd-4027-ae10-874749f49abc
+      X-Runtime:
+      - '0.118335'
+      Server-Timing:
+      - cache_write.active_support;dur=0.15, start_processing.action_controller;dur=0.08,
+        sql.active_record;dur=50.29, instantiation.active_record;dur=2.73, unpermitted_parameters.action_controller;dur=0.12,
+        render_partial.action_view;dur=22.67, render_template.action_view;dur=22.74,
+        process_action.action_controller;dur=74.86
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":6,"type":"custom","jurisdiction":{"id":68,"country":"IT","name":"Italy"},"name":"Custom
+        Italian Tax","tax_code":"eservice","valid_from":"2020-01-01","valid_until":null,"value":50.0,"url":"http://quaderno.lvh.me:3000/api/tax_rates/6","created_at":1689841492}'
+  recorded_at: Thu, 20 Jul 2023 08:24:52 GMT
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_rates/6.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689841500'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"5c069a2da0b4dbd1a723a5e4f3ef70f8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 5571af94-caf4-4769-b1cf-b0cbeff67df0
+      X-Runtime:
+      - '0.035945'
+      Server-Timing:
+      - cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=8.59, instantiation.active_record;dur=1.01, render_partial.action_view;dur=3.01,
+        render_template.action_view;dur=3.77, process_action.action_controller;dur=18.69
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":6,"type":"custom","jurisdiction":{"id":68,"country":"IT","name":"Italy"},"name":"Custom
+        Italian Tax","tax_code":"eservice","valid_from":"2020-01-01","valid_until":null,"value":50.0,"url":"http://quaderno.lvh.me:3000/api/tax_rates/6","created_at":1689841492}'
+  recorded_at: Thu, 20 Jul 2023 08:24:52 GMT
+recorded_with: VCR 6.1.0

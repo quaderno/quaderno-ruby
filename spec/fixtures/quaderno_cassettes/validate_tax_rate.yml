@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_rates/calculate.json?from_country=FR&tax_code=standard&to_country=FR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689844095'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"328863225f8506ff91f7f2a8e8777535"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 5c057de4-3233-4c3c-9aa9-410c2cb50d14
+      X-Runtime:
+      - '0.627923'
+      Server-Timing:
+      - sql.active_record;dur=109.37, instantiation.active_record;dur=32.01, active_admin.application.before_load;dur=0.19,
+        active_admin.resource.register;dur=0.05, active_admin.application.after_load;dur=0.82,
+        cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.05,
+        unpermitted_parameters.action_controller;dur=0.42, render_template.action_view;dur=0.16,
+        process_action.action_controller;dur=171.76
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"country":"FR","currency":"EUR","name":"TVA","notes":null,"product_type":"service","rate":20.0,"region":null,"tax_behavior":"exclusive","tax_code":"standard","taxable_part":100.0,"import":false,"subtotal":null,"tax_amount":null,"total_amount":null,"status":"taxable"}'
+  recorded_at: Thu, 20 Jul 2023 09:08:05 GMT
+recorded_with: VCR 6.1.0
