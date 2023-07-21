@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/accounts.json
+    body:
+      encoding: UTF-8
+      string: '{"country":"JP","business_name":"Z, Mazinger Z","local_tax_id":"11111111","email":"koji@kabuto.ftw"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689785985'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"d8652e253cee494647e4d9a8cf308047"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - f476507d-5988-4fda-99a1-634f845abc23
+      X-Runtime:
+      - '0.333410'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=54.16, instantiation.active_record;dur=0.90, unpermitted_parameters.action_controller;dur=0.08,
+        render_partial.action_view;dur=0.22, render_template.action_view;dur=0.28,
+        process_action.action_controller;dur=318.32
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":22,"authentication":{"token_type":"Bearer","access_token":"2aXg38jtbIl5Do04dsPIHLsZ0NvmsXbcPJmz2Wp_BJ0","refresh_token":"UmDXDSk5dnWl-cxCNebIfc14nBZ7AposjniY4lW8YA8"},"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785975,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"active","subdomain":"ninive-1603","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"}'
+  recorded_at: Wed, 19 Jul 2023 16:59:35 GMT
+- request:
+    method: put
+    uri: http://quaderno.lvh.me:3000/api/accounts/22/deactivate.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689785985'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"3b3e0f6d55a3b649a4d31b5a39465921"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 1a3bb321-541b-4cac-bf0b-493b25bba2d4
+      X-Runtime:
+      - '0.039504'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=13.04, instantiation.active_record;dur=0.98, render_partial.action_view;dur=1.54,
+        render_template.action_view;dur=1.64, process_action.action_controller;dur=23.72
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":22,"business_name":"Z, Mazinger Z","country":"JP","created_at":1689785975,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"hibernated","subdomain":"ninive-1603","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"}'
+  recorded_at: Wed, 19 Jul 2023 16:59:35 GMT
+recorded_with: VCR 6.1.0

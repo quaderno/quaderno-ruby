@@ -1,0 +1,253 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/tax_ids.json
+    body:
+      encoding: UTF-8
+      string: '{"value":"1111111","jurisdiction_id":68}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839325'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"2585822f6564276a5ede9245e206fb79"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 9c238a65-579b-4fb7-8921-0e7f513bf804
+      X-Runtime:
+      - '0.172019'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=12.37, instantiation.active_record;dur=0.83, unpermitted_parameters.action_controller;dur=0.04,
+        render_partial.action_view;dur=0.38, render_template.action_view;dur=0.46,
+        process_action.action_controller;dur=155.78
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":80,"jurisdiction":{"id":68,"country":"IT","name":"Italy"},"state":"unverified","valid_from":"2023-07-01","valid_until":null,"value":"1111111","created_at":1689839320}'
+  recorded_at: Thu, 20 Jul 2023 07:48:40 GMT
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_ids.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839325'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      X-Pages-Hasmore:
+      - 'false'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"d8afd783834db45b80e1cad310a8b18f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 1ebf1f2f-3463-416d-82fc-c503e1b21104
+      X-Runtime:
+      - '0.048048'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.03,
+        sql.active_record;dur=15.88, instantiation.active_record;dur=1.21, render_partial.action_view;dur=13.87,
+        render_template.action_view;dur=15.26, process_action.action_controller;dur=31.74
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjQ3LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjg1LCJjb3VudHJ5IjoiRVMiLCJuYW1lIjoiU3BhaW4g4oCTIFBlbsOtbnN1bGEgeSBCYWxlYXJlcyJ9LCJzdGF0ZSI6InVuYXZhaWxhYmxlIiwidmFsaWRfZnJvbSI6IjIwMjItMDEtMDEiLCJ2YWxpZF91bnRpbCI6bnVsbCwidmFsdWUiOiIxMTExMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk3ODM5Njd9LHsiaWQiOjY0LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDIzLTA3LTAxIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4MDIyMTF9LHsiaWQiOjY1LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4MzgyMzR9LHsiaWQiOjY2LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOiIyMDIzLTA0LTAxIiwidmFsdWUiOiIyMjIyMjIyMjIyIiwiY3JlYXRlZF9hdCI6MTY4OTgzODIzNH0seyJpZCI6NjgsImp1cmlzZGljdGlvbiI6eyJpZCI6MTEsImNvdW50cnkiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSwic3RhdGUiOiJ1bnZlcmlmaWVkIiwidmFsaWRfZnJvbSI6IjIwMTgtMDEtMDMiLCJ2YWxpZF91bnRpbCI6bnVsbCwidmFsdWUiOiIxMTExMTExIiwiY3JlYXRlZF9hdCI6MTY4OTgzODI2Mn0seyJpZCI6NjksImp1cmlzZGljdGlvbiI6eyJpZCI6MTEsImNvdW50cnkiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSwic3RhdGUiOiJ1bnZlcmlmaWVkIiwidmFsaWRfZnJvbSI6IjIwMTgtMDEtMDMiLCJ2YWxpZF91bnRpbCI6IjIwMjMtMDQtMDEiLCJ2YWx1ZSI6IjIyMjIyMjIyMjIiLCJjcmVhdGVkX2F0IjoxNjg5ODM4MjYyfSx7ImlkIjo3MSwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM4NDU0fSx7ImlkIjo3MiwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjoiMjAyMy0wNC0wMSIsInZhbHVlIjoiMjIyMjIyMjIyMiIsImNyZWF0ZWRfYXQiOjE2ODk4Mzg0NTR9LHsiaWQiOjc0LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4Mzg3NDF9LHsiaWQiOjc1LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOiIyMDIzLTA0LTAxIiwidmFsdWUiOiIyMjIyMjIyMjIyIiwiY3JlYXRlZF9hdCI6MTY4OTgzODc0Mn0seyJpZCI6NzYsImp1cmlzZGljdGlvbiI6eyJpZCI6NjgsImNvdW50cnkiOiJJVCIsIm5hbWUiOiJJdGFseSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAyMy0wNy0wMSIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM4NzQyfSx7ImlkIjo3OCwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM5MzE5fSx7ImlkIjo3OSwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjoiMjAyMy0wNC0wMSIsInZhbHVlIjoiMjIyMjIyMjIyMiIsImNyZWF0ZWRfYXQiOjE2ODk4MzkzMjB9LHsiaWQiOjgwLCJqdXJpc2RpY3Rpb24iOnsiaWQiOjY4LCJjb3VudHJ5IjoiSVQiLCJuYW1lIjoiSXRhbHkifSwic3RhdGUiOiJ1bnZlcmlmaWVkIiwidmFsaWRfZnJvbSI6IjIwMjMtMDctMDEiLCJ2YWxpZF91bnRpbCI6bnVsbCwidmFsdWUiOiIxMTExMTExIiwiY3JlYXRlZF9hdCI6MTY4OTgzOTMyMH1d
+  recorded_at: Thu, 20 Jul 2023 07:48:40 GMT
+- request:
+    method: delete
+    uri: http://quaderno.lvh.me:3000/api/tax_ids/80.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839325'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Vary:
+      - Origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 77fedfa8-d417-441c-b2d9-cf3912006a2e
+      X-Runtime:
+      - '0.028040'
+      Server-Timing:
+      - cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=6.34, instantiation.active_record;dur=0.66, process_action.action_controller;dur=12.39
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 20 Jul 2023 07:48:40 GMT
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_ids.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839325'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      X-Pages-Hasmore:
+      - 'false'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"8884b08e32b0cbde8e16c98bb87d4c32"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 4dc5487f-50c7-4c39-aed6-725a9d780193
+      X-Runtime:
+      - '0.047476'
+      Server-Timing:
+      - cache_write.active_support;dur=0.07, start_processing.action_controller;dur=0.03,
+        sql.active_record;dur=17.00, instantiation.active_record;dur=1.13, render_partial.action_view;dur=20.20,
+        render_template.action_view;dur=21.08, process_action.action_controller;dur=32.73
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjQ3LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjg1LCJjb3VudHJ5IjoiRVMiLCJuYW1lIjoiU3BhaW4g4oCTIFBlbsOtbnN1bGEgeSBCYWxlYXJlcyJ9LCJzdGF0ZSI6InVuYXZhaWxhYmxlIiwidmFsaWRfZnJvbSI6IjIwMjItMDEtMDEiLCJ2YWxpZF91bnRpbCI6bnVsbCwidmFsdWUiOiIxMTExMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk3ODM5Njd9LHsiaWQiOjY0LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDIzLTA3LTAxIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4MDIyMTF9LHsiaWQiOjY1LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4MzgyMzR9LHsiaWQiOjY2LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOiIyMDIzLTA0LTAxIiwidmFsdWUiOiIyMjIyMjIyMjIyIiwiY3JlYXRlZF9hdCI6MTY4OTgzODIzNH0seyJpZCI6NjgsImp1cmlzZGljdGlvbiI6eyJpZCI6MTEsImNvdW50cnkiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSwic3RhdGUiOiJ1bnZlcmlmaWVkIiwidmFsaWRfZnJvbSI6IjIwMTgtMDEtMDMiLCJ2YWxpZF91bnRpbCI6bnVsbCwidmFsdWUiOiIxMTExMTExIiwiY3JlYXRlZF9hdCI6MTY4OTgzODI2Mn0seyJpZCI6NjksImp1cmlzZGljdGlvbiI6eyJpZCI6MTEsImNvdW50cnkiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSwic3RhdGUiOiJ1bnZlcmlmaWVkIiwidmFsaWRfZnJvbSI6IjIwMTgtMDEtMDMiLCJ2YWxpZF91bnRpbCI6IjIwMjMtMDQtMDEiLCJ2YWx1ZSI6IjIyMjIyMjIyMjIiLCJjcmVhdGVkX2F0IjoxNjg5ODM4MjYyfSx7ImlkIjo3MSwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM4NDU0fSx7ImlkIjo3MiwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjoiMjAyMy0wNC0wMSIsInZhbHVlIjoiMjIyMjIyMjIyMiIsImNyZWF0ZWRfYXQiOjE2ODk4Mzg0NTR9LHsiaWQiOjc0LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOm51bGwsInZhbHVlIjoiMTExMTExMSIsImNyZWF0ZWRfYXQiOjE2ODk4Mzg3NDF9LHsiaWQiOjc1LCJqdXJpc2RpY3Rpb24iOnsiaWQiOjExLCJjb3VudHJ5IjoiRlIiLCJuYW1lIjoiRnJhbmNlIn0sInN0YXRlIjoidW52ZXJpZmllZCIsInZhbGlkX2Zyb20iOiIyMDE4LTAxLTAzIiwidmFsaWRfdW50aWwiOiIyMDIzLTA0LTAxIiwidmFsdWUiOiIyMjIyMjIyMjIyIiwiY3JlYXRlZF9hdCI6MTY4OTgzODc0Mn0seyJpZCI6NzYsImp1cmlzZGljdGlvbiI6eyJpZCI6NjgsImNvdW50cnkiOiJJVCIsIm5hbWUiOiJJdGFseSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAyMy0wNy0wMSIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM4NzQyfSx7ImlkIjo3OCwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjpudWxsLCJ2YWx1ZSI6IjExMTExMTEiLCJjcmVhdGVkX2F0IjoxNjg5ODM5MzE5fSx7ImlkIjo3OSwianVyaXNkaWN0aW9uIjp7ImlkIjoxMSwiY291bnRyeSI6IkZSIiwibmFtZSI6IkZyYW5jZSJ9LCJzdGF0ZSI6InVudmVyaWZpZWQiLCJ2YWxpZF9mcm9tIjoiMjAxOC0wMS0wMyIsInZhbGlkX3VudGlsIjoiMjAyMy0wNC0wMSIsInZhbHVlIjoiMjIyMjIyMjIyMiIsImNyZWF0ZWRfYXQiOjE2ODk4MzkzMjB9XQ==
+  recorded_at: Thu, 20 Jul 2023 07:48:40 GMT
+recorded_with: VCR 6.1.0

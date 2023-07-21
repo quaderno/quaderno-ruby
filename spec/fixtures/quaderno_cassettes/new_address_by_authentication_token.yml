@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/addresses.json
+    body:
+      encoding: UTF-8
+      string: '{"street_line_1":"Test_Address 2 line 1","street_line_2":"Test_Address
+        2 line 2","postal_code":"1234","city":"TCity"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689939270'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"f0c0966e5e7bb426ba4747a294ff3151"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 752de1be-57c2-4c93-9219-d484261b5f45
+      X-Runtime:
+      - '0.035952'
+      Server-Timing:
+      - cache_write.active_support;dur=0.07, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=10.40, instantiation.active_record;dur=0.44, unpermitted_parameters.action_controller;dur=0.06,
+        render_partial.action_view;dur=0.09, render_template.action_view;dur=0.41,
+        process_action.action_controller;dur=18.88
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":37,"country":"ES","street_line_1":"Test_Address 2 line 1","street_line_2":"Test_Address
+        2 line 2","city":"TCity","postal_code":"1234","region":null,"valid_from":"2023-01-01","valid_until":null}'
+  recorded_at: Fri, 21 Jul 2023 11:34:15 GMT
+recorded_with: VCR 6.1.0

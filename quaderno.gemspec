@@ -21,12 +21,12 @@ Gem::Specification.new do |spec|
   spec.date = '2018-05-07'
   spec.extra_rdoc_files = %w(LICENSE.txt README.md)
 
-  spec.add_dependency('httparty', '~> 0.21.0')
-  spec.add_development_dependency('rdoc', '>= 6.3.1')
+  spec.add_dependency('httparty', '~> 0.21')
   spec.add_development_dependency('activesupport', '~> 4.2.0')
-  spec.add_development_dependency('webmock', '~> 3.18')
-  spec.add_development_dependency('vcr', '>= 0')
   spec.add_development_dependency('bundler', '~> 2.2')
   spec.add_development_dependency('rake', '>= 12.3.3')
+  spec.add_development_dependency('rdoc', '>= 6.3.1')
   spec.add_development_dependency('rspec', '~> 3.0')
+  spec.add_development_dependency('vcr', '>= 0')
+  spec.add_development_dependency('webmock', '~> 3.18')
 end

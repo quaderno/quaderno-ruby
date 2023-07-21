@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_ids/validate.json?country=IE&tax_id=IE9825613N
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839790'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"8daf09a6fc31937457dd77e9c25ce4b2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 2af58a3d-a5ff-49b2-8585-5624a53a53b1
+      X-Runtime:
+      - '0.052522'
+      Server-Timing:
+      - cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.05,
+        sql.active_record;dur=6.96, instantiation.active_record;dur=0.90, process_action.action_controller;dur=36.45
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"valid":true}'
+  recorded_at: Thu, 20 Jul 2023 07:56:16 GMT
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_ids/validate.json?country=IE&tax_id=123456789U
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689839790'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"af5fd803088fcdc627e5cd97fb88d7fc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 5f901eb8-3b50-40e4-8f36-09654bc76388
+      X-Runtime:
+      - '0.029915'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=6.80, instantiation.active_record;dur=0.58, process_action.action_controller;dur=13.56
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"valid":false}'
+  recorded_at: Thu, 20 Jul 2023 07:56:16 GMT
+recorded_with: VCR 6.1.0

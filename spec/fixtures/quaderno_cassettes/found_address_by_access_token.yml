@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/addresses.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689939495'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"a7f060d508742a53426c2c5f39bb545f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 8f731a9d-9fd4-497d-8aff-04e295251fd3
+      X-Runtime:
+      - '0.071523'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.04,
+        sql.active_record;dur=22.66, instantiation.active_record;dur=2.70, render_collection.action_view;dur=0.87,
+        render_template.action_view;dur=2.63, process_action.action_controller;dur=38.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":19,"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":34,"country":"ES","street_line_1":"Test","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":35,"country":"ES","street_line_1":"New
+        test address 2","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":36,"country":"ES","street_line_1":"Test  3","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":37,"country":"ES","street_line_1":"Test_Address
+        2 line 1","street_line_2":"Test_Address 2 line 2","city":"TCity","postal_code":"1234","region":null,"valid_from":"2023-01-01","valid_until":null}]'
+  recorded_at: Fri, 21 Jul 2023 11:38:10 GMT
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/addresses/35.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer afa16c7478f0ba3be222e627c2571d4dd5dca47924996b13a3af377feca47ff0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689939495'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"9502c29c4c82b3f5493a69ccc2bfb40c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 196cb0dd-407f-4673-95a4-f3774f49dcc5
+      X-Runtime:
+      - '0.025474'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=3.71, instantiation.active_record;dur=0.50, render_partial.action_view;dur=0.18,
+        render_template.action_view;dur=0.29, process_action.action_controller;dur=8.81
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":35,"country":"ES","street_line_1":"New test address 2","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null}'
+  recorded_at: Fri, 21 Jul 2023 11:38:10 GMT
+recorded_with: VCR 6.1.0

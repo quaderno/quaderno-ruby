@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/tax_rates.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"Custom Swiss Tax","value":12.12,"jurisdiction_id":86,"valid_from":"2018-01-03"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689843840'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"8f195b1662067d4b4fd1e1af44bc9e81"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 41209949-5e7f-486e-8e30-1613744588dc
+      X-Runtime:
+      - '10.700031'
+      Server-Timing:
+      - sql.active_record;dur=95.41, instantiation.active_record;dur=25.06, active_admin.application.before_load;dur=0.16,
+        active_admin.resource.register;dur=0.03, active_admin.application.after_load;dur=0.69,
+        cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.07,
+        unpermitted_parameters.action_controller;dur=0.24, render_partial.action_view;dur=2.05,
+        render_template.action_view;dur=2.15, process_action.action_controller;dur=10240.15
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":9,"type":"custom","jurisdiction":{"id":86,"country":"CH","name":"Switzerland"},"name":"Custom
+        Swiss Tax","tax_code":"eservice","valid_from":"2018-01-03","valid_until":null,"value":12.12,"url":"http://quaderno.lvh.me:3000/api/tax_rates/9","created_at":1689843840}'
+  recorded_at: Thu, 20 Jul 2023 09:04:00 GMT
+- request:
+    method: put
+    uri: http://quaderno.lvh.me:3000/api/tax_rates/9.json
+    body:
+      encoding: UTF-8
+      string: '{"value":23.0,"valid_until":"2023-04-01"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689843855'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"881a628a240c272cf2c00385557a4760"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 4549154a-1b9c-46fc-8394-42fa4c48aee6
+      X-Runtime:
+      - '10.322915'
+      Server-Timing:
+      - cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=17.67, instantiation.active_record;dur=0.90, unpermitted_parameters.action_controller;dur=0.39,
+        render_partial.action_view;dur=5.69, render_template.action_view;dur=5.07,
+        process_action.action_controller;dur=10302.03
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":9,"type":"custom","jurisdiction":{"id":86,"country":"CH","name":"Switzerland"},"name":"Custom
+        Swiss Tax","tax_code":"eservice","valid_from":"2018-01-03","valid_until":"2023-04-01","value":23.0,"url":"http://quaderno.lvh.me:3000/api/tax_rates/9","created_at":1689843840}'
+  recorded_at: Thu, 20 Jul 2023 09:04:10 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/tax_codes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic N2gxNTE1NGY0azM3MGszbjo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - ca42678a-8627-4a43-afc0-164da6588611
+      X-Runtime:
+      - '0.076155'
+      Server-Timing:
+      - cache_write.active_support;dur=0.13, start_processing.action_controller;dur=0.29,
+        sql.active_record;dur=4.85, halted_callback.action_controller;dur=0.16, process_action.action_controller;dur=31.33
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"Wrong API key or the user does not exist."}'
+  recorded_at: Wed, 19 Jul 2023 17:30:07 GMT
+recorded_with: VCR 6.1.0

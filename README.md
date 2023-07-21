@@ -2,7 +2,7 @@
 
 Quaderno-ruby is a ruby wrapper for the [Quaderno API](https://developers.quaderno.io/api).
 
-Current version is 2.2.0 → See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md).
+Current version is 3.0.0 → See the changelog [here](https://github.com/quaderno/quaderno-ruby/blob/master/changelog.md).
 
 To learn more about our API and ecosystem, check [developers.quaderno.io](https://developers.quaderno.io).
 
@@ -131,8 +131,6 @@ will return the contact with the id passed as parameter.
 ```
 
 will return the contact with the customer id passed as parameter.
-
-*_Note_: `Quaderno::Contact.retrieve_customer` has been deprecated in favor of `Quaderno::Contact.retrieve`
 
 ### Creating a new contact
 
@@ -567,23 +565,101 @@ will update the specified webhook with the data of the hash passed as second par
 
 will delete the webhook with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::Webhook` with the `deleted` attribute set to `true` will be returned.
 
-## Taxes
+## Tax rates
 
 ### Calculating taxes
 
 ```ruby
- Quaderno::Tax.calculate(params) #=> Quaderno::Tax
+ Quaderno::TaxRate.calculate(params) #=> Quaderno::TaxRate
 ```
 
 will calculate the taxes applied for a customer based on the data pased as parameters.
 
-### Validate tax ID
+## Tax jurisdictions
+
+### Listing tax jurisdictions
+
+```ruby
+ Quaderno::TaxJurisdiction.all #=> Array
+```
+
+ will return an array with all the tax jurisdictions supported in Quaderno.
+
+### Finding a tax jurisdiction
+
+```ruby
+ Quaderno::TaxJurisdiction.find(id) #=> Quaderno::TaxJurisdiction
+```
+
+will return the tax jurisdiction with the id passed as parameter.
+
+## Tax codes
+
+### Listing tax codes
+
+```ruby
+ Quaderno::TaxCode.all #=> Array
+```
+
+ will return an array with all the tax codes supported in Quaderno.
+
+### Finding a tax jurisdiction
+
+```ruby
+ Quaderno::TaxCode.find(id) #=> Quaderno::TaxCode
+```
+
+will return the tax code with the id passed as parameter.
+
+## Managing Tax ids
+
+### Getting tax ids
+
+```ruby
+ Quaderno::TaxId.all #=> Array
+```
+
+ will return an array with all the tax ids in the target account.
+
+### Finding a tax id
+
+```ruby
+ Quaderno::TaxId.find(id) #=> Quaderno::TaxId
+```
+
+will return the tax id with the id passed as parameter.
+
+### Adding a new tax id
+
+```ruby
+ Quaderno::TaxId.create(params) #=> Quaderno::TaxId
+```
+
+will create a tax id using the information of the hash passed as parameter and return an instance of Quaderno::TaxId with the created tax id.
+
+### Updating an existing tax id
+
+```ruby
+ Quaderno::TaxId.update(id, params) #=> Quaderno::TaxId
+```
+
+will update the specified tax id with the data of the hash passed as second parameter.
+
+### Deleting a tax id
+
+```ruby
+  Quaderno::TaxId.delete(id) #=> Quaderno::TaxId
+```
+
+will delete the tax id with the id passed as parameter. If the deletion was successful, an instance of `Quaderno::TaxId` with the `deleted` attribute set to `true` will be returned.
+
+### Validate a tax id
 
 ```ruby
  country = 'IE'
  tax_id = 'IE6388047V'
 
- result = Quaderno::Tax.validate_tax_id(country, tax_id) #=> Quaderno::Tax
+ result = Quaderno::TaxId.validate(country, tax_id) #=> Quaderno::TaxId
 
  result.valid #=> Boolean or nil
 ```
@@ -667,6 +743,91 @@ will return the report request with the id passed as parameter.
 
 will create a report request using the information of the hash passed as parameter and return an instance of Quaderno::ReportRequest with the created report request.
 
+## Connect: Managing custom accounts
+
+### Getting custom accounts
+
+```ruby
+  Quaderno::Account.all #=> Array
+```
+
+ will return an array with all your custom accounts
+
+### Finding a custom account
+
+```ruby
+  Quaderno::Account.find(id) #=> Quaderno::Account
+```
+
+will return the account with the id passed as parameter.
+
+### Creating a new custom account
+
+```ruby
+  Quaderno::Account.create(params) #=> Quaderno::Account
+```
+
+will create a custom account using the information of the hash passed as parameter.
+
+### Updating an existing custom account
+
+```ruby
+  Quaderno::Account.update(id, params) #=> Quaderno::Account
+```
+
+will update the specified custom account with the data of the hash passed as second parameter.
+
+### Deactivating a custom account
+
+```ruby
+  Quaderno::Account.deactivate(id) #=> Quaderno::Account
+```
+
+will deactivate the custom account with the id passed as parameter.
+
+### Activating a custom account
+
+```ruby
+  Quaderno::Account.activate(id) #=> Quaderno::Account
+```
+
+will activate the custom account with the id passed as parameter.
+
+## Connect: Managing addresses
+
+### Getting addresses
+
+```ruby
+  Quaderno::Address.all(access_token: ACCESS_TOKEN) #=> Array
+```
+
+ will return an array with all the addresses of the target custom account
+
+### Finding a address
+
+```ruby
+  Quaderno::Address.find(id, access_token: ACCESS_TOKEN) #=> Quaderno::Address
+```
+
+will return the address with the id passed as parameter.
+
+### Creating a new address
+
+```ruby
+  Quaderno::Address.create(params.merge(access_token: ACCESS_TOKEN)) #=> Quaderno::Address
+```
+
+will add an address on the target custom account using the information of the hash passed as parameter.
+
+### Updating an existing address
+
+```ruby
+  Quaderno::Address.update(id, params.merge(access_token: ACCESS_TOKEN)) #=> Quaderno::Address
+```
+
+will update the specified address with the data of the hash passed as second parameter.
+
+
 ## Exceptions
 
 Quaderno-ruby exceptions raise depending on the type of error:
@@ -677,6 +838,8 @@ Quaderno-ruby exceptions raise depending on the type of error:
   Quaderno::Exceptions::InvalidSubdomainOrToken # Raised when the credentials are wrong, missing or do not match the permission for some object.
 
   Quaderno::Exceptions::InvalidID # Raised when the requested resource by ID does not exist in the account context.
+
+  Quaderno::Exceptions::InvalidRequest # Raised when the requested requirements are not fulfilled.
 
   Quaderno::Exceptions::ThrottleLimitExceeded # Raised when the throttle limit is exceeded.
 
@@ -690,6 +853,17 @@ Quaderno-ruby exceptions raise depending on the type of error:
 ```
 
 All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
+
+You can inspect a the error response from the API by rescuing the exception and checking `response_body`:
+
+```ruby
+begin
+  Quaderno::Invoice.find WRONG_ID
+rescue Quaderno::Exceptions::BaseException => e
+  e.response_body # =>  {"error"=>"Unauthorized access or document does not exist."}
+end
+```
+
 
 ### Pagination information
 

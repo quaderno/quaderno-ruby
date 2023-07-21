@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Quaderno::TaxReport < OpenStruct
 end
 
@@ -11,7 +13,7 @@ class Quaderno::Tax < Quaderno::Base
 
   def self.calculate(options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
-    params = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    params = options.dup.delete_if { |k, _| %w[auth_token access_token api_url mode api_model].include? k.to_s }
 
     response = get("#{authentication[:url]}tax_rates/calculate.json",
       query: params,
@@ -47,7 +49,7 @@ class Quaderno::Tax < Quaderno::Base
 
   def self.reports(options = {})
     authentication = get_authentication(options.merge(api_model: api_model))
-    params = options.dup.delete_if { |k,v| %w(auth_token access_token api_url mode api_model).include? k.to_s }
+    params = options.dup.delete_if { |k, _| %w[auth_token access_token api_url mode api_model].include? k.to_s }
 
     response = get("#{authentication[:url]}taxes/reports.json",
       query: params,

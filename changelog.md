@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.0.0
+* Added support for accounts API
+* Added support for addresses API
+* Added support for tax rates API
+* Added support for tax jurisdictions API
+* Added support for tax codes API
+* Clean parameters sent in the create request
+* Phase out legacy `Quaderno::Tax` class in favour of `Quaderno::TaxRate` (the class will be removed in the next release)
+* Relaxed httparty requirements
+* Detect and handle `bad_request` response codes
+* Added `Quaderno::Exceptions::InvalidRequest` to handle `not_acceptable` response codes
+* Added `Quaderno::Exceptions::BaseException#response_body` to check the API response error
+* Removed legacy `Quaderno::Contact.retrieve_customer` in favor of `Quaderno::Contact.retrieve`
+
 ## 2.2.0
 * Added support for transactions API
 * Bumped webmock to 3.18

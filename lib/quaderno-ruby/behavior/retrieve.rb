@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module Quaderno::Behavior
   module Retrieve
-
     def self.included(receiver)
       receiver.send :extend, ClassMethods
     end
@@ -25,9 +26,9 @@ module Quaderno::Behavior
 
         object
       end
-      alias_method :retrieve_customer, :retrieve
 
       private
+
       def retrieve_path(path)
         @_retrieve_path = path
       end

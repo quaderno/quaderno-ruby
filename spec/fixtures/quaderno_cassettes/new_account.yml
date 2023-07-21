@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/accounts.json
+    body:
+      encoding: UTF-8
+      string: '{"business_name":"Test_Skynet","email":"my_little@po.ny","local_tax_id":"11111111","country":"ES"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689785985'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"770e38e8525a5d6e0e1760e39ae7253d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 32729c9e-c341-4f1a-aebf-37ce989969de
+      X-Runtime:
+      - '0.362113'
+      Server-Timing:
+      - cache_write.active_support;dur=0.06, start_processing.action_controller;dur=0.05,
+        sql.active_record;dur=70.31, instantiation.active_record;dur=1.01, unpermitted_parameters.action_controller;dur=0.12,
+        render_partial.action_view;dur=0.28, render_template.action_view;dur=0.34,
+        process_action.action_controller;dur=344.81
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":19,"authentication":{"token_type":"Bearer","access_token":"IW-vIt219vYxQcp7u_PaIYmB-hug5obMS6Iajm8miJs","refresh_token":"wAOSe1PM1ktFCCXOonK9eQ_Wwak85xQwx6H5QXg2qCQ"},"business_name":"Test_Skynet","country":"ES","created_at":1689785973,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"my_little@po.ny","postal_code":"10000","state":"active","subdomain":"assur-5943","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"}'
+  recorded_at: Wed, 19 Jul 2023 16:59:33 GMT
+recorded_with: VCR 6.1.0

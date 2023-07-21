@@ -2,7 +2,6 @@
 
 module Quaderno::Behavior
   module Crud
-
     def self.included(receiver)
       receiver.send :extend, ClassMethods
     end
@@ -71,7 +70,7 @@ module Quaderno::Behavior
 
       def create(params = {})
         authentication = get_authentication(params.merge(api_model: api_model))
-        params.dup.delete_if { |k, _| %w[auth_token access_token api_url mode api_model].include? k.to_s }
+        params = params.dup.delete_if { |k, _| %w[auth_token access_token api_url mode api_model].include? k.to_s }
 
         response = post("#{authentication[:url]}#{api_model.api_path}.json",
           body: params.to_json,

@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/accounts.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689785985'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      X-Pages-Hasmore:
+      - 'false'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"1ad4f0ce4e3d1224bbda5c5a553f9352"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - d17a039c-61a7-470c-89e7-5381803343c3
+      X-Runtime:
+      - '0.049521'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.05,
+        sql.active_record;dur=16.75, instantiation.active_record;dur=2.11, render_collection.action_view;dur=11.60,
+        render_template.action_view;dur=13.80, process_action.action_controller;dur=33.50
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":12,"business_name":"Test_Skynet","country":"ES","created_at":1689785519,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"my_little@po.ny","postal_code":"10000","state":"active","subdomain":"ninive-7867","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"},{"id":13,"business_name":"Test_Skynet","country":"ES","created_at":1689785524,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"my_little@po.ny","postal_code":"10000","state":"active","subdomain":"uruk-537","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"},{"id":14,"business_name":"Test_OCP","country":"ES","created_at":1689785525,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"dont@stop.believing","postal_code":"10000","state":"active","subdomain":"nippur-1171","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"},{"id":15,"business_name":"Test_Skynet","country":"ES","created_at":1689785543,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"my_little@po.ny","postal_code":"10000","state":"active","subdomain":"assur-3927","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"},{"id":16,"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785543,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"hibernated","subdomain":"nippur-3373","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"},{"id":17,"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785544,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"active","subdomain":"assur-774","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"},{"id":18,"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785545,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"hibernated","subdomain":"uruk-8306","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"},{"id":19,"business_name":"Test_Skynet","country":"ES","created_at":1689785973,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"my_little@po.ny","postal_code":"10000","state":"active","subdomain":"assur-5943","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"},{"id":20,"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785974,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"hibernated","subdomain":"nippur-7582","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"},{"id":21,"business_name":"Z,
+        Mazinger Z","country":"JP","created_at":1689785974,"currency":"JPY","default_product_type":"service","default_tax_code":"eservice","email":"koji@kabuto.ftw","postal_code":"10000","state":"active","subdomain":"nippur-534","time_zone":"Asia/Tokyo","type":"custom","web":"http://kabuto.ftw"}]'
+  recorded_at: Wed, 19 Jul 2023 16:59:35 GMT
+- request:
+    method: put
+    uri: http://quaderno.lvh.me:3000/api/accounts/14.json
+    body:
+      encoding: UTF-8
+      string: '{"business_name":"Test_OCP","local_tax_id":"11111111","email":"dont@stop.believing"}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 2.3.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689785985'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"cfb850eda145cf8da6b2aa400ac2f77f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 72d04eb2-75c2-4669-9d5e-c1dfda8ab233
+      X-Runtime:
+      - '0.039052'
+      Server-Timing:
+      - cache_write.active_support;dur=0.04, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=10.59, instantiation.active_record;dur=0.94, unpermitted_parameters.action_controller;dur=0.04,
+        render_partial.action_view;dur=0.50, render_template.action_view;dur=0.62,
+        process_action.action_controller;dur=22.57
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":14,"business_name":"Test_OCP","country":"ES","created_at":1689785525,"currency":"EUR","default_product_type":"service","default_tax_code":"eservice","email":"dont@stop.believing","postal_code":"10000","state":"active","subdomain":"nippur-1171","time_zone":"Europe/Madrid","type":"custom","web":"http://po.ny"}'
+  recorded_at: Wed, 19 Jul 2023 16:59:35 GMT
+recorded_with: VCR 6.1.0

@@ -1,12 +1,18 @@
+# frozen_string_literal: true
+
 module Quaderno::Exceptions
   class BaseException < StandardError
     include Quaderno::Helpers::RateLimit
+    include Quaderno::Helpers::Response
   end
 
   class InvalidSubdomainOrToken < BaseException
   end
 
   class InvalidID < BaseException
+  end
+
+  class InvalidRequest < BaseException
   end
 
   class RateLimitExceeded < BaseException
@@ -35,31 +41,42 @@ module Quaderno::Exceptions
     def check_exception_for(party_response, params = {})
       raise_exception(Quaderno::Exceptions::UnsupportedApiVersion, 'Unsupported API version', party_response) if !!(party_response.body =~ /Unsupported API version/)
 
-      if params[:throttle_limit].nil? == false && party_response.response.class == Net::HTTPServiceUnavailable
+      if params[:throttle_limit].nil? == false && party_response.response.instance_of?(Net::HTTPServiceUnavailable)
         raise_exception(Quaderno::Exceptions::ThrottleLimitExceeded, 'Throttle limit exceeded, please try again later', party_response)
       end
-      if params[:rate_limit].nil? == false && party_response.response.class == Net::HTTPForbidden
+
+      if params[:rate_limit].nil? == false && party_response.response.instance_of?(Net::HTTPForbidden)
         raise_exception(Quaderno::Exceptions::RateLimitExceeded, 'Rate limit exceeded', party_response)
       end
-      if params[:subdomain_or_token].nil? == false
-        raise_exception(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token', party_response) if party_response.response.class == Net::HTTPUnauthorized
-      end
-      if params[:id].nil? == false
-        raise_exception(Quaderno::Exceptions::InvalidID, "Invalid #{ api_model } instance identifier", party_response) if (party_response.response.class == Net::HTTPInternalServerError) || (party_response.response.class == Net::HTTPNotFound)
-      end
-      if params[:required_fields].nil? == false
-        raise_exception(Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid, party_response.body, party_response) if party_response.response.class == Net::HTTPUnprocessableEntity
-      end
-      if params[:has_documents].nil? == false
-        raise_exception(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body, party_response) if party_response.response.class == Net::HTTPClientError
+
+      if params[:subdomain_or_token].nil? == false && party_response.response.instance_of?(Net::HTTPUnauthorized)
+        raise_exception(Quaderno::Exceptions::InvalidSubdomainOrToken, 'Invalid subdomain or token', party_response)
       end
 
+      if params[:id].nil? == false && (party_response.response.instance_of?(Net::HTTPInternalServerError) || party_response.response.instance_of?(Net::HTTPNotFound))
+        raise_exception(Quaderno::Exceptions::InvalidID, "Invalid #{api_model} instance identifier", party_response)
+      end
+
+      if params[:required_fields].nil? == false && party_response.response.instance_of?(Net::HTTPUnprocessableEntity)
+        raise_exception(Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid, party_response.body, party_response)
+      end
+
+      if party_response.response.instance_of?(Net::HTTPBadRequest)
+        raise_exception(Quaderno::Exceptions::RequiredFieldsEmptyOrInvalid, party_response.body, party_response)
+      end
+
+      if params[:has_documents].nil? == false && party_response.response.instance_of?(Net::HTTPClientError)
+        raise_exception(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body, party_response)
+      end
+
+      raise_exception(Quaderno::Exceptions::InvalidRequest, 'Invalid request', party_response) if party_response.response.instance_of?(Net::HTTPNotAcceptable)
       raise_exception(Quaderno::Exceptions::ServerError, 'Server error', party_response) if party_response.response.is_a?(Net::HTTPServerError)
     end
 
     def raise_exception(klass, message, response)
       exception = klass.new(message)
       exception.rate_limit_info = response
+      exception.response_body = response.parsed_response
 
       raise exception
     end

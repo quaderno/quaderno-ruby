@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://quaderno.lvh.me:3000/api/tax_rates.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"Custom Swiss Tax","value":11.11,"jurisdiction_id":86}'
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689841530'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"a0f54d90dc99635407c5dd6500d05ffb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - c6a2ee59-b932-4be8-9226-79063b3fd2c6
+      X-Runtime:
+      - '0.046529'
+      Server-Timing:
+      - cache_write.active_support;dur=0.05, start_processing.action_controller;dur=0.06,
+        sql.active_record;dur=17.85, instantiation.active_record;dur=1.05, unpermitted_parameters.action_controller;dur=0.04,
+        render_partial.action_view;dur=2.08, render_template.action_view;dur=2.11,
+        process_action.action_controller;dur=30.37
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":7,"type":"custom","jurisdiction":{"id":86,"country":"CH","name":"Switzerland"},"name":"Custom
+        Swiss Tax","tax_code":"eservice","valid_from":"2020-01-01","valid_until":null,"value":11.11,"url":"http://quaderno.lvh.me:3000/api/tax_rates/7","created_at":1689841519}'
+  recorded_at: Thu, 20 Jul 2023 08:25:19 GMT
+recorded_with: VCR 6.1.0
