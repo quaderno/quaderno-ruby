@@ -2,6 +2,7 @@
 
 ## 3.0.0
 * Added support for accounts API
+* Added support for addresses API
 * Added support for tax rates API
 * Added support for tax jurisdictions API
 * Added support for tax codes API
@@ -9,6 +10,8 @@
 * Phase out legacy `Quaderno::Tax` class in favour of `Quaderno::TaxRate` (the class will be removed in the next release)
 * Relaxed httparty requirements
 * Detect and handle `bad_request` response codes
+* Added `Quaderno::Exceptions::InvalidRequest` to handle `not_acceptable` response codes
+* Added `BaseException#response_body` to check the API response error
 
 ## 2.2.0
 * Added support for transactions API

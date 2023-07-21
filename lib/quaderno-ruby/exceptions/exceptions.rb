@@ -1,12 +1,18 @@
+# frozen_string_literal: true
+
 module Quaderno::Exceptions
   class BaseException < StandardError
     include Quaderno::Helpers::RateLimit
+    include Quaderno::Helpers::Response
   end
 
   class InvalidSubdomainOrToken < BaseException
   end
 
   class InvalidID < BaseException
+  end
+
+  class InvalidRequest < BaseException
   end
 
   class RateLimitExceeded < BaseException
@@ -63,12 +69,14 @@ module Quaderno::Exceptions
         raise_exception(Quaderno::Exceptions::HasAssociatedDocuments, party_response.body, party_response)
       end
 
+      raise_exception(Quaderno::Exceptions::InvalidRequest, 'Invalid request', party_response) if party_response.response.instance_of?(Net::HTTPNotAcceptable)
       raise_exception(Quaderno::Exceptions::ServerError, 'Server error', party_response) if party_response.response.is_a?(Net::HTTPServerError)
     end
 
     def raise_exception(klass, message, response)
       exception = klass.new(message)
       exception.rate_limit_info = response
+      exception.response_body = response.parsed_response
 
       raise exception
     end

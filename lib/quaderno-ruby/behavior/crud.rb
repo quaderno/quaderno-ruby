@@ -2,7 +2,6 @@
 
 module Quaderno::Behavior
   module Crud
-
     def self.included(receiver)
       receiver.send :extend, ClassMethods
     end

@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://quaderno.lvh.me:3000/api/addresses.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Quaderno Ruby Gem 3.0.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Authorization:
+      - Basic c2tfdGVzdF9iTXo5bUpKNWJabldQd1dHdVY4eTo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ratelimit-Reset:
+      - '1689939315'
+      X-Ratelimit-Remaining:
+      - '99'
+      X-Ratelimit-Limit:
+      - '100'
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      Etag:
+      - W/"a7f060d508742a53426c2c5f39bb545f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'connect-src ''self'' https: http://localhost:3035 ws://localhost:3035'
+      X-Request-Id:
+      - 95e73071-375a-4f63-b7f5-fe97c39df1a1
+      X-Runtime:
+      - '0.047253'
+      Server-Timing:
+      - cache_write.active_support;dur=0.08, start_processing.action_controller;dur=0.07,
+        sql.active_record;dur=12.82, instantiation.active_record;dur=0.72, render_collection.action_view;dur=0.75,
+        render_template.action_view;dur=7.54, process_action.action_controller;dur=21.67
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":19,"country":"ES","street_line_1":null,"street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":34,"country":"ES","street_line_1":"Test","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":35,"country":"ES","street_line_1":"New
+        test address 2","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":36,"country":"ES","street_line_1":"Test  3","street_line_2":null,"city":null,"postal_code":null,"region":null,"valid_from":"2023-01-01","valid_until":null},{"id":37,"country":"ES","street_line_1":"Test_Address
+        2 line 1","street_line_2":"Test_Address 2 line 2","city":"TCity","postal_code":"1234","region":null,"valid_from":"2023-01-01","valid_until":null}]'
+  recorded_at: Fri, 21 Jul 2023 11:35:12 GMT
+recorded_with: VCR 6.1.0
