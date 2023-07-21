@@ -11,7 +11,8 @@
 * Relaxed httparty requirements
 * Detect and handle `bad_request` response codes
 * Added `Quaderno::Exceptions::InvalidRequest` to handle `not_acceptable` response codes
-* Added `BaseException#response_body` to check the API response error
+* Added `Quaderno::Exceptions::BaseException#response_body` to check the API response error
+* Removed legacy `Quaderno::Contact.retrieve_customer` in favor of `Quaderno::Contact.retrieve`
 
 ## 2.2.0
 * Added support for transactions API

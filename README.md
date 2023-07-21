@@ -132,8 +132,6 @@ will return the contact with the id passed as parameter.
 
 will return the contact with the customer id passed as parameter.
 
-*_Note_: `Quaderno::Contact.retrieve_customer` has been deprecated in favor of `Quaderno::Contact.retrieve`
-
 ### Creating a new contact
 
 ```ruby
@@ -761,7 +759,7 @@ will create a report request using the information of the hash passed as paramet
   Quaderno::Account.find(id) #=> Quaderno::Account
 ```
 
-will return the recurring with the id passed as parameter.
+will return the account with the id passed as parameter.
 
 ### Creating a new custom account
 
@@ -795,6 +793,41 @@ will deactivate the custom account with the id passed as parameter.
 
 will activate the custom account with the id passed as parameter.
 
+## Connect: Managing addresses
+
+### Getting addresses
+
+```ruby
+  Quaderno::Address.all(access_token: ACCESS_TOKEN) #=> Array
+```
+
+ will return an array with all the addresses of the target custom account
+
+### Finding a address
+
+```ruby
+  Quaderno::Address.find(id, access_token: ACCESS_TOKEN) #=> Quaderno::Address
+```
+
+will return the address with the id passed as parameter.
+
+### Creating a new address
+
+```ruby
+  Quaderno::Address.create(params.merge(access_token: ACCESS_TOKEN)) #=> Quaderno::Address
+```
+
+will add an address on the target custom account using the information of the hash passed as parameter.
+
+### Updating an existing address
+
+```ruby
+  Quaderno::Address.update(id, params.merge(access_token: ACCESS_TOKEN)) #=> Quaderno::Address
+```
+
+will update the specified address with the data of the hash passed as second parameter.
+
+
 ## Exceptions
 
 Quaderno-ruby exceptions raise depending on the type of error:
@@ -805,6 +838,8 @@ Quaderno-ruby exceptions raise depending on the type of error:
   Quaderno::Exceptions::InvalidSubdomainOrToken # Raised when the credentials are wrong, missing or do not match the permission for some object.
 
   Quaderno::Exceptions::InvalidID # Raised when the requested resource by ID does not exist in the account context.
+
+  Quaderno::Exceptions::InvalidRequest # Raised when the requested requirements are not fulfilled.
 
   Quaderno::Exceptions::ThrottleLimitExceeded # Raised when the throttle limit is exceeded.
 
@@ -818,6 +853,17 @@ Quaderno-ruby exceptions raise depending on the type of error:
 ```
 
 All those exceptions inherit from `Quaderno::Exceptions::BaseException`.
+
+You can inspect a the error response from the API by rescuing the exception and checking `response_body`:
+
+```ruby
+begin
+  Quaderno::Invoice.find WRONG_ID
+rescue Quaderno::Exceptions::BaseException => e
+  e.response_body # =>  {"error"=>"Unauthorized access or document does not exist."}
+end
+```
+
 
 ### Pagination information
 
