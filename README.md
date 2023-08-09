@@ -21,19 +21,19 @@ To configure just add this to your initializers
     config.auth_token = 'my_authenticate_token'
     config.url = 'https://my_subdomain.quadernoapp.com/api/'
     config.api_version = API_VERSION # Optional, defaults to the API version set in your account
-    config.user_agent_header = 'my custom user agent' # Optional, will make support for your account more efficient if you are doing oauth integrations
+    config.user_agent_header = 'my custom user agent' # Optional, will make support for your account more efficient if you are doing OAuth integrations
   end
 ```
 
 ## Quaderno Sandbox
 
-Quaderno Sandbox is our public staging environment, a safe space to experiment with our set of APIs and products. As a complete separate environment, it has it's own URL https://sandbox-quadernoapp.com and credentials.
+Quaderno Sandbox is our public staging environment, a safe space to experiment with our set of APIs and products. As a completely separate environment, it has its own URL https://sandbox-quadernoapp.com and credentials.
 
-It's perfect for your first steps with our tools. Please check https://developers.quaderno.io/dev_tools/sandbox to learn about its test data and limitations.
+It's perfect for your first steps with our tools. Please check https://developers.quaderno.io/developer-tools/sandbox/ to learn about its test data and limitations.
 
 ## Get authorization data
 
-You can get your account subdomain by grabbing it from your account url or by calling the authorization method with your personal api token.
+You can get your account subdomain by grabbing it from your account URL or by calling the authorization method with your personal API token.
 
 ```ruby
   response = Quaderno::Base.authorization 'my_authenticate_token', environment #=> Quaderno::Base
@@ -42,7 +42,7 @@ You can get your account subdomain by grabbing it from your account url or by ca
 
 Note that `environment` is an optional argument. By passing `:sandbox`, you will retrieve your credentials for the sandbox environment and not for production.
 
-This will return a hash with the information about your api url, which includes the account subdomain.
+This will return a hash with the information about your API URL, which includes the account subdomain.
 
 ## Ping the service
 
