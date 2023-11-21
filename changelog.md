@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.1
+* Security: update development dependency activesupport to 6.1.7.3
+
 ## 3.0.0
 * Added support for accounts API
 * Added support for addresses API
