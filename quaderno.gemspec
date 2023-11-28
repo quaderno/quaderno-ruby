@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = %w(LICENSE.txt README.md)
 
   spec.add_dependency('httparty', '~> 0.21')
-  spec.add_development_dependency('activesupport', '~> 4.2.0')
+  spec.add_development_dependency('activesupport', '~> 6.1.7.3')
   spec.add_development_dependency('bundler', '~> 2.2')
   spec.add_development_dependency('rake', '>= 12.3.3')
   spec.add_development_dependency('rdoc', '>= 6.3.1')
